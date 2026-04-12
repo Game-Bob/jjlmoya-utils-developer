@@ -1,0 +1,29 @@
+export interface InspectorCertificadosSslUI extends Record<string, string> {
+  labelAnalyzeCertificate: string;
+  dragDropText: string;
+  dragDropSubtext: string;
+  cardStatusTitle: string;
+  cardSubjectTitle: string;
+  cardIssuerTitle: string;
+  cardFingerprintsTitle: string;
+  cardTechnicalTitle: string;
+  labelValidityStatus: string;
+  labelExpiryDate: string;
+  labelIssueDate: string;
+  labelSha256: string;
+  labelSha1: string;
+  labelSignatureAlgorithm: string;
+  labelVersion: string;
+  labelSerialNumber: string;
+  labelCommonName: string;
+  labelOrganization: string;
+  labelOrgUnit: string;
+  labelLocality: string;
+  labelState: string;
+  labelCountry: string;
+  labelEmail: string;
+  statusValid: string;
+  statusExpired: string;
+  errorMessageInvalid: string;
+  supportedFormats: string;
+}

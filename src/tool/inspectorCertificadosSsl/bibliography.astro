@@ -1,0 +1,14 @@
+---
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { inspectorCertificadosSsl } from './index';
+import type { KnownLocale } from '../../types';
+
+interface Props {
+  locale?: KnownLocale;
+}
+
+const { locale = 'es' } = Astro.props;
+const content = await inspectorCertificadosSsl.i18n[locale]?.();
+---
+
+{content && <SharedBibliography links={content.bibliography} />}

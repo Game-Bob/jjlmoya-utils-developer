@@ -1,0 +1,580 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { KnownLocale } from '../../types';
+import type { InspectorCertificadosSslUI } from './ui';
+
+interface Props {
+  locale?: KnownLocale;
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as InspectorCertificadosSslUI;
+---
+
+<div id="ics-root" data-i18n={JSON.stringify(t)} class="ics-root">
+  <div class="ics-container">
+    <div id="drop-zone" class="ics-drop-zone">
+      <input type="file" id="cert-file" class="ics-file-input" accept=".pem,.crt,.cer,.der" />
+      <div class="ics-drop-zone-content">
+        <div class="ics-icon-wrapper">
+          <Icon name="mdi:certificate" class="ics-certificate-icon" />
+        </div>
+        <h3 class="ics-drop-zone-title">{t.labelAnalyzeCertificate}</h3>
+        <p class="ics-drop-zone-text">{t.dragDropText}</p>
+        <p class="ics-drop-zone-subtext">
+          <small>{t.dragDropSubtext}</small>
+        </p>
+      </div>
+    </div>
+
+    <div id="error-message" class="ics-error-message"></div>
+
+    <div id="results" class="ics-results-grid">
+      <div class="ics-card" id="card-status">
+        <div class="ics-card-header">
+          <Icon name="mdi:shield-check" class="ics-card-icon" />
+          <h4>{t.cardStatusTitle}</h4>
+        </div>
+        <div class="ics-card-content">
+          <div class="ics-data-item">
+            <div id="validez-status"></div>
+          </div>
+          <div class="ics-data-item">
+            <span class="ics-data-label">{t.labelExpiryDate}:</span>
+            <span id="expiry-date" class="ics-data-value"></span>
+          </div>
+          <div class="ics-data-item">
+            <span class="ics-data-label">{t.labelIssueDate}:</span>
+            <span id="issue-date" class="ics-data-value"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ics-card" id="card-subject">
+        <div class="ics-card-header">
+          <Icon name="mdi:account-details" class="ics-card-icon" />
+          <h4>{t.cardSubjectTitle}</h4>
+        </div>
+        <div class="ics-card-content" id="subject-details"></div>
+      </div>
+
+      <div class="ics-card" id="card-issuer">
+        <div class="ics-card-header">
+          <Icon name="mdi:bank" class="ics-card-icon" />
+          <h4>{t.cardIssuerTitle}</h4>
+        </div>
+        <div class="ics-card-content" id="issuer-details"></div>
+      </div>
+
+      <div class="ics-card" id="card-fingerprints">
+        <div class="ics-card-header">
+          <Icon name="mdi:fingerprint" class="ics-card-icon" />
+          <h4>{t.cardFingerprintsTitle}</h4>
+        </div>
+        <div class="ics-card-content">
+          <div class="ics-data-item">
+            <span class="ics-data-label">{t.labelSha256}:</span>
+            <div id="sha256-fingerprint" class="ics-fingerprint"></div>
+          </div>
+          <div class="ics-data-item">
+            <span class="ics-data-label">{t.labelSha1}:</span>
+            <div id="sha1-fingerprint" class="ics-fingerprint"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ics-card" id="card-algorithm">
+        <div class="ics-card-header">
+          <Icon name="mdi:file-key" class="ics-card-icon" />
+          <h4>{t.cardTechnicalTitle}</h4>
+        </div>
+        <div class="ics-card-content">
+          <div class="ics-data-item">
+            <span class="ics-data-label">{t.labelSignatureAlgorithm}:</span>
+            <span id="sig-algo" class="ics-data-value"></span>
+          </div>
+          <div class="ics-data-item">
+            <span class="ics-data-label">{t.labelVersion}:</span>
+            <span id="cert-version" class="ics-data-value"></span>
+          </div>
+          <div class="ics-data-item">
+            <span class="ics-data-label">{t.labelSerialNumber}:</span>
+            <span id="serial-number" class="ics-data-value"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/node-forge@1.3.1/dist/forge.min.js"></script>
+
+<script>
+  const dropZone = document.getElementById('drop-zone') as HTMLDivElement;
+  const fileInput = document.getElementById('cert-file') as HTMLInputElement;
+  const results = document.getElementById('results') as HTMLDivElement;
+  const errorMsg = document.getElementById('error-message') as HTMLDivElement;
+
+  fileInput.addEventListener('change', (e) => {
+    const file = (e.target as HTMLInputElement).files?.[0];
+    if (file) handleFile(file);
+  });
+
+  ['dragenter', 'dragover', 'dragleave', 'drop'].forEach((eventName) => {
+    dropZone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  });
+
+  dropZone.addEventListener('dragover', () => dropZone.classList.add('ics-drag-active'));
+  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('ics-drag-active'));
+  dropZone.addEventListener('drop', (e) => {
+    dropZone.classList.remove('ics-drag-active');
+    const file = e.dataTransfer?.files[0];
+    if (file) handleFile(file);
+  });
+
+  function isPemFormat(content: string): boolean {
+    return content.trim().includes('-----BEGIN CERTIFICATE-----');
+  }
+
+  function parsePemCertificate(pki: { certificateFromPem: (pem: string) => unknown }, content: string): unknown {
+    const pemMatch = content.trim().match(
+      /-----BEGIN CERTIFICATE-----[\s\S]+?-----END CERTIFICATE-----/
+    );
+    if (!pemMatch) throw new Error('Formato PEM malformado.');
+    return pki.certificateFromPem(pemMatch[0]);
+  }
+
+  function parseDerCertificate(
+    forge: Record<string, unknown>,
+    pki: { certificateFromAsn1: (asn1: unknown) => unknown },
+    bytes: Uint8Array
+  ): unknown {
+    const util = forge.util as { createBuffer: (data: number[]) => unknown };
+    const asn1 = (forge.asn1 as { fromDer: (buffer: unknown) => unknown }).fromDer(
+      util.createBuffer(Array.from(bytes))
+    );
+    return pki.certificateFromAsn1(asn1);
+  }
+
+  async function handleFile(file: File): Promise<void> {
+    errorMsg.style.display = 'none';
+    results.classList.remove('ics-visible');
+
+    try {
+      const buffer = await file.arrayBuffer();
+      const bytes = new Uint8Array(buffer);
+      const content = new TextDecoder().decode(bytes);
+
+      const forge = (window as Record<string, unknown>).forge;
+      if (!forge) throw new Error('La librería criptográfica no se ha cargado.');
+
+      const pki = forge.pki as { certificateFromPem: (pem: string) => unknown; certificateFromAsn1: (asn1: unknown) => unknown };
+      let cert: unknown;
+
+      if (isPemFormat(content)) {
+        cert = parsePemCertificate(pki, content);
+      } else {
+        cert = parseDerCertificate(forge, pki, bytes);
+      }
+
+      if (!cert) throw new Error('Información de certificado no válida.');
+
+      await displayCertInfo(cert as ForgeCert, buffer);
+    } catch (err: unknown) {
+      console.error('Error:', err);
+      const message = err instanceof Error ? err.message : 'Archivo no válido.';
+      errorMsg.textContent = `Error: ${message}`;
+      errorMsg.style.display = 'block';
+    }
+  }
+
+  interface CertAttribute {
+    shortName: string;
+    name: string;
+    value: string;
+  }
+
+  interface ForgeCert {
+    validity: {
+      notBefore: Date;
+      notAfter: Date;
+    };
+    subject: {
+      attributes: CertAttribute[];
+    };
+    issuer: {
+      attributes: CertAttribute[];
+    };
+    signatureOid: string;
+    version: number;
+    serialNumber: string;
+  }
+
+  function getUIData(): Record<string, string> {
+    return JSON.parse(document.getElementById('ics-root')?.dataset.i18n ?? '{}');
+  }
+
+  function bufToHex(buf: ArrayBuffer): string {
+    return Array.from(new Uint8Array(buf))
+      .map((b) => b.toString(16).padStart(2, '0').toUpperCase())
+      .join(':');
+  }
+
+  const FIELD_LABELS: Record<string, string> = {
+    CN: 'labelCommonName',
+    O: 'labelOrganization',
+    OU: 'labelOrgUnit',
+    L: 'labelLocality',
+    ST: 'labelState',
+    C: 'labelCountry',
+    E: 'labelEmail',
+  };
+
+  function getFieldLabel(uiData: Record<string, string>, shortName: string, name: string): string {
+    const key = FIELD_LABELS[shortName];
+    if (key && uiData[key]) return uiData[key];
+    if (name) return name;
+    return shortName || 'Unknown';
+  }
+
+  function renderDNFields(attributes: CertAttribute[]): string {
+    const uiData = getUIData();
+    return attributes
+      .map((attr) => {
+        const label = getFieldLabel(uiData, attr.shortName, attr.name);
+        return `
+          <div class="ics-data-item">
+            <span class="ics-data-label">${label}:</span>
+            <span class="ics-data-value">${attr.value}</span>
+          </div>
+        `;
+      })
+      .join('');
+  }
+
+  function updateValidityStatus(isValid: boolean): void {
+    const validezEl = document.getElementById('validez-status');
+    const uiData = getUIData();
+    if (validezEl) {
+      const statusClass = isValid ? 'ics-status-valid' : 'ics-status-expired';
+      const statusText = isValid ? uiData.statusValid || 'Válido' : uiData.statusExpired || 'No válido';
+      const statusSymbol = isValid ? '[+]' : '[-]';
+      validezEl.innerHTML = `<span class="ics-status-badge ${statusClass}"><span class="ics-status-symbol">${statusSymbol}</span>&nbsp;${statusText}</span>`;
+    }
+  }
+
+  function updateDateFields(notBefore: Date, notAfter: Date): void {
+    const expiryEl = document.getElementById('expiry-date');
+    const issueEl = document.getElementById('issue-date');
+    if (expiryEl) expiryEl.textContent = notAfter.toLocaleString();
+    if (issueEl) issueEl.textContent = notBefore.toLocaleString();
+  }
+
+  function updateDNFields(cert: ForgeCert): void {
+    const subjectDetails = document.getElementById('subject-details');
+    const issuerDetails = document.getElementById('issuer-details');
+    if (subjectDetails) subjectDetails.innerHTML = renderDNFields(cert.subject.attributes);
+    if (issuerDetails) issuerDetails.innerHTML = renderDNFields(cert.issuer.attributes);
+  }
+
+  async function updateFingerprints(rawBuffer: ArrayBuffer): Promise<void> {
+    const sha1Buf = await crypto.subtle.digest('SHA-1', rawBuffer);
+    const sha256Buf = await crypto.subtle.digest('SHA-256', rawBuffer);
+    const sha1El = document.getElementById('sha1-fingerprint');
+    const sha256El = document.getElementById('sha256-fingerprint');
+    if (sha1El) sha1El.textContent = bufToHex(sha1Buf);
+    if (sha256El) sha256El.textContent = bufToHex(sha256Buf);
+  }
+
+  function updateTechnicalDetails(cert: ForgeCert): void {
+    const sigEl = document.getElementById('sig-algo');
+    const verEl = document.getElementById('cert-version');
+    const serialEl = document.getElementById('serial-number');
+    const forge = (window as Record<string, unknown>).forge as { pki: { oids: Record<string, string> } };
+    if (sigEl && forge)
+      sigEl.textContent = forge.pki.oids[cert.signatureOid] || cert.signatureOid;
+    if (verEl) verEl.textContent = (cert.version + 1).toString();
+    if (serialEl) serialEl.textContent = cert.serialNumber;
+  }
+
+  async function displayCertInfo(cert: ForgeCert, rawBuffer: ArrayBuffer): Promise<void> {
+    const now = new Date();
+    const notBefore = cert.validity.notBefore;
+    const notAfter = cert.validity.notAfter;
+    const isValid = now >= notBefore && now <= notAfter;
+
+    updateValidityStatus(isValid);
+    updateDateFields(notBefore, notAfter);
+    updateDNFields(cert);
+    await updateFingerprints(rawBuffer);
+    updateTechnicalDetails(cert);
+
+    results.classList.add('ics-visible');
+  }
+</script>
+
+<style>
+  .ics-root {
+    width: 100%;
+  }
+
+  .ics-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .ics-drop-zone {
+    border: 2px dashed rgba(16, 185, 129, 0.3);
+    border-radius: 1.5rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  :global(.theme-dark) .ics-drop-zone {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .ics-drop-zone:hover,
+  .ics-drop-zone.ics-drag-active {
+    border-color: var(--ics-theme-color, #10b981);
+    background: rgba(16, 185, 129, 0.05);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .ics-drop-zone-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    pointer-events: none;
+  }
+
+  .ics-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.05));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--ics-theme-color, #10b981);
+    margin-bottom: 1rem;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+  }
+
+  .ics-certificate-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .ics-drop-zone-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(30, 41, 59);
+    margin: 0;
+  }
+
+  :global(.theme-dark) .ics-drop-zone-title {
+    color: rgb(226, 232, 240);
+  }
+
+  .ics-drop-zone-text {
+    color: rgb(100, 116, 139);
+    margin: 0;
+  }
+
+  :global(.theme-dark) .ics-drop-zone-text {
+    color: rgb(148, 163, 184);
+  }
+
+  .ics-drop-zone-subtext {
+    color: rgb(148, 163, 184);
+    margin: 0;
+  }
+
+  :global(.theme-dark) .ics-drop-zone-subtext {
+    color: rgb(100, 116, 139);
+  }
+
+  .ics-file-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .ics-results-grid {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+
+  .ics-results-grid.ics-visible {
+    display: grid;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .ics-card {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  :global(.theme-dark) .ics-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .ics-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .ics-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .ics-card-icon {
+    font-size: 1.25rem;
+    color: var(--ics-theme-color, #10b981);
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .ics-card-header h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgb(30, 41, 59);
+    opacity: 0.8;
+  }
+
+  :global(.theme-dark) .ics-card-header h4 {
+    color: rgb(226, 232, 240);
+  }
+
+  .ics-card-content {
+    overflow-wrap: break-word;
+  }
+
+  .ics-data-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .ics-data-label {
+    font-size: 0.75rem;
+    color: rgb(71, 85, 105);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+  }
+
+  :global(.theme-dark) .ics-data-label {
+    color: rgb(148, 163, 184);
+  }
+
+  .ics-data-value {
+    font-size: 1rem;
+    color: rgb(15, 23, 42);
+    line-height: 1.5;
+    word-break: break-all;
+  }
+
+  :global(.theme-dark) .ics-data-value {
+    color: rgb(226, 232, 240);
+  }
+
+  .ics-status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .ics-status-symbol {
+    font-weight: bold;
+  }
+
+  .ics-status-valid {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+
+  .ics-status-expired {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+  }
+
+  .ics-fingerprint {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    font-size: 0.85rem;
+    color: rgb(30, 41, 59);
+    word-break: break-all;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  :global(.theme-dark) .ics-fingerprint {
+    background: rgba(0, 0, 0, 0.2);
+    color: rgb(212, 212, 212);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+  }
+
+  .ics-error-message {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .ics-drop-zone {
+      padding: 3rem 1.5rem;
+    }
+
+    .ics-results-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
