@@ -76,3 +76,15 @@ export { UTM_GENERATOR_TOOL } from './tool/utmGenerator/index';
 
 export { UrlCleanerComponent, UrlCleanerSEO, UrlCleanerBibliography } from './tool/urlCleaner/index';
 export { URL_CLEANER_TOOL } from './tool/urlCleaner/index';
+
+export { GeneradorSecurityTxtComponent, GeneradorSecurityTxtSEO, GeneradorSecurityTxtBibliography } from './tool/generadorSecurityTxt/index';
+export { GENERADOR_SECURITY_TXT_TOOL } from './tool/generadorSecurityTxt/index';
+
+export { CalculadoraTiempoDatosComponent, CalculadoraTiempoDatosSEO, CalculadoraTiempoDatosBibliography } from './tool/calculadoraTiempoDatos/index';
+export { CALCULADORA_TIEMPO_DATOS_TOOL } from './tool/calculadoraTiempoDatos/index';
+
+export { InspectorCertificadosSslComponent, InspectorCertificadosSslSEO, InspectorCertificadosSslBibliography } from './tool/inspectorCertificadosSsl/index';
+export { INSPECTOR_CERTIFICADOS_SSL_TOOL } from './tool/inspectorCertificadosSsl/index';
+
+export { ConversorExcelCsvHtmlComponent, ConversorExcelCsvHtmlSEO, ConversorExcelCsvHtmlBibliography } from './tool/conversorExcelCsvHtml/index';
+export { CONVERSOR_EXCEL_CSV_HTML_TOOL } from './tool/conversorExcelCsvHtml/index';
