@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find \"d:\\\\code\\\\jjlmoya\\\\src\\\\tools\\\\tipografia-musical\\\\\" -type f -name \"*\" 2>/dev/null | head -50)",
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(item['text']\\) for item in data if item['type']=='text']\")"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+export interface PromptLibraryUI extends Record<string, string> {
+  placeholderSearch: string;
+  btnNew: string;
+  emptyTitle: string;
+  emptyDesc: string;
+  btnAddFirst: string;
+  modalTitleCreate: string;
+  modalTitleEdit: string;
+  labelTitle: string;
+  placeholderTitle: string;
+  labelContent: string;
+  placeholderContent: string;
+  hintContent: string;
+  labelTags: string;
+  placeholderTags: string;
+  btnCancel: string;
+  btnSave: string;
+  ariaLabelStar: string;
+  ariaLabelEdit: string;
+  ariaLabelShare: string;
+  ariaLabelCopy: string;
+  ariaLabelDelete: string;
+  varsTitle: string;
+  noResults: string;
+  confirmTitle: string;
+  confirmDesc: string;
+  btnCancelDelete: string;
+  btnConfirmDelete: string;
+}

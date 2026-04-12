@@ -1,0 +1,1131 @@
+---
+import type { KnownLocale } from '../../types';
+import type { PromptLibraryUI } from './ui';
+
+interface Props {
+  locale?: KnownLocale;
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as PromptLibraryUI;
+---
+
+<div id="pl-root" data-i18n={JSON.stringify(t)} class="pl-root">
+  <header class="pl-topbar">
+    <div class="pl-search-wrap">
+      <svg class="pl-search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="pl-search" class="pl-search-input" placeholder={t.placeholderSearch} aria-label={t.placeholderSearch} />
+    </div>
+    <button id="pl-add-btn" class="pl-btn pl-btn-primary" aria-label={t.btnNew}>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+      {t.btnNew}
+    </button>
+  </header>
+
+  <div id="pl-empty" class="pl-empty-state">
+    <div class="pl-empty-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <line x1="16" y1="13" x2="8" y2="13"></line>
+        <line x1="16" y1="17" x2="8" y2="17"></line>
+      </svg>
+    </div>
+    <h3 class="pl-empty-title">{t.emptyTitle}</h3>
+    <p class="pl-empty-desc">{t.emptyDesc}</p>
+    <button id="pl-empty-add" class="pl-btn pl-btn-secondary">{t.btnAddFirst}</button>
+  </div>
+
+  <div id="pl-grid" class="pl-grid" style="display:none"></div>
+
+  <template id="pl-card-tpl">
+    <article class="pl-card">
+      <div class="pl-card-top">
+        <h4 class="pl-card-title"></h4>
+        <div class="pl-card-actions">
+          <button class="pl-btn-icon pl-star-btn" title="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" class="pl-star-icon" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </button>
+          <button class="pl-btn-icon pl-edit-btn" title="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+          </button>
+          <button class="pl-btn-icon pl-share-btn" title="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </button>
+          <button class="pl-btn-icon pl-copy-btn" title="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </button>
+          <button class="pl-btn-icon pl-del-btn pl-danger" title="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="3 6 5 6 21 6"></polyline>
+              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="pl-card-body">
+        <p class="pl-card-text"></p>
+      </div>
+      <div class="pl-tags-container"></div>
+      <div class="pl-card-vars"></div>
+    </article>
+  </template>
+
+  <dialog id="pl-modal" class="pl-modal">
+    <div class="pl-modal-container">
+      <div class="pl-modal-header">
+        <h3 class="pl-modal-title">{t.modalTitleCreate}</h3>
+        <button id="pl-close-modal" class="pl-btn-icon" aria-label={t.btnCancel}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <form id="pl-form" class="pl-form">
+        <div class="pl-form-group">
+          <label for="pl-title" class="pl-label">{t.labelTitle}</label>
+          <input type="text" id="pl-title" class="pl-input" placeholder={t.placeholderTitle} required autocomplete="off" />
+        </div>
+        <div class="pl-form-group">
+          <label for="pl-content" class="pl-label">{t.labelContent}</label>
+          <textarea id="pl-content" class="pl-textarea" placeholder={t.placeholderContent} required></textarea>
+          <span class="pl-hint">{t.hintContent}</span>
+        </div>
+        <div class="pl-form-group">
+          <label for="pl-tags-input" class="pl-label">{t.labelTags}</label>
+          <div class="pl-tags-input-wrapper" id="pl-tags-wrapper">
+            <div id="pl-tags-list" class="pl-tags-list"></div>
+            <input type="text" id="pl-tags-input" class="pl-tags-input-field" placeholder={t.placeholderTags} autocomplete="off" />
+          </div>
+        </div>
+        <div class="pl-modal-footer">
+          <button type="button" id="pl-cancel-form" class="pl-btn pl-btn-ghost">{t.btnCancel}</button>
+          <button type="submit" class="pl-btn pl-btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+              <polyline points="17 21 17 13 7 13 7 21"></polyline>
+              <polyline points="7 3 7 8 15 8"></polyline>
+            </svg>
+            {t.btnSave}
+          </button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog id="pl-confirm-modal" class="pl-modal pl-confirm-dialog">
+    <div class="pl-modal-container pl-confirm-container">
+      <div class="pl-confirm-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 6h18"></path>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path>
+          <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+        </svg>
+      </div>
+      <h3 class="pl-confirm-title">{t.confirmTitle}</h3>
+      <p class="pl-confirm-desc">{t.confirmDesc}</p>
+      <div class="pl-confirm-actions">
+        <button type="button" id="pl-cancel-delete" class="pl-btn pl-btn-ghost">{t.btnCancelDelete}</button>
+        <button type="button" id="pl-confirm-delete" class="pl-btn pl-btn-danger">{t.btnConfirmDelete}</button>
+      </div>
+    </div>
+  </dialog>
+</div>
+
+<script>
+  import type { PromptLibraryUI } from './ui';
+  import type { PromptItem } from './controller';
+  import { loadPrompts, addPrompt, updatePrompt, deletePrompt } from './controller';
+
+  const root = document.getElementById('pl-root')!;
+  const t = JSON.parse(root.dataset.i18n ?? '{}') as PromptLibraryUI;
+
+  const modal = document.getElementById('pl-modal') as HTMLDialogElement;
+  const confirmModal = document.getElementById('pl-confirm-modal') as HTMLDialogElement;
+  const searchInput = document.getElementById('pl-search') as HTMLInputElement;
+  const grid = document.getElementById('pl-grid') as HTMLDivElement;
+  const emptyState = document.getElementById('pl-empty') as HTMLDivElement;
+  const tpl = document.getElementById('pl-card-tpl') as HTMLTemplateElement;
+  const form = document.getElementById('pl-form') as HTMLFormElement;
+  const titleIn = document.getElementById('pl-title') as HTMLInputElement;
+  const contentIn = document.getElementById('pl-content') as HTMLTextAreaElement;
+  const tagsWrapper = document.getElementById('pl-tags-wrapper') as HTMLDivElement;
+  const tagsList = document.getElementById('pl-tags-list') as HTMLDivElement;
+  const tagsInput = document.getElementById('pl-tags-input') as HTMLInputElement;
+
+  let editId: string | null = null;
+  let deleteTarget: { id: string; card: HTMLElement } | null = null;
+  let currentTags: string[] = [];
+
+  const svgCheck = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgb(16,185,129)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+
+  function extractVariables(text: string): string[] {
+    const regex = /\[([^\]]+)\]/g;
+    const matches: string[] = [];
+    let match;
+    while ((match = regex.exec(text)) !== null) {
+      if (!matches.includes(match[1])) matches.push(match[1]);
+    }
+    return matches;
+  }
+
+  function highlightVariables(text: string, vals: Record<string, string>): { html: string; raw: string } {
+    let html = text;
+    let raw = text;
+    extractVariables(text).forEach((v) => {
+      const filled = vals[v] ?? '';
+      const display = filled || `[${v}]`;
+      const cls = filled ? 'pl-var-highlight pl-var-filled' : 'pl-var-highlight';
+      html = html.replace(new RegExp(`\\[${v}\\]`, 'g'), `<span class="${cls}">${display}</span>`);
+      raw = raw.replace(new RegExp(`\\[${v}\\]`, 'g'), filled || `[${v}]`);
+    });
+    return { html, raw };
+  }
+
+  function copyText(text: string, btn: HTMLElement) {
+    navigator.clipboard.writeText(text).then(() => {
+      const orig = btn.innerHTML;
+      btn.innerHTML = svgCheck;
+      setTimeout(() => { btn.innerHTML = orig; }, 2000);
+    }).catch((e) => console.error('Copy failed', e));
+  }
+
+  function updateTagsUI() {
+    if (!tagsList) return;
+    tagsList.innerHTML = '';
+    currentTags.forEach((tag, i) => {
+      const span = document.createElement('span');
+      span.className = 'pl-card-tag';
+      span.style.cursor = 'pointer';
+      span.textContent = tag;
+      span.addEventListener('click', () => { currentTags.splice(i, 1); updateTagsUI(); });
+      tagsList.appendChild(span);
+    });
+  }
+
+  function pushTag(val: string) {
+    const clean = val.trim().replace(/,/g, '');
+    if (clean && !currentTags.includes(clean)) { currentTags.push(clean); updateTagsUI(); }
+  }
+
+  function openModal(item: PromptItem | null = null) {
+    const titleEl = modal.querySelector('.pl-modal-title');
+    if (item) {
+      editId = item.id;
+      titleIn.value = item.title;
+      contentIn.value = item.content;
+      currentTags = [...item.tags];
+      if (titleEl) titleEl.textContent = t.modalTitleEdit;
+    } else {
+      editId = null;
+      form.reset();
+      currentTags = [];
+      if (titleEl) titleEl.textContent = t.modalTitleCreate;
+    }
+    updateTagsUI();
+    modal.showModal();
+    modal.classList.add('pl-modal-open');
+    titleIn.focus();
+  }
+
+  function closeModal() {
+    modal?.classList.remove('pl-modal-open');
+    setTimeout(() => { modal?.close(); editId = null; form?.reset(); currentTags = []; updateTagsUI(); }, 300);
+  }
+
+  function closeConfirmModal() {
+    confirmModal?.classList.remove('pl-modal-open');
+    setTimeout(() => { confirmModal?.close(); deleteTarget = null; }, 300);
+  }
+
+  function updateVisibility(items: PromptItem[]) {
+    const hasItems = items.length > 0;
+    emptyState.style.display = hasItems ? 'none' : '';
+    grid.style.display = hasItems ? '' : 'none';
+  }
+
+  function setupCardVars(card: HTMLElement, item: PromptItem) {
+    const contentEl = card.querySelector('.pl-card-text') as HTMLElement;
+    const varsCont = card.querySelector('.pl-card-vars') as HTMLElement;
+    const vars = extractVariables(item.content);
+    const varInputs: Record<string, HTMLInputElement> = {};
+
+    const updateDisplay = () => {
+      const vals: Record<string, string> = {};
+      vars.forEach((v) => { vals[v] = varInputs[v]?.value.trim() ?? ''; });
+      const { html, raw } = highlightVariables(item.content, vals);
+      contentEl.innerHTML = html;
+      return raw;
+    };
+
+    if (vars.length > 0 && varsCont) {
+      varsCont.appendChild(Object.assign(document.createElement('h5'), { className: 'pl-card-vars-title', textContent: t.varsTitle }));
+      vars.forEach((v) => {
+        const inp = document.createElement('input');
+        inp.type = 'text';
+        inp.placeholder = v;
+        inp.className = 'pl-var-input';
+        inp.addEventListener('input', updateDisplay);
+        varsCont.appendChild(inp);
+        varInputs[v] = inp;
+      });
+    } else if (varsCont) {
+      varsCont.remove();
+    }
+    updateDisplay();
+    return updateDisplay;
+  }
+
+  function setupCardEvents(card: HTMLElement, item: PromptItem, getContent: () => string) {
+    const starBtn = card.querySelector('.pl-star-btn') as HTMLElement;
+    const starIcon = card.querySelector('.pl-star-icon') as HTMLElement;
+    const editBtn = card.querySelector('.pl-edit-btn') as HTMLElement;
+    const shareBtn = card.querySelector('.pl-share-btn') as HTMLElement;
+    const copyBtn = card.querySelector('.pl-copy-btn') as HTMLElement;
+    const delBtn = card.querySelector('.pl-del-btn') as HTMLElement;
+
+    starBtn.title = t.ariaLabelStar;
+    editBtn.title = t.ariaLabelEdit;
+    shareBtn.title = t.ariaLabelShare;
+    copyBtn.title = t.ariaLabelCopy;
+    delBtn.title = t.ariaLabelDelete;
+
+    if (item.isStarred) { starIcon.classList.add('pl-starred'); starIcon.setAttribute('fill', 'currentColor'); }
+
+    starBtn.addEventListener('click', () => { updatePrompt(item.id, { isStarred: !item.isStarred }); renderPrompts(); });
+    editBtn.addEventListener('click', () => openModal(item));
+    delBtn.addEventListener('click', () => {
+      deleteTarget = { id: item.id, card };
+      confirmModal?.showModal();
+      confirmModal?.classList.add('pl-modal-open');
+    });
+    shareBtn.addEventListener('click', () => {
+      const url = new URL(window.location.href.split('?')[0]);
+      url.searchParams.set('title', item.title);
+      url.searchParams.set('content', item.content);
+      if (item.tags.length > 0) url.searchParams.set('tags', item.tags.join(','));
+      copyText(url.toString(), shareBtn);
+    });
+    copyBtn.addEventListener('click', () => copyText(getContent(), copyBtn));
+  }
+
+  function renderCard(item: PromptItem): DocumentFragment {
+    const clone = tpl.content.cloneNode(true) as DocumentFragment;
+    const card = clone.querySelector('.pl-card') as HTMLElement;
+    const titleEl = clone.querySelector('.pl-card-title');
+    const tagsCont = clone.querySelector('.pl-tags-container');
+
+    if (titleEl) titleEl.textContent = item.title;
+
+    if (tagsCont && item.tags.length > 0) {
+      item.tags.forEach((tag) => {
+        const s = document.createElement('span');
+        s.className = 'pl-card-tag';
+        s.textContent = tag.trim();
+        if (s.textContent) tagsCont.appendChild(s);
+      });
+    } else if (tagsCont) {
+      tagsCont.remove();
+    }
+
+    const getContent = setupCardVars(card, item);
+    setupCardEvents(card, item, getContent);
+    return clone;
+  }
+
+  function renderPrompts() {
+    const items = loadPrompts();
+    const term = searchInput?.value.toLowerCase().trim() ?? '';
+    updateVisibility(items);
+    if (items.length === 0) { grid.innerHTML = ''; return; }
+
+    const filtered = items.filter((item) => {
+      const matchText = item.title.toLowerCase().includes(term) || item.content.toLowerCase().includes(term);
+      const matchTag = item.tags.some((tg) => tg.toLowerCase().includes(term));
+      return !term || matchText || matchTag;
+    });
+
+    if (filtered.length === 0) {
+      grid.innerHTML = `<div class="pl-no-results">${t.noResults}</div>`;
+      return;
+    }
+
+    const df = document.createDocumentFragment();
+    filtered.forEach((item) => df.appendChild(renderCard(item)));
+    grid.innerHTML = '';
+    grid.appendChild(df);
+  }
+
+  function handleUrlParams() {
+    const params = new URLSearchParams(window.location.search);
+    const sharedTitle = params.get('title');
+    const sharedContent = params.get('content');
+    if (!sharedTitle && !sharedContent) return;
+    openModal(null);
+    titleIn.value = sharedTitle ?? '';
+    contentIn.value = sharedContent ?? '';
+    const sharedTags = params.get('tags');
+    if (sharedTags) {
+      currentTags = sharedTags.split(',').map((tg) => tg.trim()).filter(Boolean);
+      updateTagsUI();
+    }
+    const cleanUrl = new URL(window.location.href);
+    cleanUrl.search = '';
+    window.history.replaceState({}, document.title, cleanUrl.toString());
+  }
+
+  document.getElementById('pl-add-btn')?.addEventListener('click', () => openModal(null));
+  document.getElementById('pl-empty-add')?.addEventListener('click', () => openModal(null));
+  document.getElementById('pl-close-modal')?.addEventListener('click', closeModal);
+  document.getElementById('pl-cancel-form')?.addEventListener('click', closeModal);
+  document.getElementById('pl-cancel-delete')?.addEventListener('click', closeConfirmModal);
+
+  document.getElementById('pl-confirm-delete')?.addEventListener('click', () => {
+    if (!deleteTarget) return;
+    const { id, card } = deleteTarget;
+    card.style.opacity = '0';
+    card.style.transform = 'scale(0.95)';
+    setTimeout(() => { deletePrompt(id); closeConfirmModal(); renderPrompts(); }, 200);
+  });
+
+  tagsWrapper?.addEventListener('click', () => tagsInput?.focus());
+
+  tagsInput?.addEventListener('keydown', (e) => {
+    if (e.key === ' ' || e.key === 'Enter' || e.key === ',') {
+      e.preventDefault();
+      pushTag(tagsInput.value);
+      tagsInput.value = '';
+    } else if (e.key === 'Backspace' && tagsInput.value === '') {
+      currentTags.pop();
+      updateTagsUI();
+    }
+  });
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (tagsInput?.value) pushTag(tagsInput.value);
+    const data = { title: titleIn.value, content: contentIn.value, tags: [...currentTags] };
+    if (editId) { updatePrompt(editId, data); } else { addPrompt(data); }
+    renderPrompts();
+    closeModal();
+  });
+
+  modal?.addEventListener('cancel', (e) => e.preventDefault());
+  confirmModal?.addEventListener('cancel', (e) => e.preventDefault());
+
+  searchInput?.addEventListener('input', () => requestAnimationFrame(renderPrompts));
+
+  document.addEventListener('DOMContentLoaded', () => { renderPrompts(); handleUrlParams(); });
+</script>
+
+<style>
+  .pl-root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .pl-topbar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+  }
+
+  :global(.theme-dark) .pl-topbar {
+    background: rgba(15, 23, 42, 0.4);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .pl-search-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .pl-search-icon {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(148, 163, 184);
+    pointer-events: none;
+    transition: color 0.3s;
+  }
+
+  .pl-search-input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    color: rgb(30, 41, 59);
+    transition: all 0.3s;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+  }
+
+  .pl-search-input:focus {
+    outline: none;
+    border-color: rgb(139, 92, 246);
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+  }
+
+  :global(.theme-dark) .pl-search-input {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: rgb(248, 250, 252);
+  }
+
+  :global(.theme-dark) .pl-search-input:focus {
+    background: rgba(30, 41, 59, 0.8);
+  }
+
+  .pl-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s;
+    border: none;
+    white-space: nowrap;
+  }
+
+  .pl-btn-primary {
+    background: linear-gradient(135deg, rgb(139, 92, 246), rgb(192, 38, 211));
+    color: rgb(255, 255, 255);
+    box-shadow: 0 4px 15px -3px rgba(192, 38, 211, 0.4);
+  }
+
+  .pl-btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px -5px rgba(192, 38, 211, 0.5);
+  }
+
+  .pl-btn-primary:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  .pl-btn-secondary {
+    background: rgba(139, 92, 246, 0.1);
+    color: rgb(139, 92, 246);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+  }
+
+  .pl-btn-secondary:hover {
+    background: rgba(139, 92, 246, 0.2);
+  }
+
+  .pl-btn-ghost {
+    background: transparent;
+    color: rgb(100, 116, 139);
+    border: none;
+  }
+
+  .pl-btn-ghost:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: rgb(30, 41, 59);
+  }
+
+  :global(.theme-dark) .pl-btn-ghost {
+    color: rgb(148, 163, 184);
+  }
+
+  :global(.theme-dark) .pl-btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: rgb(248, 250, 252);
+  }
+
+  .pl-btn-danger {
+    background: rgb(239, 68, 68);
+    color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 0 4px 15px -3px rgba(239, 68, 68, 0.4);
+  }
+
+  .pl-btn-danger:hover {
+    background: rgb(220, 38, 38);
+  }
+
+  .pl-btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: none;
+    color: rgb(100, 116, 139);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .pl-btn-icon:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: rgb(30, 41, 59);
+  }
+
+  .pl-btn-icon.pl-danger:hover {
+    color: rgb(239, 68, 68);
+    background: rgba(239, 68, 68, 0.1);
+  }
+
+  :global(.theme-dark) .pl-btn-icon {
+    color: rgb(148, 163, 184);
+  }
+
+  :global(.theme-dark) .pl-btn-icon:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(248, 250, 252);
+  }
+
+  .pl-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  :global(.theme-dark) .pl-empty-state {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .pl-empty-icon {
+    margin-bottom: 1.5rem;
+    color: rgb(139, 92, 246);
+    filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.4));
+  }
+
+  .pl-empty-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(30, 41, 59);
+    margin-bottom: 0.5rem;
+  }
+
+  .pl-empty-desc {
+    font-size: 1.125rem;
+    color: rgb(100, 116, 139);
+    max-width: 400px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  :global(.theme-dark) .pl-empty-title {
+    color: rgb(248, 250, 252);
+  }
+
+  :global(.theme-dark) .pl-empty-desc {
+    color: rgb(148, 163, 184);
+  }
+
+  .pl-no-results {
+    text-align: center;
+    padding: 3rem;
+    color: rgb(100, 116, 139);
+    font-size: 1.125rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 1rem;
+    grid-column: 1 / -1;
+  }
+
+  .pl-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .pl-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pl-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, rgb(139, 92, 246), rgb(192, 38, 211));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .pl-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px -5px rgba(139, 92, 246, 0.15);
+    border-color: rgba(139, 92, 246, 0.3);
+  }
+
+  .pl-card:hover::before {
+    opacity: 1;
+  }
+
+  :global(.theme-dark) .pl-card {
+    background: rgba(30, 41, 59, 0.5);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .pl-card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .pl-card-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgb(15, 23, 42);
+    line-height: 1.3;
+  }
+
+  :global(.theme-dark) .pl-card-title {
+    color: rgb(248, 250, 252);
+  }
+
+  .pl-card-actions {
+    display: flex;
+    gap: 0.25rem;
+    justify-content: flex-end;
+  }
+
+  .pl-card-body {
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+  }
+
+  :global(.theme-dark) .pl-card-body {
+    background: rgba(15, 23, 42, 0.4);
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .pl-card-text {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgb(71, 85, 105);
+    white-space: pre-wrap;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+
+  :global(.theme-dark) .pl-card-text {
+    color: rgb(203, 213, 225);
+  }
+
+  .pl-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .pl-card-tag {
+    background: rgba(139, 92, 246, 0.1);
+    color: rgb(124, 58, 237);
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+  }
+
+  :global(.theme-dark) .pl-card-tag {
+    background: rgba(139, 92, 246, 0.15);
+    color: rgb(167, 139, 250);
+  }
+
+  .pl-star-btn {
+    color: rgb(203, 213, 225);
+  }
+
+  .pl-star-btn:hover {
+    color: rgb(245, 158, 11);
+    background: rgba(245, 158, 11, 0.1);
+  }
+
+  .pl-star-icon.pl-starred {
+    color: rgb(245, 158, 11);
+    fill: rgb(245, 158, 11);
+  }
+
+  .pl-var-highlight {
+    background: rgba(139, 92, 246, 0.2);
+    color: rgb(124, 58, 237);
+    padding: 0 0.25rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+  }
+
+  .pl-var-highlight.pl-var-filled {
+    background: rgba(16, 185, 129, 0.2);
+    color: rgb(5, 150, 105);
+  }
+
+  :global(.theme-dark) .pl-var-highlight {
+    background: rgba(139, 92, 246, 0.3);
+    color: rgb(167, 139, 250);
+  }
+
+  :global(.theme-dark) .pl-var-highlight.pl-var-filled {
+    background: rgba(16, 185, 129, 0.3);
+    color: rgb(52, 211, 153);
+  }
+
+  .pl-card-vars {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: rgba(139, 92, 246, 0.05);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 1px dashed rgba(139, 92, 246, 0.3);
+  }
+
+  .pl-card-vars-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgb(139, 92, 246);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+
+  .pl-var-input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    color: rgb(30, 41, 59);
+    box-sizing: border-box;
+  }
+
+  :global(.theme-dark) .pl-var-input {
+    background: rgba(15, 23, 42, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: rgb(248, 250, 252);
+  }
+
+  .pl-modal {
+    padding: 0;
+    border: none;
+    background: transparent;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 1.5rem;
+    margin: auto;
+    overflow: visible;
+  }
+
+  .pl-modal::backdrop {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .pl-modal[open]::backdrop {
+    opacity: 1;
+  }
+
+  .pl-modal-container {
+    background: rgb(255, 255, 255);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: scale(0.95) translateY(20px);
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  :global(.theme-dark) .pl-modal-container {
+    background: rgb(30, 41, 59);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .pl-modal.pl-modal-open .pl-modal-container {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+
+  .pl-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .pl-modal-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, rgb(139, 92, 246), rgb(192, 38, 211));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .pl-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .pl-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .pl-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: rgb(51, 65, 85);
+  }
+
+  :global(.theme-dark) .pl-label {
+    color: rgb(226, 232, 240);
+  }
+
+  .pl-input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: rgb(248, 250, 252);
+    font-size: 1rem;
+    color: rgb(30, 41, 59);
+    transition: all 0.2s;
+    box-sizing: border-box;
+  }
+
+  .pl-textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: rgb(248, 250, 252);
+    font-size: 1rem;
+    color: rgb(30, 41, 59);
+    transition: all 0.2s;
+    box-sizing: border-box;
+    min-height: 150px;
+    resize: vertical;
+    line-height: 1.6;
+  }
+
+  :global(.theme-dark) .pl-input {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: rgb(248, 250, 252);
+  }
+
+  :global(.theme-dark) .pl-textarea {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: rgb(248, 250, 252);
+  }
+
+  .pl-input:focus {
+    outline: none;
+    border-color: rgb(139, 92, 246);
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+  }
+
+  .pl-textarea:focus {
+    outline: none;
+    border-color: rgb(139, 92, 246);
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+  }
+
+  :global(.theme-dark) .pl-input:focus {
+    background: rgba(15, 23, 42, 0.9);
+  }
+
+  :global(.theme-dark) .pl-textarea:focus {
+    background: rgba(15, 23, 42, 0.9);
+  }
+
+  .pl-hint {
+    font-size: 0.85rem;
+    color: rgb(100, 116, 139);
+    margin-top: 0.25rem;
+  }
+
+  :global(.theme-dark) .pl-hint {
+    color: rgb(148, 163, 184);
+  }
+
+  .pl-tags-input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: rgb(248, 250, 252);
+    min-height: 3.5rem;
+    transition: all 0.2s;
+    align-items: center;
+    cursor: text;
+  }
+
+  :global(.theme-dark) .pl-tags-input-wrapper {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .pl-tags-input-wrapper:focus-within {
+    border-color: rgb(139, 92, 246);
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+  }
+
+  :global(.theme-dark) .pl-tags-input-wrapper:focus-within {
+    background: rgba(15, 23, 42, 0.9);
+  }
+
+  .pl-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .pl-tags-input-field {
+    flex-grow: 1;
+    min-width: 150px;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    color: rgb(30, 41, 59);
+    padding: 0.25rem 0;
+    outline: none;
+  }
+
+  :global(.theme-dark) .pl-tags-input-field {
+    color: rgb(248, 250, 252);
+  }
+
+  .pl-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  :global(.theme-dark) .pl-modal-footer {
+    border-top-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .pl-confirm-dialog {
+    max-width: 400px;
+  }
+
+  .pl-confirm-container {
+    text-align: center;
+  }
+
+  .pl-confirm-icon {
+    margin-bottom: 1rem;
+    color: rgb(239, 68, 68);
+  }
+
+  .pl-confirm-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgb(15, 23, 42);
+    margin-bottom: 0.5rem;
+  }
+
+  :global(.theme-dark) .pl-confirm-title {
+    color: rgb(248, 250, 252);
+  }
+
+  .pl-confirm-desc {
+    font-size: 1rem;
+    color: rgb(100, 116, 139);
+    margin-bottom: 1.5rem;
+  }
+
+  .pl-confirm-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .pl-topbar {
+      flex-direction: row;
+      padding: 1.25rem 2rem;
+    }
+  }
+</style>

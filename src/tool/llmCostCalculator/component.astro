@@ -1,0 +1,488 @@
+---
+import type { KnownLocale } from '../../types';
+import type { LlmCostCalculatorUI } from './ui';
+import { LLM_MODELS } from './data';
+
+interface Props {
+  locale?: KnownLocale;
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as LlmCostCalculatorUI;
+---
+
+<div
+  class="llm-root"
+  id="llm-root"
+  data-i18n={JSON.stringify(t)}
+  data-models={JSON.stringify(LLM_MODELS)}
+>
+  <div class="llm-glow-wrap">
+    <div class="llm-glow"></div>
+    <div class="llm-card">
+      <div class="llm-grid">
+        <div class="llm-controls">
+          <div class="llm-field">
+            <label class="llm-label" for="llm-model-select">{t.labelModel}</label>
+            <select class="llm-select" id="llm-model-select"></select>
+          </div>
+
+          <div class="llm-tokens-grid">
+            <div class="llm-field">
+              <label class="llm-label" for="llm-input-tokens">{t.labelInputTokens}</label>
+              <input class="llm-input" type="number" id="llm-input-tokens" value="1000" min="0" />
+              <p class="llm-word-hint">
+                ~<span id="llm-input-words">750</span>
+                {t.unitWords}
+              </p>
+            </div>
+            <div class="llm-field">
+              <label class="llm-label" for="llm-output-tokens">{t.labelOutputTokens}</label>
+              <input class="llm-input" type="number" id="llm-output-tokens" value="500" min="0" />
+              <p class="llm-word-hint">
+                ~<span id="llm-output-words">375</span>
+                {t.unitWords}
+              </p>
+            </div>
+          </div>
+
+          <div class="llm-field">
+            <label class="llm-label" for="llm-requests-range">{t.labelRequests}</label>
+            <div class="llm-slider-row">
+              <input
+                class="llm-slider"
+                type="range"
+                id="llm-requests-range"
+                min="1"
+                max="100000"
+                step="100"
+                value="1000"
+              />
+              <input class="llm-req-num" type="number" id="llm-requests-num" value="1000" min="1" />
+            </div>
+          </div>
+        </div>
+
+        <div class="llm-results">
+          <div class="llm-stat-block">
+            <h3 class="llm-stat-title">{t.labelCostPerRequest}</h3>
+            <div class="llm-cost-val" id="llm-cost-per-req">$0.00</div>
+          </div>
+
+          <div class="llm-divider-wrap">
+            <div class="llm-divider-line"></div>
+            <span class="llm-divider-label">x <span id="llm-multiplier">1,000</span></span>
+          </div>
+
+          <div class="llm-stat-block">
+            <h3 class="llm-total-title">{t.labelTotal}</h3>
+            <div class="llm-total-val" id="llm-total-cost">$0.00</div>
+          </div>
+
+          <div class="llm-bar-section">
+            <div class="llm-bar-labels">
+              <span>{t.labelInput}</span>
+              <span>{t.labelOutput}</span>
+            </div>
+            <div class="llm-bar-track">
+              <div class="llm-bar-input" id="llm-bar-input" style="width:50%"></div>
+              <div class="llm-bar-output" id="llm-bar-output" style="width:50%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  type Model = {
+    id: string;
+    name: string;
+    input: number;
+    output: number;
+    group: string;
+    description: string;
+  };
+  type Refs = {
+    select: HTMLSelectElement;
+    inputTokens: HTMLInputElement;
+    outputTokens: HTMLInputElement;
+    requestsRange: HTMLInputElement;
+    requestsNum: HTMLInputElement;
+    inputWords: HTMLElement;
+    outputWords: HTMLElement;
+    costPerReq: HTMLElement;
+    multiplier: HTMLElement;
+    barInput: HTMLElement;
+    barOutput: HTMLElement;
+    totalCost: HTMLElement;
+  };
+
+  function formatMoney(amount: number): string {
+    const digits = amount < 0.01 ? 6 : 4;
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: digits,
+    }).format(amount);
+  }
+
+  function estimateWords(tokens: number): number {
+    return Math.round(tokens * 0.75);
+  }
+
+  function getGroups(models: Model[]): string[] {
+    const seen = new Set<string>();
+    models.forEach((m) => seen.add(m.group));
+    return Array.from(seen);
+  }
+
+  function buildOption(model: Model): HTMLOptionElement {
+    const opt = document.createElement('option');
+    opt.value = model.id;
+    opt.dataset.input = String(model.input);
+    opt.dataset.output = String(model.output);
+    opt.textContent = model.name + ' ($' + model.input + '/$' + model.output + ')';
+    return opt;
+  }
+
+  function buildOptgroup(group: string, models: Model[]): HTMLOptGroupElement {
+    const og = document.createElement('optgroup');
+    og.label = group;
+    models.filter((m) => m.group === group).forEach((m) => og.appendChild(buildOption(m)));
+    return og;
+  }
+
+  function buildSelect(select: HTMLSelectElement, models: Model[]): void {
+    const groups = getGroups(models);
+    groups.forEach((g) => select.appendChild(buildOptgroup(g, models)));
+  }
+
+  function updateBar(refs: Refs, inputCost: number, outputCost: number, total: number): void {
+    if (total <= 0) return;
+    refs.barInput.style.width = (inputCost / total) * 100 + '%';
+    refs.barOutput.style.width = (outputCost / total) * 100 + '%';
+  }
+
+  function update(refs: Refs): void {
+    const opt = refs.select.options[refs.select.selectedIndex];
+    const inputPrice = parseFloat(opt?.dataset.input ?? '0');
+    const outputPrice = parseFloat(opt?.dataset.output ?? '0');
+    const inputs = parseInt(refs.inputTokens.value, 10) || 0;
+    const outputs = parseInt(refs.outputTokens.value, 10) || 0;
+    const requests = parseInt(refs.requestsNum.value, 10) || 1;
+    refs.inputWords.textContent = estimateWords(inputs).toLocaleString();
+    refs.outputWords.textContent = estimateWords(outputs).toLocaleString();
+    const inputCost = (inputs / 1e6) * inputPrice;
+    const outputCost = (outputs / 1e6) * outputPrice;
+    const costPerReq = inputCost + outputCost;
+    refs.costPerReq.textContent = formatMoney(costPerReq);
+    refs.multiplier.textContent = requests.toLocaleString();
+    const total = costPerReq * requests;
+    refs.totalCost.textContent = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(total);
+    updateBar(refs, inputCost, outputCost, costPerReq);
+  }
+
+  function getRefs(root: HTMLElement): Refs {
+    return {
+      select: root.querySelector<HTMLSelectElement>('#llm-model-select')!,
+      inputTokens: root.querySelector<HTMLInputElement>('#llm-input-tokens')!,
+      outputTokens: root.querySelector<HTMLInputElement>('#llm-output-tokens')!,
+      requestsRange: root.querySelector<HTMLInputElement>('#llm-requests-range')!,
+      requestsNum: root.querySelector<HTMLInputElement>('#llm-requests-num')!,
+      inputWords: root.querySelector<HTMLElement>('#llm-input-words')!,
+      outputWords: root.querySelector<HTMLElement>('#llm-output-words')!,
+      costPerReq: root.querySelector<HTMLElement>('#llm-cost-per-req')!,
+      multiplier: root.querySelector<HTMLElement>('#llm-multiplier')!,
+      barInput: root.querySelector<HTMLElement>('#llm-bar-input')!,
+      barOutput: root.querySelector<HTMLElement>('#llm-bar-output')!,
+      totalCost: root.querySelector<HTMLElement>('#llm-total-cost')!,
+    };
+  }
+
+  function bindEvents(refs: Refs, onUpdate: () => void): void {
+    refs.select.addEventListener('change', onUpdate);
+    refs.inputTokens.addEventListener('input', onUpdate);
+    refs.outputTokens.addEventListener('input', onUpdate);
+    refs.requestsRange.addEventListener('input', () => {
+      refs.requestsNum.value = refs.requestsRange.value;
+      onUpdate();
+    });
+    refs.requestsNum.addEventListener('input', () => {
+      refs.requestsRange.value = refs.requestsNum.value;
+      onUpdate();
+    });
+  }
+
+  function init(): void {
+    const root = document.getElementById('llm-root');
+    if (!root) return;
+    const models = JSON.parse(root.dataset.models ?? '[]') as Model[];
+    const refs = getRefs(root as HTMLElement);
+    buildSelect(refs.select, models);
+    const upd = () => update(refs);
+    bindEvents(refs, upd);
+    upd();
+  }
+
+  init();
+</script>
+
+<style>
+  .llm-root {
+    --llm-card-bg: rgba(255, 255, 255, 0.9);
+    --llm-card-border: rgba(15, 23, 42, 0.05);
+    --llm-text: #1e293b;
+    --llm-muted: #64748b;
+    --llm-accent: #6366f1;
+    --llm-input-bg: #f8fafc;
+    --llm-input-border: #e2e8f0;
+    --llm-panel-bg: #f8fafc;
+    --llm-panel-border: #f1f5f9;
+    --llm-divider: #e2e8f0;
+    --llm-total-from: #4f46e5;
+    --llm-total-to: #9333ea;
+  }
+
+  :global(.theme-dark) .llm-root {
+    --llm-card-bg: rgba(15, 23, 42, 0.9);
+    --llm-card-border: rgba(255, 255, 255, 0.1);
+    --llm-text: #f1f5f9;
+    --llm-muted: #94a3b8;
+    --llm-input-bg: #1e293b;
+    --llm-input-border: #334155;
+    --llm-panel-bg: rgba(30, 41, 59, 0.5);
+    --llm-panel-border: rgba(51, 65, 85, 0.5);
+    --llm-divider: #334155;
+    --llm-total-from: #818cf8;
+    --llm-total-to: #c084fc;
+  }
+
+  .llm-glow-wrap {
+    position: relative;
+  }
+
+  .llm-glow {
+    position: absolute;
+    inset: -4px;
+    background: linear-gradient(to right, #6366f1, #a855f7, #ec4899);
+    border-radius: 1.25rem;
+    filter: blur(8px);
+    opacity: 0.25;
+    transition: opacity 1s;
+  }
+
+  .llm-glow-wrap:hover .llm-glow {
+    opacity: 0.5;
+    transition-duration: 0.2s;
+  }
+
+  .llm-card {
+    position: relative;
+    background: var(--llm-card-bg);
+    backdrop-filter: blur(12px);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--llm-card-border);
+    color: var(--llm-text);
+  }
+
+  .llm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  @media (max-width: 640px) {
+    .llm-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .llm-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .llm-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--llm-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .llm-select,
+  .llm-input {
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid var(--llm-input-border);
+    background: var(--llm-input-bg);
+    color: var(--llm-text);
+    font-size: 0.875rem;
+    padding: 0.625rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+  }
+
+  .llm-select:focus,
+  .llm-input:focus {
+    outline: 2px solid var(--llm-accent);
+    outline-offset: 2px;
+    border-color: var(--llm-accent);
+  }
+
+  .llm-tokens-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .llm-word-hint {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--llm-muted);
+  }
+
+  .llm-slider-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .llm-slider {
+    flex: 1;
+    accent-color: var(--llm-accent);
+    cursor: pointer;
+  }
+
+  .llm-req-num {
+    width: 6rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--llm-input-border);
+    background: var(--llm-input-bg);
+    color: var(--llm-text);
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .llm-req-num:focus {
+    outline: 2px solid var(--llm-accent);
+    outline-offset: 2px;
+  }
+
+  .llm-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    background: var(--llm-panel-bg);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid var(--llm-panel-border);
+  }
+
+  .llm-stat-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--llm-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin: 0 0 0.5rem;
+  }
+
+  .llm-cost-val {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--llm-text);
+    text-align: center;
+  }
+
+  .llm-divider-wrap {
+    position: relative;
+    height: 1px;
+    background: var(--llm-divider);
+  }
+
+  .llm-divider-line {
+    position: absolute;
+    inset: 0;
+    background: var(--llm-divider);
+  }
+
+  .llm-divider-label {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--llm-panel-bg);
+    padding: 0 0.5rem;
+    font-size: 0.75rem;
+    color: var(--llm-muted);
+    white-space: nowrap;
+  }
+
+  .llm-total-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--llm-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin: 0 0 0.5rem;
+  }
+
+  .llm-total-val {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    background: linear-gradient(to right, var(--llm-total-from), var(--llm-total-to));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .llm-bar-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .llm-bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--llm-muted);
+  }
+
+  .llm-bar-track {
+    height: 0.5rem;
+    background: var(--llm-divider);
+    border-radius: 9999px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .llm-bar-input {
+    background: #3b82f6;
+    height: 100%;
+    transition: width 0.5s;
+  }
+
+  .llm-bar-output {
+    background: #22c55e;
+    height: 100%;
+    transition: width 0.5s;
+  }
+</style>

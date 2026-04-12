@@ -8,5 +8,11 @@ import { DUPLICATE_CSS_REMOVER_TOOL } from './tool/duplicateCssRemover/index';
 import { CSS_TO_INLINE_CONVERTER_TOOL } from './tool/cssToInlineConverter/index';
 import { CSS_SPECIFICITY_CALCULATOR_TOOL } from './tool/cssSpecificityCalculator/index';
 import { CRON_GENERATOR_TOOL } from './tool/cronGenerator/index';
+import { KEYCODE_TOOL } from './tool/keycode/index';
+import { LLM_COST_CALCULATOR_TOOL } from './tool/llmCostCalculator/index';
+import { MUSICAL_TYPOGRAPHY_TOOL } from './tool/musicalTypography/index';
+import { MOBILE_MOCKUP_GENERATOR_TOOL } from './tool/mobileMockupGenerator/index';
+import { HASH_GENERATOR_TOOL } from './tool/hashGenerator/index';
+import { PROMPT_LIBRARY_TOOL } from './tool/promptLibrary/index';
 
-export const ALL_TOOLS: ToolDefinition[] = [JSON_FORMATTER_TOOL, SVG_TO_CSS_TOOL, ASPECT_RATIO_TOOL, PLACEHOLDER_GENERATOR_TOOL, URL_ENCODER_DECODER_TOOL, DUPLICATE_CSS_REMOVER_TOOL, CSS_TO_INLINE_CONVERTER_TOOL, CSS_SPECIFICITY_CALCULATOR_TOOL, CRON_GENERATOR_TOOL];
+export const ALL_TOOLS: ToolDefinition[] = [JSON_FORMATTER_TOOL, SVG_TO_CSS_TOOL, ASPECT_RATIO_TOOL, PLACEHOLDER_GENERATOR_TOOL, URL_ENCODER_DECODER_TOOL, DUPLICATE_CSS_REMOVER_TOOL, CSS_TO_INLINE_CONVERTER_TOOL, CSS_SPECIFICITY_CALCULATOR_TOOL, CRON_GENERATOR_TOOL, KEYCODE_TOOL, LLM_COST_CALCULATOR_TOOL, MUSICAL_TYPOGRAPHY_TOOL, MOBILE_MOCKUP_GENERATOR_TOOL, HASH_GENERATOR_TOOL, PROMPT_LIBRARY_TOOL];

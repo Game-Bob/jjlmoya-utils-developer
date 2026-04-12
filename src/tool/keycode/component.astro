@@ -1,0 +1,540 @@
+---
+import type { KnownLocale } from '../../types';
+import type { KeycodeUI } from './ui';
+
+interface Props {
+  locale?: KnownLocale;
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as KeycodeUI;
+
+const infoFields = [
+  { id: 'key', label: 'event.key' },
+  { id: 'code', label: 'event.code' },
+  { id: 'which', label: 'event.which' },
+  { id: 'location', label: 'location' },
+];
+
+const modKeys = ['ctrl', 'shift', 'alt', 'meta'];
+---
+
+<div class="kc-root" id="kc-root" data-i18n={JSON.stringify(t)}>
+  <div class="kc-outer-card">
+  <div id="kc-initial" class="kc-initial">
+    <div class="kc-kbd-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="kc-kbd-icon" aria-hidden="true">
+        <path d="M20 5H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 5H5v-2h2v2zm10 0H7v-2h10v2zm0-3h-2v-2h2v2zm0-3h-2V8h2v2zm-3 3h-2v-2h2v2zm0-3h-2V8h2v2zm-3 0h-2V8h2v2z"/>
+      </svg>
+    </div>
+    <div class="kc-prompt">
+      <h2 class="kc-prompt-title">{t.promptTitle}</h2>
+      <p class="kc-prompt-sub">{t.promptSubtitle}</p>
+    </div>
+    <div class="kc-dots">
+      <span class="kc-dot"></span>
+      <span class="kc-dot" style="animation-delay:0.15s"></span>
+      <span class="kc-dot" style="animation-delay:0.3s"></span>
+    </div>
+  </div>
+
+  <div id="kc-active" class="kc-active" style="display:none">
+    <div class="kc-key-outer">
+      <div id="kc-key-wrap" class="kc-key-display">
+        <span id="kc-display-key" class="kc-key-char"></span>
+        <span id="kc-display-code" class="kc-key-code"></span>
+      </div>
+    </div>
+
+    <div class="kc-info-grid">
+      {infoFields.map(({ id, label }) => (
+        <div class="kc-info-card">
+          <span class="kc-info-label">{label}</span>
+          <span id={`kc-info-${id}`} class="kc-info-value"></span>
+          <button class="kc-copy-btn" data-target={`kc-info-${id}`} aria-label={`Copy ${label}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+            </svg>
+          </button>
+        </div>
+      ))}
+    </div>
+
+    <div class="kc-mods-row">
+      {modKeys.map((mod) => (
+        <div id={`kc-mod-${mod}`} class="kc-mod-key">{mod.toUpperCase()}</div>
+      ))}
+    </div>
+
+    <div class="kc-snippets-section">
+      <h3 class="kc-snippets-title">{t.snippetsTitle}</h3>
+      <div class="kc-snippets-grid">
+        <button class="kc-snippet-btn"><code id="kc-snippet-key" class="kc-snippet-code"></code><span class="kc-snippet-copy">{t.btnCopy}</span></button>
+        <button class="kc-snippet-btn"><code id="kc-snippet-code" class="kc-snippet-code"></code><span class="kc-snippet-copy">{t.btnCopy}</span></button>
+        <button class="kc-snippet-btn"><code id="kc-snippet-which" class="kc-snippet-code"></code><span class="kc-snippet-copy">{t.btnCopy}</span></button>
+        <button class="kc-snippet-btn"><code id="kc-snippet-json" class="kc-snippet-code kc-snippet-code-wide"></code><span class="kc-snippet-copy">{t.btnCopy}</span></button>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<style>
+  .kc-root {
+    --kc-primary: #7c3aed;
+    --kc-primary-light: #8b5cf6;
+    --kc-success: #10b981;
+    --kc-card-bg: #fff;
+    --kc-bg: #f8fafc;
+    --kc-text: #0f172a;
+    --kc-text-muted: #64748b;
+    --kc-border: #e2e8f0;
+    --kc-key-border: #cbd5e1;
+
+    max-width: 56rem;
+    margin: 2rem auto;
+    color: var(--kc-text);
+  }
+
+  :global(.theme-dark) .kc-root {
+    --kc-card-bg: #1e293b;
+    --kc-bg: #0f172a;
+    --kc-text: #f1f5f9;
+    --kc-text-muted: #94a3b8;
+    --kc-border: #334155;
+    --kc-key-border: #0f172a;
+  }
+
+  .kc-outer-card {
+    background: var(--kc-card-bg);
+    border: 1px solid var(--kc-border);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    padding: 2rem;
+  }
+
+  .kc-initial {
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .kc-kbd-wrap {
+    width: 8rem;
+    height: 8rem;
+    background: var(--kc-bg);
+    border-radius: 1.5rem;
+    border: 1px solid var(--kc-border);
+    border-bottom: 8px solid var(--kc-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .kc-kbd-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    color: var(--kc-text-muted);
+  }
+
+  .kc-prompt {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .kc-prompt-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--kc-text);
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+
+  .kc-prompt-sub {
+    font-size: 1rem;
+    color: var(--kc-text-muted);
+    margin: 0;
+  }
+
+  .kc-dots {
+    display: flex;
+    gap: 0.5rem;
+    opacity: 0.4;
+  }
+
+  @keyframes kc-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .kc-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--kc-border);
+    animation: kc-bounce 1s ease infinite;
+  }
+
+  .kc-active {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .kc-key-outer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .kc-key-display {
+    min-width: 12rem;
+    min-height: 12rem;
+    padding: 2rem 3rem;
+    background: var(--kc-bg);
+    border-radius: 1.5rem;
+    border: 1px solid var(--kc-border);
+    border-bottom: 12px solid var(--kc-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: transform 0.1s, border-bottom-width 0.1s, box-shadow 0.1s;
+  }
+
+  .kc-key-char {
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--kc-text);
+    line-height: 1;
+    text-align: center;
+    max-width: 20rem;
+    overflow-wrap: break-word;
+  }
+
+  .kc-key-code {
+    font-size: 0.8rem;
+    color: var(--kc-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .kc-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 640px) {
+    .kc-info-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .kc-info-card {
+    background: var(--kc-bg);
+    border: 1px solid var(--kc-border);
+    border-radius: 1rem;
+    padding: 1rem 0.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 8rem;
+    justify-content: space-between;
+    transition: border-color 0.15s;
+  }
+
+  .kc-info-card:hover {
+    border-color: var(--kc-primary-light);
+  }
+
+  .kc-info-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--kc-text-muted);
+    font-weight: 600;
+  }
+
+  .kc-info-value {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--kc-primary-light);
+    text-align: center;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .kc-copy-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.35rem;
+    border-radius: 0.375rem;
+    color: var(--kc-text-muted);
+    display: flex;
+    align-items: center;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .kc-copy-btn:hover {
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--kc-primary-light);
+  }
+
+  .kc-mods-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .kc-mod-key {
+    padding: 0.625rem 1.5rem;
+    border: 2px solid var(--kc-border);
+    border-radius: 0.75rem;
+    color: var(--kc-text-muted);
+    font-weight: 800;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    transition: border-color 0.15s, background 0.15s, color 0.15s, transform 0.15s;
+  }
+
+  .kc-snippets-section {
+    border-top: 1px solid var(--kc-border);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .kc-snippets-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--kc-text-muted);
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .kc-snippets-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.625rem;
+  }
+
+  @media (max-width: 520px) {
+    .kc-snippets-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .kc-snippet-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.875rem 1rem;
+    background: var(--kc-card-bg);
+    border: 1px solid var(--kc-border);
+    border-radius: 0.875rem;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .kc-snippet-btn:hover {
+    border-color: var(--kc-primary-light);
+  }
+
+  .kc-snippet-code {
+    font-size: 0.8rem;
+    color: var(--kc-text);
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .kc-snippet-copy {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--kc-primary-light);
+    opacity: 0;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .kc-snippet-btn:hover .kc-snippet-copy {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  import type { KeycodeUI } from './ui';
+
+  type InfoEls = { key: HTMLElement; code: HTMLElement; which: HTMLElement; location: HTMLElement };
+  type ModEls = { ctrl: HTMLElement | null; shift: HTMLElement | null; alt: HTMLElement | null; meta: HTMLElement | null };
+  type SnippetEls = { key: HTMLElement; code: HTMLElement; which: HTMLElement; json: HTMLElement };
+  type MainEls = { displayKey: HTMLElement; displayCode: HTMLElement; keyWrap: HTMLElement };
+  type AllRefs = { initial: HTMLElement; active: HTMLElement; main: MainEls; info: InfoEls; mods: ModEls; snippets: SnippetEls };
+
+  function getDisplayKey(key: string): string {
+    if (key === ' ') return 'Space';
+    return key.length === 1 ? key.toUpperCase() : key;
+  }
+
+  function getLocation(loc: number, locs: string[]): string {
+    return locs[loc] ?? locs[0];
+  }
+
+  function animateKey(el: HTMLElement): void {
+    el.style.transform = 'translateY(16px)';
+    el.style.borderBottomWidth = '0px';
+    el.style.boxShadow = 'none';
+    setTimeout(() => { el.style.transform = ''; el.style.borderBottomWidth = ''; el.style.boxShadow = ''; }, 150);
+  }
+
+  function setMod(el: HTMLElement | null, active: boolean): void {
+    if (!el) return;
+    el.style.borderColor = active ? '#8b5cf6' : '';
+    el.style.background = active ? 'rgba(139, 92, 246, 0.1)' : '';
+    el.style.color = active ? '#7c3aed' : '';
+    el.style.transform = active ? 'scale(1.1)' : '';
+  }
+
+  function showActive(initial: HTMLElement, active: HTMLElement): void {
+    if (initial.style.display !== 'none') {
+      initial.style.display = 'none';
+      active.style.display = '';
+    }
+  }
+
+  function updateInfoCards(e: KeyboardEvent, els: InfoEls, locs: string[]): void {
+    els.key.textContent = e.key === ' ' ? '(space)' : e.key;
+    els.code.textContent = e.code;
+    els.which.textContent = String(e.which);
+    els.location.textContent = getLocation(e.location, locs);
+  }
+
+  function updateMods(e: KeyboardEvent, mods: ModEls): void {
+    setMod(mods.ctrl, e.ctrlKey);
+    setMod(mods.shift, e.shiftKey);
+    setMod(mods.alt, e.altKey);
+    setMod(mods.meta, e.metaKey);
+  }
+
+  function updateSnippets(e: KeyboardEvent, els: SnippetEls): void {
+    const q = e.key === "'" ? '"' : "'";
+    els.key.textContent = `if (e.key === ${q}${e.key}${q})`;
+    els.code.textContent = `if (e.code === '${e.code}')`;
+    els.which.textContent = `if (e.which === ${e.which})`;
+    els.json.textContent = `{ key: '${e.key}', code: '${e.code}', which: ${e.which} }`;
+  }
+
+  function handleKeydown(e: KeyboardEvent, refs: AllRefs, locs: string[]): void {
+    e.preventDefault();
+    showActive(refs.initial, refs.active);
+    animateKey(refs.main.keyWrap);
+    refs.main.displayKey.textContent = getDisplayKey(e.key);
+    refs.main.displayCode.textContent = e.code;
+    updateInfoCards(e, refs.info, locs);
+    updateMods(e, refs.mods);
+    updateSnippets(e, refs.snippets);
+  }
+
+  function getMainEls(root: HTMLElement): MainEls {
+    return {
+      displayKey: root.querySelector<HTMLElement>('#kc-display-key')!,
+      displayCode: root.querySelector<HTMLElement>('#kc-display-code')!,
+      keyWrap: root.querySelector<HTMLElement>('#kc-key-wrap')!,
+    };
+  }
+
+  function getInfoEls(root: HTMLElement): InfoEls {
+    return {
+      key: root.querySelector<HTMLElement>('#kc-info-key')!,
+      code: root.querySelector<HTMLElement>('#kc-info-code')!,
+      which: root.querySelector<HTMLElement>('#kc-info-which')!,
+      location: root.querySelector<HTMLElement>('#kc-info-location')!,
+    };
+  }
+
+  function getModEls(root: HTMLElement): ModEls {
+    return {
+      ctrl: root.querySelector<HTMLElement>('#kc-mod-ctrl'),
+      shift: root.querySelector<HTMLElement>('#kc-mod-shift'),
+      alt: root.querySelector<HTMLElement>('#kc-mod-alt'),
+      meta: root.querySelector<HTMLElement>('#kc-mod-meta'),
+    };
+  }
+
+  function getSnippetEls(root: HTMLElement): SnippetEls {
+    return {
+      key: root.querySelector<HTMLElement>('#kc-snippet-key')!,
+      code: root.querySelector<HTMLElement>('#kc-snippet-code')!,
+      which: root.querySelector<HTMLElement>('#kc-snippet-which')!,
+      json: root.querySelector<HTMLElement>('#kc-snippet-json')!,
+    };
+  }
+
+  function getAllRefs(root: HTMLElement): AllRefs {
+    return {
+      initial: root.querySelector<HTMLElement>('#kc-initial')!,
+      active: root.querySelector<HTMLElement>('#kc-active')!,
+      main: getMainEls(root),
+      info: getInfoEls(root),
+      mods: getModEls(root),
+      snippets: getSnippetEls(root),
+    };
+  }
+
+  function setupSnippetCopy(root: HTMLElement): void {
+    root.querySelectorAll<HTMLElement>('.kc-snippet-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const code = btn.querySelector('code');
+        if (!code?.textContent) return;
+        await navigator.clipboard.writeText(code.textContent);
+        btn.style.background = 'rgba(16, 185, 129, 0.1)';
+        btn.style.borderColor = '#10b981';
+        setTimeout(() => { btn.style.background = ''; btn.style.borderColor = ''; }, 600);
+      });
+    });
+  }
+
+  function setupValueCopy(root: HTMLElement): void {
+    root.querySelectorAll<HTMLElement>('.kc-copy-btn').forEach(btn => {
+      btn.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        const id = btn.dataset.target;
+        if (!id) return;
+        const el = root.querySelector<HTMLElement>(`#${id}`);
+        if (!el?.textContent) return;
+        await navigator.clipboard.writeText(el.textContent);
+        btn.style.color = '#10b981';
+        setTimeout(() => { btn.style.color = ''; }, 1000);
+      });
+    });
+  }
+
+  function setup(root: HTMLElement): void {
+    const t = JSON.parse(root.dataset.i18n ?? '{}') as KeycodeUI;
+    const refs = getAllRefs(root);
+    const locs = [t.locationStandard, t.locationLeft, t.locationRight, t.locationNumpad];
+    setupSnippetCopy(root);
+    setupValueCopy(root);
+    window.addEventListener('keydown', (e) => handleKeydown(e, refs, locs));
+  }
+
+  const root = document.getElementById('kc-root');
+  if (root) setup(root);
+</script>
