@@ -1,5 +1,5 @@
 ---
-import { SEORender } from '@jjlmoya/utils-shared';
+import { SEORenderer } from '@jjlmoya/utils-shared';
 import { conversorExcelCsvHtml } from './index';
 import type { KnownLocale } from '../../types';
 
@@ -11,4 +11,4 @@ const { locale = 'es' } = Astro.props;
 const content = await conversorExcelCsvHtml.i18n[locale]?.();
 ---
 
-{content && <SEORender content={content} />}
+{content && <SEORenderer content={{ locale, sections: content.seo }} />}
