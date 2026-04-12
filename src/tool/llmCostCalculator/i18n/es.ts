@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { LlmCostCalculatorUI } from '../ui';
 
-const slug = 'llm-cost-calculator';
+const slug = 'calculadora-coste-llm';
 const title = 'Calculadora de Costes de LLMs. Estimador de Precios de APIs de IA';
 const description =
   'Herramienta online gratuita para estimar el coste de llamadas a APIs de modelos de lenguaje. Compara GPT-4o, Claude, Gemini, Llama y más con precios reales por millón de tokens.';
