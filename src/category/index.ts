@@ -1,10 +1,17 @@
 import type { DeveloperCategoryEntry } from '../types';
 import { jsonFormatter } from '../tool/jsonFormatter/index';
 import { svgToCss } from '../tool/svgToCss/index';
+import { aspectRatio } from '../tool/aspectRatio/index';
+import { placeholderGenerator } from '../tool/placeholderGenerator/index';
+import { urlEncoderDecoder } from '../tool/urlEncoderDecoder/index';
+import { duplicateCssRemover } from '../tool/duplicateCssRemover/index';
+import { cssToInlineConverter } from '../tool/cssToInlineConverter/index';
+import { cssSpecificityCalculator } from '../tool/cssSpecificityCalculator/index';
+import { cronGenerator } from '../tool/cronGenerator/index';
 
 export const developerCategory: DeveloperCategoryEntry = {
   icon: 'mdi:code-tags',
-  tools: [jsonFormatter, svgToCss],
+  tools: [jsonFormatter, svgToCss, aspectRatio, placeholderGenerator, urlEncoderDecoder, duplicateCssRemover, cssToInlineConverter, cssSpecificityCalculator, cronGenerator],
   i18n: {
     es: () => import('./i18n/es').then((m) => m.content),
     en: () => import('./i18n/en').then((m) => m.content),

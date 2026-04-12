@@ -1,0 +1,667 @@
+---
+import type { KnownLocale } from '../../types';
+import type { CronGeneratorUI } from './ui';
+
+interface Props {
+  locale?: KnownLocale;
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as CronGeneratorUI;
+
+const presets = [
+  { label: t.presetEveryMinute, cron: '* * * * *' },
+  { label: t.presetEveryHour, cron: '0 * * * *' },
+  { label: t.presetDaily, cron: '0 0 * * *' },
+  { label: t.presetWeekly, cron: '0 0 * * 0' },
+  { label: t.presetMonthly, cron: '0 0 1 * *' },
+  { label: t.presetYearly, cron: '0 0 1 1 *' },
+];
+
+const dispFields = [
+  { id: 'minute', label: t.labelMinute },
+  { id: 'hour', label: t.labelHour },
+  { id: 'dom', label: t.labelDom },
+  { id: 'month', label: t.labelMonth },
+  { id: 'dow', label: t.labelDow },
+];
+
+const advFields = [
+  { id: 'minute', label: t.fieldMinute, hint: t.hintMinute },
+  { id: 'hour', label: t.fieldHour, hint: '' },
+  { id: 'dom', label: t.fieldDom, hint: '' },
+  { id: 'month', label: t.fieldMonth, hint: '' },
+  { id: 'dow', label: t.fieldDow, hint: t.hintDow },
+];
+---
+
+<div class="cron-root" id="cron-root" data-i18n={JSON.stringify(t)}>
+  <div class="cron-outer-card">
+    <div class="cron-hero">
+      <div class="cron-expr-row">
+        {dispFields.map(({ id, label }) => (
+          <div class="cron-part-wrapper">
+            <span id={`cron-disp-${id}`} class="cron-disp-part">*</span>
+            <span class="cron-part-label">{label}</span>
+          </div>
+        ))}
+      </div>
+      <div class="cron-human-wrap">
+        <span id="cron-human-readable" class="cron-human-text">{t.descEveryMinute}</span>
+      </div>
+    </div>
+
+    <div class="cron-body">
+      <div class="cron-grid">
+        <div class="cron-controls">
+          <div class="cron-tabs">
+            <button class="cron-tab-btn" data-tab="quick" data-active>{t.tabQuick}</button>
+            <button class="cron-tab-btn" data-tab="advanced">{t.tabAdvanced}</button>
+          </div>
+
+          <div id="cron-tab-quick">
+            <div class="cron-presets">
+              {presets.map(({ label, cron }) => (
+                <button class="cron-preset-btn" data-cron={cron}>
+                  <span class="cron-preset-label">{label}</span>
+                  <span class="cron-preset-expr">{cron}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div id="cron-tab-advanced" style="display:none">
+            {advFields.map(({ id, label, hint }) => (
+              <div class="cron-field">
+                <label for={`cron-input-${id}`} class="cron-field-label">{label}</label>
+                <input type="text" id={`cron-input-${id}`} class="cron-input" value="*" autocomplete="off" spellcheck="false" />
+                {hint && <span class="cron-field-hint">{hint}</span>}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="cron-runs-section">
+          <h3 class="cron-runs-title">{t.labelNextRuns}</h3>
+          <ul id="cron-next-runs" class="cron-runs-list">
+            {[...Array(5)].map(() => <li class="cron-run-skeleton"></li>)}
+          </ul>
+        </div>
+      </div>
+
+      <button id="cron-btn-copy" class="cron-copy-btn">{t.btnCopy}</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cron-root {
+    --cron-primary: #8b5cf6;
+    --cron-success: #10b981;
+    --cron-card-bg: #fff;
+    --cron-bg: #f8fafc;
+    --cron-text: #0f172a;
+    --cron-text-muted: #64748b;
+    --cron-border: #e2e8f0;
+
+    max-width: 900px;
+    margin: 2rem auto;
+    color: var(--cron-text);
+  }
+
+  :global(.theme-dark) .cron-root {
+    --cron-card-bg: #1e293b;
+    --cron-bg: #0f172a;
+    --cron-text: #f1f5f9;
+    --cron-text-muted: #94a3b8;
+    --cron-border: #334155;
+  }
+
+  .cron-outer-card {
+    background: var(--cron-card-bg);
+    border: 1px solid var(--cron-border);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+  }
+
+  .cron-hero {
+    background: #0f172a;
+    padding: 2.25rem 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .cron-expr-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cron-part-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
+  .cron-disp-part {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #a78bfa;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    transition: color 0.2s;
+  }
+
+  .cron-part-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  .cron-human-wrap {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    padding: 0.5rem 1.25rem;
+  }
+
+  .cron-human-text {
+    color: #cbd5e1;
+    font-size: 0.925rem;
+    font-weight: 500;
+  }
+
+  .cron-human-text[data-error] {
+    color: #f87171;
+  }
+
+  .cron-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .cron-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 700px) {
+    .cron-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .cron-controls {
+    background: var(--cron-bg);
+    border: 1px solid var(--cron-border);
+    border-radius: 1rem;
+    padding: 1.125rem;
+  }
+
+  .cron-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.125rem;
+    border-bottom: 1px solid var(--cron-border);
+    padding-bottom: 0.875rem;
+  }
+
+  .cron-tab-btn {
+    padding: 0.375rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: transparent;
+    color: var(--cron-text-muted);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .cron-tab-btn[data-active] {
+    background: rgba(139, 92, 246, 0.12);
+    color: var(--cron-primary);
+  }
+
+  .cron-presets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .cron-preset-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    padding: 0.75rem;
+    background: var(--cron-card-bg);
+    border: 1px solid var(--cron-border);
+    border-radius: 0.75rem;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .cron-preset-btn:hover {
+    border-color: var(--cron-primary);
+    background: rgba(139, 92, 246, 0.06);
+  }
+
+  .cron-preset-label {
+    font-size: 0.825rem;
+    font-weight: 700;
+    color: var(--cron-text);
+  }
+
+  .cron-preset-expr {
+    font-size: 0.72rem;
+    color: var(--cron-text-muted);
+  }
+
+  .cron-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .cron-field:last-child {
+    margin-bottom: 0;
+  }
+
+  .cron-field-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--cron-text-muted);
+  }
+
+  .cron-input {
+    width: 100%;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.875rem;
+    background: var(--cron-card-bg);
+    border: 1px solid var(--cron-border);
+    border-radius: 0.5rem;
+    color: var(--cron-text);
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .cron-input:focus {
+    border-color: var(--cron-primary);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.14);
+  }
+
+  .cron-field-hint {
+    font-size: 0.7rem;
+    color: var(--cron-text-muted);
+  }
+
+  .cron-runs-section {
+    background: var(--cron-bg);
+    border: 1px solid var(--cron-border);
+    border-radius: 1rem;
+    padding: 1.125rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cron-runs-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--cron-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.75rem;
+  }
+
+  .cron-runs-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+  }
+
+  .cron-run-skeleton {
+    height: 2.25rem;
+    background: var(--cron-card-bg);
+    border-radius: 0.5rem;
+    border: 1px solid var(--cron-border);
+  }
+
+  :global(.cron-run-item) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    background: var(--cron-card-bg);
+    border: 1px solid var(--cron-border);
+    border-radius: 0.5rem;
+    font-size: 0.825rem;
+  }
+
+  :global(.cron-run-date) {
+    font-weight: 600;
+    color: var(--cron-text);
+    text-transform: capitalize;
+  }
+
+  :global(.cron-run-rel) {
+    font-size: 0.72rem;
+    color: var(--cron-text-muted);
+  }
+
+  :global(.cron-no-runs) {
+    padding: 1rem;
+    text-align: center;
+    color: var(--cron-text-muted);
+    font-size: 0.825rem;
+    font-style: italic;
+  }
+
+  .cron-copy-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--cron-primary);
+    color: #fff;
+    border: none;
+    border-radius: 0.875rem;
+    font-size: 0.925rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  .cron-copy-btn:hover {
+    background: #7c3aed;
+  }
+
+  .cron-copy-btn:active {
+    transform: scale(0.98);
+  }
+
+  .cron-copy-btn[data-copied] {
+    background: var(--cron-success);
+  }
+
+  @media (max-width: 480px) {
+    .cron-disp-part {
+      font-size: 2rem;
+    }
+
+    .cron-presets {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  import type { CronGeneratorUI } from './ui';
+
+  type Displays = { minute: HTMLElement; hour: HTMLElement; dom: HTMLElement; month: HTMLElement; dow: HTMLElement };
+  type Inputs = { minute: HTMLInputElement; hour: HTMLInputElement; dom: HTMLInputElement; month: HTMLInputElement; dow: HTMLInputElement };
+  type DOMRefs = { desc: HTMLElement; list: HTMLElement; disps: Displays };
+
+  function inRange(v: number, min: number, max: number): boolean {
+    return v >= min && v <= max;
+  }
+
+  function parseStepPart(part: string, min: number, max: number): number[] {
+    const m = part.match(/^(\*|\d+(?:-\d+)?)\/(\d+)$/);
+    if (!m) return [];
+    const step = parseInt(m[2], 10);
+    let start = min, end = max;
+    if (m[1] !== '*') { const r = m[1].split('-').map(Number); start = r[0]; end = r[1] ?? max; }
+    const vals: number[] = [];
+    for (let i = start; i <= end; i += step) { if (inRange(i, min, max)) vals.push(i); }
+    return vals;
+  }
+
+  function parseRangePart(part: string, min: number, max: number): number[] {
+    if (!part.includes('-')) {
+      const v = parseInt(part, 10);
+      return inRange(v, min, max) ? [v] : [];
+    }
+    const [s, e] = part.split('-').map(Number);
+    const vals: number[] = [];
+    for (let i = s; i <= e; i++) { if (inRange(i, min, max)) vals.push(i); }
+    return vals;
+  }
+
+  function parsePart(partStr: string, min: number, max: number): number[] {
+    if (partStr === '*') return Array.from({ length: max - min + 1 }, (_, i) => i + min);
+    const values = new Set<number>();
+    for (const part of partStr.split(',')) {
+      const step = parseStepPart(part, min, max);
+      if (step.length) { step.forEach(v => values.add(v)); continue; }
+      parseRangePart(part, min, max).forEach(v => values.add(v));
+    }
+    return Array.from(values).sort((a, b) => a - b);
+  }
+
+  function describeTimePart(m: string, h: string, t: CronGeneratorUI): string {
+    if (m === '*' && h === '*') return t.descEveryMin;
+    if (m === '0' && h === '*') return t.descEveryHourOnDot;
+    if (h === '*') return t.descAtMinute.replace('{m}', m);
+    return t.descAtTime.replace('{h}', h).replace('{m}', m.padStart(2, '0'));
+  }
+
+  function describeDayPart(dom: string, mon: string, dow: string, t: CronGeneratorUI): string {
+    let s = '';
+    if (dom !== '*') s += t.descOnDay.replace('{d}', dom);
+    if (mon !== '*') s += t.descInMonth.replace('{mon}', mon);
+    if (dow !== '*') s += t.descIfDow.replace('{d}', dow);
+    return s;
+  }
+
+  function describeCron(parts: string[], t: CronGeneratorUI): string {
+    const expr = parts.join(' ');
+    if (expr === '* * * * *') return t.descEveryMinute;
+    if (expr === '0 * * * *') return t.descEveryHour;
+    if (expr === '0 0 * * *') return t.descEveryDay;
+    return t.descPrefix + ' ' + describeTimePart(parts[0], parts[1], t) + describeDayPart(parts[2], parts[3], parts[4], t);
+  }
+
+  function isDayValid(parts: string[], doms: number[], dows: number[], cursor: Date): boolean {
+    const domR = parts[2] !== '*';
+    const dowR = parts[4] !== '*';
+    if (!domR && !dowR) return true;
+    if (domR && dowR) return doms.includes(cursor.getDate()) || dows.includes(cursor.getDay());
+    return domR ? doms.includes(cursor.getDate()) : dows.includes(cursor.getDay());
+  }
+
+  function calculateNextRuns(parts: string[]): Date[] {
+    const mins = parsePart(parts[0], 0, 59);
+    const hrs = parsePart(parts[1], 0, 23);
+    const doms = parsePart(parts[2], 1, 31);
+    const mons = parsePart(parts[3], 1, 12);
+    const dows = parsePart(parts[4], 0, 6);
+    const runs: Date[] = [];
+    const cursor = new Date();
+    cursor.setSeconds(0); cursor.setMilliseconds(0);
+    cursor.setMinutes(cursor.getMinutes() + 1);
+    let iter = 0;
+    while (runs.length < 5 && iter++ < 20000) {
+      if (!mons.includes(cursor.getMonth() + 1)) { cursor.setMonth(cursor.getMonth() + 1); cursor.setDate(1); cursor.setHours(0); cursor.setMinutes(0); continue; }
+      if (!isDayValid(parts, doms, dows, cursor)) { cursor.setDate(cursor.getDate() + 1); cursor.setHours(0); cursor.setMinutes(0); continue; }
+      if (!hrs.includes(cursor.getHours())) { cursor.setHours(cursor.getHours() + 1); cursor.setMinutes(0); continue; }
+      if (mins.includes(cursor.getMinutes())) runs.push(new Date(cursor));
+      cursor.setMinutes(cursor.getMinutes() + 1);
+    }
+    return runs;
+  }
+
+  function getTimeRemaining(target: Date, t: CronGeneratorUI): string {
+    const diff = target.getTime() - Date.now();
+    if (diff < 0) return t.timeNow;
+    const mins = Math.floor(diff / 60000);
+    if (mins < 60) return `${mins} ${t.timeMin}`;
+    const hours = Math.floor(mins / 60);
+    if (hours < 24) return `${hours} ${t.timeHour}`;
+    return `${Math.floor(hours / 24)} ${t.timeDays}`;
+  }
+
+  function buildRunItem(date: Date, t: CronGeneratorUI): HTMLLIElement {
+    const li = document.createElement('li');
+    li.className = 'cron-run-item';
+    const dateStr = new Intl.DateTimeFormat(t.locale, { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }).format(date);
+    const left = document.createElement('span');
+    left.className = 'cron-run-date';
+    left.textContent = dateStr;
+    const right = document.createElement('span');
+    right.className = 'cron-run-rel';
+    right.textContent = getTimeRemaining(date, t);
+    li.append(left, right);
+    return li;
+  }
+
+  function setDisplaysError(disps: Displays, isError: boolean): void {
+    const color = isError ? '#f87171' : 'var(--cron-primary)';
+    const keys = ['minute', 'hour', 'dom', 'month', 'dow'] as const;
+    keys.forEach(k => { disps[k].style.color = color; });
+  }
+
+  function updateDescription(parts: string[], desc: HTMLElement, disps: Displays, t: CronGeneratorUI): void {
+    try {
+      desc.textContent = describeCron(parts, t);
+      desc.removeAttribute('data-error');
+      setDisplaysError(disps, false);
+    } catch {
+      desc.textContent = t.descInvalid;
+      desc.setAttribute('data-error', '');
+      setDisplaysError(disps, true);
+    }
+  }
+
+  function updateNextRuns(parts: string[], list: HTMLElement, t: CronGeneratorUI): void {
+    try {
+      const dates = calculateNextRuns(parts);
+      list.innerHTML = '';
+      if (!dates.length) { list.innerHTML = `<li class="cron-no-runs">${t.msgNoRuns}</li>`; return; }
+      dates.forEach(d => list.appendChild(buildRunItem(d, t)));
+    } catch {
+      list.innerHTML = `<li class="cron-no-runs">${t.msgError}</li>`;
+    }
+  }
+
+  function updateDisplays(parts: string[], disps: Displays): void {
+    const keys = ['minute', 'hour', 'dom', 'month', 'dow'] as const;
+    keys.forEach((k, i) => { disps[k].textContent = parts[i]; });
+  }
+
+  function syncInputs(parts: string[], inps: Inputs): void {
+    const keys = ['minute', 'hour', 'dom', 'month', 'dow'] as const;
+    keys.forEach((k, i) => { inps[k].value = parts[i]; });
+  }
+
+  function updateAll(parts: string[], refs: DOMRefs, t: CronGeneratorUI): void {
+    updateDisplays(parts, refs.disps);
+    updateDescription(parts, refs.desc, refs.disps, t);
+    updateNextRuns(parts, refs.list, t);
+  }
+
+  function getDisps(root: HTMLElement): Displays {
+    return {
+      minute: root.querySelector<HTMLElement>('#cron-disp-minute')!,
+      hour: root.querySelector<HTMLElement>('#cron-disp-hour')!,
+      dom: root.querySelector<HTMLElement>('#cron-disp-dom')!,
+      month: root.querySelector<HTMLElement>('#cron-disp-month')!,
+      dow: root.querySelector<HTMLElement>('#cron-disp-dow')!,
+    };
+  }
+
+  function getInps(root: HTMLElement): Inputs {
+    return {
+      minute: root.querySelector<HTMLInputElement>('#cron-input-minute')!,
+      hour: root.querySelector<HTMLInputElement>('#cron-input-hour')!,
+      dom: root.querySelector<HTMLInputElement>('#cron-input-dom')!,
+      month: root.querySelector<HTMLInputElement>('#cron-input-month')!,
+      dow: root.querySelector<HTMLInputElement>('#cron-input-dow')!,
+    };
+  }
+
+  function setupTabs(root: HTMLElement): void {
+    const tabs = root.querySelectorAll<HTMLElement>('.cron-tab-btn');
+    const quick = root.querySelector<HTMLElement>('#cron-tab-quick');
+    const adv = root.querySelector<HTMLElement>('#cron-tab-advanced');
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(t => t.removeAttribute('data-active'));
+        btn.setAttribute('data-active', '');
+        const isQuick = btn.dataset.tab === 'quick';
+        if (quick) quick.style.display = isQuick ? '' : 'none';
+        if (adv) adv.style.display = isQuick ? 'none' : '';
+      });
+    });
+  }
+
+  function setupPresets(root: HTMLElement, onChange: (parts: string[]) => void): void {
+    root.querySelectorAll<HTMLElement>('.cron-preset-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cron = btn.dataset.cron;
+        if (cron) onChange(cron.split(' '));
+      });
+    });
+  }
+
+  function setupInputs(root: HTMLElement, onChange: (parts: string[]) => void, getParts: () => string[]): void {
+    const keys = ['minute', 'hour', 'dom', 'month', 'dow'];
+    keys.forEach((key, idx) => {
+      const inp = root.querySelector<HTMLInputElement>(`#cron-input-${key}`);
+      if (!inp) return;
+      inp.addEventListener('input', () => {
+        const parts = [...getParts()];
+        parts[idx] = inp.value.trim() || '*';
+        onChange(parts);
+      });
+    });
+  }
+
+  function setupCopyBtn(btn: HTMLElement, getExpr: () => string, t: CronGeneratorUI): void {
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(getExpr());
+      const orig = btn.textContent ?? '';
+      btn.textContent = t.btnCopied;
+      btn.setAttribute('data-copied', '');
+      setTimeout(() => { btn.textContent = orig; btn.removeAttribute('data-copied'); }, 2000);
+    });
+  }
+
+  function setup(root: HTMLElement): void {
+    const t = JSON.parse(root.dataset.i18n ?? '{}') as CronGeneratorUI;
+    let parts = ['*', '*', '*', '*', '*'];
+    const desc = root.querySelector<HTMLElement>('#cron-human-readable')!;
+    const list = root.querySelector<HTMLElement>('#cron-next-runs')!;
+    const disps = getDisps(root);
+    const inps = getInps(root);
+    const btn = root.querySelector<HTMLElement>('#cron-btn-copy')!;
+    const refs: DOMRefs = { desc, list, disps };
+    const upd = (p: string[]) => { parts = p; syncInputs(p, inps); updateAll(p, refs, t); };
+    setupTabs(root);
+    setupPresets(root, upd);
+    setupInputs(root, upd, () => parts);
+    setupCopyBtn(btn, () => parts.join(' '), t);
+    upd(parts);
+  }
+
+  const root = document.getElementById('cron-root');
+  if (root) setup(root);
+</script>

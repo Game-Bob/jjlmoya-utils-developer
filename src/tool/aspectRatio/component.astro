@@ -1,0 +1,468 @@
+---
+import type { KnownLocale } from '../../types';
+import type { AspectRatioUI } from './ui';
+
+interface Props {
+  locale?: KnownLocale;
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as AspectRatioUI;
+---
+
+<div class="arc-container">
+  <div class="arc-layout">
+    <div class="arc-panel">
+      <div class="arc-title-group">
+        <div class="arc-icon-box">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+            <path d="M21 15V9"></path>
+            <path d="M9 21h6"></path>
+          </svg>
+        </div>
+        <h2 class="arc-panel-title">{t.labelConfig}</h2>
+      </div>
+
+      <div class="arc-section">
+        <span class="arc-section-header">{t.labelRatio}</span>
+        <div class="arc-input-grid">
+          <div class="arc-field">
+            <label class="arc-label" for="arc-ratio-w">{t.labelWidth}</label>
+            <input type="number" id="arc-ratio-w" class="arc-input" value="16" min="1" step="0.1" />
+          </div>
+          <div class="arc-separator">:</div>
+          <div class="arc-field">
+            <label class="arc-label" for="arc-ratio-h">{t.labelHeight}</label>
+            <input type="number" id="arc-ratio-h" class="arc-input" value="9" min="1" step="0.1" />
+          </div>
+        </div>
+
+        <div class="arc-presets">
+          <button class="arc-preset-btn" data-w="16" data-h="9">16:9</button>
+          <button class="arc-preset-btn" data-w="4" data-h="3">4:3</button>
+          <button class="arc-preset-btn" data-w="1" data-h="1">1:1</button>
+          <button class="arc-preset-btn" data-w="21" data-h="9">21:9</button>
+          <button class="arc-preset-btn" data-w="9" data-h="16">9:16</button>
+          <button class="arc-preset-btn" data-w="3" data-h="2">3:2</button>
+        </div>
+      </div>
+
+      <div class="arc-section">
+        <span class="arc-section-header">{t.labelScale}</span>
+        <div class="arc-input-grid">
+          <div class="arc-field">
+            <label class="arc-label" for="arc-res-w">{t.labelPixelWidth}</label>
+            <input type="number" id="arc-res-w" class="arc-input" value="1920" min="1" />
+          </div>
+          <div class="arc-separator">&times;</div>
+          <div class="arc-field">
+            <label class="arc-label" for="arc-res-h">{t.labelPixelHeight}</label>
+            <input type="number" id="arc-res-h" class="arc-input" value="1080" min="1" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arc-preview-panel">
+      <header class="arc-preview-header">
+        <div class="arc-preview-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--arc-primary)" aria-hidden="true">
+            <path d="M15 3h6v6"></path>
+            <path d="M9 21H3v-6"></path>
+            <path d="M21 3l-7 7"></path>
+            <path d="M3 21l7-7"></path>
+          </svg>
+          {t.labelPreview}
+        </div>
+        <div id="arc-badge" class="arc-badge">16:9</div>
+      </header>
+
+      <main class="arc-viewport" id="arc-viewport">
+        <div id="arc-box" class="arc-box">
+          <span id="arc-box-ratio" class="arc-box-ratio">16:9</span>
+          <span id="arc-box-res" class="arc-box-res">1920 &times; 1080px</span>
+        </div>
+      </main>
+
+      <footer class="arc-status">
+        <div class="arc-status-item">
+          <div class="arc-dot"></div>
+          <span>{t.labelStatus}</span>
+        </div>
+        <div class="arc-status-item">
+          <span>{t.labelOffline}</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<style>
+  .arc-container {
+    --arc-primary: #0ea5e9;
+    --arc-secondary: #8b5cf6;
+    --arc-bg: #f8fafc;
+    --arc-card-bg: #fff;
+    --arc-text: #0f172a;
+    --arc-text-muted: #64748b;
+    --arc-border: #e2e8f0;
+    --arc-input-bg: #f1f5f9;
+    --arc-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --arc-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --arc-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+    max-width: 1100px;
+    margin: 4rem auto;
+    color: var(--arc-text);
+  }
+
+  :global(.theme-dark) .arc-container {
+    --arc-bg: #0f172a;
+    --arc-card-bg: #1e293b;
+    --arc-text: #f8fafc;
+    --arc-text-muted: #94a3b8;
+    --arc-border: #334155;
+    --arc-input-bg: #0f172a;
+  }
+
+  .arc-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 992px) {
+    .arc-layout {
+      grid-template-columns: 420px 1fr;
+    }
+  }
+
+  .arc-panel {
+    background: var(--arc-card-bg);
+    border: 1px solid var(--arc-border);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: var(--arc-shadow-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .arc-title-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .arc-icon-box {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--arc-primary), var(--arc-secondary));
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+  }
+
+  .arc-panel-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.025em;
+  }
+
+  .arc-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .arc-section-header {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--arc-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .arc-input-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .arc-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .arc-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--arc-text-muted);
+  }
+
+  .arc-input {
+    width: 100%;
+    background: var(--arc-input-bg);
+    border: 2px solid var(--arc-border);
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--arc-text);
+    text-align: center;
+    outline: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .arc-input:focus {
+    border-color: var(--arc-primary);
+    background: var(--arc-card-bg);
+    box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1);
+  }
+
+  .arc-separator {
+    font-size: 1.5rem;
+    font-weight: 900;
+    opacity: 0.3;
+    padding-top: 1.5rem;
+  }
+
+  .arc-presets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .arc-preset-btn {
+    background: var(--arc-input-bg);
+    border: 1px solid var(--arc-border);
+    border-radius: 0.75rem;
+    padding: 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--arc-text);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .arc-preset-btn:hover {
+    background: var(--arc-primary);
+    color: white;
+    border-color: var(--arc-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.2);
+  }
+
+  .arc-preview-panel {
+    background: var(--arc-input-bg);
+    border: 1px solid var(--arc-border);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .arc-preview-header {
+    padding: 1.5rem 2rem;
+    background: var(--arc-card-bg);
+    border-bottom: 1px solid var(--arc-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .arc-preview-title {
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .arc-badge {
+    background: rgba(14, 165, 233, 0.1);
+    color: var(--arc-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+  }
+
+  .arc-viewport {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    min-height: 500px;
+    background-image: radial-gradient(var(--arc-border) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  .arc-box {
+    background: linear-gradient(45deg, var(--arc-primary), var(--arc-secondary));
+    border-radius: 1rem;
+    box-shadow: var(--arc-shadow-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition:
+      width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+      height 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+  }
+
+  .arc-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.2;
+  }
+
+  .arc-box-ratio {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .arc-box-res {
+    font-size: 0.875rem;
+    font-weight: 600;
+    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    z-index: 1;
+  }
+
+  .arc-status {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--arc-text-muted);
+  }
+
+  .arc-status-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .arc-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--arc-primary);
+    box-shadow: 0 0 8px var(--arc-primary);
+  }
+</style>
+
+<script>
+  const rwInput = document.getElementById('arc-ratio-w') as HTMLInputElement;
+  const rhInput = document.getElementById('arc-ratio-h') as HTMLInputElement;
+  const cwInput = document.getElementById('arc-res-w') as HTMLInputElement;
+  const chInput = document.getElementById('arc-res-h') as HTMLInputElement;
+  const arcBox = document.getElementById('arc-box');
+  const arcBoxRatio = document.getElementById('arc-box-ratio');
+  const arcBoxRes = document.getElementById('arc-box-res');
+  const arcBadge = document.getElementById('arc-badge');
+  const viewport = document.getElementById('arc-viewport');
+  const presetsBtn = document.querySelectorAll('.arc-preset-btn');
+
+  const calculateGcd = (a: number, b: number): number => {
+    return b === 0 ? a : calculateGcd(b, a % b);
+  };
+
+  const getInputValues = () => ({
+    rw: parseFloat(rwInput.value) || 1,
+    rh: parseFloat(rhInput.value) || 1,
+    cw: parseFloat(cwInput.value) || 0,
+    ch: parseFloat(chInput.value) || 0,
+  });
+
+  const computeBoxDimensions = (rw: number, rh: number, viewW: number, viewH: number) => {
+    const targetRatio = rw / rh;
+    if (targetRatio > viewW / viewH) {
+      return { w: viewW, h: viewW / targetRatio };
+    }
+    return { w: viewH * targetRatio, h: viewH };
+  };
+
+  const renderBox = () => {
+    if (!arcBox || !viewport || !arcBoxRatio || !arcBoxRes || !arcBadge) return;
+
+    const { rw, rh, cw, ch } = getInputValues();
+    const divisor = calculateGcd(Math.round(rw * 100), Math.round(rh * 100)) / 100;
+    const ratioText = `${Math.round(rw / divisor)}:${Math.round(rh / divisor)}`;
+
+    arcBoxRatio.textContent = ratioText;
+    arcBoxRes.innerHTML = `${cw} &times; ${ch}px`;
+    arcBadge.textContent = ratioText;
+
+    const { w, h } = computeBoxDimensions(rw, rh, viewport.clientWidth - 80, viewport.clientHeight - 80);
+    arcBox.style.width = w + 'px';
+    arcBox.style.height = h + 'px';
+  };
+
+  const recalcFromWidth = () => {
+    const { rw, rh, cw } = getInputValues();
+    chInput.value = Math.round((cw / rw) * rh).toString();
+  };
+
+  const recalcFromHeight = () => {
+    const { rw, rh, ch } = getInputValues();
+    cwInput.value = Math.round((ch / rh) * rw).toString();
+  };
+
+  const updateAll = (source: string) => {
+    if (source === 'height') {
+      recalcFromHeight();
+    } else {
+      recalcFromWidth();
+    }
+    renderBox();
+  };
+
+  rwInput?.addEventListener('input', () => updateAll('ratio'));
+  rhInput?.addEventListener('input', () => updateAll('ratio'));
+  cwInput?.addEventListener('input', () => updateAll('width'));
+  chInput?.addEventListener('input', () => updateAll('height'));
+
+  presetsBtn.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const el = e.currentTarget as HTMLButtonElement;
+      const w = el.dataset.w;
+      const h = el.dataset.h;
+      if (w && h) {
+        rwInput.value = w;
+        rhInput.value = h;
+        updateAll('ratio');
+      }
+    });
+  });
+
+  window.addEventListener('resize', renderBox);
+
+  setTimeout(renderBox, 10);
+</script>

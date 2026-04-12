@@ -1,0 +1,499 @@
+---
+import type { KnownLocale } from '../../types';
+import type { PlaceholderGeneratorUI } from './ui';
+
+interface Props {
+  locale?: KnownLocale;
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as PlaceholderGeneratorUI;
+---
+
+<section class="pg-root">
+  <div class="pg-card">
+    <div class="pg-body">
+      <div class="pg-controls">
+        <div class="pg-control-group">
+          <label class="pg-label">{t.labelDimensions}</label>
+          <div class="pg-presets-row" id="p-presets">
+            <button type="button" class="pg-preset-pill" data-w="1920" data-h="1080">FHD</button>
+            <button type="button" class="pg-preset-pill" data-w="1280" data-h="720">HD</button>
+            <button type="button" class="pg-preset-pill" data-w="1080" data-h="1080">Insta</button>
+            <button type="button" class="pg-preset-pill" data-w="1200" data-h="630">OG Image</button>
+            <button type="button" class="pg-preset-pill active" data-w="800" data-h="600">800x600</button>
+            <button type="button" class="pg-preset-pill" data-w="250" data-h="250">Avatar</button>
+          </div>
+        </div>
+
+        <div class="pg-dims-group">
+          <div class="pg-control-group">
+            <label class="pg-label" for="p-width">{t.labelWidth}</label>
+            <input class="pg-input" type="number" id="p-width" value="800" min="1" max="8000" />
+          </div>
+          <div class="pg-control-group">
+            <label class="pg-label" for="p-height">{t.labelHeight}</label>
+            <input class="pg-input" type="number" id="p-height" value="600" min="1" max="8000" />
+          </div>
+        </div>
+
+        <div class="pg-colors-group">
+          <div class="pg-control-group">
+            <label class="pg-label" for="p-bg-color">{t.labelBgColor}</label>
+            <div class="pg-color-wrapper">
+              <input type="color" id="p-bg-color" value="#e2e8f0" />
+              <input class="pg-color-text" type="text" id="p-bg-text" value="#e2e8f0" maxlength="7" />
+            </div>
+          </div>
+          <div class="pg-control-group">
+            <label class="pg-label" for="p-text-color">{t.labelTextColor}</label>
+            <div class="pg-color-wrapper">
+              <input type="color" id="p-text-color" value="#64748b" />
+              <input class="pg-color-text" type="text" id="p-text-text" value="#64748b" maxlength="7" />
+            </div>
+          </div>
+        </div>
+
+        <div class="pg-control-group">
+          <label class="pg-label" for="p-custom-text">{t.labelCustomText}</label>
+          <input class="pg-input" type="text" id="p-custom-text" placeholder={t.placeholderCustomText} />
+        </div>
+
+        <div class="pg-typo-group">
+          <div class="pg-control-group">
+            <label class="pg-label" for="p-font-family">{t.labelFontFamily}</label>
+            <select class="pg-select" id="p-font-family">
+              <option value="Inter, sans-serif">Sans-serif (Inter)</option>
+              <option value="Georgia, serif">Serif</option>
+              <option value="monospace">Monospace</option>
+            </select>
+          </div>
+          <div class="pg-control-group">
+            <label class="pg-label" for="p-font-size">{t.labelFontSize}</label>
+            <select class="pg-select" id="p-font-size">
+              <option value="auto">{t.fontSizeAuto}</option>
+              <option value="16">16px</option>
+              <option value="24">24px</option>
+              <option value="32">32px</option>
+              <option value="48">48px</option>
+              <option value="64">64px</option>
+              <option value="128">128px</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pg-control-group">
+          <label class="pg-label">{t.labelFormat}</label>
+          <div class="pg-presets-row">
+            <label class="pg-radio-pill">
+              <input type="radio" name="p-format" value="image/webp" checked />
+              <span>WebP</span>
+            </label>
+            <label class="pg-radio-pill">
+              <input type="radio" name="p-format" value="image/png" />
+              <span>PNG</span>
+            </label>
+            <label class="pg-radio-pill">
+              <input type="radio" name="p-format" value="image/jpeg" />
+              <span>JPEG</span>
+            </label>
+          </div>
+        </div>
+
+        <button id="p-download-btn" class="pg-download-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M12 16L7 11L8.4 9.55L11 12.15V4H13V12.15L15.6 9.55L17 11L12 16ZM6 20C5.45 20 4.97917 19.8042 4.5875 19.4125C4.19583 19.0208 4 18.55 4 18V15H6V18H18V15H20V18C20 18.55 19.8042 19.0208 19.4125 19.4125C19.0208 19.8042 18.55 20 18 20H6Z"></path>
+          </svg>
+          {t.btnDownload}
+        </button>
+      </div>
+
+      <div class="pg-preview">
+        <canvas id="p-canvas" style="display: none;"></canvas>
+        <img id="p-image-preview" alt="Placeholder preview" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pg-root {
+    --pg-primary: #eab308;
+    --pg-primary-dark: #ca8a04;
+    --pg-card-bg: #fff;
+    --pg-bg: #f8fafc;
+    --pg-text: #1e293b;
+    --pg-text-muted: #64748b;
+    --pg-border: #e2e8f0;
+    --pg-input-bg: #f1f5f9;
+    --pg-input-text: #1e293b;
+    --pg-btn-bg: #111827;
+    --pg-btn-hover: #000;
+
+    max-width: 1100px;
+    margin: 2rem auto;
+    color: var(--pg-text);
+  }
+
+  :global(.theme-dark) .pg-root {
+    --pg-card-bg: #1e293b;
+    --pg-bg: #0f172a;
+    --pg-text: #f1f5f9;
+    --pg-text-muted: #94a3b8;
+    --pg-border: #334155;
+    --pg-input-bg: #0f172a;
+    --pg-input-text: #e2e8f0;
+    --pg-btn-bg: #f1f5f9;
+    --pg-btn-hover: #fff;
+  }
+
+  .pg-card {
+    background: var(--pg-card-bg);
+    border: 1px solid var(--pg-border);
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+  }
+
+  .pg-body {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: 560px;
+  }
+
+  @media (max-width: 860px) {
+    .pg-body {
+      grid-template-columns: 1fr;
+    }
+
+    .pg-controls {
+      border-right: none;
+      border-bottom: 1px solid var(--pg-border);
+    }
+  }
+
+  .pg-controls {
+    border-right: 1px solid var(--pg-border);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+    background: var(--pg-bg);
+  }
+
+  .pg-control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .pg-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--pg-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .pg-input,
+  .pg-select {
+    width: 100%;
+    padding: 0.6rem 0.875rem;
+    border-radius: 0.625rem;
+    border: 1px solid var(--pg-border);
+    background: var(--pg-card-bg);
+    font-size: 0.875rem;
+    color: var(--pg-input-text);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .pg-input:focus,
+  .pg-select:focus {
+    border-color: var(--pg-primary);
+    box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.15);
+  }
+
+  .pg-dims-group,
+  .pg-colors-group,
+  .pg-typo-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .pg-presets-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+
+  .pg-preset-pill {
+    background: var(--pg-input-bg);
+    border: 1px solid var(--pg-border);
+    color: var(--pg-text-muted);
+    padding: 0.3rem 0.6rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .pg-preset-pill:hover,
+  :global(.pg-preset-pill.active) {
+    background: var(--pg-primary);
+    border-color: var(--pg-primary-dark);
+    color: #fff;
+  }
+
+  .pg-radio-pill {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .pg-radio-pill input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .pg-radio-pill span {
+    display: inline-block;
+    background: var(--pg-input-bg);
+    border: 1px solid var(--pg-border);
+    color: var(--pg-text-muted);
+    padding: 0.3rem 0.6rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+
+  .pg-radio-pill input:checked + span {
+    background: var(--pg-primary);
+    border-color: var(--pg-primary-dark);
+    color: #fff;
+  }
+
+  .pg-color-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--pg-border);
+    border-radius: 0.625rem;
+    overflow: hidden;
+    background: var(--pg-card-bg);
+  }
+
+  .pg-color-wrapper input[type="color"] {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    background: transparent;
+    flex-shrink: 0;
+  }
+
+  .pg-color-wrapper input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+  .pg-color-wrapper input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-right: 1px solid var(--pg-border);
+  }
+
+  .pg-color-text {
+    border: none;
+    padding: 0.5rem 0.625rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--pg-input-text);
+    background: transparent;
+    flex: 1;
+    outline: none;
+    width: 0;
+  }
+
+  .pg-download-btn {
+    background: var(--pg-btn-bg);
+    color: var(--pg-card-bg);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.75rem;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition:
+      background 0.2s,
+      transform 0.1s;
+    margin-top: 0.25rem;
+  }
+
+  .pg-download-btn:hover {
+    background: var(--pg-btn-hover);
+  }
+
+  .pg-download-btn:active {
+    transform: scale(0.98);
+  }
+
+  .pg-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--pg-bg);
+    background-image: radial-gradient(var(--pg-border) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  #p-image-preview {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+  }
+
+  canvas {
+    display: none;
+  }
+</style>
+
+<script>
+  const widthInput = document.getElementById('p-width') as HTMLInputElement;
+  const heightInput = document.getElementById('p-height') as HTMLInputElement;
+  const bgColorInput = document.getElementById('p-bg-color') as HTMLInputElement;
+  const bgTextInput = document.getElementById('p-bg-text') as HTMLInputElement;
+  const textColorInput = document.getElementById('p-text-color') as HTMLInputElement;
+  const textTextInput = document.getElementById('p-text-text') as HTMLInputElement;
+  const customTextInput = document.getElementById('p-custom-text') as HTMLInputElement;
+  const fontFamilyInput = document.getElementById('p-font-family') as HTMLSelectElement;
+  const fontSizeInput = document.getElementById('p-font-size') as HTMLSelectElement;
+  const canvas = document.getElementById('p-canvas') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d');
+  const downloadBtn = document.getElementById('p-download-btn') as HTMLButtonElement;
+  const imagePreview = document.getElementById('p-image-preview') as HTMLImageElement;
+  const presetBtns = document.querySelectorAll('.pg-preset-pill');
+  const formatRadios = document.querySelectorAll('input[name="p-format"]');
+
+  const getFormat = () => {
+    const checked = document.querySelector('input[name="p-format"]:checked') as HTMLInputElement;
+    return checked ? checked.value : 'image/webp';
+  };
+
+  const computeFontSize = (w: number, h: number, text: string) => {
+    if (fontSizeInput.value !== 'auto') return parseInt(fontSizeInput.value);
+    const raw = Math.min((w * 0.9 / text.length) * 1.8, h * 0.9 / 2);
+    return Math.max(12, Math.min(raw, 200));
+  };
+
+  const renderCanvas = () => {
+    if (!ctx) return;
+    const w = parseInt(widthInput.value) || 800;
+    const h = parseInt(heightInput.value) || 600;
+    canvas.width = w;
+    canvas.height = h;
+    ctx.fillStyle = bgColorInput.value;
+    ctx.fillRect(0, 0, w, h);
+    const textStr = customTextInput.value.trim() || `${w} × ${h}`;
+    ctx.fillStyle = textColorInput.value;
+    ctx.font = `600 ${computeFontSize(w, h, textStr)}px ${fontFamilyInput.value}`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(textStr, w / 2, h / 2);
+    const format = getFormat();
+    const ext = format.split('/')[1] || 'webp';
+    const fileName = `placeholder-${w}x${h}.${ext}`;
+    imagePreview.src = canvas.toDataURL(format, 0.9);
+    imagePreview.title = fileName;
+    imagePreview.alt = fileName;
+  };
+
+  const syncColor = (colorInput: HTMLInputElement, textInput: HTMLInputElement, val: string) => {
+    colorInput.value = val;
+    textInput.value = val;
+    renderCanvas();
+  };
+
+  const syncHex = (e: Event, type: 'bg' | 'text') => {
+    const target = e.target as HTMLInputElement;
+    let val = target.value;
+    if (val.length > 0 && val[0] !== '#') val = '#' + val;
+    if (/^#[0-9A-F]{6}$/i.test(val)) {
+      if (type === 'bg') {
+        syncColor(bgColorInput, bgTextInput, val);
+      } else {
+        syncColor(textColorInput, textTextInput, val);
+      }
+    }
+  };
+
+  const updateActivePreset = () => {
+    presetBtns.forEach((p) => {
+      if (p.getAttribute('data-w') === widthInput.value && p.getAttribute('data-h') === heightInput.value) {
+        p.classList.add('active');
+      } else {
+        p.classList.remove('active');
+      }
+    });
+  };
+
+  const inputs = [widthInput, heightInput, customTextInput, fontFamilyInput, fontSizeInput];
+  inputs.forEach((input) => input?.addEventListener('input', renderCanvas));
+
+  widthInput.addEventListener('input', updateActivePreset);
+  heightInput.addEventListener('input', updateActivePreset);
+
+  presetBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      widthInput.value = btn.getAttribute('data-w')!;
+      heightInput.value = btn.getAttribute('data-h')!;
+      updateActivePreset();
+      renderCanvas();
+    });
+  });
+
+  bgColorInput?.addEventListener('input', (e) => {
+    bgTextInput.value = (e.target as HTMLInputElement).value;
+    renderCanvas();
+  });
+
+  textColorInput?.addEventListener('input', (e) => {
+    textTextInput.value = (e.target as HTMLInputElement).value;
+    renderCanvas();
+  });
+
+  bgTextInput?.addEventListener('input', (e) => syncHex(e, 'bg'));
+  textTextInput?.addEventListener('input', (e) => syncHex(e, 'text'));
+
+  downloadBtn?.addEventListener('click', () => {
+    const w = parseInt(widthInput.value) || 800;
+    const h = parseInt(heightInput.value) || 600;
+    const format = getFormat();
+    const ext = format.split('/')[1] || 'png';
+    const a = document.createElement('a');
+    a.href = canvas.toDataURL(format, 0.9);
+    a.download = `placeholder-${w}x${h}.${ext}`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  });
+
+  formatRadios.forEach((radio) => radio.addEventListener('change', renderCanvas));
+
+  renderCanvas();
+</script>

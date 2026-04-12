@@ -1,0 +1,308 @@
+---
+import type { KnownLocale } from '../../types';
+import type { CssToInlineConverterUI } from './ui';
+
+interface Props {
+  locale?: KnownLocale;
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as CssToInlineConverterUI;
+---
+
+<div
+  class="cssi-root"
+  data-btn-copy={t.btnCopy}
+  data-btn-copied={t.btnCopied}
+  data-msg-error={t.msgError}
+>
+  <div class="cssi-card">
+    <div class="cssi-grid">
+      <div class="cssi-field">
+        <span class="cssi-field-label">{t.labelHtml}</span>
+        <textarea
+          id="cssi-html-input"
+          class="cssi-textarea"
+          placeholder={t.placeholderHtml}
+          spellcheck="false"
+        ></textarea>
+      </div>
+      <div class="cssi-field">
+        <span class="cssi-field-label">{t.labelCss}</span>
+        <textarea
+          id="cssi-css-input"
+          class="cssi-textarea"
+          placeholder={t.placeholderCss}
+          spellcheck="false"
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="cssi-actions">
+      <button id="cssi-convert-btn" class="cssi-btn">
+        <svg class="cssi-btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+        </svg>
+        {t.btnConvert}
+      </button>
+    </div>
+
+    <div class="cssi-field">
+      <div class="cssi-output-header">
+        <span class="cssi-field-label">{t.labelOutput}</span>
+        <button id="cssi-copy-btn" class="cssi-copy-btn">{t.btnCopy}</button>
+      </div>
+      <textarea
+        id="cssi-html-output"
+        class="cssi-textarea cssi-textarea-output"
+        readonly
+        placeholder={t.placeholderOutput}
+        spellcheck="false"
+      ></textarea>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cssi-root {
+    --cssi-primary: #ec4899;
+    --cssi-primary-dark: #db2777;
+    --cssi-card-bg: #fff;
+    --cssi-bg: #f8fafc;
+    --cssi-text: #0f172a;
+    --cssi-text-muted: #64748b;
+    --cssi-border: #e2e8f0;
+    --cssi-output-bg: rgba(236, 72, 153, 0.04);
+
+    max-width: 1000px;
+    margin: 2rem auto;
+    color: var(--cssi-text);
+  }
+
+  :global(.theme-dark) .cssi-root {
+    --cssi-card-bg: #1e293b;
+    --cssi-bg: #0f172a;
+    --cssi-text: #f1f5f9;
+    --cssi-text-muted: #94a3b8;
+    --cssi-border: #334155;
+    --cssi-output-bg: rgba(236, 72, 153, 0.08);
+  }
+
+  .cssi-card {
+    background: var(--cssi-card-bg);
+    border: 1px solid var(--cssi-border);
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .cssi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 768px) {
+    .cssi-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .cssi-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cssi-output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cssi-field-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--cssi-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .cssi-copy-btn {
+    background: transparent;
+    border: 1px solid var(--cssi-border);
+    color: var(--cssi-text-muted);
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .cssi-copy-btn:hover {
+    background: var(--cssi-bg);
+    color: var(--cssi-primary);
+    border-color: var(--cssi-primary);
+  }
+
+  .cssi-textarea {
+    width: 100%;
+    height: 220px;
+    padding: 1rem 1.25rem;
+    font-size: 0.875rem;
+    color: var(--cssi-text);
+    background: var(--cssi-bg);
+    border: 1px solid var(--cssi-border);
+    border-radius: 0.875rem;
+    resize: vertical;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    white-space: pre;
+    overflow: auto;
+    line-height: 1.6;
+  }
+
+  .cssi-textarea:focus {
+    border-color: var(--cssi-primary);
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.12);
+  }
+
+  .cssi-textarea-output {
+    border-color: var(--cssi-primary);
+    background: var(--cssi-output-bg);
+    height: 180px;
+  }
+
+  .cssi-textarea-output:focus {
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.12);
+  }
+
+  .cssi-actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cssi-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--cssi-primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.875rem 2rem;
+    border-radius: 0.875rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+  }
+
+  .cssi-btn:hover {
+    background: var(--cssi-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(236, 72, 153, 0.4);
+  }
+
+  .cssi-btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+</style>
+
+<script>
+  const root = document.querySelector('.cssi-root') as HTMLElement | null;
+  const htmlInput = document.getElementById('cssi-html-input') as HTMLTextAreaElement;
+  const cssInput = document.getElementById('cssi-css-input') as HTMLTextAreaElement;
+  const htmlOutput = document.getElementById('cssi-html-output') as HTMLTextAreaElement;
+  const convertBtn = document.getElementById('cssi-convert-btn');
+  const copyBtn = document.getElementById('cssi-copy-btn');
+
+  const txtCopy = root?.dataset.btnCopy ?? 'Copy';
+  const txtCopied = root?.dataset.btnCopied ?? 'Copied!';
+  const txtError = root?.dataset.msgError ?? 'Processing error.';
+
+  function countMatches(text: string, regex: RegExp): number {
+    return (text.match(regex) ?? []).length;
+  }
+
+  function getSpecificity(s: string): number {
+    let text = s;
+    const ids = countMatches(text, /#[\w-]+/g);
+    text = text.replace(/#[\w-]+/g, ' ');
+    const classes = countMatches(text, /\.[\w-]+/g);
+    text = text.replace(/\.[\w-]+/g, ' ');
+    const attrs = countMatches(text, /\[[^\]]+\]/g);
+    text = text.replace(/\[[^\]]+\]/g, ' ');
+    const pElems = countMatches(text, /::[\w-]+/g);
+    text = text.replace(/::[\w-]+/g, ' ');
+    const pClasses = countMatches(text, /:[\w-()]+/g);
+    text = text.replace(/:[\w-()]+/g, ' ');
+    const parts = text.replace(/[*+>~,]/g, ' ').trim().split(/\s+/);
+    const elems = parts[0] ? parts.length : 0;
+    return ids * 100 + (classes + attrs + pClasses) * 10 + (elems + pElems);
+  }
+
+  type CssRule = { selector: string; styles: string; spec: number };
+
+  function extractRules(rawCss: string): CssRule[] {
+    const clean = rawCss.replace(/\/\*[\s\S]*?\*\//g, '');
+    const matches = clean.match(/(?:[^{}]+)\s*\{[^}]+\}/g) ?? [];
+    const rules: CssRule[] = [];
+    for (const block of matches) {
+      const braceIdx = block.indexOf('{');
+      if (braceIdx === -1) continue;
+      const styles = block.slice(braceIdx + 1).replace('}', '').trim();
+      const selectors = block.slice(0, braceIdx).split(',').map((s) => s.trim());
+      if (!styles) continue;
+      for (const sel of selectors) {
+        if (sel && !sel.startsWith('@')) rules.push({ selector: sel, styles, spec: getSpecificity(sel) });
+      }
+    }
+    return rules.sort((a, b) => a.spec - b.spec);
+  }
+
+  function applyRule(doc: Document, rule: CssRule): void {
+    const nodes = doc.querySelectorAll(rule.selector);
+    nodes.forEach((el) => {
+      if (!(el instanceof HTMLElement)) return;
+      let existing = el.getAttribute('style') ?? '';
+      if (existing && !existing.endsWith(';')) existing += '; ';
+      el.setAttribute('style', existing + rule.styles);
+    });
+  }
+
+  function convertToInline(rawHtml: string, rawCss: string): string {
+    const rules = extractRules(rawCss);
+    const doc = new DOMParser().parseFromString(rawHtml, 'text/html');
+    for (const rule of rules) {
+      try { applyRule(doc, rule); } catch { }
+    }
+    return doc.body.innerHTML;
+  }
+
+  if (convertBtn && htmlInput && cssInput && htmlOutput) {
+    convertBtn.addEventListener('click', () => {
+      if (!htmlInput.value.trim()) return;
+      try {
+        htmlOutput.value = convertToInline(htmlInput.value, cssInput.value);
+      } catch {
+        htmlOutput.value = txtError;
+      }
+    });
+  }
+
+  if (copyBtn && htmlOutput) {
+    copyBtn.addEventListener('click', async () => {
+      if (!htmlOutput.value) return;
+      await navigator.clipboard.writeText(htmlOutput.value);
+      copyBtn.textContent = txtCopied;
+      setTimeout(() => { copyBtn.textContent = txtCopy; }, 1500);
+    });
+  }
+</script>

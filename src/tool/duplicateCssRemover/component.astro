@@ -1,0 +1,353 @@
+---
+import type { KnownLocale } from '../../types';
+import type { DuplicateCssRemoverUI } from './ui';
+
+interface Props {
+  locale?: KnownLocale;
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as DuplicateCssRemoverUI;
+---
+
+<div
+  class="dupcss-root"
+  data-btn-copy={t.btnCopy}
+  data-btn-copied={t.btnCopied}
+>
+  <div class="dupcss-card">
+    <div class="dupcss-stats" id="dupcss-stats">
+      <div class="dupcss-stat-item">
+        <span class="dupcss-stat-value" id="dupcss-stat-original">0</span>
+        <span class="dupcss-stat-label">{t.statBytesOriginal}</span>
+      </div>
+      <div class="dupcss-stat-sep"></div>
+      <div class="dupcss-stat-item">
+        <span class="dupcss-stat-value dupcss-stat-value-clean" id="dupcss-stat-clean">0</span>
+        <span class="dupcss-stat-label">{t.statBytesClean}</span>
+      </div>
+      <div class="dupcss-stat-sep"></div>
+      <div class="dupcss-stat-item">
+        <span class="dupcss-stat-value dupcss-stat-value-saving" id="dupcss-stat-saving">0%</span>
+        <span class="dupcss-stat-label">{t.statSaving}</span>
+      </div>
+    </div>
+
+    <div class="dupcss-grid">
+      <div class="dupcss-field">
+        <span class="dupcss-field-label">{t.labelInput}</span>
+        <textarea
+          id="dupcss-input"
+          class="dupcss-textarea"
+          placeholder={t.placeholderInput}
+          spellcheck="false"
+        ></textarea>
+      </div>
+      <div class="dupcss-field">
+        <div class="dupcss-field-header">
+          <span class="dupcss-field-label">{t.labelOutput}</span>
+          <button id="dupcss-copy-btn" class="dupcss-copy-btn">{t.btnCopy}</button>
+        </div>
+        <textarea
+          id="dupcss-output"
+          class="dupcss-textarea dupcss-textarea-output"
+          readonly
+          placeholder={t.placeholderOutput}
+          spellcheck="false"
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="dupcss-actions">
+      <button id="dupcss-clean-btn" class="dupcss-btn">
+        <svg class="dupcss-btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+        </svg>
+        {t.btnClean}
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .dupcss-root {
+    --dupcss-primary: #10b981;
+    --dupcss-primary-dark: #059669;
+    --dupcss-card-bg: #fff;
+    --dupcss-bg: #f8fafc;
+    --dupcss-text: #0f172a;
+    --dupcss-text-muted: #64748b;
+    --dupcss-border: #e2e8f0;
+    --dupcss-output-bg: rgba(16, 185, 129, 0.04);
+    --dupcss-saving-color: #f59e0b;
+
+    max-width: 1000px;
+    margin: 2rem auto;
+    color: var(--dupcss-text);
+  }
+
+  :global(.theme-dark) .dupcss-root {
+    --dupcss-card-bg: #1e293b;
+    --dupcss-bg: #0f172a;
+    --dupcss-text: #f1f5f9;
+    --dupcss-text-muted: #94a3b8;
+    --dupcss-border: #334155;
+    --dupcss-output-bg: rgba(16, 185, 129, 0.08);
+  }
+
+  .dupcss-card {
+    background: var(--dupcss-card-bg);
+    border: 1px solid var(--dupcss-border);
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .dupcss-stats {
+    display: none;
+    gap: 0;
+    background: var(--dupcss-bg);
+    border: 1px solid var(--dupcss-border);
+    border-radius: 0.875rem;
+    overflow: hidden;
+  }
+
+  :global(.dupcss-stats-visible) {
+    display: flex;
+  }
+
+  .dupcss-stat-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.875rem 1rem;
+    gap: 0.25rem;
+  }
+
+  .dupcss-stat-sep {
+    width: 1px;
+    background: var(--dupcss-border);
+    align-self: stretch;
+  }
+
+  .dupcss-stat-value {
+    font-size: 1.375rem;
+    font-weight: 800;
+    color: var(--dupcss-primary);
+    line-height: 1;
+  }
+
+  .dupcss-stat-value-saving {
+    color: var(--dupcss-saving-color);
+  }
+
+  .dupcss-stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--dupcss-text-muted);
+    letter-spacing: 0.06em;
+  }
+
+  .dupcss-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 768px) {
+    .dupcss-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .dupcss-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .dupcss-field-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dupcss-field-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--dupcss-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .dupcss-copy-btn {
+    background: transparent;
+    border: 1px solid var(--dupcss-border);
+    color: var(--dupcss-text-muted);
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .dupcss-copy-btn:hover {
+    background: var(--dupcss-bg);
+    color: var(--dupcss-primary);
+    border-color: var(--dupcss-primary);
+  }
+
+  .dupcss-textarea {
+    width: 100%;
+    height: 320px;
+    padding: 1rem 1.25rem;
+    font-size: 0.875rem;
+    color: var(--dupcss-text);
+    background: var(--dupcss-bg);
+    border: 1px solid var(--dupcss-border);
+    border-radius: 0.875rem;
+    resize: vertical;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    white-space: pre;
+    overflow: auto;
+    line-height: 1.6;
+  }
+
+  .dupcss-textarea:focus {
+    border-color: var(--dupcss-primary);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+  }
+
+  .dupcss-textarea-output {
+    border-color: var(--dupcss-primary);
+    background: var(--dupcss-output-bg);
+  }
+
+  .dupcss-textarea-output:focus {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+  }
+
+  .dupcss-actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  .dupcss-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--dupcss-primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.875rem 2rem;
+    border-radius: 0.875rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  }
+
+  .dupcss-btn:hover {
+    background: var(--dupcss-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+  }
+
+  .dupcss-btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+</style>
+
+<script>
+  const root = document.querySelector('.dupcss-root') as HTMLElement | null;
+  const inputEl = document.getElementById('dupcss-input') as HTMLTextAreaElement;
+  const outputEl = document.getElementById('dupcss-output') as HTMLTextAreaElement;
+  const cleanBtn = document.getElementById('dupcss-clean-btn');
+  const copyBtn = document.getElementById('dupcss-copy-btn');
+  const statsBlock = document.getElementById('dupcss-stats');
+  const statOriginal = document.getElementById('dupcss-stat-original');
+  const statClean = document.getElementById('dupcss-stat-clean');
+  const statSaving = document.getElementById('dupcss-stat-saving');
+
+  const txtCopy = root?.dataset.btnCopy ?? 'Copy';
+  const txtCopied = root?.dataset.btnCopied ?? 'Copied!';
+
+  function parseProps(propertiesRaw: string, propMap: Map<string, string>): void {
+    for (const p of propertiesRaw.split(';')) {
+      const colonIdx = p.indexOf(':');
+      if (colonIdx === -1) continue;
+      const key = p.slice(0, colonIdx).trim();
+      const val = p.slice(colonIdx + 1).trim();
+      if (key && val) propMap.set(key, val);
+    }
+  }
+
+  function parseRule(ruleBlock: string, stylesMap: Map<string, Map<string, string>>): void {
+    const braceIdx = ruleBlock.indexOf('{');
+    if (braceIdx === -1) return;
+    const selector = ruleBlock.slice(0, braceIdx).trim().replace(/\s+/g, ' ');
+    const propertiesRaw = ruleBlock.slice(braceIdx + 1).replace('}', '').trim();
+    if (!selector || !propertiesRaw) return;
+    if (!stylesMap.has(selector)) stylesMap.set(selector, new Map<string, string>());
+    parseProps(propertiesRaw, stylesMap.get(selector)!);
+  }
+
+  function serializeStyles(stylesMap: Map<string, Map<string, string>>): string {
+    let out = '';
+    stylesMap.forEach((propMap, selector) => {
+      if (propMap.size === 0) return;
+      out += `${selector} {\n`;
+      propMap.forEach((val, key) => { out += `  ${key}: ${val};\n`; });
+      out += `}\n\n`;
+    });
+    return out.trim();
+  }
+
+  function cleanCss(rawCss: string): string {
+    if (!rawCss.trim()) return '';
+    const withoutComments = rawCss.replace(/\/\*[\s\S]*?\*\//g, '');
+    const matches = withoutComments.match(/(?:[^{}]+)\s*\{[^}]+\}/g) ?? [];
+    const stylesMap = new Map<string, Map<string, string>>();
+    for (const rule of matches) parseRule(rule, stylesMap);
+    return serializeStyles(stylesMap);
+  }
+
+  if (cleanBtn && inputEl && outputEl && statsBlock && statOriginal && statClean && statSaving) {
+    cleanBtn.addEventListener('click', () => {
+      const result = cleanCss(inputEl.value);
+      outputEl.value = result;
+
+      if (result) {
+        const origBytes = new Blob([inputEl.value]).size;
+        const cleanBytes = new Blob([result]).size;
+        const saving = origBytes > 0 ? (((origBytes - cleanBytes) / origBytes) * 100).toFixed(1) : '0';
+
+        statOriginal.textContent = origBytes.toString();
+        statClean.textContent = cleanBytes.toString();
+        statSaving.textContent = `${saving}%`;
+        statsBlock.classList.add('dupcss-stats-visible');
+      } else {
+        statsBlock.classList.remove('dupcss-stats-visible');
+      }
+    });
+  }
+
+  if (copyBtn && outputEl) {
+    copyBtn.addEventListener('click', async () => {
+      if (!outputEl.value) return;
+      await navigator.clipboard.writeText(outputEl.value);
+      copyBtn.textContent = txtCopied;
+      setTimeout(() => { copyBtn.textContent = txtCopy; }, 1500);
+    });
+  }
+</script>
