@@ -1,0 +1,270 @@
+---
+import type { UtmGeneratorUI } from './ui';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as UtmGeneratorUI;
+---
+
+<div id="ug-root" class="ug-root" data-i18n={JSON.stringify(t)}>
+  <div class="ug-container">
+    <div class="ug-grid">
+      <div class="ug-input-group ug-col-span-2">
+        <label for="ug-url">{t.labelUrl}</label>
+        <input type="url" id="ug-url" class="ug-input" placeholder="https://example.com" />
+      </div>
+
+      <div class="ug-input-group">
+        <label for="ug-source">{t.labelSource}</label>
+        <input type="text" id="ug-source" class="ug-input" placeholder="google" />
+      </div>
+
+      <div class="ug-input-group">
+        <label for="ug-medium">{t.labelMedium}</label>
+        <input type="text" id="ug-medium" class="ug-input" placeholder="cpc" />
+      </div>
+
+      <div class="ug-input-group">
+        <label for="ug-campaign">{t.labelCampaign}</label>
+        <input type="text" id="ug-campaign" class="ug-input" placeholder="summer_offer" />
+      </div>
+
+      <div class="ug-input-group">
+        <label for="ug-term">{t.labelTerm}</label>
+        <input type="text" id="ug-term" class="ug-input" placeholder="buy_shoes" />
+      </div>
+
+      <div class="ug-input-group">
+        <label for="ug-content">{t.labelContent}</label>
+        <input type="text" id="ug-content" class="ug-input" placeholder="banner_top" />
+      </div>
+    </div>
+
+    <div class="ug-result">
+      <div class="ug-result-header">
+        <span class="ug-result-label">{t.labelGenerated}</span>
+        <button id="ug-btn-copy" class="ug-btn-copy">{t.btnCopy}</button>
+      </div>
+      <div id="ug-output" class="ug-result-url">https://example.com</div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .ug-root {
+    width: 100%;
+  }
+
+  .ug-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.06);
+  }
+
+  :global(.theme-dark) .ug-container {
+    background: rgba(15, 23, 42, 0.75);
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .ug-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .ug-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ug-grid .ug-col-span-2 {
+      grid-column: span 1;
+    }
+
+    .ug-container {
+      padding: 1.5rem;
+    }
+  }
+
+  .ug-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .ug-input-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgb(100, 116, 139);
+  }
+
+  :global(.theme-dark) .ug-input-group label {
+    color: rgb(148, 163, 184);
+  }
+
+  .ug-input {
+    padding: 0.8rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgb(226, 232, 240);
+    background: white;
+    color: rgb(51, 65, 85);
+    transition: all 0.2s ease;
+  }
+
+  :global(.theme-dark) .ug-input {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgb(51, 65, 85);
+    color: rgb(203, 213, 225);
+  }
+
+  .ug-input:focus {
+    outline: none;
+    border-color: rgb(99, 102, 241);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  }
+
+  .ug-col-span-2 {
+    grid-column: span 2;
+  }
+
+  .ug-result {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 1rem;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+  }
+
+  :global(.theme-dark) .ug-result {
+    background: rgba(99, 102, 241, 0.05);
+    border-color: rgba(99, 102, 241, 0.15);
+  }
+
+  .ug-result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .ug-result-label {
+    font-weight: 600;
+    color: rgb(51, 65, 85);
+    font-size: 0.875rem;
+  }
+
+  :global(.theme-dark) .ug-result-label {
+    color: rgb(203, 213, 225);
+  }
+
+  .ug-result-url {
+    word-break: break-all;
+    font-size: 0.875rem;
+    color: rgb(99, 102, 241);
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  :global(.theme-dark) .ug-result-url {
+    background: rgb(30, 41, 59);
+    border-color: rgb(51, 65, 85);
+    color: rgb(129, 140, 248);
+  }
+
+  .ug-btn-copy {
+    padding: 0.5rem 1rem;
+    background: rgb(99, 102, 241);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .ug-btn-copy:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+
+  .ug-btn-copy:active {
+    transform: translateY(0);
+  }
+
+  .ug-btn-copy.ug-copied {
+    background: rgb(16, 185, 129);
+  }
+</style>
+
+<script>
+  import type { UtmGeneratorUI } from './ui';
+
+  const root = document.getElementById('ug-root') as HTMLElement;
+  const t = JSON.parse(root.dataset.i18n ?? '{}') as UtmGeneratorUI;
+
+  const urlInput = document.getElementById('ug-url') as HTMLInputElement;
+  const sourceInput = document.getElementById('ug-source') as HTMLInputElement;
+  const mediumInput = document.getElementById('ug-medium') as HTMLInputElement;
+  const campaignInput = document.getElementById('ug-campaign') as HTMLInputElement;
+  const termInput = document.getElementById('ug-term') as HTMLInputElement;
+  const contentInput = document.getElementById('ug-content') as HTMLInputElement;
+  const outputEl = document.getElementById('ug-output') as HTMLElement;
+  const copyBtn = document.getElementById('ug-btn-copy') as HTMLButtonElement;
+
+  function updateUrl(): void {
+    const baseUrl = urlInput.value.trim();
+    if (!baseUrl) {
+      outputEl.textContent = t.errorInvalid;
+      return;
+    }
+
+    try {
+      const url = new URL(baseUrl);
+      const params = new URLSearchParams(url.search);
+
+      if (sourceInput.value.trim()) params.set('utm_source', sourceInput.value.trim());
+      if (mediumInput.value.trim()) params.set('utm_medium', mediumInput.value.trim());
+      if (campaignInput.value.trim()) params.set('utm_campaign', campaignInput.value.trim());
+      if (termInput.value.trim()) params.set('utm_term', termInput.value.trim());
+      if (contentInput.value.trim()) params.set('utm_content', contentInput.value.trim());
+
+      url.search = params.toString();
+      outputEl.textContent = url.toString();
+    } catch {
+      outputEl.textContent = t.errorInvalidUrl;
+    }
+  }
+
+  [urlInput, sourceInput, mediumInput, campaignInput, termInput, contentInput].forEach((input) => {
+    input.addEventListener('input', updateUrl);
+  });
+
+  copyBtn.addEventListener('click', () => {
+    const text = outputEl.textContent || '';
+    navigator.clipboard.writeText(text).then(() => {
+      const origText = copyBtn.textContent;
+      copyBtn.textContent = t.btnCopied;
+      copyBtn.classList.add('ug-copied');
+      setTimeout(() => {
+        copyBtn.textContent = origText;
+        copyBtn.classList.remove('ug-copied');
+      }, 2000);
+    });
+  });
+
+  updateUrl();
+</script>

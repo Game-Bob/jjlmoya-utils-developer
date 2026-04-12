@@ -1,0 +1,504 @@
+---
+import type { ColorConverterUI } from './ui';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as ColorConverterUI;
+---
+
+<div id="cc-root" class="cc-root" data-i18n={JSON.stringify(t)}>
+  <div class="cc-container">
+    <div class="cc-card cc-left">
+      <div class="cc-input-grid">
+        <div class="cc-input-group">
+          <div class="cc-label-row">
+            <label for="cc-hex" class="cc-label">HEX</label>
+            <button class="cc-copy-badge" data-target="cc-hex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              {t.btnCopy}
+            </button>
+          </div>
+          <input type="text" id="cc-hex" class="cc-text-input" placeholder="#FFFFFF" spellcheck="false" />
+        </div>
+
+        <div class="cc-input-group">
+          <div class="cc-label-row">
+            <label for="cc-rgb" class="cc-label">RGB</label>
+            <button class="cc-copy-badge" data-target="cc-rgb">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              {t.btnCopy}
+            </button>
+          </div>
+          <input type="text" id="cc-rgb" class="cc-text-input" placeholder="rgb(255, 255, 255)" spellcheck="false" />
+        </div>
+
+        <div class="cc-input-group">
+          <div class="cc-label-row">
+            <label for="cc-hsl" class="cc-label">HSL</label>
+            <button class="cc-copy-badge" data-target="cc-hsl">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              {t.btnCopy}
+            </button>
+          </div>
+          <input type="text" id="cc-hsl" class="cc-text-input" placeholder="hsl(0, 0%, 100%)" spellcheck="false" />
+        </div>
+      </div>
+
+      <div class="cc-sliders">
+        <div class="cc-slider-group">
+          <div class="cc-slider-header">
+            <span>{t.labelR}</span>
+            <span id="cc-r-val">255</span>
+          </div>
+          <input type="range" id="cc-r-slider" class="cc-range" min="0" max="255" value="255" />
+        </div>
+        <div class="cc-slider-group">
+          <div class="cc-slider-header">
+            <span>{t.labelG}</span>
+            <span id="cc-g-val">255</span>
+          </div>
+          <input type="range" id="cc-g-slider" class="cc-range" min="0" max="255" value="255" />
+        </div>
+        <div class="cc-slider-group">
+          <div class="cc-slider-header">
+            <span>{t.labelB}</span>
+            <span id="cc-b-val">255</span>
+          </div>
+          <input type="range" id="cc-b-slider" class="cc-range" min="0" max="255" value="255" />
+        </div>
+      </div>
+    </div>
+
+    <div class="cc-card cc-right">
+      <div class="cc-preview-section">
+        <label class="cc-label">{t.labelPreview}</label>
+        <div id="cc-preview" class="cc-main-preview" style="background-color: rgb(99, 102, 241);" title={t.labelPreview}>
+          <div class="cc-info-overlay">
+            <span id="cc-preview-hex">#6366F1</span>
+            <span id="cc-preview-contrast">{t.contrastLabel}: 4.6</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cc-harmony-section">
+        <label class="cc-label">{t.labelHarmonies}</label>
+        <div class="cc-harmony-grid">
+          <div class="cc-harmony-item">
+            <div id="cc-comp" class="cc-harmony-color" title={t.clickToCopy}></div>
+            <span class="cc-harmony-label">{t.labelComp}</span>
+          </div>
+          <div class="cc-harmony-item">
+            <div id="cc-ana1" class="cc-harmony-color" title={t.clickToCopy}></div>
+            <span class="cc-harmony-label">{t.labelAna1}</span>
+          </div>
+          <div class="cc-harmony-item">
+            <div id="cc-ana2" class="cc-harmony-color" title={t.clickToCopy}></div>
+            <span class="cc-harmony-label">{t.labelAna2}</span>
+          </div>
+          <div class="cc-harmony-item">
+            <div id="cc-tri1" class="cc-harmony-color" title={t.clickToCopy}></div>
+            <span class="cc-harmony-label">{t.labelTri1}</span>
+          </div>
+          <div class="cc-harmony-item">
+            <div id="cc-tri2" class="cc-harmony-color" title={t.clickToCopy}></div>
+            <span class="cc-harmony-label">{t.labelTri2}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cc-root {
+    width: 100%;
+  }
+
+  .cc-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    .cc-container {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+  }
+
+  .cc-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  }
+
+  :global(.theme-dark) .cc-card {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .cc-input-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cc-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cc-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cc-label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: rgb(100, 116, 139);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  :global(.theme-dark) .cc-label {
+    color: rgb(148, 163, 184);
+  }
+
+  .cc-text-input {
+    width: 100%;
+    background: rgba(248, 250, 252, 0.8);
+    border: 1px solid rgb(203, 213, 225);
+    border-radius: 0.75rem;
+    color: rgb(30, 41, 59);
+    padding: 0.75rem 1rem;
+    font-size: 1.125rem;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  :global(.theme-dark) .cc-text-input {
+    background: rgba(15, 23, 42, 0.5);
+    border-color: rgb(51, 65, 85);
+    color: rgb(241, 245, 249);
+  }
+
+  .cc-text-input:focus {
+    border-color: rgb(99, 102, 241);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  }
+
+  .cc-copy-badge {
+    background: rgb(241, 245, 249);
+    border: 1px solid rgb(226, 232, 240);
+    color: rgb(100, 116, 139);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    transition: all 0.2s ease;
+  }
+
+  :global(.theme-dark) .cc-copy-badge {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: rgb(148, 163, 184);
+  }
+
+  .cc-copy-badge:hover {
+    background: rgb(238, 242, 255);
+    border-color: rgb(99, 102, 241);
+    color: rgb(79, 70, 229);
+    transform: translateY(-1px);
+  }
+
+  :global(.theme-dark) .cc-copy-badge:hover {
+    background: rgba(99, 102, 241, 0.1);
+  }
+
+  .cc-copy-badge.cc-copied,
+  .cc-copy-badge.cc-copied:hover {
+    background: rgb(240, 253, 244);
+    border-color: rgb(34, 197, 94);
+    color: rgb(22, 163, 74);
+    transform: none;
+  }
+
+  :global(.theme-dark) .cc-copy-badge.cc-copied,
+  :global(.theme-dark) .cc-copy-badge.cc-copied:hover {
+    background: rgba(34, 197, 94, 0.1);
+  }
+
+  .cc-sliders {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .cc-slider-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cc-slider-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgb(148, 163, 184);
+  }
+
+  .cc-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: rgb(226, 232, 240);
+    border-radius: 3px;
+    outline: none;
+  }
+
+  :global(.theme-dark) .cc-range {
+    background: rgb(51, 65, 85);
+  }
+
+  .cc-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: rgb(99, 102, 241);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .cc-range:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+  }
+
+  .cc-preview-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cc-main-preview {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 1.25rem;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+  }
+
+  :global(.theme-dark) .cc-main-preview {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .cc-info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cc-harmony-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cc-harmony-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
+  }
+
+  .cc-harmony-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .cc-harmony-color {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .cc-harmony-color:hover {
+    transform: scale(1.08);
+  }
+
+  .cc-harmony-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: rgb(148, 163, 184);
+    text-transform: uppercase;
+    text-align: center;
+  }
+</style>
+
+<script>
+  import type { ColorConverterUI } from './ui';
+
+  const root = document.getElementById('cc-root')!;
+  const t = JSON.parse(root.dataset.i18n ?? '{}') as ColorConverterUI;
+
+  const hexInput = document.getElementById('cc-hex') as HTMLInputElement;
+  const rgbInput = document.getElementById('cc-rgb') as HTMLInputElement;
+  const hslInput = document.getElementById('cc-hsl') as HTMLInputElement;
+  const rSlider = document.getElementById('cc-r-slider') as HTMLInputElement;
+  const gSlider = document.getElementById('cc-g-slider') as HTMLInputElement;
+  const bSlider = document.getElementById('cc-b-slider') as HTMLInputElement;
+  const rVal = document.getElementById('cc-r-val') as HTMLElement;
+  const gVal = document.getElementById('cc-g-val') as HTMLElement;
+  const bVal = document.getElementById('cc-b-val') as HTMLElement;
+  const mainPreview = document.getElementById('cc-preview') as HTMLElement;
+  const previewHex = document.getElementById('cc-preview-hex') as HTMLElement;
+  const previewContrast = document.getElementById('cc-preview-contrast') as HTMLElement;
+
+  const harmonyEls = {
+    comp: document.getElementById('cc-comp') as HTMLElement,
+    ana1: document.getElementById('cc-ana1') as HTMLElement,
+    ana2: document.getElementById('cc-ana2') as HTMLElement,
+    tri1: document.getElementById('cc-tri1') as HTMLElement,
+    tri2: document.getElementById('cc-tri2') as HTMLElement,
+  };
+
+  const svgCheck = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgb(16,185,129)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+
+  function rgbToHex(r: number, g: number, b: number): string {
+    return '#' + [r, g, b].map((x) => x.toString(16).padStart(2, '0')).join('').toUpperCase();
+  }
+
+  function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
+    const res = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return res ? { r: parseInt(res[1], 16), g: parseInt(res[2], 16), b: parseInt(res[3], 16) } : null;
+  }
+
+  function getHslParts(r: number, g: number, b: number): { h: number; s: number; l: number } {
+    const rn = r / 255; const gn = g / 255; const bn = b / 255;
+    const max = Math.max(rn, gn, bn); const min = Math.min(rn, gn, bn);
+    let h = 0; let s = 0;
+    const l = (max + min) / 2;
+    if (max !== min) {
+      const d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      if (max === rn) h = (gn - bn) / d + (gn < bn ? 6 : 0);
+      else if (max === gn) h = (bn - rn) / d + 2;
+      else h = (rn - gn) / d + 4;
+      h /= 6;
+    }
+    return { h: Math.round(h * 360), s: Math.round(s * 100), l: Math.round(l * 100) };
+  }
+
+  function getLuminance(r: number, g: number, b: number): number {
+    const lin = (v: number) => { const n = v / 255; return n <= 0.03928 ? n / 12.92 : Math.pow((n + 0.055) / 1.055, 2.4); };
+    return lin(r) * 0.2126 + lin(g) * 0.7152 + lin(b) * 0.0722;
+  }
+
+  function updateHarmonies(h: number, s: number, l: number): void {
+    const pairs: [keyof typeof harmonyEls, number][] = [
+      ['comp', h + 180], ['ana1', h + 30], ['ana2', h + 330], ['tri1', h + 120], ['tri2', h + 240],
+    ];
+    pairs.forEach(([key, deg]) => {
+      const el = harmonyEls[key];
+      const color = `hsl(${deg % 360}, ${s}%, ${l}%)`;
+      el.style.backgroundColor = color;
+      el.dataset.color = color;
+    });
+  }
+
+  function updateAll(r: number, g: number, b: number): void {
+    const hex = rgbToHex(r, g, b);
+    const { h, s, l } = getHslParts(r, g, b);
+    hexInput.value = hex;
+    rgbInput.value = `rgb(${r}, ${g}, ${b})`;
+    hslInput.value = `hsl(${h}, ${s}%, ${l}%)`;
+    rSlider.value = r.toString(); gSlider.value = g.toString(); bSlider.value = b.toString();
+    rVal.textContent = r.toString(); gVal.textContent = g.toString(); bVal.textContent = b.toString();
+    mainPreview.style.backgroundColor = hex;
+    previewHex.textContent = hex;
+    const contrast = (getLuminance(r, g, b) + 0.05) / 0.05;
+    previewContrast.textContent = `${t.contrastLabel}: ${contrast.toFixed(1)}`;
+    updateHarmonies(h, s, l);
+  }
+
+  function applyCopy(btn: HTMLElement, text: string): void {
+    navigator.clipboard.writeText(text).then(() => {
+      const orig = btn.innerHTML;
+      btn.innerHTML = `${svgCheck} ${t.btnCopied}`;
+      btn.classList.add('cc-copied');
+      setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('cc-copied'); }, 2000);
+    }).catch(() => { });
+  }
+
+  document.querySelectorAll<HTMLElement>('.cc-copy-badge').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.dataset.target;
+      if (!targetId) return;
+      const target = document.getElementById(targetId) as HTMLInputElement;
+      if (!target) return;
+      applyCopy(btn, target.value);
+    });
+  });
+
+  mainPreview.addEventListener('click', () => applyCopy(mainPreview, hexInput.value));
+
+  Object.values(harmonyEls).forEach((el) => {
+    el.addEventListener('click', () => {
+      const color = el.dataset.color;
+      if (color) navigator.clipboard.writeText(color).catch(() => { });
+    });
+  });
+
+  hexInput.addEventListener('input', () => {
+    const rgb = hexToRgb(hexInput.value);
+    if (rgb) updateAll(rgb.r, rgb.g, rgb.b);
+  });
+
+  [rSlider, gSlider, bSlider].forEach((slider) => {
+    slider.addEventListener('input', () => updateAll(parseInt(rSlider.value), parseInt(gSlider.value), parseInt(bSlider.value)));
+  });
+
+  updateAll(99, 102, 241);
+</script>

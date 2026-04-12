@@ -1,0 +1,458 @@
+---
+import type { UrlCleanerUI } from './ui';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as UrlCleanerUI;
+---
+
+<div id="uc-root" class="uc-root" data-i18n={JSON.stringify(t)}>
+  <div class="uc-container">
+    <div class="uc-input-card">
+      <label for="uc-url-input" class="uc-label">{t.labelInput}</label>
+      <div class="uc-input-group">
+        <input type="url" id="uc-url-input" class="uc-input" placeholder="https://example.com?utm_source=twitter&fbclid=123..." />
+        <button id="uc-btn-clean" class="uc-btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.36 2.72L20.78 4.14L15.06 9.85C16.13 11.39 16.28 13.24 15.38 14.44L9.06 8.12C10.26 7.22 12.11 7.38 13.65 8.44L19.36 2.72M5.93 17.57C3.92 15.56 2.69 13.16 2.35 10.92L7.23 8.83L14.67 16.27L12.58 21.15C10.34 20.81 7.94 19.58 5.93 17.57Z"/></svg>
+          {t.btnClean}
+        </button>
+      </div>
+    </div>
+
+    <div id="uc-results" class="uc-results" style="display:none">
+      <div class="uc-result-card">
+        <div class="uc-card-header">
+          <h3 class="uc-card-title">{t.labelCleaned}</h3>
+          <button id="uc-btn-copy" class="uc-copy-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            {t.btnCopy}
+          </button>
+        </div>
+        <div id="uc-cleaned-url" class="uc-url-display"></div>
+      </div>
+
+      <div class="uc-result-card">
+        <h3 class="uc-card-title">{t.labelRemoved}</h3>
+        <div id="uc-removed-list" class="uc-removed-list"></div>
+      </div>
+    </div>
+
+    <div id="uc-stats" class="uc-stats-card" style="display:none">
+      <div class="uc-stat-item">
+        <span class="uc-stat-value" id="uc-count">0</span>
+        <span class="uc-stat-label">{t.countLabel}</span>
+      </div>
+      <div class="uc-stat-item">
+        <span class="uc-stat-value" id="uc-reduction">0%</span>
+        <span class="uc-stat-label">{t.reductionLabel}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .uc-root {
+    width: 100%;
+  }
+
+  .uc-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .uc-input-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  :global(.theme-dark) .uc-input-card {
+    background: rgba(15, 23, 42, 0.75);
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .uc-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgb(100, 116, 139);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  :global(.theme-dark) .uc-label {
+    color: rgb(148, 163, 184);
+  }
+
+  .uc-input-group {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .uc-input {
+    flex-grow: 1;
+    background: white;
+    border: 1px solid rgb(226, 232, 240);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease;
+    color: rgb(51, 65, 85);
+  }
+
+  :global(.theme-dark) .uc-input {
+    background: rgb(15, 23, 42);
+    border-color: rgb(51, 65, 85);
+    color: rgb(203, 213, 225);
+  }
+
+  .uc-input:focus {
+    border-color: rgb(59, 130, 246);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  .uc-btn-primary {
+    background: rgb(59, 130, 246);
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 0 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+  }
+
+  .uc-btn-primary:hover {
+    background: rgb(37, 99, 235);
+    transform: translateY(-1px);
+  }
+
+  .uc-results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .uc-results {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .uc-result-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  :global(.theme-dark) .uc-result-card {
+    background: rgba(15, 23, 42, 0.75);
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .uc-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .uc-card-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgb(51, 65, 85);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  :global(.theme-dark) .uc-card-title {
+    color: rgb(203, 213, 225);
+  }
+
+  .uc-url-display {
+    word-break: break-all;
+    font-size: 0.875rem;
+    color: rgb(59, 130, 246);
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  :global(.theme-dark) .uc-url-display {
+    background: rgb(30, 41, 59);
+    border-color: rgb(51, 65, 85);
+    color: rgb(129, 140, 148);
+  }
+
+  .uc-copy-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.4rem 0.875rem;
+    border-radius: 2rem;
+    border: 1.5px solid rgb(226, 232, 240);
+    background: white;
+    color: rgb(71, 85, 105);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  :global(.theme-dark) .uc-copy-btn {
+    background: rgb(30, 41, 59);
+    border-color: rgb(51, 65, 85);
+    color: rgb(148, 163, 184);
+  }
+
+  .uc-copy-btn:hover {
+    border-color: rgb(59, 130, 246);
+    color: rgb(59, 130, 246);
+  }
+
+  .uc-copy-btn.uc-copied {
+    background: rgb(16, 185, 129);
+    border-color: rgb(16, 185, 129);
+    color: white;
+  }
+
+  .uc-removed-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .uc-removed-item {
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 0.5rem;
+    border-left: 3px solid rgb(59, 130, 246);
+  }
+
+  :global(.theme-dark) .uc-removed-item {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .uc-item-key {
+    font-weight: 600;
+    color: rgb(51, 65, 85);
+    font-size: 0.875rem;
+  }
+
+  :global(.theme-dark) .uc-item-key {
+    color: rgb(203, 213, 225);
+  }
+
+  .uc-item-val {
+    font-size: 0.75rem;
+    color: rgb(100, 116, 139);
+    margin-left: 0.5rem;
+  }
+
+  .uc-item-desc {
+    font-size: 0.8rem;
+    color: rgb(100, 116, 139);
+    margin: 0.25rem 0;
+  }
+
+  :global(.theme-dark) .uc-item-desc {
+    color: rgb(148, 163, 184);
+  }
+
+  .uc-none-detected {
+    font-size: 0.875rem;
+    color: rgb(100, 116, 139);
+    font-style: italic;
+  }
+
+  .uc-stats-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.06);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  :global(.theme-dark) .uc-stats-card {
+    background: rgba(15, 23, 42, 0.75);
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .uc-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .uc-stat-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: rgb(59, 130, 246);
+  }
+
+  .uc-stat-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgb(100, 116, 139);
+    letter-spacing: 0.04em;
+  }
+
+  :global(.theme-dark) .uc-stat-label {
+    color: rgb(148, 163, 184);
+  }
+</style>
+
+<script>
+  import type { UrlCleanerUI } from './ui';
+
+  interface TrackingParam { label: string; desc: string; }
+
+  const TRACKING_PARAMS: Record<string, TrackingParam> = {
+    utm_source: { label: 'UTM Source', desc: 'Identifica la plataforma o red de origen' },
+    utm_medium: { label: 'UTM Medium', desc: 'Define el canal de marketing' },
+    utm_campaign: { label: 'UTM Campaign', desc: 'Nombre específico de la campaña' },
+    utm_term: { label: 'UTM Term', desc: 'Palabras clave usadas en anuncios' },
+    utm_content: { label: 'UTM Content', desc: 'Diferencia anuncios o enlaces' },
+    fbclid: { label: 'Facebook Click ID', desc: 'Rastreador inyectado por Facebook' },
+    gclid: { label: 'Google Click ID', desc: 'ID de Google Ads para seguimiento' },
+    dclid: { label: 'Display Click ID', desc: 'Similar al gclid, para Display Ads' },
+    msclkid: { label: 'Bing Click ID', desc: 'Identificador de Microsoft Advertising' },
+    li_fat_id: { label: 'LinkedIn Insights', desc: 'Rastreador de conversiones de LinkedIn' },
+    mc_cid: { label: 'Mailchimp Campaign ID', desc: 'Identificador de campañas Mailchimp' },
+    mc_eid: { label: 'Mailchimp Email ID', desc: 'ID único para rastrear aperturas' },
+    _hsenc: { label: 'HubSpot Tracking', desc: 'Parámetro de personalización HubSpot' },
+    _hsmi: { label: 'HubSpot Email', desc: 'Rastrea interacción con correos HubSpot' },
+    ref: { label: 'Referencia', desc: 'Indica el sitio que recomendó el enlace' },
+    affiliate: { label: 'Afiliado', desc: 'ID para atribuir ventas a socio' },
+  };
+
+  const root = document.getElementById('uc-root') as HTMLElement;
+  const t = JSON.parse(root.dataset.i18n ?? '{}') as UrlCleanerUI;
+  const urlInput = document.getElementById('uc-url-input') as HTMLInputElement;
+  const btnClean = document.getElementById('uc-btn-clean') as HTMLButtonElement;
+  const results = document.getElementById('uc-results') as HTMLElement;
+  const stats = document.getElementById('uc-stats') as HTMLElement;
+  const cleanedUrlEl = document.getElementById('uc-cleaned-url') as HTMLElement;
+  const removedListEl = document.getElementById('uc-removed-list') as HTMLElement;
+  const countEl = document.getElementById('uc-count') as HTMLElement;
+  const reductionEl = document.getElementById('uc-reduction') as HTMLElement;
+  const copyBtn = document.getElementById('uc-btn-copy') as HTMLButtonElement;
+
+  function cleanUrl(): void {
+    const rawUrl = urlInput.value.trim();
+    if (!rawUrl) return;
+
+    try {
+      const url = new URL(rawUrl);
+      const params = new URLSearchParams(url.search);
+      const removed: Array<{ key: string; value: string }> = [];
+
+      const keysToRemove: string[] = [];
+      params.forEach((value, key) => {
+        if (TRACKING_PARAMS[key] || key.startsWith('utm_') || key.includes('clid')) {
+          removed.push({ key, value });
+          keysToRemove.push(key);
+        }
+      });
+
+      keysToRemove.forEach((key) => params.delete(key));
+      url.search = params.toString();
+      const cleanedUrl = url.toString();
+
+      displayResults(cleanedUrl, removed, rawUrl.length, cleanedUrl.length);
+    } catch {
+      alert(t.errorInvalid);
+    }
+  }
+
+  function createRemovedItem(item: { key: string; value: string }): HTMLElement {
+    const info = TRACKING_PARAMS[item.key] || { label: item.key, desc: 'Tracking parameter' };
+    const div = document.createElement('div');
+    div.className = 'uc-removed-item';
+    const header = document.createElement('div');
+    const keySpan = document.createElement('span');
+    keySpan.className = 'uc-item-key';
+    keySpan.textContent = info.label;
+    const valSpan = document.createElement('span');
+    valSpan.className = 'uc-item-val';
+    valSpan.textContent = item.value;
+    header.appendChild(keySpan);
+    header.appendChild(valSpan);
+    const desc = document.createElement('p');
+    desc.className = 'uc-item-desc';
+    desc.textContent = info.desc;
+    div.appendChild(header);
+    div.appendChild(desc);
+    return div;
+  }
+
+  function displayResults(cleaned: string, removed: Array<{ key: string; value: string }>, oldLen: number, newLen: number): void {
+    results.style.display = '';
+    stats.style.display = '';
+    cleanedUrlEl.textContent = cleaned;
+    countEl.textContent = removed.length.toString();
+    const reduction = oldLen > 0 ? Math.round(((oldLen - newLen) / oldLen) * 100) : 0;
+    reductionEl.textContent = `${reduction}%`;
+    removedListEl.innerHTML = '';
+    if (removed.length === 0) {
+      const p = document.createElement('p');
+      p.className = 'uc-none-detected';
+      p.textContent = t.noneDetected;
+      removedListEl.appendChild(p);
+    } else {
+      removed.forEach((item) => removedListEl.appendChild(createRemovedItem(item)));
+    }
+  }
+
+  btnClean.addEventListener('click', cleanUrl);
+  urlInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') cleanUrl();
+  });
+
+  copyBtn.addEventListener('click', () => {
+    const text = cleanedUrlEl.textContent || '';
+    navigator.clipboard.writeText(text).then(() => {
+      const origText = copyBtn.textContent;
+      copyBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg> ${t.btnCopied}`;
+      copyBtn.classList.add('uc-copied');
+      setTimeout(() => {
+        copyBtn.textContent = origText;
+        copyBtn.classList.remove('uc-copied');
+      }, 2000);
+    });
+  });
+</script>

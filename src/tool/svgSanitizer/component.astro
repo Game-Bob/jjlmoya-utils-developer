@@ -1,0 +1,554 @@
+---
+import type { SvgSanitizerUI } from './ui';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as SvgSanitizerUI;
+
+const placeholder = `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" data-name="Figma Export">
+  <metadata>...</metadata>
+  <g id="Layer_1" data-name="Capa 1"></g>
+  <path d="M10 10 L90 90"/>
+</svg>`;
+---
+
+<div id="ss-root" class="ss-root" data-i18n={JSON.stringify(t)}>
+  <div id="ss-layout" class="ss-layout">
+    <div class="ss-panel ss-input-panel">
+      <label for="ss-input-area" class="ss-panel-label">{t.labelInput}</label>
+      <textarea
+        id="ss-input-area"
+        class="ss-textarea"
+        placeholder={placeholder}
+        spellcheck="false"
+        autocomplete="off"
+      ></textarea>
+
+      <div class="ss-options-row">
+        <label class="ss-toggle-label">
+          <input type="checkbox" id="ss-opt-ids" class="ss-toggle-input" />
+          <span class="ss-toggle-track"></span>
+          {t.optRemoveIds}
+        </label>
+        <label class="ss-toggle-label">
+          <input type="checkbox" id="ss-opt-wh" class="ss-toggle-input" checked />
+          <span class="ss-toggle-track"></span>
+          {t.optRemoveWH}
+        </label>
+        <label class="ss-toggle-label">
+          <input type="checkbox" id="ss-opt-minify" class="ss-toggle-input" />
+          <span class="ss-toggle-track"></span>
+          {t.optMinify}
+        </label>
+      </div>
+
+      <button id="ss-btn-sanitize" class="ss-btn-sanitize">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.36 2.72L20.78 4.14L15.06 9.85C16.13 11.39 16.28 13.24 15.38 14.44L9.06 8.12C10.26 7.22 12.11 7.38 13.65 8.44L19.36 2.72M5.93 17.57C3.92 15.56 2.69 13.16 2.35 10.92L7.23 8.83L14.67 16.27L12.58 21.15C10.34 20.81 7.94 19.58 5.93 17.57Z"/></svg>
+        {t.btnSanitize}
+      </button>
+
+      <p id="ss-error" class="ss-error" style="display:none"></p>
+    </div>
+
+    <div id="ss-output-panel" class="ss-panel ss-output-panel" style="display:none">
+      <div class="ss-output-header">
+        <span class="ss-output-label">{t.labelOutput}</span>
+        <div class="ss-output-actions">
+          <button id="ss-btn-copy" class="ss-btn-action">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            {t.btnCopy}
+          </button>
+          <button id="ss-btn-download" class="ss-btn-action ss-btn-download">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/></svg>
+            {t.btnDownload}
+          </button>
+        </div>
+      </div>
+
+      <textarea id="ss-output-area" class="ss-textarea ss-output-textarea" readonly spellcheck="false"></textarea>
+
+      <div class="ss-stats-row">
+        <div class="ss-stat-chip">
+          <span class="ss-chip-value" id="ss-stat-original">--</span>
+          <span class="ss-chip-label">{t.statOriginal}</span>
+        </div>
+        <div class="ss-stat-chip ss-chip-green">
+          <span class="ss-chip-value" id="ss-stat-cleaned">--</span>
+          <span class="ss-chip-label">{t.statCleaned}</span>
+        </div>
+        <div class="ss-stat-chip ss-chip-purple">
+          <span class="ss-chip-value" id="ss-stat-reduction">--</span>
+          <span class="ss-chip-label">{t.statReduction}</span>
+        </div>
+        <div class="ss-stat-chip ss-chip-amber">
+          <span class="ss-chip-value" id="ss-stat-elems">--</span>
+          <span class="ss-chip-label">{t.statElems}</span>
+        </div>
+        <div class="ss-stat-chip ss-chip-rose">
+          <span class="ss-chip-value" id="ss-stat-attrs">--</span>
+          <span class="ss-chip-label">{t.statAttrs}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .ss-root {
+    width: 100%;
+  }
+
+  .ss-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  @media (min-width: 768px) {
+    .ss-layout.ss-has-output {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .ss-panel {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  :global(.theme-dark) .ss-panel {
+    background: rgba(15, 23, 42, 0.75);
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .ss-panel-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgb(100, 116, 139);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  :global(.theme-dark) .ss-panel-label {
+    color: rgb(148, 163, 184);
+  }
+
+  .ss-textarea {
+    width: 100%;
+    min-height: 260px;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.03);
+    border: 1.5px solid rgb(226, 232, 240);
+    border-radius: 0.875rem;
+    padding: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: rgb(51, 65, 85);
+    outline: none;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  :global(.theme-dark) .ss-textarea {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgb(51, 65, 85);
+    color: rgb(203, 213, 225);
+  }
+
+  .ss-textarea:focus {
+    border-color: rgb(139, 92, 246);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+  }
+
+  .ss-output-textarea {
+    min-height: 220px;
+    cursor: text;
+  }
+
+  .ss-options-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .ss-toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: rgb(71, 85, 105);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  :global(.theme-dark) .ss-toggle-label {
+    color: rgb(148, 163, 184);
+  }
+
+  .ss-toggle-input {
+    display: none;
+  }
+
+  .ss-toggle-track {
+    width: 36px;
+    height: 20px;
+    background: rgb(226, 232, 240);
+    border-radius: 999px;
+    position: relative;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .ss-toggle-track::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .ss-toggle-input:checked + .ss-toggle-track {
+    background: rgb(139, 92, 246);
+  }
+
+  .ss-toggle-input:checked + .ss-toggle-track::after {
+    transform: translateX(16px);
+  }
+
+  .ss-btn-sanitize {
+    background: linear-gradient(135deg, rgb(139, 92, 246), rgb(124, 58, 237));
+    color: white;
+    border: none;
+    border-radius: 0.875rem;
+    padding: 0.875rem 1.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
+  }
+
+  .ss-btn-sanitize:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+  }
+
+  .ss-error {
+    font-size: 0.875rem;
+    color: rgb(239, 68, 68);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .ss-output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .ss-output-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgb(139, 92, 246);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .ss-output-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .ss-btn-action {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.875rem;
+    border-radius: 2rem;
+    border: 1.5px solid rgb(226, 232, 240);
+    background: white;
+    color: rgb(71, 85, 105);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  :global(.theme-dark) .ss-btn-action {
+    background: rgb(30, 41, 59);
+    border-color: rgb(51, 65, 85);
+    color: rgb(148, 163, 184);
+  }
+
+  .ss-btn-action:hover {
+    border-color: rgb(139, 92, 246);
+    color: rgb(139, 92, 246);
+  }
+
+  .ss-btn-action.ss-copied {
+    background: rgb(16, 185, 129);
+    border-color: rgb(16, 185, 129);
+    color: white;
+  }
+
+  .ss-btn-download:hover {
+    border-color: rgb(99, 102, 241);
+    color: rgb(99, 102, 241);
+  }
+
+  .ss-stats-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .ss-stats-row {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .ss-stat-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.625rem 0.375rem;
+    background: rgba(0, 0, 0, 0.025);
+    border-radius: 0.75rem;
+    text-align: center;
+    border-top: 2px solid rgb(226, 232, 240);
+  }
+
+  :global(.theme-dark) .ss-stat-chip {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgb(51, 65, 85);
+  }
+
+  .ss-chip-green {
+    border-color: rgb(16, 185, 129);
+  }
+
+  .ss-chip-purple {
+    border-color: rgb(139, 92, 246);
+  }
+
+  .ss-chip-amber {
+    border-color: rgb(245, 158, 11);
+  }
+
+  .ss-chip-rose {
+    border-color: rgb(244, 63, 94);
+  }
+
+  .ss-chip-value {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: rgb(15, 23, 42);
+    line-height: 1.2;
+  }
+
+  :global(.theme-dark) .ss-chip-value {
+    color: white;
+  }
+
+  .ss-chip-label {
+    font-size: 0.6rem;
+    color: rgb(148, 163, 184);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.3;
+  }
+</style>
+
+<script>
+  import type { SvgSanitizerUI } from './ui';
+
+  interface SanitizeOptions { removeIds: boolean; removeWidthHeight: boolean; minify: boolean; }
+  interface SanitizeResult { svg: string; originalBytes: number; cleanedBytes: number; removedElements: number; removedAttrs: number; }
+
+  const BAD_ATTRS = new Set(['xml:space', 'version', 'xmlns:dc', 'xmlns:cc', 'xmlns:rdf', 'xmlns:svg', 'xmlns:inkscape', 'xmlns:sodipodi', 'xmlns:xlink', 'enable-background']);
+  const BAD_ATTR_PREFIXES = ['data-', 'inkscape:', 'sodipodi:'];
+  const METADATA_TAGS = ['metadata', 'title', 'desc'];
+  const NS_PATTERNS = [/<sodipodi:[^>]*(?:\/>|>[\s\S]*?<\/sodipodi:[^>]*>)/gi, /<inkscape:[^>]*(?:\/>|>[\s\S]*?<\/inkscape:[^>]*>)/gi];
+
+  function stripNamespacedElements(text: string): { text: string; count: number } {
+    let count = 0;
+    let result = text;
+    for (const pattern of NS_PATTERNS) {
+      result = result.replace(pattern, () => { count++; return ''; });
+    }
+    return { text: result, count };
+  }
+
+  function prettify(svg: string): string {
+    let indent = 0;
+    return svg.replace(/></g, '>\n<').split('\n').map((line) => {
+      line = line.trim();
+      if (!line) return '';
+      if (line.startsWith('</')) indent = Math.max(0, indent - 1);
+      const out = '  '.repeat(indent) + line;
+      if (!line.startsWith('</') && !line.endsWith('/>')) indent++;
+      return out;
+    }).filter(Boolean).join('\n');
+  }
+
+  function parseDoc(text: string): Document {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'image/svg+xml');
+    if (!doc.querySelector('parsererror')) return doc;
+    const htmlDoc = new DOMParser().parseFromString(`<body>${text}</body>`, 'text/html');
+    const found = htmlDoc.querySelector('svg');
+    if (!found) throw new Error('No valid SVG found.');
+    return parser.parseFromString(found.outerHTML, 'image/svg+xml');
+  }
+
+  function removeElements(svgEl: Element): number {
+    let removed = 0;
+    for (const tag of METADATA_TAGS) {
+      svgEl.querySelectorAll(tag).forEach((el) => { el.remove(); removed++; });
+    }
+    svgEl.querySelectorAll('defs').forEach((defs) => {
+      if (defs.children.length === 0) { defs.remove(); removed++; }
+    });
+    let changed = true;
+    while (changed) {
+      changed = false;
+      svgEl.querySelectorAll('g').forEach((g) => {
+        if (g.children.length === 0 && !g.textContent?.trim()) { g.remove(); removed++; changed = true; }
+      });
+    }
+    return removed;
+  }
+
+  function isBadAttr(n: string, el: Element, options: SanitizeOptions): boolean {
+    if (BAD_ATTRS.has(n)) return true;
+    if (BAD_ATTR_PREFIXES.some((p) => n.startsWith(p))) return true;
+    if (options.removeIds && n === 'id') return true;
+    if (!options.removeWidthHeight || el.tagName !== 'svg') return false;
+    return n === 'width' || n === 'height';
+  }
+
+  function removeAttrs(svgEl: Element, options: SanitizeOptions): number {
+    let removed = 0;
+    const allEls = [svgEl, ...Array.from(svgEl.querySelectorAll('*'))];
+    for (const el of allEls) {
+      const toRemove: string[] = [];
+      for (const attr of el.attributes) {
+        if (isBadAttr(attr.name, el, options)) toRemove.push(attr.name);
+      }
+      toRemove.forEach((a) => { el.removeAttribute(a); removed++; });
+    }
+    return removed;
+  }
+
+  function sanitizeSVG(input: string, options: SanitizeOptions): SanitizeResult {
+    const originalBytes = new TextEncoder().encode(input).length;
+    let text = input.trim()
+      .replace(/<\?xml[^?]*\?>\s*/gi, '')
+      .replace(/<!DOCTYPE[^>]*>\s*/gi, '')
+      .replace(/<!-{2}[\s\S]*?-{2}>/g, '');
+    const stripped = stripNamespacedElements(text);
+    text = stripped.text;
+    const doc = parseDoc(text);
+    const svgEl = doc.querySelector('svg') ?? doc.documentElement;
+    const removedElements = stripped.count + removeElements(svgEl);
+    const removedAttrs = removeAttrs(svgEl, options);
+    let svg = new XMLSerializer().serializeToString(svgEl);
+    if (!svg.includes('xlink:href')) svg = svg.replace(/\s*xmlns:xlink="[^"]*"/g, '');
+    svg = options.minify ? svg.replace(/\s+/g, ' ').replace(/> </g, '><').trim() : prettify(svg);
+    const cleanedBytes = new TextEncoder().encode(svg).length;
+    return { svg, originalBytes, cleanedBytes, removedElements, removedAttrs };
+  }
+
+  const root = document.getElementById('ss-root') as HTMLElement;
+  const t = JSON.parse(root.dataset.i18n ?? '{}') as SvgSanitizerUI;
+  const layout = document.getElementById('ss-layout') as HTMLElement;
+  const textarea = document.getElementById('ss-input-area') as HTMLTextAreaElement;
+  const optIds = document.getElementById('ss-opt-ids') as HTMLInputElement;
+  const optWH = document.getElementById('ss-opt-wh') as HTMLInputElement;
+  const optMinify = document.getElementById('ss-opt-minify') as HTMLInputElement;
+  const errorEl = document.getElementById('ss-error') as HTMLElement;
+  const outputPanel = document.getElementById('ss-output-panel') as HTMLElement;
+  const outputArea = document.getElementById('ss-output-area') as HTMLTextAreaElement;
+  const copyBtn = document.getElementById('ss-btn-copy') as HTMLButtonElement;
+  const statOriginal = document.getElementById('ss-stat-original') as HTMLElement;
+  const statCleaned = document.getElementById('ss-stat-cleaned') as HTMLElement;
+  const statReduction = document.getElementById('ss-stat-reduction') as HTMLElement;
+  const statElems = document.getElementById('ss-stat-elems') as HTMLElement;
+  const statAttrs = document.getElementById('ss-stat-attrs') as HTMLElement;
+
+  const svgCopied = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>';
+
+  function fmt(bytes: number): string {
+    if (bytes < 1024) return `${bytes} B`;
+    return `${(bytes / 1024).toFixed(1)} KB`;
+  }
+
+  function showResult(r: SanitizeResult): void {
+    outputArea.value = r.svg;
+    const pct = Math.round(((r.originalBytes - r.cleanedBytes) / r.originalBytes) * 100);
+    statOriginal.textContent = fmt(r.originalBytes);
+    statCleaned.textContent = fmt(r.cleanedBytes);
+    statReduction.textContent = `${pct}%`;
+    statElems.textContent = r.removedElements.toString();
+    statAttrs.textContent = r.removedAttrs.toString();
+    outputPanel.style.display = '';
+    layout.classList.add('ss-has-output');
+  }
+
+  document.getElementById('ss-btn-sanitize')!.addEventListener('click', () => {
+    const input = textarea.value.trim();
+    errorEl.style.display = 'none';
+    if (!input) { errorEl.textContent = t.errorPaste; errorEl.style.display = ''; return; }
+    const options: SanitizeOptions = { removeIds: optIds.checked, removeWidthHeight: optWH.checked, minify: optMinify.checked };
+    try {
+      showResult(sanitizeSVG(input, options));
+    } catch (e) {
+      errorEl.textContent = e instanceof Error ? e.message : t.errorProcess;
+      errorEl.style.display = '';
+    }
+  });
+
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(outputArea.value);
+    const origInner = copyBtn.innerHTML;
+    copyBtn.innerHTML = `${svgCopied} ${t.btnCopied}`;
+    copyBtn.classList.add('ss-copied');
+    setTimeout(() => { copyBtn.innerHTML = origInner; copyBtn.classList.remove('ss-copied'); }, 2000);
+  });
+
+  document.getElementById('ss-btn-download')!.addEventListener('click', () => {
+    const blob = new Blob([outputArea.value], { type: 'image/svg+xml' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'optimized.svg';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  });
+</script>

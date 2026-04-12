@@ -61,3 +61,18 @@ export { HASH_GENERATOR_TOOL } from './tool/hashGenerator/index';
 
 export { PromptLibraryComponent, PromptLibrarySEO, PromptLibraryBibliography } from './tool/promptLibrary/index';
 export { PROMPT_LIBRARY_TOOL } from './tool/promptLibrary/index';
+
+export { ColorConverterComponent, ColorConverterSEO, ColorConverterBibliography } from './tool/colorConverter/index';
+export { COLOR_CONVERTER_TOOL } from './tool/colorConverter/index';
+
+export { ReadabilityCalculatorComponent, ReadabilityCalculatorSEO, ReadabilityCalculatorBibliography } from './tool/readabilityCalculator/index';
+export { READABILITY_CALCULATOR_TOOL } from './tool/readabilityCalculator/index';
+
+export { SvgSanitizerComponent, SvgSanitizerSEO, SvgSanitizerBibliography } from './tool/svgSanitizer/index';
+export { SVG_SANITIZER_TOOL } from './tool/svgSanitizer/index';
+
+export { UtmGeneratorComponent, UtmGeneratorSEO, UtmGeneratorBibliography } from './tool/utmGenerator/index';
+export { UTM_GENERATOR_TOOL } from './tool/utmGenerator/index';
+
+export { UrlCleanerComponent, UrlCleanerSEO, UrlCleanerBibliography } from './tool/urlCleaner/index';
+export { URL_CLEANER_TOOL } from './tool/urlCleaner/index';

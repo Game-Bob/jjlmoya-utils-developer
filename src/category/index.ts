@@ -14,10 +14,15 @@ import { musicalTypography } from '../tool/musicalTypography/index';
 import { mobileMockupGenerator } from '../tool/mobileMockupGenerator/index';
 import { hashGenerator } from '../tool/hashGenerator/index';
 import { promptLibrary } from '../tool/promptLibrary/index';
+import { colorConverter } from '../tool/colorConverter/index';
+import { readabilityCalculator } from '../tool/readabilityCalculator/index';
+import { svgSanitizer } from '../tool/svgSanitizer/index';
+import { utmGenerator } from '../tool/utmGenerator/index';
+import { urlCleaner } from '../tool/urlCleaner/index';
 
 export const developerCategory: DeveloperCategoryEntry = {
   icon: 'mdi:code-tags',
-  tools: [jsonFormatter, svgToCss, aspectRatio, placeholderGenerator, urlEncoderDecoder, duplicateCssRemover, cssToInlineConverter, cssSpecificityCalculator, cronGenerator, keycode, llmCostCalculator, musicalTypography, mobileMockupGenerator, hashGenerator, promptLibrary],
+  tools: [jsonFormatter, svgToCss, aspectRatio, placeholderGenerator, urlEncoderDecoder, duplicateCssRemover, cssToInlineConverter, cssSpecificityCalculator, cronGenerator, keycode, llmCostCalculator, musicalTypography, mobileMockupGenerator, hashGenerator, promptLibrary, colorConverter, readabilityCalculator, svgSanitizer, utmGenerator, urlCleaner],
   i18n: {
     es: () => import('./i18n/es').then((m) => m.content),
     en: () => import('./i18n/en').then((m) => m.content),
