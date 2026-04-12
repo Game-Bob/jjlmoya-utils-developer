@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { InspectorCertificadosSslUI } from '../ui';
 
-const slug = 'inspector-certificados-ssl-tls';
+const slug = 'inspector-certificados-ssl';
 const title = 'Inspector de Certificados SSL/TLS Online Ver PEM y CRT';
 const description = 'Analiza archivos de certificados SSL (.pem, .crt, .der) localmente. Consulta fechas de expiración, emisores, sujetos y huellas digitales SHA-256 sin que tus datos salgan del navegador.';
 

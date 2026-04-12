@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { ConversorExcelCsvHtmlUI } from '../ui';
 
-const slug = 'conversor-excel-csv-html-tabla';
+const slug = 'conversor-excel-csv-a-tabla-html';
 const title = 'Conversor de Excel y CSV a Tabla HTML Generador de Código';
 const description = 'Convierte tus datos de Excel o CSV a tablas HTML semánticas y limpias al instante. Herramienta gratuita para desarrolladores y creadores de contenido.';
 

@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { CalculadoraTiempoDatosUI } from '../ui';
 
-const slug = 'calculadora-tiempo-datos-impacto-velocidad-web';
+const slug = 'calculadora-tiempo-datos';
 const title = 'Calculadora de Tiempo en Datos Impacto de la Velocidad Web';
 const description = 'Descubre cuánto tiempo de vida pierden tus usuarios esperando a que tu web cargue en conexiones 3G, 4G y 5G. Calcula el impacto real del peso de tu sitio.';
 
