@@ -37,6 +37,7 @@
     },
     "dependencies": {
         "@iconify-json/mdi": "^1.2.3",
+        "@jjlmoya/prompagate": "^1.1.0",
         "@jjlmoya/utils-shared": "1.2.0",
         "@types/file-saver": "^2.0.7",
         "astro": "^6.1.2",

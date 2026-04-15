@@ -4,8 +4,7 @@ import type { WithContext, Thing } from 'schema-dts';
 export type { SEOSection };
 
 export type KnownLocale =
-  | 'ar' | 'da' | 'de' | 'en' | 'es' | 'fi'
-  | 'fr' | 'it' | 'ja' | 'ko' | 'nb' | 'nl'
+  | 'de' | 'en' | 'es' | 'fr' | 'id' | 'it' | 'ja' | 'ko' | 'nl'
   | 'pl' | 'pt' | 'ru' | 'sv' | 'tr' | 'zh';
 
 export interface FAQItem {
