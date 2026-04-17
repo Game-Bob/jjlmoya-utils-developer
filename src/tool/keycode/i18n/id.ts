@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { KeycodeUI } from '../ui';
 
-const slug = 'keycode-id';
+const slug = 'penampil-kode-keyboard';
 const title = 'Visualizer Kode Tombol Keyboard Online. KeyCode Inspector';
 const description =
   'Alat online gratis untuk melihat event.key, event.code, event.which, dan lokasi setiap tombol keyboard secara real time. Menghasilkan cuplikan kode JavaScript siap pakai.';

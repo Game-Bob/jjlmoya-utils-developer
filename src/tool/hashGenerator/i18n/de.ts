@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { HashGeneratorUI } from '../ui';
 
-const slug = 'hash-generator-de';
+const slug = 'hash-berechner-online';
 const title = 'Online Sicherheits Hash Generator';
 const description = 'Berechnen Sie sofort MD5, SHA-1, SHA-256 und SHA-512-Hashes. Kostenloses, privates und ultraschnelles Sicherheitstool für Entwickler. 100 % Client-Side.';
 

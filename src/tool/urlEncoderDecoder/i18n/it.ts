@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { UrlEncoderDecoderUI } from '../ui';
 
-const slug = 'url-encoder-decoder-it';
+const slug = 'codificatore-decodificatore-url';
 const title = 'Codificatore e Decodificatore URL Online';
 const description =
   'Converti i caratteri speciali da qualsiasi link in un formato sicuro (Percent-Encoding) o riportali istantaneamente e localmente allo stato originale leggibile.';

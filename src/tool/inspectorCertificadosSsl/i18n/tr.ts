@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { InspectorCertificadosSslUI } from '../ui';
 
-const slug = 'ssl-tls-certificate-inspector-tr';
+const slug = 'ssl-sertifika-inceleme';
 const title = 'Çevrimiçi SSL/TLS Sertifika İnceleme PEM ve CRT Dosyalarını Görüntüle';
 const description = 'SSL sertifika dosyalarını (.pem, .crt, .der) yerel olarak analiz edin. Sona erme tarihlerini, yayımcıları, konuları ve SHA-256 parmak izlerini kontrol edin ve verileriniz tarayıcınızdan çıkmaz.';
 

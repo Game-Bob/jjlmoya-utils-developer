@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { GeneradorSecurityTxtUI } from '../ui';
 
-const slug = 'security-txt-generator-rfc-9116-de';
+const slug = 'security-txt-erzeuger';
 const title = 'Security.txt Generator RFC 9116';
 const description = 'Erstellen Sie Ihre professionelle security.txt-Datei, um die Meldung von Sicherheitslücken zu erleichtern und internationale Webstandards zu erfüllen.';
 

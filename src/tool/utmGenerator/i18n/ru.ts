@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { UtmGeneratorUI } from '../ui';
 
-const slug = 'utm-generator-ru';
+const slug = 'generator-parametrov-utm';
 const title = 'Генератор параметров UTM для Google Analytics';
 const description = 'Создавайте точные ссылки для отслеживания ваших цифровых маркетинговых кампаний. Оптимизировано для Google Analytics и других инструментов аналитики.';
 

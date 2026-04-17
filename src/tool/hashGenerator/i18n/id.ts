@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { HashGeneratorUI } from '../ui';
 
-const slug = 'hash-generator-id';
+const slug = 'generator-hash-keamanan';
 const title = 'Generator Hash Keamanan Online';
 const description = 'Hitung hash MD5, SHA-1, SHA-256, dan SHA-512 secara instan. Alat keamanan gratis, pribadi, dan sangat cepat untuk pengembang. 100% Sisi Klien.';
 

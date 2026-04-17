@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { UtmGeneratorUI } from '../ui';
 
-const slug = 'utm-generator-de';
+const slug = 'utm-parameter-erzeuger';
 const title = 'UTM Parameter Generator für Google Analytics';
 const description = 'Erstellen Sie präzise Tracking-Links für Ihre digitalen Marketingkampagnen. Optimiert für Google Analytics und andere Analysetools.';
 

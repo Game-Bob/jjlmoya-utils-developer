@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { KeycodeUI } from '../ui';
 
-const slug = 'keycode-nl';
+const slug = 'toetsenbord-keycode-visualizer';
 const title = 'Toetsenbord Keycode Visualizer Online. KeyCode Inspector';
 const description =
   'Gratis online tool om event.key, event.code, event.which en de locatie van elke toets in realtime te bekijken. Genereert direct bruikbare JavaScript-codefragmenten.';

@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { InspectorCertificadosSslUI } from '../ui';
 
-const slug = 'ssl-tls-certificate-inspector-id';
+const slug = 'inspektur-sertifikat-ssl';
 const title = 'Inspektur Sertifikat SSL/TLS Online Lihat File PEM dan CRT';
 const description = 'Analisis file sertifikat SSL (.pem, .crt, .der) secara lokal. Periksa tanggal kedaluwarsa, penerbit, subjek, dan sidik jari SHA-256 tanpa data Anda meninggalkan browser.';
 

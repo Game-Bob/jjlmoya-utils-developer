@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { HashGeneratorUI } from '../ui';
 
-const slug = 'hash-generator-ru';
+const slug = 'generator-heshej';
 const title = 'Онлайн генератор хешей безопасности';
 const description = 'Мгновенно вычисляйте хеши MD5, SHA-1, SHA-256 и SHA-512. Бесплатный, конфиденциальный и сверхбыстрый инструмент безопасности для разработчиков. 100% на стороне клиента.';
 

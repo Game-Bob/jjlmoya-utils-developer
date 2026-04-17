@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { PromptLibraryUI } from '../ui';
 
-const slug = 'libreria-prompt-ia';
+const slug = 'libreria-prompts';
 const title = 'Libreria Prompt IA Privata';
 const description = 'Organizza, etichetta e salva i tuoi prompt di ChatGPT, Midjourney e Claude in modo privato. La tua raccolta personale di prompt nel localStorage.';
 

@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { UtmGeneratorUI } from '../ui';
 
-const slug = 'utm-generator-id';
+const slug = 'pembuat-parameter-utm';
 const title = 'Generator Parameter UTM untuk Google Analytics';
 const description = 'Buat tautan pelacakan yang presisi untuk kampanye pemasaran digital Anda. Dioptimalkan untuk Google Analytics dan alat analisis lainnya.';
 

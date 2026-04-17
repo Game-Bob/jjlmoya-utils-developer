@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { InspectorCertificadosSslUI } from '../ui';
 
-const slug = 'ssl-tls-certificate-inspector-sv';
+const slug = 'certifikatgranskare-ssl-tls';
 const title = 'Online SSL/TLS certifikatgranskare Visa PEM och CRT filer';
 const description = 'Analysera SSL-certifikatfiler (.pem, .crt, .der) lokalt. Kontrollera utgångsdatum, utfärdare, ämnen och SHA-256-fingeravtryck utan att din data lämnar webbläsaren.';
 

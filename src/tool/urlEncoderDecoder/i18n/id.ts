@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { UrlEncoderDecoderUI } from '../ui';
 
-const slug = 'url-encoder-decoder-id';
+const slug = 'pengode-pendekode-url';
 const title = 'Pengode dan Pendekode URL Online';
 const description =
   'Konversikan karakter khusus dari tautan apa pun ke dalam format aman (Percent-Encoding) atau kembalikan ke keadaan aslinya yang dapat dibaca secara instan dan lokal.';

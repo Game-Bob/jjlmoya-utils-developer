@@ -3,6 +3,7 @@ import { ALL_TOOLS } from '../tools';
 import type { ToolLocaleContent } from '../types';
 
 const sharingLocales = ['ja', 'ko', 'zh'];
+const toolsWithSharedSpanishSlug = ['cron-generator', 'json-formatter', 'keycode'];
 
 interface ValidateParams {
   toolId: string;
@@ -29,6 +30,11 @@ const validateLocaleSlug = ({
   }
 
   if (sharingLocales.includes(locale)) {
+    expect(
+      content.slug,
+      `Tool "${toolId}" locale "${locale}" must use the same slug as "en" ("${enSlug}").`,
+    ).toBe(enSlug);
+  } else if (locale === 'es' && toolsWithSharedSpanishSlug.includes(toolId)) {
     expect(
       content.slug,
       `Tool "${toolId}" locale "${locale}" must use the same slug as "en" ("${enSlug}").`,

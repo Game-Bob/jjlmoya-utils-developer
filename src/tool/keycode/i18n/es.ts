@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { KeycodeUI } from '../ui';
 
-const slug = 'keycode-es';
+const slug = 'keycode';
 const title = 'Visualizador de Códigos de Teclado Online. KeyCode Inspector';
 const description =
   'Herramienta online gratuita para ver en tiempo real el event.key, event.code, event.which y location de cualquier tecla de tu teclado. Genera snippets de código JavaScript listos para usar.';

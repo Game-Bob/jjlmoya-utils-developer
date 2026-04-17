@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { CronGeneratorUI } from '../ui';
 
-const slug = 'cron-sv';
+const slug = 'cron-uttrycksgenerator';
 const title = 'Online Cron Expression Generator. Översättare och visualisera';
 const description =
   'Gratis visuellt verktyg för att generera Linux Cron-uttryck. Översätter * * * * * till mänskligt språk och visar de nästa 5 körningarna i realtid.';

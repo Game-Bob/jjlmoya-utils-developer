@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { HashGeneratorUI } from '../ui';
 
-const slug = 'hash-generator-nl';
+const slug = 'hash-generator-beveiliging';
 const title = 'Online Beveiligings Hash Generator';
 const description = 'Bereken direct MD5, SHA-1, SHA-256 en SHA-512 hashes. Gratis, privé en ultrasnelle beveiligingstool voor ontwikkelaars. 100% Client-Side.';
 

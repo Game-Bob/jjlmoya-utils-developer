@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { AspectRatioUI } from '../ui';
 
-const slug = 'aspect-ratio-calculator-nl';
+const slug = 'aspect-ratio-rekenmachine';
 const title = 'Aspect Ratio Calculator in Pixels. Online Verhoudingen';
 const description =
   'Bereken nieuwe resoluties voor afbeeldingen, video en webdesign met behoud van de exacte verhoudingen om vervorming van afbeeldingen te voorkomen. Ondersteunt 16:9, 4:3, 21:9 en aangepaste formaten.';

@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { CalculadoraTiempoDatosUI } from '../ui';
 
-const slug = 'data-time-calculator-web-speed-impact-ru';
+const slug = 'kalkulyator-vremeni-dannyh';
 const title = 'Калькулятор времени данных: Влияние скорости интернета';
 const description = 'Узнайте, сколько времени жизни теряют ваши пользователи, ожидая загрузки вашего сайта на 3G, 4G и 5G соединениях. Рассчитайте реальное влияние веса вашего сайта.';
 

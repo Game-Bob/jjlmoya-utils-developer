@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { UtmGeneratorUI } from '../ui';
 
-const slug = 'utm-generator-nl';
+const slug = 'utm-parameter-generator';
 const title = 'UTM Parameter Generator voor Google Analytics';
 const description = 'Maak nauwkeurige tracking-links voor uw digitale marketingcampagnes. Geoptimaliseerd voor Google Analytics en andere analysetools.';
 

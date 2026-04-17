@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { InspectorCertificadosSslUI } from '../ui';
 
-const slug = 'ssl-tls-certificate-inspector-nl';
+const slug = 'ssl-certificaatinspector';
 const title = 'Online SSL TLS certificaatinspecteur Bekijk PEM en CRT bestanden';
 const description = 'Analyseer SSL-certificaatbestanden (.pem, .crt, .der) lokaal. Controleer vervaldatums, certificaatautoriteiten, onderwerpen en SHA-256-vingerafdrukken zonder dat uw gegevens uw browser verlaten.';
 

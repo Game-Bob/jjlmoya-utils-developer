@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { SvgSanitizerUI } from '../ui';
 
-const slug = 'svg-sanitizer-sv';
+const slug = 'svg-sanering-online';
 const title = 'Online SVG Sanering';
 const description = 'Optimera och rensa SVG exporterade från Figma, Adobe Illustrator eller Inkscape. Ta bort metadata, onödiga attribut och tomma grupper för att få en produktionsklar SVG.';
 

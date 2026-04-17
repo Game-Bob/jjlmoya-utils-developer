@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { JsonFormatterUI } from '../ui';
 
-const slug = 'json-formatter-de';
+const slug = 'json-formatierer';
 const title = 'Kostenloser Online JSON Formatter und Validator';
 const description =
   'Kostenloses Online-Tool zum Formatieren, Validieren und Reparieren von JSON-Code. JSON verschönern und formatieren. Erkennt Syntaxfehler und verbessert die Lesbarkeit des Codes.';

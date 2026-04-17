@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { KeycodeUI } from '../ui';
 
-const slug = 'keycode-it';
+const slug = 'visualizzatore-codici-tasto';
 const title = 'Visualizzatore di Codici Tasto Online. KeyCode Inspector';
 const description =
   'Strumento online gratuito per vedere in tempo reale event.key, event.code, event.which e la posizione di qualsiasi tasto della tastiera. Genera snippet di codice JavaScript pronti all\'uso.';

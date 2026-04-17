@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { CronGeneratorUI } from '../ui';
 
-const slug = 'cron-tr';
+const slug = 'cron-ifadesi-olusturucu';
 const title = 'Online Cron İfadesi Oluşturucu. Çevirmen ve Görselleştirici';
 const description =
   'Linux Cron ifadeleri oluşturmak için ücretsiz görsel araç. * * * * * ifadesini insan diline çevirir ve sonraki 5 çalışmayı gerçek zamanlı olarak gösterir.';

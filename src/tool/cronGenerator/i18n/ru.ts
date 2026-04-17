@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { CronGeneratorUI } from '../ui';
 
-const slug = 'cron-ru';
+const slug = 'generator-vyrazhenij-cron';
 const title = 'Онлайн генератор Cron выражений. Переводчик и визуализатор';
 const description =
   'Бесплатный визуальный инструмент для генерации выражений Linux Cron. Переводит * * * * * на понятный человеку язык и показывает следующие 5 запусков в реальном времени.';

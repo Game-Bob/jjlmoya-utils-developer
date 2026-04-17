@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { SvgSanitizerUI } from '../ui';
 
-const slug = 'svg-sanitizer-tr';
+const slug = 'svg-temizleyici';
 const title = 'Online SVG Temizleyici';
 const description = 'Figma, Adobe Illustrator veya Inkscape\'ten dışa aktarılan SVG dosyalarını optimize edin ve temizleyin. Meta verileri, gereksiz öznitelikleri ve boş grupları kaldırarak üretim ortamına hazır bir SVG elde edin.';
 

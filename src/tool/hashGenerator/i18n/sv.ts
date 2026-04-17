@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { HashGeneratorUI } from '../ui';
 
-const slug = 'hash-generator-sv';
+const slug = 'hashgenerator-sakekerhet';
 const title = 'Online Säkerhetshashgenerator';
 const description = 'Beräkna MD5, SHA-1, SHA-256 och SHA-512 hashar direkt. Gratis, privat och supersnabbt säkerhetsverktyg för utvecklare. 100 % Client-Side.';
 

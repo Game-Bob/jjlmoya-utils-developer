@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { LlmCostCalculatorUI } from '../ui';
 
-const slug = 'llm-cost-calculator-id';
+const slug = 'kalkulator-biaya-llm';
 const title = 'Kalkulator Biaya LLM. Estimator Harga Model AI';
 const description =
   'Alat online gratis untuk memperkirakan biaya pemanggilan API model bahasa besar. Bandingkan GPT-4o, Claude, Gemini, Llama, dan lainnya dengan harga token nyata per satu juta token.';

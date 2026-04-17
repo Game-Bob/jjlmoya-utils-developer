@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { UrlEncoderDecoderUI } from '../ui';
 
-const slug = 'url-encoder-decoder-sv';
+const slug = 'url-kodare-avkodare';
 const title = 'URL Encoder och Decoder Online';
 const description =
   'Konvertera specialtecken från valfri länk till ett säkert format (Percent-Encoding) eller återställ dem omedelbart och lokalt till deras ursprungliga läsbara tillstånd.';

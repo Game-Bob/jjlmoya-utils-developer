@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { LlmCostCalculatorUI } from '../ui';
 
-const slug = 'llm-cost-calculator-de';
+const slug = 'llm-kostenrechner';
 const title = 'LLM Kostenrechner. KI Modell Preisschätzer';
 const description =
   'Kostenloses Online-Tool zur Schätzung der Kosten von LLM-API-Aufrufen. Vergleiche GPT-4o, Claude, Gemini, Llama und mehr mit realen Token-Preisen pro Million Tokens.';

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/code/**)",
+      "Bash(sed -i \"s/const slug = 'strip-text-formatting'/const slug = 'format-stripper'/\" jjlmoya-utils-files/src/tool/formatStripper/i18n/en.ts jjlmoya-utils-files/src/tool/formatStripper/i18n/ja.ts jjlmoya-utils-files/src/tool/formatStripper/i18n/ko.ts jjlmoya-utils-files/src/tool/formatStripper/i18n/zh.ts)",
+      "Bash(sed -i \"s/const slug = 'text-to-markdown-converter'/const slug = 'text-to-markdown'/\" jjlmoya-utils-files/src/tool/textToMarkdown/i18n/en.ts jjlmoya-utils-files/src/tool/textToMarkdown/i18n/ja.ts jjlmoya-utils-files/src/tool/textToMarkdown/i18n/ko.ts jjlmoya-utils-files/src/tool/textToMarkdown/i18n/zh.ts)",
+      "Bash(sed -i \"s/const slug = 'emoji-and-double-space-remover'/const slug = 'emoji-space-cleaner'/\" jjlmoya-utils-files/src/tool/emojiSpaceCleaner/i18n/en.ts jjlmoya-utils-files/src/tool/emojiSpaceCleaner/i18n/ja.ts jjlmoya-utils-files/src/tool/emojiSpaceCleaner/i18n/ko.ts jjlmoya-utils-files/src/tool/emojiSpaceCleaner/i18n/zh.ts)",
+      "Bash(cd d:\\\\\\\\code\\\\\\\\jjlmoya-utils-developer)"
+    ],
+    "additionalDirectories": [
+      "\\tmp"
+    ]
+  }
+}

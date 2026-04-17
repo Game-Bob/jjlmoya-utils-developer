@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { SvgSanitizerUI } from '../ui';
 
-const slug = 'svg-sanitizer-ru';
+const slug = 'svg-ochishchatel';
 const title = 'Онлайн SVG Очиститель';
 const description = 'Оптимизируйте и очищайте SVG, экспортированные из Figma, Adobe Illustrator или Inkscape. Удаляйте метаданные, ненужные атрибуты и пустые группы, чтобы получить готовый к продакшену SVG.';
 

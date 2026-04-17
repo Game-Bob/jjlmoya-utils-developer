@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { JsonFormatterUI } from '../ui';
 
-const slug = 'json-formatter-tr';
+const slug = 'json-formatlayici-dogrulayici';
 const title = 'Ücretsiz Çevrimiçi JSON Formatlayıcı ve Doğrulayıcı';
 const description =
   'JSON kodunu formatlamak, doğrulamak ve onarmak için ücretsiz çevrimiçi araç. JSON\'u güzelleştirin ve düzenleyin. Sözdizimi hatalarını algılar ve kodun okunabilirliğini artırır.';
