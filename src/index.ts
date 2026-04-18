@@ -15,7 +15,7 @@ export type {
   ToolDefinition,
 } from './types';
 
-export { ALL_TOOLS } from './tools';
+export { ALL_ENTRIES, ALL_TOOLS } from './tools';
 
 export { JsonFormatterComponent, JsonFormatterSEO, JsonFormatterBibliography } from './tool/jsonFormatter/index';
 export { JSON_FORMATTER_TOOL } from './tool/jsonFormatter/index';
