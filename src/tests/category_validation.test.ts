@@ -6,7 +6,7 @@ const EXPECTED_LOCALES = [
   'de', 'en', 'es', 'fr', 'id', 'it', 'ja', 'ko', 'nl', 'pl', 'pt', 'ru', 'sv', 'tr', 'zh'
 ];
 
-const sharingLocales = ['ja', 'ko', 'zh'];
+const sharingLocales: string[] = [];
 
 describe('Category Validation', () => {
   it('should have all 15 required locales', () => {

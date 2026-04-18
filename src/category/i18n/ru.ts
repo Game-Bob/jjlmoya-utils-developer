@@ -1,8 +1,8 @@
 import type { CategoryLocaleContent } from '../../types';
 
 export const content: CategoryLocaleContent = {
-  slug: 'veb-razrabotka',
-  title: 'Веб разработка',
+  slug: 'veb-razrabotka-util',
+  title: 'Веб-разработка',
   description:
     'Бесплатные инструменты для веб-разработки: форматировщики, калькуляторы CSS, генераторы и утилиты для фронтенд- и бэкенд-разработчиков.',
   seo: [

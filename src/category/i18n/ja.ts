@@ -1,8 +1,8 @@
 import type { CategoryLocaleContent } from '../../types';
 
 export const content: CategoryLocaleContent = {
-  slug: 'uebu-kaihatsu',
-  title: 'Web開発',
+  slug: 'uebu-kaihatsu-tools',
+  title: 'ウェブ開発',
   description:
     'フロントエンドおよびバックエンド開発者向けの無料Web開発ツール：フォーマッタ、CSS計算機、ジェネレーター、ユーティリティ。',
   seo: [
