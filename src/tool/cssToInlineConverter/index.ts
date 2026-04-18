@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import CssToInlineConverterComponent from './component.astro';
-import CssToInlineConverterSEO from './seo.astro';
-import CssToInlineConverterBibliography from './bibliography.astro';
 
 import type { CssToInlineConverterUI } from './ui';
 
@@ -32,11 +29,10 @@ export const cssToInlineConverter: DeveloperToolEntry<CssToInlineConverterUI> = 
   },
 };
 
-export { CssToInlineConverterComponent, CssToInlineConverterSEO, CssToInlineConverterBibliography };
 
 export const CSS_TO_INLINE_CONVERTER_TOOL: ToolDefinition = {
   entry: cssToInlineConverter,
-  Component: CssToInlineConverterComponent,
-  SEOComponent: CssToInlineConverterSEO,
-  BibliographyComponent: CssToInlineConverterBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

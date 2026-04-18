@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import JsonFormatterComponent from './component.astro';
-import JsonFormatterSEO from './seo.astro';
-import JsonFormatterBibliography from './bibliography.astro';
 
 import type { JsonFormatterUI } from './ui';
 
@@ -32,11 +29,10 @@ export const jsonFormatter: DeveloperToolEntry<JsonFormatterUI> = {
   },
 };
 
-export { JsonFormatterComponent, JsonFormatterSEO, JsonFormatterBibliography };
 
 export const JSON_FORMATTER_TOOL: ToolDefinition = {
   entry: jsonFormatter,
-  Component: JsonFormatterComponent,
-  SEOComponent: JsonFormatterSEO,
-  BibliographyComponent: JsonFormatterBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

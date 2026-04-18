@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import AspectRatioComponent from './component.astro';
-import AspectRatioSEO from './seo.astro';
-import AspectRatioBibliography from './bibliography.astro';
 
 import type { AspectRatioUI } from './ui';
 
@@ -32,11 +29,10 @@ export const aspectRatio: DeveloperToolEntry<AspectRatioUI> = {
   },
 };
 
-export { AspectRatioComponent, AspectRatioSEO, AspectRatioBibliography };
 
 export const ASPECT_RATIO_TOOL: ToolDefinition = {
   entry: aspectRatio,
-  Component: AspectRatioComponent,
-  SEOComponent: AspectRatioSEO,
-  BibliographyComponent: AspectRatioBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import UrlEncoderDecoderComponent from './component.astro';
-import UrlEncoderDecoderSEO from './seo.astro';
-import UrlEncoderDecoderBibliography from './bibliography.astro';
 
 import type { UrlEncoderDecoderUI } from './ui';
 
@@ -32,11 +29,10 @@ export const urlEncoderDecoder: DeveloperToolEntry<UrlEncoderDecoderUI> = {
   },
 };
 
-export { UrlEncoderDecoderComponent, UrlEncoderDecoderSEO, UrlEncoderDecoderBibliography };
 
 export const URL_ENCODER_DECODER_TOOL: ToolDefinition = {
   entry: urlEncoderDecoder,
-  Component: UrlEncoderDecoderComponent,
-  SEOComponent: UrlEncoderDecoderSEO,
-  BibliographyComponent: UrlEncoderDecoderBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

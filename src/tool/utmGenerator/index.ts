@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import UtmGeneratorComponent from './component.astro';
-import UtmGeneratorSEO from './seo.astro';
-import UtmGeneratorBibliography from './bibliography.astro';
 import type { UtmGeneratorUI } from './ui';
 
 export type UtmGeneratorLocaleContent = ToolLocaleContent<UtmGeneratorUI>;
@@ -31,11 +28,10 @@ export const utmGenerator: DeveloperToolEntry<UtmGeneratorUI> = {
   },
 };
 
-export { UtmGeneratorComponent, UtmGeneratorSEO, UtmGeneratorBibliography };
 
 export const UTM_GENERATOR_TOOL: ToolDefinition = {
   entry: utmGenerator,
-  Component: UtmGeneratorComponent,
-  SEOComponent: UtmGeneratorSEO,
-  BibliographyComponent: UtmGeneratorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

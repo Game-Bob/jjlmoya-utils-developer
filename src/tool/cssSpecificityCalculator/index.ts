@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import CssSpecificityCalculatorComponent from './component.astro';
-import CssSpecificityCalculatorSEO from './seo.astro';
-import CssSpecificityCalculatorBibliography from './bibliography.astro';
 
 import type { CssSpecificityCalculatorUI } from './ui';
 
@@ -32,11 +29,10 @@ export const cssSpecificityCalculator: DeveloperToolEntry<CssSpecificityCalculat
   },
 };
 
-export { CssSpecificityCalculatorComponent, CssSpecificityCalculatorSEO, CssSpecificityCalculatorBibliography };
 
 export const CSS_SPECIFICITY_CALCULATOR_TOOL: ToolDefinition = {
   entry: cssSpecificityCalculator,
-  Component: CssSpecificityCalculatorComponent,
-  SEOComponent: CssSpecificityCalculatorSEO,
-  BibliographyComponent: CssSpecificityCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

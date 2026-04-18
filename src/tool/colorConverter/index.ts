@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import ColorConverterComponent from './component.astro';
-import ColorConverterSEO from './seo.astro';
-import ColorConverterBibliography from './bibliography.astro';
 import type { ColorConverterUI } from './ui';
 
 export type ColorConverterLocaleContent = ToolLocaleContent<ColorConverterUI>;
@@ -31,11 +28,10 @@ export const colorConverter: DeveloperToolEntry<ColorConverterUI> = {
   },
 };
 
-export { ColorConverterComponent, ColorConverterSEO, ColorConverterBibliography };
 
 export const COLOR_CONVERTER_TOOL: ToolDefinition = {
   entry: colorConverter,
-  Component: ColorConverterComponent,
-  SEOComponent: ColorConverterSEO,
-  BibliographyComponent: ColorConverterBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

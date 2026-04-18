@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import InspectorCertificadosSslComponent from './component.astro';
-import InspectorCertificadosSslSEO from './seo.astro';
-import InspectorCertificadosSslBibliography from './bibliography.astro';
 import type { InspectorCertificadosSslUI } from './ui';
 
 export type InspectorCertificadosSslLocaleContent = ToolLocaleContent<InspectorCertificadosSslUI>;
@@ -47,11 +44,10 @@ export const inspectorCertificadosSsl: DeveloperToolEntry<InspectorCertificadosS
   },
 };
 
-export { InspectorCertificadosSslComponent, InspectorCertificadosSslSEO, InspectorCertificadosSslBibliography };
 
 export const INSPECTOR_CERTIFICADOS_SSL_TOOL: ToolDefinition = {
   entry: inspectorCertificadosSsl,
-  Component: InspectorCertificadosSslComponent,
-  SEOComponent: InspectorCertificadosSslSEO,
-  BibliographyComponent: InspectorCertificadosSslBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

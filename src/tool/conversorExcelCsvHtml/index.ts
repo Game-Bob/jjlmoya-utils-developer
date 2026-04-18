@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import ConversorExcelCsvHtmlComponent from './component.astro';
-import ConversorExcelCsvHtmlSEO from './seo.astro';
-import ConversorExcelCsvHtmlBibliography from './bibliography.astro';
 import type { ConversorExcelCsvHtmlUI } from './ui';
 
 export type ConversorExcelCsvHtmlLocaleContent = ToolLocaleContent<ConversorExcelCsvHtmlUI>;
@@ -31,11 +28,10 @@ export const conversorExcelCsvHtml: DeveloperToolEntry<ConversorExcelCsvHtmlUI> 
   },
 };
 
-export { ConversorExcelCsvHtmlComponent, ConversorExcelCsvHtmlSEO, ConversorExcelCsvHtmlBibliography };
 
 export const CONVERSOR_EXCEL_CSV_HTML_TOOL: ToolDefinition = {
   entry: conversorExcelCsvHtml,
-  Component: ConversorExcelCsvHtmlComponent,
-  SEOComponent: ConversorExcelCsvHtmlSEO,
-  BibliographyComponent: ConversorExcelCsvHtmlBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

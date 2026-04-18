@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import ReadabilityCalculatorComponent from './component.astro';
-import ReadabilityCalculatorSEO from './seo.astro';
-import ReadabilityCalculatorBibliography from './bibliography.astro';
 import type { ReadabilityCalculatorUI } from './ui';
 
 export type ReadabilityCalculatorLocaleContent = ToolLocaleContent<ReadabilityCalculatorUI>;
@@ -47,11 +44,10 @@ export const readabilityCalculator: DeveloperToolEntry<ReadabilityCalculatorUI> 
   },
 };
 
-export { ReadabilityCalculatorComponent, ReadabilityCalculatorSEO, ReadabilityCalculatorBibliography };
 
 export const READABILITY_CALCULATOR_TOOL: ToolDefinition = {
   entry: readabilityCalculator,
-  Component: ReadabilityCalculatorComponent,
-  SEOComponent: ReadabilityCalculatorSEO,
-  BibliographyComponent: ReadabilityCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

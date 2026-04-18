@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import CalculadoraTiempoDatosComponent from './component.astro';
-import CalculadoraTiempoDatosSEO from './seo.astro';
-import CalculadoraTiempoDatosBibliography from './bibliography.astro';
 import type { CalculadoraTiempoDatosUI } from './ui';
 
 export type CalculadoraTiempoDatosLocaleContent = ToolLocaleContent<CalculadoraTiempoDatosUI>;
@@ -31,11 +28,10 @@ export const calculadoraTiempoDatos: DeveloperToolEntry<CalculadoraTiempoDatosUI
   },
 };
 
-export { CalculadoraTiempoDatosComponent, CalculadoraTiempoDatosSEO, CalculadoraTiempoDatosBibliography };
 
 export const CALCULADORA_TIEMPO_DATOS_TOOL: ToolDefinition = {
   entry: calculadoraTiempoDatos,
-  Component: CalculadoraTiempoDatosComponent,
-  SEOComponent: CalculadoraTiempoDatosSEO,
-  BibliographyComponent: CalculadoraTiempoDatosBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

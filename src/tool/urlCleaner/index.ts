@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import UrlCleanerComponent from './component.astro';
-import UrlCleanerSEO from './seo.astro';
-import UrlCleanerBibliography from './bibliography.astro';
 import type { UrlCleanerUI } from './ui';
 
 export type UrlCleanerLocaleContent = ToolLocaleContent<UrlCleanerUI>;
@@ -47,11 +44,10 @@ export const urlCleaner: DeveloperToolEntry<UrlCleanerUI> = {
   },
 };
 
-export { UrlCleanerComponent, UrlCleanerSEO, UrlCleanerBibliography };
 
 export const URL_CLEANER_TOOL: ToolDefinition = {
   entry: urlCleaner,
-  Component: UrlCleanerComponent,
-  SEOComponent: UrlCleanerSEO,
-  BibliographyComponent: UrlCleanerBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

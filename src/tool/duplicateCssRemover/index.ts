@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import DuplicateCssRemoverComponent from './component.astro';
-import DuplicateCssRemoverSEO from './seo.astro';
-import DuplicateCssRemoverBibliography from './bibliography.astro';
 
 import type { DuplicateCssRemoverUI } from './ui';
 
@@ -32,11 +29,10 @@ export const duplicateCssRemover: DeveloperToolEntry<DuplicateCssRemoverUI> = {
   },
 };
 
-export { DuplicateCssRemoverComponent, DuplicateCssRemoverSEO, DuplicateCssRemoverBibliography };
 
 export const DUPLICATE_CSS_REMOVER_TOOL: ToolDefinition = {
   entry: duplicateCssRemover,
-  Component: DuplicateCssRemoverComponent,
-  SEOComponent: DuplicateCssRemoverSEO,
-  BibliographyComponent: DuplicateCssRemoverBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

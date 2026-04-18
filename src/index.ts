@@ -1,5 +1,5 @@
 export { developerCategory } from './category';
-export { default as developerCategorySEO } from './category/seo.astro';
+export const developerCategorySEO = () => import('./category/seo.astro').then((m) => m.default);
 
 export type {
   KnownLocale,

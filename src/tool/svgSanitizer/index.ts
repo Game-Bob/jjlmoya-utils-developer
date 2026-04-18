@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import SvgSanitizerComponent from './component.astro';
-import SvgSanitizerSEO from './seo.astro';
-import SvgSanitizerBibliography from './bibliography.astro';
 import type { SvgSanitizerUI } from './ui';
 
 export type SvgSanitizerLocaleContent = ToolLocaleContent<SvgSanitizerUI>;
@@ -47,11 +44,10 @@ export const svgSanitizer: DeveloperToolEntry<SvgSanitizerUI> = {
   },
 };
 
-export { SvgSanitizerComponent, SvgSanitizerSEO, SvgSanitizerBibliography };
 
 export const SVG_SANITIZER_TOOL: ToolDefinition = {
   entry: svgSanitizer,
-  Component: SvgSanitizerComponent,
-  SEOComponent: SvgSanitizerSEO,
-  BibliographyComponent: SvgSanitizerBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import CronGeneratorComponent from './component.astro';
-import CronGeneratorSEO from './seo.astro';
-import CronGeneratorBibliography from './bibliography.astro';
 
 import type { CronGeneratorUI } from './ui';
 
@@ -32,11 +29,10 @@ export const cronGenerator: DeveloperToolEntry<CronGeneratorUI> = {
   },
 };
 
-export { CronGeneratorComponent, CronGeneratorSEO, CronGeneratorBibliography };
 
 export const CRON_GENERATOR_TOOL: ToolDefinition = {
   entry: cronGenerator,
-  Component: CronGeneratorComponent,
-  SEOComponent: CronGeneratorSEO,
-  BibliographyComponent: CronGeneratorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

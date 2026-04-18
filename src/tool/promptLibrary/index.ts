@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import PromptLibraryComponent from './component.astro';
-import PromptLibrarySEO from './seo.astro';
-import PromptLibraryBibliography from './bibliography.astro';
 import type { PromptLibraryUI } from './ui';
 
 export type PromptLibraryLocaleContent = ToolLocaleContent<PromptLibraryUI>;
@@ -47,11 +44,10 @@ export const promptLibrary: DeveloperToolEntry<PromptLibraryUI> = {
   },
 };
 
-export { PromptLibraryComponent, PromptLibrarySEO, PromptLibraryBibliography };
 
 export const PROMPT_LIBRARY_TOOL: ToolDefinition = {
   entry: promptLibrary,
-  Component: PromptLibraryComponent,
-  SEOComponent: PromptLibrarySEO,
-  BibliographyComponent: PromptLibraryBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

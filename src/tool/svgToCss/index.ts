@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import SvgToCssComponent from './component.astro';
-import SvgToCssSEO from './seo.astro';
-import SvgToCssBibliography from './bibliography.astro';
 
 import type { SvgToCssUI } from './ui';
 
@@ -32,11 +29,10 @@ export const svgToCss: DeveloperToolEntry<SvgToCssUI> = {
   },
 };
 
-export { SvgToCssComponent, SvgToCssSEO, SvgToCssBibliography };
 
 export const SVG_TO_CSS_TOOL: ToolDefinition = {
   entry: svgToCss,
-  Component: SvgToCssComponent,
-  SEOComponent: SvgToCssSEO,
-  BibliographyComponent: SvgToCssBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

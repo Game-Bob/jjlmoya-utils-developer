@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import LlmCostCalculatorComponent from './component.astro';
-import LlmCostCalculatorSEO from './seo.astro';
-import LlmCostCalculatorBibliography from './bibliography.astro';
 
 import type { LlmCostCalculatorUI } from './ui';
 
@@ -48,11 +45,10 @@ export const llmCostCalculator: DeveloperToolEntry<LlmCostCalculatorUI> = {
   },
 };
 
-export { LlmCostCalculatorComponent, LlmCostCalculatorSEO, LlmCostCalculatorBibliography };
 
 export const LLM_COST_CALCULATOR_TOOL: ToolDefinition = {
   entry: llmCostCalculator,
-  Component: LlmCostCalculatorComponent,
-  SEOComponent: LlmCostCalculatorSEO,
-  BibliographyComponent: LlmCostCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

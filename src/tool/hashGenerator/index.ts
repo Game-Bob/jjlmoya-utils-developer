@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import HashGeneratorComponent from './component.astro';
-import HashGeneratorSEO from './seo.astro';
-import HashGeneratorBibliography from './bibliography.astro';
 import type { HashGeneratorUI } from './ui';
 
 export type HashGeneratorLocaleContent = ToolLocaleContent<HashGeneratorUI>;
@@ -31,11 +28,10 @@ export const hashGenerator: DeveloperToolEntry<HashGeneratorUI> = {
   },
 };
 
-export { HashGeneratorComponent, HashGeneratorSEO, HashGeneratorBibliography };
 
 export const HASH_GENERATOR_TOOL: ToolDefinition = {
   entry: hashGenerator,
-  Component: HashGeneratorComponent,
-  SEOComponent: HashGeneratorSEO,
-  BibliographyComponent: HashGeneratorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

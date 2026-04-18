@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import MusicalTypographyComponent from './component.astro';
-import MusicalTypographySEO from './seo.astro';
-import MusicalTypographyBibliography from './bibliography.astro';
 import type { MusicalTypographyUI } from './ui';
 
 export type MusicalTypographyLocaleContent = ToolLocaleContent<MusicalTypographyUI>;
@@ -31,11 +28,10 @@ export const musicalTypography: DeveloperToolEntry<MusicalTypographyUI> = {
   },
 };
 
-export { MusicalTypographyComponent, MusicalTypographySEO, MusicalTypographyBibliography };
 
 export const MUSICAL_TYPOGRAPHY_TOOL: ToolDefinition = {
   entry: musicalTypography,
-  Component: MusicalTypographyComponent,
-  SEOComponent: MusicalTypographySEO,
-  BibliographyComponent: MusicalTypographyBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import PlaceholderGeneratorComponent from './component.astro';
-import PlaceholderGeneratorSEO from './seo.astro';
-import PlaceholderGeneratorBibliography from './bibliography.astro';
 
 import type { PlaceholderGeneratorUI } from './ui';
 
@@ -48,11 +45,10 @@ export const placeholderGenerator: DeveloperToolEntry<PlaceholderGeneratorUI> = 
   },
 };
 
-export { PlaceholderGeneratorComponent, PlaceholderGeneratorSEO, PlaceholderGeneratorBibliography };
 
 export const PLACEHOLDER_GENERATOR_TOOL: ToolDefinition = {
   entry: placeholderGenerator,
-  Component: PlaceholderGeneratorComponent,
-  SEOComponent: PlaceholderGeneratorSEO,
-  BibliographyComponent: PlaceholderGeneratorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

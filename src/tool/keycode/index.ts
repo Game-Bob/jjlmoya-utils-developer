@@ -1,7 +1,4 @@
 import type { DeveloperToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import KeycodeComponent from './component.astro';
-import KeycodeSEO from './seo.astro';
-import KeycodeBibliography from './bibliography.astro';
 
 import type { KeycodeUI } from './ui';
 
@@ -32,11 +29,10 @@ export const keycode: DeveloperToolEntry<KeycodeUI> = {
   },
 };
 
-export { KeycodeComponent, KeycodeSEO, KeycodeBibliography };
 
 export const KEYCODE_TOOL: ToolDefinition = {
   entry: keycode,
-  Component: KeycodeComponent,
-  SEOComponent: KeycodeSEO,
-  BibliographyComponent: KeycodeBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };
