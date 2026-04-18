@@ -1,3 +1,4 @@
+import { keycode } from './entry';
 export * from './entry';
 export const KEYCODE_TOOL: ToolDefinition = {
   entry: keycode,

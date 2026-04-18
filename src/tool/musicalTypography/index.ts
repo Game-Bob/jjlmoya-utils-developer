@@ -1,3 +1,4 @@
+import { musicalTypography } from './entry';
 export * from './entry';
 export const MUSICAL_TYPOGRAPHY_TOOL: ToolDefinition = {
   entry: musicalTypography,

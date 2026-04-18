@@ -1,3 +1,4 @@
+import { placeholderGenerator } from './entry';
 export * from './entry';
 export const PLACEHOLDER_GENERATOR_TOOL: ToolDefinition = {
   entry: placeholderGenerator,

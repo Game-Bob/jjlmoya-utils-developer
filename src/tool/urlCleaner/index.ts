@@ -1,3 +1,4 @@
+import { urlCleaner } from './entry';
 export * from './entry';
 export const URL_CLEANER_TOOL: ToolDefinition = {
   entry: urlCleaner,

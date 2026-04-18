@@ -1,3 +1,4 @@
+import { mobileMockupGenerator } from './entry';
 export * from './entry';
 export const MOBILE_MOCKUP_GENERATOR_TOOL: ToolDefinition = {
   entry: mobileMockupGenerator,

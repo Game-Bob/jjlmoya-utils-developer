@@ -1,3 +1,4 @@
+import { cssToInlineConverter } from './entry';
 export * from './entry';
 export const CSS_TO_INLINE_CONVERTER_TOOL: ToolDefinition = {
   entry: cssToInlineConverter,

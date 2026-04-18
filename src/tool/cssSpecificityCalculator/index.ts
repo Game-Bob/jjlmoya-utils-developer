@@ -1,3 +1,4 @@
+import { cssSpecificityCalculator } from './entry';
 export * from './entry';
 export const CSS_SPECIFICITY_CALCULATOR_TOOL: ToolDefinition = {
   entry: cssSpecificityCalculator,

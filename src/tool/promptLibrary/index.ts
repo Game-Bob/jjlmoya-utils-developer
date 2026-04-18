@@ -1,3 +1,4 @@
+import { promptLibrary } from './entry';
 export * from './entry';
 export const PROMPT_LIBRARY_TOOL: ToolDefinition = {
   entry: promptLibrary,

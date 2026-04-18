@@ -1,3 +1,4 @@
+import { urlEncoderDecoder } from './entry';
 export * from './entry';
 export const URL_ENCODER_DECODER_TOOL: ToolDefinition = {
   entry: urlEncoderDecoder,

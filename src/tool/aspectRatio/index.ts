@@ -1,3 +1,4 @@
+import { aspectRatio } from './entry';
 export * from './entry';
 export const ASPECT_RATIO_TOOL: ToolDefinition = {
   entry: aspectRatio,
