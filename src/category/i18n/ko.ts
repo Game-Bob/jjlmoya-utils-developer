@@ -1,7 +1,7 @@
 import type { CategoryLocaleContent } from '../../types';
 
 export const content: CategoryLocaleContent = {
-  slug: 'web-development',
+  slug: 'web-gaebal',
   title: '웹 개발',
   description:
     '프론트엔드 및 백엔드 개발자를 위한 무료 웹 개발 툴: 포매터, CSS 계산기, 제너레이터 및 유틸리티.',

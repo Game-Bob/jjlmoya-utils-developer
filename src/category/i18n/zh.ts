@@ -1,7 +1,7 @@
 import type { CategoryLocaleContent } from '../../types';
 
 export const content: CategoryLocaleContent = {
-  slug: 'web-development',
+  slug: 'wang-ye-kai-fa',
   title: 'Web开发',
   description:
     '免费Web开发工具：面向前后端开发者的代码格式化、CSS计算器、生成器及实用工具。',
