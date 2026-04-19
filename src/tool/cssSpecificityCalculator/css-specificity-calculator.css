@@ -13,7 +13,7 @@
     color: var(--spec-text);
   }
 
-  :global(.theme-dark) .spec-root {
+  .theme-dark .spec-root {
     --spec-card-bg: #1e293b;
     --spec-bg: #0f172a;
     --spec-text: #f1f5f9;

@@ -13,7 +13,7 @@
     --llm-total-to: #9333ea;
   }
 
-  :global(.theme-dark) .llm-root {
+  .theme-dark .llm-root {
     --llm-card-bg: rgba(15, 23, 42, 0.9);
     --llm-card-border: rgba(255, 255, 255, 0.1);
     --llm-text: #f1f5f9;

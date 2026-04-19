@@ -16,7 +16,7 @@
     color: var(--pg-text);
   }
 
-  :global(.theme-dark) .pg-root {
+  .theme-dark .pg-root {
     --pg-card-bg: #1e293b;
     --pg-bg: #0f172a;
     --pg-text: #f1f5f9;
@@ -123,7 +123,7 @@
   }
 
   .pg-preset-pill:hover,
-  :global(.pg-preset-pill.active) {
+  .pg-preset-pill.active {
     background: var(--pg-primary);
     border-color: var(--pg-primary-dark);
     color: #fff;

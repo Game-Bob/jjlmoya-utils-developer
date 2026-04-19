@@ -22,7 +22,7 @@
     overflow: hidden;
   }
 
-  :global(.theme-dark) .ics-drop-zone {
+  .theme-dark .ics-drop-zone {
     background: rgba(255, 255, 255, 0.03);
   }
 
@@ -68,7 +68,7 @@
     margin: 0;
   }
 
-  :global(.theme-dark) .ics-drop-zone-title {
+  .theme-dark .ics-drop-zone-title {
     color: rgb(226, 232, 240);
   }
 
@@ -77,7 +77,7 @@
     margin: 0;
   }
 
-  :global(.theme-dark) .ics-drop-zone-text {
+  .theme-dark .ics-drop-zone-text {
     color: rgb(148, 163, 184);
   }
 
@@ -86,7 +86,7 @@
     margin: 0;
   }
 
-  :global(.theme-dark) .ics-drop-zone-subtext {
+  .theme-dark .ics-drop-zone-subtext {
     color: rgb(100, 116, 139);
   }
 
@@ -124,7 +124,7 @@
     transition: transform 0.3s ease, background 0.3s ease;
   }
 
-  :global(.theme-dark) .ics-card {
+  .theme-dark .ics-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
@@ -159,7 +159,7 @@
     opacity: 0.8;
   }
 
-  :global(.theme-dark) .ics-card-header h4 {
+  .theme-dark .ics-card-header h4 {
     color: rgb(226, 232, 240);
   }
 
@@ -182,7 +182,7 @@
     letter-spacing: 0.025em;
   }
 
-  :global(.theme-dark) .ics-data-label {
+  .theme-dark .ics-data-label {
     color: rgb(148, 163, 184);
   }
 
@@ -193,7 +193,7 @@
     word-break: break-all;
   }
 
-  :global(.theme-dark) .ics-data-value {
+  .theme-dark .ics-data-value {
     color: rgb(226, 232, 240);
   }
 
@@ -232,7 +232,7 @@
     border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
-  :global(.theme-dark) .ics-fingerprint {
+  .theme-dark .ics-fingerprint {
     background: rgba(0, 0, 0, 0.2);
     color: rgb(212, 212, 212);
     border: 1px solid rgba(255, 255, 255, 0.03);

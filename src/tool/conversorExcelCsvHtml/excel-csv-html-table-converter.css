@@ -28,7 +28,7 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
   }
 
-  :global(.theme-dark) .cec-converter-card {
+  .theme-dark .cec-converter-card {
     background: rgba(15, 23, 42, 0.6);
     border-color: rgba(255, 255, 255, 0.05);
   }
@@ -59,7 +59,7 @@
     letter-spacing: 0.05em;
   }
 
-  :global(.theme-dark) .cec-input-label {
+  .theme-dark .cec-input-label {
     color: rgb(148, 163, 184);
   }
 
@@ -76,7 +76,7 @@
     transition: all 0.2s;
   }
 
-  :global(.theme-dark) .cec-csv-textarea {
+  .theme-dark .cec-csv-textarea {
     background: rgb(2, 6, 23);
     border-color: rgb(30, 41, 59);
     color: var(--cec-text-light);
@@ -102,7 +102,7 @@
     background: rgba(248, 250, 252, 0.5);
   }
 
-  :global(.theme-dark) .cec-drop-zone {
+  .theme-dark .cec-drop-zone {
     border-color: var(--cec-border-dark);
     background: rgba(30, 41, 59, 0.2);
   }
@@ -113,7 +113,7 @@
     background: rgba(139, 92, 246, 0.05);
   }
 
-  .cec-drop-zone :global(svg) {
+  .cec-drop-zone svg {
     color: var(--cec-primary);
   }
 
@@ -132,7 +132,7 @@
     border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 
-  :global(.theme-dark) .cec-options-row {
+  .theme-dark .cec-options-row {
     border-top-color: rgba(255, 255, 255, 0.05);
   }
 
@@ -164,7 +164,7 @@
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  :global(.theme-dark) .cec-option-item input[type="checkbox"] {
+  .theme-dark .cec-option-item input[type="checkbox"] {
     background: rgb(15, 23, 42);
     border-color: var(--cec-border-dark);
   }
@@ -193,7 +193,7 @@
     color: var(--cec-text-secondary);
   }
 
-  :global(.theme-dark) .cec-option-item span {
+  .theme-dark .cec-option-item span {
     color: rgb(148, 163, 184);
   }
 
@@ -201,7 +201,7 @@
     color: rgb(88, 28, 135);
   }
 
-  :global(.theme-dark) .cec-option-item input[type="checkbox"]:checked + span {
+  .theme-dark .cec-option-item input[type="checkbox"]:checked + span {
     color: rgb(196, 181, 253);
   }
 
@@ -217,7 +217,7 @@
     border-bottom: 2px solid var(--cec-border);
   }
 
-  :global(.theme-dark) .cec-result-tabs {
+  .theme-dark .cec-result-tabs {
     border-bottom-color: rgb(30, 41, 59);
   }
 
@@ -248,7 +248,7 @@
     padding: 1rem;
   }
 
-  :global(.theme-dark) .cec-preview-container {
+  .theme-dark .cec-preview-container {
     background: rgb(15, 23, 42);
     border-color: rgb(30, 41, 59);
   }
@@ -291,13 +291,13 @@
     background: var(--cec-primary-hover);
   }
 
-  .cec-preview-container :global(table) {
+  .cec-preview-container table {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.875rem;
   }
 
-  .cec-preview-container :global(th) {
+  .cec-preview-container th {
     background: var(--cec-bg-light);
     border-bottom: 2px solid var(--cec-border);
     padding: 0.75rem;
@@ -306,19 +306,19 @@
     color: var(--cec-text-primary);
   }
 
-  :global(.theme-dark) .cec-preview-container :global(th) {
+  .theme-dark .cec-preview-container th {
     background: rgb(30, 41, 59);
     border-bottom-color: var(--cec-border-dark);
     color: var(--cec-text-light);
   }
 
-  .cec-preview-container :global(td) {
+  .cec-preview-container td {
     padding: 0.75rem;
     border-bottom: 1px solid rgb(241, 245, 249);
     color: var(--cec-text-secondary);
   }
 
-  :global(.theme-dark) .cec-preview-container :global(td) {
+  .theme-dark .cec-preview-container td {
     border-bottom-color: rgb(30, 41, 59);
     color: rgb(148, 163, 184);
   }
@@ -334,25 +334,25 @@
     gap: 1rem;
   }
 
-  .cec-preview-container :global(table.bordered) {
+  .cec-preview-container table.bordered {
     border: 1px solid var(--cec-border);
   }
 
-  .cec-preview-container :global(table.bordered th),
-  .cec-preview-container :global(table.bordered td) {
+  .cec-preview-container table.bordered th,
+  .cec-preview-container table.bordered td {
     border: 1px solid var(--cec-border);
   }
 
-  :global(.theme-dark) .cec-preview-container :global(table.bordered),
-  :global(.theme-dark) .cec-preview-container :global(table.bordered th),
-  :global(.theme-dark) .cec-preview-container :global(table.bordered td) {
+  .theme-dark .cec-preview-container table.bordered,
+  .theme-dark .cec-preview-container table.bordered th,
+  .theme-dark .cec-preview-container table.bordered td {
     border-color: var(--cec-border-dark);
   }
 
-  .cec-preview-container :global(table.zebra tbody tr:nth-child(even)) {
+  .cec-preview-container table.zebra tbody tr:nth-child(even) {
     background: var(--cec-bg-light);
   }
 
-  :global(.theme-dark) .cec-preview-container :global(table.zebra tbody tr:nth-child(even)) {
+  .theme-dark .cec-preview-container table.zebra tbody tr:nth-child(even) {
     background: rgba(30, 41, 59, 0.5);
   }

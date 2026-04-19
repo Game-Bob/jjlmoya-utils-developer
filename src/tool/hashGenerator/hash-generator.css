@@ -9,7 +9,7 @@
     overflow: hidden;
   }
 
-  :global(.theme-dark) .hg-card {
+  .theme-dark .hg-card {
     background: rgb(15, 23, 42);
     border-color: rgb(30, 41, 59);
   }
@@ -36,7 +36,7 @@
     color: rgb(15, 23, 42);
   }
 
-  :global(.theme-dark) .hg-label {
+  .theme-dark .hg-label {
     color: rgb(226, 232, 240);
   }
 
@@ -66,7 +66,7 @@
     box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
   }
 
-  :global(.theme-dark) .hg-textarea {
+  .theme-dark .hg-textarea {
     background: rgb(30, 41, 59);
     border-color: rgb(51, 65, 85);
     color: rgb(226, 232, 240);
@@ -107,7 +107,7 @@
     border-color: rgb(99, 102, 241);
   }
 
-  :global(.theme-dark) .hg-option-input {
+  .theme-dark .hg-option-input {
     background: rgb(30, 41, 59);
     border-color: rgb(51, 65, 85);
     color: rgb(226, 232, 240);
@@ -118,7 +118,7 @@
     background: rgb(226, 232, 240);
   }
 
-  :global(.theme-dark) .hg-divider {
+  .theme-dark .hg-divider {
     background: rgb(30, 41, 59);
   }
 
@@ -144,11 +144,11 @@
     background: rgb(248, 250, 252);
   }
 
-  :global(.theme-dark) .hg-row {
+  .theme-dark .hg-row {
     border-bottom-color: rgb(30, 41, 59);
   }
 
-  :global(.theme-dark) .hg-row:hover {
+  .theme-dark .hg-row:hover {
     background: rgb(30, 41, 59);
   }
 
@@ -172,7 +172,7 @@
     line-height: 1.4;
   }
 
-  :global(.theme-dark) .hg-hash {
+  .theme-dark .hg-hash {
     color: rgb(148, 163, 184);
   }
 
@@ -201,12 +201,12 @@
     transform: scale(0.92);
   }
 
-  :global(.theme-dark) .hg-copy-btn {
+  .theme-dark .hg-copy-btn {
     border-color: rgb(51, 65, 85);
     color: rgb(100, 116, 139);
   }
 
-  :global(.theme-dark) .hg-copy-btn:hover {
+  .theme-dark .hg-copy-btn:hover {
     background: rgb(51, 65, 85);
     color: rgb(99, 102, 241);
   }

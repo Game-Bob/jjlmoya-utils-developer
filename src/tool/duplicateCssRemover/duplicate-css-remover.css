@@ -14,7 +14,7 @@
     color: var(--dupcss-text);
   }
 
-  :global(.theme-dark) .dupcss-root {
+  .theme-dark .dupcss-root {
     --dupcss-card-bg: #1e293b;
     --dupcss-bg: #0f172a;
     --dupcss-text: #f1f5f9;
@@ -43,7 +43,7 @@
     overflow: hidden;
   }
 
-  :global(.dupcss-stats-visible) {
+  .dupcss-stats-visible {
     display: flex;
   }
 

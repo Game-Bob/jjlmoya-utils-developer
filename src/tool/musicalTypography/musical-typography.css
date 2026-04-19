@@ -16,7 +16,7 @@
     --mt-feedback-color: #059669;
   }
 
-  :global(.theme-dark) .mt-root {
+  .theme-dark .mt-root {
     --mt-card-bg: #1e293b;
     --mt-border: #334155;
     --mt-text: #f1f5f9;
@@ -65,7 +65,7 @@
     background: rgba(236, 72, 153, 0.04);
   }
 
-  :global(.theme-dark) .mt-card-header-preview {
+  .theme-dark .mt-card-header-preview {
     background: rgba(236, 72, 153, 0.08);
   }
 
@@ -168,7 +168,7 @@
     gap: 0.25rem;
   }
 
-  :global(.mt-scale-row) {
+  .mt-scale-row {
     display: flex;
     justify-content: space-between;
     font-size: 0.8125rem;
@@ -176,7 +176,7 @@
     padding: 0.125rem 0;
   }
 
-  :global(.mt-scale-base) {
+  .mt-scale-base {
     color: var(--mt-base-color);
     font-weight: 700;
     background: var(--mt-accent-bg);
@@ -217,12 +217,12 @@
     border-radius: 9999px;
   }
 
-  :global(.mt-prev-item) {
+  .mt-prev-item {
     border-bottom: 1px solid var(--mt-border);
     padding-bottom: 1rem;
   }
 
-  :global(.mt-prev-meta) {
+  .mt-prev-meta {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
@@ -231,7 +231,7 @@
     color: var(--mt-muted);
   }
 
-  :global(.mt-prev-text) {
+  .mt-prev-text {
     font-weight: 700;
     color: var(--mt-text);
     white-space: nowrap;
@@ -240,7 +240,7 @@
     margin: 0;
   }
 
-  :global(.mt-sub) {
+  .mt-sub {
     color: var(--mt-muted);
     margin: 0.25rem 0 0;
     white-space: nowrap;

@@ -20,7 +20,7 @@
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
   }
 
-  :global(.theme-dark) .gst-glass-card {
+  .theme-dark .gst-glass-card {
     background: rgba(20, 20, 25, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.05);
   }
@@ -49,7 +49,7 @@
     margin-bottom: 0.5rem;
   }
 
-  :global(.theme-dark) .gst-group-title {
+  .theme-dark .gst-group-title {
     color: rgb(148, 163, 184);
   }
 
@@ -74,7 +74,7 @@
     gap: 0.5rem;
   }
 
-  :global(.theme-dark) .gst-input-field label {
+  .theme-dark .gst-input-field label {
     color: rgb(203, 213, 225);
   }
 
@@ -95,7 +95,7 @@
     box-sizing: border-box;
   }
 
-  :global(.theme-dark) .gst-premium-input {
+  .theme-dark .gst-premium-input {
     background: rgb(15, 23, 42);
     border-color: rgb(51, 65, 85);
     color: white;
@@ -111,7 +111,7 @@
     color: rgb(100, 116, 139);
   }
 
-  :global(.theme-dark) .gst-field-tip {
+  .theme-dark .gst-field-tip {
     color: rgb(148, 163, 184);
   }
 
@@ -130,7 +130,7 @@
     color: rgb(30, 41, 59);
   }
 
-  :global(.theme-dark) .gst-result-title {
+  .theme-dark .gst-result-title {
     color: white;
   }
 
@@ -147,7 +147,7 @@
     border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
-  :global(.theme-dark) .gst-code-display {
+  .theme-dark .gst-code-display {
     background: rgba(255, 255, 255, 0.03);
     color: rgb(203, 213, 225);
     border-color: rgba(255, 255, 255, 0.05);
@@ -197,7 +197,7 @@
     transition: all 0.2s ease;
   }
 
-  :global(.theme-dark) .gst-btn-secondary {
+  .theme-dark .gst-btn-secondary {
     background: rgb(30, 41, 59);
     color: white;
     border-color: rgb(51, 65, 85);
@@ -207,7 +207,7 @@
     background: rgb(248, 250, 252);
   }
 
-  :global(.theme-dark) .gst-btn-secondary:hover {
+  .theme-dark .gst-btn-secondary:hover {
     background: rgb(51, 65, 85);
   }
 

@@ -15,7 +15,7 @@
     color: var(--urlc-text);
   }
 
-  :global(.theme-dark) .urlc-root {
+  .theme-dark .urlc-root {
     --urlc-card-bg: #1e293b;
     --urlc-bg: #0f172a;
     --urlc-text: #f1f5f9;

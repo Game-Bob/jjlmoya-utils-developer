@@ -13,7 +13,7 @@
     color: var(--stc-text);
   }
 
-  :global(.theme-dark) .stc-container {
+  .theme-dark .stc-container {
     --stc-card-bg: #1e293b;
     --stc-text: #f8fafc;
     --stc-text-muted: #94a3b8;
@@ -187,7 +187,7 @@
     transition: all 0.2s;
   }
 
-  :global(.stc-tab-btn.active) {
+  .stc-tab-btn.active {
     background: var(--stc-card-bg);
     color: var(--stc-primary);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);

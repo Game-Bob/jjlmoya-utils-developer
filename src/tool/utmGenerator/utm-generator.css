@@ -14,7 +14,7 @@
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.06);
   }
 
-  :global(.theme-dark) .ug-container {
+  .theme-dark .ug-container {
     background: rgba(15, 23, 42, 0.75);
     border-color: rgba(255, 255, 255, 0.06);
   }
@@ -51,7 +51,7 @@
     color: rgb(100, 116, 139);
   }
 
-  :global(.theme-dark) .ug-input-group label {
+  .theme-dark .ug-input-group label {
     color: rgb(148, 163, 184);
   }
 
@@ -64,7 +64,7 @@
     transition: all 0.2s ease;
   }
 
-  :global(.theme-dark) .ug-input {
+  .theme-dark .ug-input {
     background: rgba(255, 255, 255, 0.04);
     border-color: rgb(51, 65, 85);
     color: rgb(203, 213, 225);
@@ -88,7 +88,7 @@
     border: 1px solid rgba(99, 102, 241, 0.2);
   }
 
-  :global(.theme-dark) .ug-result {
+  .theme-dark .ug-result {
     background: rgba(99, 102, 241, 0.05);
     border-color: rgba(99, 102, 241, 0.15);
   }
@@ -108,7 +108,7 @@
     font-size: 0.875rem;
   }
 
-  :global(.theme-dark) .ug-result-label {
+  .theme-dark .ug-result-label {
     color: rgb(203, 213, 225);
   }
 
@@ -122,7 +122,7 @@
     border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
-  :global(.theme-dark) .ug-result-url {
+  .theme-dark .ug-result-url {
     background: rgb(30, 41, 59);
     border-color: rgb(51, 65, 85);
     color: rgb(129, 140, 248);

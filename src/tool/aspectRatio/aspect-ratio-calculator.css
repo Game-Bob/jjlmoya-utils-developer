@@ -16,7 +16,7 @@
     color: var(--arc-text);
   }
 
-  :global(.theme-dark) .arc-container {
+  .theme-dark .arc-container {
     --arc-bg: #0f172a;
     --arc-card-bg: #1e293b;
     --arc-text: #f8fafc;

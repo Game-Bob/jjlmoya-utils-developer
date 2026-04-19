@@ -24,7 +24,7 @@
     gap: 1rem;
   }
 
-  :global(.theme-dark) .uc-input-card {
+  .theme-dark .uc-input-card {
     background: rgba(15, 23, 42, 0.75);
     border-color: rgba(255, 255, 255, 0.06);
   }
@@ -37,7 +37,7 @@
     letter-spacing: 0.05em;
   }
 
-  :global(.theme-dark) .uc-label {
+  .theme-dark .uc-label {
     color: rgb(148, 163, 184);
   }
 
@@ -58,7 +58,7 @@
     color: rgb(51, 65, 85);
   }
 
-  :global(.theme-dark) .uc-input {
+  .theme-dark .uc-input {
     background: rgb(15, 23, 42);
     border-color: rgb(51, 65, 85);
     color: rgb(203, 213, 225);
@@ -114,7 +114,7 @@
     gap: 1rem;
   }
 
-  :global(.theme-dark) .uc-result-card {
+  .theme-dark .uc-result-card {
     background: rgba(15, 23, 42, 0.75);
     border-color: rgba(255, 255, 255, 0.06);
   }
@@ -134,7 +134,7 @@
     letter-spacing: 0.05em;
   }
 
-  :global(.theme-dark) .uc-card-title {
+  .theme-dark .uc-card-title {
     color: rgb(203, 213, 225);
   }
 
@@ -148,7 +148,7 @@
     border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
-  :global(.theme-dark) .uc-url-display {
+  .theme-dark .uc-url-display {
     background: rgb(30, 41, 59);
     border-color: rgb(51, 65, 85);
     color: rgb(129, 140, 148);
@@ -169,7 +169,7 @@
     transition: all 0.2s ease;
   }
 
-  :global(.theme-dark) .uc-copy-btn {
+  .theme-dark .uc-copy-btn {
     background: rgb(30, 41, 59);
     border-color: rgb(51, 65, 85);
     color: rgb(148, 163, 184);
@@ -199,7 +199,7 @@
     border-left: 3px solid rgb(59, 130, 246);
   }
 
-  :global(.theme-dark) .uc-removed-item {
+  .theme-dark .uc-removed-item {
     background: rgba(255, 255, 255, 0.03);
   }
 
@@ -209,7 +209,7 @@
     font-size: 0.875rem;
   }
 
-  :global(.theme-dark) .uc-item-key {
+  .theme-dark .uc-item-key {
     color: rgb(203, 213, 225);
   }
 
@@ -225,7 +225,7 @@
     margin: 0.25rem 0;
   }
 
-  :global(.theme-dark) .uc-item-desc {
+  .theme-dark .uc-item-desc {
     color: rgb(148, 163, 184);
   }
 
@@ -248,7 +248,7 @@
     gap: 1.5rem;
   }
 
-  :global(.theme-dark) .uc-stats-card {
+  .theme-dark .uc-stats-card {
     background: rgba(15, 23, 42, 0.75);
     border-color: rgba(255, 255, 255, 0.06);
   }
@@ -275,6 +275,6 @@
     letter-spacing: 0.04em;
   }
 
-  :global(.theme-dark) .uc-stat-label {
+  .theme-dark .uc-stat-label {
     color: rgb(148, 163, 184);
   }

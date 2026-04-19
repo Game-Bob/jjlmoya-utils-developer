@@ -12,7 +12,7 @@
     color: var(--cron-text);
   }
 
-  :global(.theme-dark) .cron-root {
+  .theme-dark .cron-root {
     --cron-card-bg: #1e293b;
     --cron-bg: #0f172a;
     --cron-text: #f1f5f9;
@@ -249,7 +249,7 @@
     border: 1px solid var(--cron-border);
   }
 
-  :global(.cron-run-item) {
+  .cron-run-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -260,18 +260,18 @@
     font-size: 0.825rem;
   }
 
-  :global(.cron-run-date) {
+  .cron-run-date {
     font-weight: 600;
     color: var(--cron-text);
     text-transform: capitalize;
   }
 
-  :global(.cron-run-rel) {
+  .cron-run-rel {
     font-size: 0.72rem;
     color: var(--cron-text-muted);
   }
 
-  :global(.cron-no-runs) {
+  .cron-no-runs {
     padding: 1rem;
     text-align: center;
     color: var(--cron-text-muted);

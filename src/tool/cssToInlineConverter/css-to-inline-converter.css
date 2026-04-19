@@ -13,7 +13,7 @@
     color: var(--cssi-text);
   }
 
-  :global(.theme-dark) .cssi-root {
+  .theme-dark .cssi-root {
     --cssi-card-bg: #1e293b;
     --cssi-bg: #0f172a;
     --cssi-text: #f1f5f9;

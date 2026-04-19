@@ -201,144 +201,144 @@
     z-index: 50;
   }
 
-  :global(.theme-dark) .jf-toolbar {
+  .theme-dark .jf-toolbar {
     background: rgba(15, 23, 42, 0.5);
     border-color: rgba(255, 255, 255, 0.08);
   }
 
-  :global(.theme-dark) .jf-status-pill {
+  .theme-dark .jf-status-pill {
     background: #1e293b;
   }
 
-  :global(.theme-dark) .jf-btn-muted {
+  .theme-dark .jf-btn-muted {
     color: #cbd5e1;
   }
 
-  :global(.theme-dark) .jf-btn-muted:hover {
+  .theme-dark .jf-btn-muted:hover {
     background: #1e293b;
   }
 
-  :global(.theme-dark) .jf-btn-amber {
+  .theme-dark .jf-btn-amber {
     color: #fbbf24;
   }
 
-  :global(.theme-dark) .jf-btn-amber:hover {
+  .theme-dark .jf-btn-amber:hover {
     background: rgba(251, 191, 36, 0.1);
   }
 
-  :global(.theme-dark) .jf-divider {
+  .theme-dark .jf-divider {
     background: #334155;
   }
 
-  :global(.theme-dark) .jf-panel {
+  .theme-dark .jf-panel {
     background: #0f172a;
     border-color: #1e293b;
   }
 
-  :global(.theme-dark) .jf-panel-header {
+  .theme-dark .jf-panel-header {
     background: rgba(30, 41, 59, 0.5);
     border-color: #1e293b;
   }
 
-  :global(.theme-dark) .jf-textarea {
+  .theme-dark .jf-textarea {
     color: #cbd5e1;
   }
 
-  :global(.theme-dark) .jf-textarea::placeholder {
+  .theme-dark .jf-textarea::placeholder {
     color: #334155;
   }
 
-  :global(.theme-dark) .jf-output {
+  .theme-dark .jf-output {
     background: #0d1117;
     color: #cbd5e1;
   }
 
-  :global(.theme-dark) .jf-toast {
+  .theme-dark .jf-toast {
     background: #f8fafc;
     color: #0f172a;
   }
 
-  :global(.jf-badge-empty) {
+  .jf-badge-empty {
     background: #94a3b8;
   }
 
-  :global(.jf-badge-valid) {
+  .jf-badge-valid {
     background: #10b981;
     box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
   }
 
-  :global(.jf-badge-invalid) {
+  .jf-badge-invalid {
     background: #ef4444;
     box-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
   }
 
-  :global(.jf-text-empty) {
+  .jf-text-empty {
     color: #64748b;
   }
 
-  :global(.jf-text-valid) {
+  .jf-text-valid {
     color: #10b981;
     font-weight: 600;
   }
 
-  :global(.theme-dark) :global(.jf-text-valid) {
+  .theme-dark .jf-text-valid {
     color: #34d399;
   }
 
-  :global(.jf-text-invalid) {
+  .jf-text-invalid {
     color: #ef4444;
     font-weight: 600;
   }
 
-  :global(.theme-dark) :global(.jf-text-invalid) {
+  .theme-dark .jf-text-invalid {
     color: #f87171;
   }
 
-  :global(.jf-toast-visible) {
+  .jf-toast-visible {
     transform: translateY(0);
     opacity: 1;
   }
 
-  :global(.jf-token-key) {
+  .jf-token-key {
     color: #7c3aed;
   }
 
-  :global(.theme-dark) :global(.jf-token-key) {
+  .theme-dark .jf-token-key {
     color: #a78bfa;
   }
 
-  :global(.jf-token-string) {
+  .jf-token-string {
     color: #16a34a;
   }
 
-  :global(.theme-dark) :global(.jf-token-string) {
+  .theme-dark .jf-token-string {
     color: #4ade80;
   }
 
-  :global(.jf-token-number) {
+  .jf-token-number {
     color: #c2410c;
   }
 
-  :global(.theme-dark) :global(.jf-token-number) {
+  .theme-dark .jf-token-number {
     color: #fb923c;
   }
 
-  :global(.jf-token-boolean) {
+  .jf-token-boolean {
     color: #1d4ed8;
   }
 
-  :global(.theme-dark) :global(.jf-token-boolean) {
+  .theme-dark .jf-token-boolean {
     color: #60a5fa;
   }
 
-  :global(.jf-token-null) {
+  .jf-token-null {
     color: #dc2626;
   }
 
-  :global(.theme-dark) :global(.jf-token-null) {
+  .theme-dark .jf-token-null {
     color: #f87171;
   }
 
-  :global(.jf-token-error) {
+  .jf-token-error {
     color: #ef4444;
   }

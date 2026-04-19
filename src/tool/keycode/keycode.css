@@ -14,7 +14,7 @@
     color: var(--kc-text);
   }
 
-  :global(.theme-dark) .kc-root {
+  .theme-dark .kc-root {
     --kc-card-bg: #1e293b;
     --kc-bg: #0f172a;
     --kc-text: #f1f5f9;
