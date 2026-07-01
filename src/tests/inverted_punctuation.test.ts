@@ -61,7 +61,7 @@ function findMissingInvertedMarks(
   text: string,
   startMark: string,
   endMark: string,
-  toolId: string,
+  _toolId: string,
 ): string[] {
   const cleaned = text.replace(/<code>.*?<\/code>/g, '');
 

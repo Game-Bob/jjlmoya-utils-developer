@@ -4,6 +4,7 @@
   }
 
   .rc-container {
+    container-type: inline-size;
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -64,7 +65,7 @@
 
   .rc-inputs-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
     gap: 1.5rem;
   }
 
@@ -199,7 +200,7 @@
 
   .rc-comparison-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
     gap: 1rem;
   }
 
@@ -212,6 +213,7 @@
     gap: 0.5rem;
     background: rgba(255, 255, 255, 0.4);
     border: 1px solid rgba(0, 0, 0, 0.05);
+    min-width: 0;
   }
 
   .theme-dark .rc-score-card {
@@ -331,7 +333,7 @@
     color: rgb(239, 68, 68);
   }
 
-  @media (max-width: 640px) {
+  @container (max-width: 520px) {
     .rc-container {
       gap: 1rem;
       padding: 0;
@@ -385,5 +387,18 @@
 
     .rc-item-check {
       text-align: left;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .rc-container {
+      gap: 1rem;
+      padding: 0;
+    }
+
+    .rc-card {
+      border-radius: 1rem;
+      gap: 1.25rem;
+      padding: 1rem;
     }
   }
