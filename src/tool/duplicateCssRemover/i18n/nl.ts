@@ -141,7 +141,7 @@ export const content: ToolLocaleContent<DuplicateCssRemoverUI> = {
     },
     {
       type: 'tip',
-      html: 'Overbodige stijlen verwijderen gaat niet alleen om codenetjes — het is een meetbare en directe verbetering van vitale metrics zoals de <strong>First Contentful Paint (FCP)</strong>.',
+      html: 'Overbodige stijlen verwijderen gaat niet alleen om codenetjes - het is een meetbare en directe verbetering van vitale metrics zoals de <strong>First Contentful Paint (FCP)</strong>.',
     },
     {
       type: 'title',

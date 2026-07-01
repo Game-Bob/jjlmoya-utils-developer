@@ -19,7 +19,7 @@ const faqData = [
       'La herramienta respeta los estilos inline existentes y añade las nuevas propiedades a continuación, simulando el comportamiento de la cascada CSS: las propiedades declaradas más tarde sobreescriben las anteriores en caso de conflicto.',
   },
   {
-    question: '¿Funciona con selectores complejos como :hover o media queries?',
+    question: '¿Funciona con selectores complejos como hover o media queries?',
     answer:
       'La herramienta procesa selectores de clase, id, atributos y pseudo-clases estructurales que DOMParser puede resolver. Los selectores dependientes de estado como :hover y las media queries no se pueden inlinear (ya que dependen del entorno en tiempo de ejecución) y son ignorados.',
   },

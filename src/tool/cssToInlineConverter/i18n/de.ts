@@ -16,32 +16,32 @@ const faqData = [
   {
     question: 'Was passiert, wenn ein Element bereits ein eigenes style-Attribut hat?',
     answer:
-      'Das Werkzeug respektiert vorhandene Inline-Styles und fügt die neuen Eigenschaften dahinter an – es simuliert dabei das Verhalten der CSS-Kaskade: Bei Konflikten überschreiben später deklarierte Eigenschaften frühere.',
+      'Das Werkzeug respektiert vorhandene Inline-Styles und fügt die neuen Eigenschaften dahinter an - es simuliert dabei das Verhalten der CSS-Kaskade: Bei Konflikten überschreiben später deklarierte Eigenschaften frühere.',
   },
   {
     question: 'Funktioniert es auch mit komplexen Selektoren wie :hover oder Media Queries?',
     answer:
-      'Das Werkzeug verarbeitet Klassen-, ID-, Attribut- und strukturelle Pseudo-Klassen-Selektoren, die DOMParser auflösen kann. Zustandsabhängige Selektoren wie :hover und Media Queries können nicht inline eingebettet werden – sie hängen von der Laufzeitumgebung ab und werden ignoriert.',
+      'Das Werkzeug verarbeitet Klassen-, ID-, Attribut- und strukturelle Pseudo-Klassen-Selektoren, die DOMParser auflösen kann. Zustandsabhängige Selektoren wie :hover und Media Queries können nicht inline eingebettet werden - sie hängen von der Laufzeitumgebung ab und werden ignoriert.',
   },
   {
     question: 'Wird mein HTML- und CSS-Code an einen Server gesendet?',
     answer:
-      'Nein. Die gesamte Verarbeitung findet zu 100 % in Ihrem Browser mithilfe der nativen DOMParser-API statt. Kein einziges Byte Ihres Codes verlässt Ihr Gerät – das garantiert vollständige Privatsphäre, auch bei Vorlagen mit vertraulichen Inhalten.',
+      'Nein. Die gesamte Verarbeitung findet zu 100 % in Ihrem Browser mithilfe der nativen DOMParser-API statt. Kein einziges Byte Ihres Codes verlässt Ihr Gerät - das garantiert vollständige Privatsphäre, auch bei Vorlagen mit vertraulichen Inhalten.',
   },
 ];
 
 const howToData = [
   {
     name: 'Fügen Sie Ihr HTML ein',
-    text: 'Schreiben oder fügen Sie das HTML, das Sie verarbeiten möchten, in das Feld „Original-HTML" ein. Es kann sich um ein Fragment oder ein vollständiges Dokument handeln.',
+    text: 'Schreiben oder fügen Sie das HTML, das Sie verarbeiten möchten, in das Feld "Original-HTML" ein. Es kann sich um ein Fragment oder ein vollständiges Dokument handeln.',
   },
   {
     name: 'CSS-Regeln hinzufügen',
-    text: 'Fügen Sie die Klassen und IDs, die Sie einbetten möchten, in das Feld „CSS-Regeln" ein. Das Werkzeug wendet sie unter Berücksichtigung der Selektorspezifität an.',
+    text: 'Fügen Sie die Klassen und IDs, die Sie einbetten möchten, in das Feld "CSS-Regeln" ein. Das Werkzeug wendet sie unter Berücksichtigung der Selektorspezifität an.',
   },
   {
     name: 'Konvertieren und kopieren',
-    text: 'Klicken Sie auf „CSS in HTML einbetten". Das Ergebnis mit allen Inline-Styles erscheint darunter – bereit zum Kopieren und Einfügen in Ihren E-Mail-Manager oder Ihr CMS.',
+    text: 'Klicken Sie auf "CSS in HTML einbetten". Das Ergebnis mit allen Inline-Styles erscheint darunter - bereit zum Kopieren und Einfügen in Ihren E-Mail-Manager oder Ihr CMS.',
   },
 ];
 

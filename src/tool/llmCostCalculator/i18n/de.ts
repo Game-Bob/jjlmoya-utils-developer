@@ -16,12 +16,12 @@ const faqData = [
   {
     question: 'Was sind Tokens und wie hängen sie mit Wörtern zusammen?',
     answer:
-      'Ein Token ist die grundlegende Texteinheit, die ein Sprachmodell verarbeitet. Im Durchschnitt entspricht 1 Token etwa 0,75 Wörtern auf Englisch, also 1.000 Tokens ≈ 750 Wörter. Preise werden pro Million Tokens ($/1M) angegeben – das ist die branchenübliche Einheit bei allen Anbietern.',
+      'Ein Token ist die grundlegende Texteinheit, die ein Sprachmodell verarbeitet. Im Durchschnitt entspricht 1 Token etwa 0,75 Wörtern auf Englisch, also 1.000 Tokens ≈ 750 Wörter. Preise werden pro Million Tokens ($/1M) angegeben - das ist die branchenübliche Einheit bei allen Anbietern.',
   },
   {
     question: 'Warum sind Ausgabe Tokens teurer als Eingabe Tokens?',
     answer:
-      'Das Generieren von Text (Ausgabe) erfordert, dass das Modell jeden Token nacheinander berechnet – das ist rechenintensiver als das Lesen der Eingabe. Die meisten Anbieter berechnen für Ausgabe Tokens das 3- bis 5-Fache des Preises für Eingabe Tokens.',
+      'Das Generieren von Text (Ausgabe) erfordert, dass das Modell jeden Token nacheinander berechnet - das ist rechenintensiver als das Lesen der Eingabe. Die meisten Anbieter berechnen für Ausgabe Tokens das 3- bis 5-Fache des Preises für Eingabe Tokens.',
   },
   {
     question: 'Wie kann ich die Kosten meiner LLM-API senken?',
@@ -127,7 +127,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'APIs für große Sprachmodelle werden nach Token-Nutzung abgerechnet – nicht nach Zeit oder Anfragen. Jeder API-Aufruf hat zwei Kostenkomponenten: die <strong>Eingabekosten</strong> (Verarbeitung deines Prompts) und die <strong>Ausgabekosten</strong> (Generierung der Antwort). Diesen Unterschied zu verstehen ist der Schlüssel zur genauen Schätzung deiner monatlichen Rechnung.',
+      html: 'APIs für große Sprachmodelle werden nach Token-Nutzung abgerechnet - nicht nach Zeit oder Anfragen. Jeder API-Aufruf hat zwei Kostenkomponenten: die <strong>Eingabekosten</strong> (Verarbeitung deines Prompts) und die <strong>Ausgabekosten</strong> (Generierung der Antwort). Diesen Unterschied zu verstehen ist der Schlüssel zur genauen Schätzung deiner monatlichen Rechnung.',
     },
     {
       type: 'title',
@@ -146,7 +146,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     {
       type: 'card',
       title: 'Ausgabe Tokens',
-      html: '<p>Ausgabe Tokens werden sequenziell – Token für Token – erzeugt, was sie rechenintensiver macht. Die meisten Anbieter berechnen für Ausgabe Tokens <strong>das 3- bis 5-Fache</strong> des Eingabepreises. Eine Antwort mit 300 Wörtern erzeugt etwa 400 Ausgabe Tokens. Präzise Antworten zu halten ist eine der wirkungsvollsten Methoden, Kosten zu sparen.</p>',
+      html: '<p>Ausgabe Tokens werden sequenziell - Token für Token - erzeugt, was sie rechenintensiver macht. Die meisten Anbieter berechnen für Ausgabe Tokens <strong>das 3- bis 5-Fache</strong> des Eingabepreises. Eine Antwort mit 300 Wörtern erzeugt etwa 400 Ausgabe Tokens. Präzise Antworten zu halten ist eine der wirkungsvollsten Methoden, Kosten zu sparen.</p>',
     },
     {
       type: 'title',

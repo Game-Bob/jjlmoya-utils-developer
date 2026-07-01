@@ -108,7 +108,7 @@ export const content: ToolLocaleContent<SvgSanitizerUI> = {
     { type: 'title', text: 'Dlaczego wyeksportowane pliki SVG są takie brudne?', level: 3 },
     {
       type: 'paragraph',
-      html: 'Gdy eksportujesz SVG z Figmy, otrzymujesz plik wypełniony atrybutami, które mają sens tylko wewnątrz aplikacji: <code>data-name</code>, <code>xml:space</code>, odwołania do wewnętrznych warstw i metadane projektu. Efektem jest SVG, który może ważyć o 40–70% więcej niż powinien.',
+      html: 'Gdy eksportujesz SVG z Figmy, otrzymujesz plik wypełniony atrybutami, które mają sens tylko wewnątrz aplikacji: <code>data-name</code>, <code>xml:space</code>, odwołania do wewnętrznych warstw i metadane projektu. Efektem jest SVG, który może ważyć o 40-70% więcej niż powinien.',
     },
     { type: 'title', text: 'Co usuwa oczyszczacz', level: 3 },
     {

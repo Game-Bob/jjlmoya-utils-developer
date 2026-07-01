@@ -160,7 +160,7 @@ export const content: ToolLocaleContent<MusicalTypographyUI> = {
     {
       type: 'card',
       title: 'Mengapa "Musikal"',
-      html: '<p>Kaum Pythagoras menemukan bahwa membagi senar dalam proporsi sederhana (1:2, 2:3, 3:4) menghasilkan bunyi yang konsonan. Interval-interval ini — oktaf, kuint sempurna, dan kuart sempurna — adalah persis rasio tipografi yang digunakan. Anda sedang menggubah musik visual.</p>',
+      html: '<p>Kaum Pythagoras menemukan bahwa membagi senar dalam proporsi sederhana (1:2, 2:3, 3:4) menghasilkan bunyi yang konsonan. Interval-interval ini - oktaf, kuint sempurna, dan kuart sempurna - adalah persis rasio tipografi yang digunakan. Anda sedang menggubah musik visual.</p>',
     },
     {
       type: 'title',

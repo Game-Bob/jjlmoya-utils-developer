@@ -11,7 +11,7 @@ const faqData = [
   {
     question: "Comment le coût d'une API LLM est-il calculé ?",
     answer:
-      "Les APIs LLM facturent séparément les tokens d'entrée (le prompt) et les tokens de sortie (la réponse). Le coût total par requête est : (tokens entrée × prix entrée + tokens sortie × prix sortie) / 1 000 000. Multipliez par le nombre de requêtes pour obtenir le coût mensuel total.",
+      "Les APIs LLM facturent séparément les tokens d'entrée (le prompt) et les tokens de sortie (la réponse). Le coût total par requête est: (tokens entrée × prix entrée + tokens sortie × prix sortie) / 1 000 000. Multipliez par le nombre de requêtes pour obtenir le coût mensuel total.",
   },
   {
     question: 'Que sont les tokens et comment se rapportent-ils aux mots ?',
@@ -127,7 +127,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: "Les APIs de modèles de langage facturent en fonction de l'utilisation des tokens, et non du temps ou des requêtes. Chaque appel a deux coûts : le <strong>coût d'entrée</strong> (traitement de votre prompt) et le <strong>coût de sortie</strong> (génération de la réponse). Comprendre cette distinction est essentiel pour estimer avec précision votre facture mensuelle.",
+      html: "Les APIs de modèles de langage facturent en fonction de l'utilisation des tokens, et non du temps ou des requêtes. Chaque appel a deux coûts: le <strong>coût d'entrée</strong> (traitement de votre prompt) et le <strong>coût de sortie</strong> (génération de la réponse). Comprendre cette distinction est essentiel pour estimer avec précision votre facture mensuelle.",
     },
     {
       type: 'title',
@@ -141,7 +141,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     {
       type: 'card',
       title: "Tokens d'entrée",
-      html: "<p>Les tokens d'entrée représentent tout ce qui est envoyé <strong>au</strong> modèle : votre prompt système, l'historique de la conversation et le message de l'utilisateur. Ils sont moins chers car le modèle les traite en parallèle. Un prompt système typique de 200 mots génère environ 267 tokens d'entrée.</p>",
+      html: "<p>Les tokens d'entrée représentent tout ce qui est envoyé <strong>au</strong> modèle: votre prompt système, l'historique de la conversation et le message de l'utilisateur. Ils sont moins chers car le modèle les traite en parallèle. Un prompt système typique de 200 mots génère environ 267 tokens d'entrée.</p>",
     },
     {
       type: 'card',

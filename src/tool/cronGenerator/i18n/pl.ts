@@ -21,7 +21,7 @@ const faqData = [
   {
     question: 'Co oznacza gwiazdka (*) w Cron?',
     answer:
-      'Gwiazdka to symbol wieloznaczny oznaczający „wszystko”. Na przykład gwiazdka w polu minut oznacza, że zadanie będzie uruchamiane w każdej minucie zdefiniowanego zakresu.',
+      'Gwiazdka to symbol wieloznaczny oznaczający "wszystko". Na przykład gwiazdka w polu minut oznacza, że zadanie będzie uruchamiane w każdej minucie zdefiniowanego zakresu.',
   },
   {
     question: 'Jak mogę sprawdzić nadchodzące wykonania?',
@@ -37,7 +37,7 @@ const howToData = [
   },
   {
     name: 'Skonfiguruj zaawansowane szczegóły',
-    text: 'Przełącz się na kartę „Zaawansowane”, aby ręcznie zdefiniować dokładne minuty, godziny lub określone dni tygodnia.',
+    text: 'Przełącz się na kartę "Zaawansowane", aby ręcznie zdefiniować dokładne minuty, godziny lub określone dni tygodnia.',
   },
   {
     name: 'Zweryfikuj tłumaczenie i daty',
@@ -167,11 +167,11 @@ export const content: ToolLocaleContent<CronGeneratorUI> = {
     {
       type: 'list',
       items: [
-        '<strong>Pole 1 – Minuta (0-59):</strong> Kiedy zadanie rozpoczyna się w ciągu godziny.',
-        '<strong>Pole 2 – Godzina (0-23):</strong> Wymagany format 24-godzinny.',
-        '<strong>Pole 3 – Dzień miesiąca (1-31):</strong> Konkretny dzień kalendarzowy.',
-        '<strong>Pole 4 – Miesiąc (1-12):</strong> Od stycznia do grudnia.',
-        '<strong>Pole 5 – Dzień tygodnia (0-6):</strong> 0 to zazwyczaj niedziela.',
+        '<strong>Pole 1 - Minuta (0-59):</strong> Kiedy zadanie rozpoczyna się w ciągu godziny.',
+        '<strong>Pole 2 - Godzina (0-23):</strong> Wymagany format 24-godzinny.',
+        '<strong>Pole 3 - Dzień miesiąca (1-31):</strong> Konkretny dzień kalendarzowy.',
+        '<strong>Pole 4 - Miesiąc (1-12):</strong> Od stycznia do grudnia.',
+        '<strong>Pole 5 - Dzień tygodnia (0-6):</strong> 0 to zazwyczaj niedziela.',
       ],
     },
     {
@@ -185,7 +185,7 @@ export const content: ToolLocaleContent<CronGeneratorUI> = {
     },
     {
       type: 'paragraph',
-      html: '90% serwerów działa w czasie <strong>UTC</strong>. Jeśli zaplanujesz zadanie na 02:00 rano, myśląc o lokalnej strefie czasowej, może ono zostać uruchomione o nieoczekiwanej porze. Ponadto Cron nie ma dostępu do Twojej zwykłej ścieżki <code>$PATH</code> – zawsze używaj ścieżek bezwzględnych, takich jak <code>/usr/local/bin/node</code>.',
+      html: '90% serwerów działa w czasie <strong>UTC</strong>. Jeśli zaplanujesz zadanie na 02:00 rano, myśląc o lokalnej strefie czasowej, może ono zostać uruchomione o nieoczekiwanej porze. Ponadto Cron nie ma dostępu do Twojej zwykłej ścieżki <code>$PATH</code> - zawsze używaj ścieżek bezwzględnych, takich jak <code>/usr/local/bin/node</code>.',
     },
   ],
 };

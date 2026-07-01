@@ -119,7 +119,7 @@ export const content: ToolLocaleContent<CssSpecificityCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Die CSS-Spezifität ist der Algorithmus, nach dem Browser entscheiden, welche Eigenschaftswerte auf ein bestimmtes Element angewendet werden. Es ist im Grunde ein mathematischer Wert, der dem Browser sagt, „wie spezifisch“ eine Regel ist.',
+      html: 'Die CSS-Spezifität ist der Algorithmus, nach dem Browser entscheiden, welche Eigenschaftswerte auf ein bestimmtes Element angewendet werden. Es ist im Grunde ein mathematischer Wert, der dem Browser sagt, "wie spezifisch" eine Regel ist.',
     },
     {
       type: 'paragraph',

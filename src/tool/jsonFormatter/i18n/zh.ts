@@ -14,7 +14,7 @@ const faqData = [
       '绝对安全。所有处理均 100% 在您的浏览器中完成（客户端处理）。您的 JSON 数据永远不会被发送到任何服务器，确保您的数据结构完全私密。',
   },
   {
-    question: '导致“Invalid JSON”错误的原因是什么？',
+    question: '导致"Invalid JSON"错误的原因是什么？',
     answer:
       '通常是由于对象末尾多余的逗号、键（key）缺少双引号或存在不可见字符引起的。我们的工具会高亮显示错误的具体行号，方便您进行修复。',
   },
@@ -109,19 +109,19 @@ export const content: ToolLocaleContent<JsonFormatterUI> = {
   bibliographyTitle: '参考资料与标准',
   bibliography: [
     {
-      name: 'RFC 8259 – The JavaScript Object Notation (JSON) Data Interchange Format (IETF)',
+      name: 'RFC 8259 - The JavaScript Object Notation (JSON) Data Interchange Format (IETF)',
       url: 'https://datatracker.ietf.org/doc/html/rfc8259',
     },
     {
-      name: 'ECMA-404 – The JSON Data Interchange Syntax (Ecma International)',
+      name: 'ECMA-404 - The JSON Data Interchange Syntax (Ecma International)',
       url: 'https://www.ecma-international.org/publications-and-standards/standards/ecma-404/',
     },
     {
-      name: 'JSON.org – JSON 介绍',
+      name: 'JSON.org - JSON 介绍',
       url: 'https://www.json.org/json-en.html',
     },
     {
-      name: 'MDN Web Docs – JSON',
+      name: 'MDN Web Docs - JSON',
       url: 'https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON',
     },
   ],

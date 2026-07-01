@@ -108,7 +108,7 @@ export const content: ToolLocaleContent<SvgSanitizerUI> = {
     { type: 'title', text: 'Mengapa SVG yang diekspor begitu berantakan?', level: 3 },
     {
       type: 'paragraph',
-      html: 'Saat kamu mengekspor SVG dari Figma, kamu mendapatkan file yang penuh dengan atribut yang hanya bermakna di dalam aplikasinya: <code>data-name</code>, <code>xml:space</code>, referensi ke layer internal, dan metadata desain. Hasilnya adalah SVG yang bisa 40–70% lebih besar dari yang seharusnya.',
+      html: 'Saat kamu mengekspor SVG dari Figma, kamu mendapatkan file yang penuh dengan atribut yang hanya bermakna di dalam aplikasinya: <code>data-name</code>, <code>xml:space</code>, referensi ke layer internal, dan metadata desain. Hasilnya adalah SVG yang bisa 40-70% lebih besar dari yang seharusnya.',
     },
     { type: 'title', text: 'Apa yang dihapus oleh Pembersih', level: 3 },
     {

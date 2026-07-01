@@ -16,7 +16,7 @@ const faqData = [
   {
     question: 'Что такое event.which и почему это устаревшее?',
     answer:
-      'event.which — это устаревшее свойство, которое возвращает числовой код ASCII для клавиши. Оно помечено как устаревшее в современных стандартах, потому что event.key и event.code заменяют его более точной и читаемой информацией. Оно показано в этом инструменте в образовательных целях.',
+      'event.which - это устаревшее свойство, которое возвращает числовой код ASCII для клавиши. Оно помечено как устаревшее в современных стандартах, потому что event.key и event.code заменяют его более точной и читаемой информацией. Оно показано в этом инструменте в образовательных целях.',
   },
   {
     question: 'Что означает свойство location?',
@@ -100,15 +100,15 @@ export const content: ToolLocaleContent<KeycodeUI> = {
   bibliographyTitle: 'Ссылки и Стандарты',
   bibliography: [
     {
-      name: 'MDN Web Docs – KeyboardEvent',
+      name: 'MDN Web Docs - KeyboardEvent',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent',
     },
     {
-      name: 'Спецификация UI Events (W3C) – KeyboardEvent',
+      name: 'Спецификация UI Events (W3C) - KeyboardEvent',
       url: 'https://www.w3.org/TR/uievents/#events-keyboardevents',
     },
     {
-      name: 'MDN – Значения KeyboardEvent.code',
+      name: 'MDN - Значения KeyboardEvent.code',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values',
     },
   ],
@@ -135,12 +135,12 @@ export const content: ToolLocaleContent<KeycodeUI> = {
     },
     {
       type: 'card',
-      title: 'event.code — Физическая клавиша',
+      title: 'event.code: Физическая клавиша',
       html: '<p>Возвращает идентификатор <strong>физической позиции</strong> клавиши на клавиатуре, используя номенклатуру QWERTY. Например, клавиша "A" на клавиатуре AZERTY возвращает <code>KeyQ</code>. Идеально для управления игрой, где важна позиция, а не символ.</p>',
     },
     {
       type: 'card',
-      title: 'event.key — Сгенерированный символ',
+      title: 'event.key: Сгенерированный символ',
       html: '<p>Возвращает <strong>значение символа</strong>, сгенерированное в соответствии с языком и активными модификаторами. Нажатие Shift+A возвращает <code>"A"</code>; без Shift возвращает <code>"a"</code>. Для специальных клавиш возвращает названия, такие как <code>"Enter"</code>, <code>"Escape"</code>, <code>"ArrowUp"</code>.</p>',
     },
     {

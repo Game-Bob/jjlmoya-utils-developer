@@ -41,7 +41,7 @@ const howToData = [
   },
   {
     name: 'Użyj fragmentów kodu',
-    text: 'W sekcji „Szybkie fragmenty" znajdziesz bloki kodu JavaScript gotowe do wklejenia bezpośrednio do swojego projektu.',
+    text: 'W sekcji "Szybkie fragmenty" znajdziesz bloki kodu JavaScript gotowe do wklejenia bezpośrednio do swojego projektu.',
   },
 ];
 
@@ -100,15 +100,15 @@ export const content: ToolLocaleContent<KeycodeUI> = {
   bibliographyTitle: 'Referencje i Standardy',
   bibliography: [
     {
-      name: 'MDN Web Docs – KeyboardEvent',
+      name: 'MDN Web Docs - KeyboardEvent',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent',
     },
     {
-      name: 'UI Events Specification (W3C) – KeyboardEvent',
+      name: 'UI Events Specification (W3C) - KeyboardEvent',
       url: 'https://www.w3.org/TR/uievents/#events-keyboardevents',
     },
     {
-      name: 'MDN – KeyboardEvent.code values',
+      name: 'MDN - KeyboardEvent.code values',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values',
     },
   ],
@@ -135,12 +135,12 @@ export const content: ToolLocaleContent<KeycodeUI> = {
     },
     {
       type: 'card',
-      title: 'event.code — Fizyczny klawisz',
-      html: '<p>Zwraca identyfikator <strong>fizycznej pozycji</strong> klawisza na klawiaturze, używając nomenklatury QWERTY. Na przykład klawisz „A" na klawiaturze AZERTY zwraca <code>KeyQ</code>. Idealny do sterowania grami, gdzie liczy się pozycja, a nie znak.</p>',
+      title: 'event.code: Fizyczny klawisz',
+      html: '<p>Zwraca identyfikator <strong>fizycznej pozycji</strong> klawisza na klawiaturze, używając nomenklatury QWERTY. Na przykład klawisz "A" na klawiaturze AZERTY zwraca <code>KeyQ</code>. Idealny do sterowania grami, gdzie liczy się pozycja, a nie znak.</p>',
     },
     {
       type: 'card',
-      title: 'event.key — Wygenerowany znak',
+      title: 'event.key: Wygenerowany znak',
       html: '<p>Zwraca <strong>wartość znaku</strong> wygenerowanego zgodnie z językiem i aktywnymi modyfikatorami. Naciśnięcie Shift+A zwraca <code>"A"</code>; bez Shift zwraca <code>"a"</code>. Dla klawiszy specjalnych zwraca nazwy jak <code>"Enter"</code>, <code>"Escape"</code>, <code>"ArrowUp"</code>.</p>',
     },
     {

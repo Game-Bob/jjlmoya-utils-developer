@@ -33,11 +33,11 @@ const faqData = [
 const howToData = [
   {
     name: 'Saisissez le premier sélecteur',
-    text: 'Tapez le Sélecteur A dans le champ texte de gauche, par exemple : #header .nav-item > a. Les compteurs d\'IDs, Classes et Éléments se mettront à jour instantanément.',
+    text: 'Tapez le Sélecteur A dans le champ texte de gauche, par exemple: #header .nav-item > a. Les compteurs d\'IDs, Classes et Éléments se mettront à jour instantanément.',
   },
   {
     name: 'Saisissez le deuxième sélecteur',
-    text: 'Tapez le Sélecteur B dans le champ texte de droite, par exemple : ul li.active a:hover. Observez comment les poids changent en temps réel.',
+    text: 'Tapez le Sélecteur B dans le champ texte de droite, par exemple: ul li.active a:hover. Observez comment les poids changent en temps réel.',
   },
   {
     name: 'Lisez le résultat',
@@ -137,7 +137,7 @@ export const content: ToolLocaleContent<CssSpecificityCalculatorUI> = {
     {
       type: 'list',
       items: [
-        '<strong>Colonne A (IDs) :</strong> Compte le nombre d\'identifiants uniques. Exemple : <code>#header</code> compte comme 1 dans la colonne A.',
+        '<strong>Colonne A (IDs):</strong> Compte le nombre d\'identifiants uniques. Exemple: <code>#header</code> compte comme 1 dans la colonne A.',
         '<strong>Colonne B (Classes, Attributs et Pseudo-classes) :</strong> Compte toutes les classes (<code>.button</code>), attributs (<code>[type="text"]</code>) et pseudo-classes (<code>:hover</code>).',
         '<strong>Colonne C (Éléments et Pseudo-éléments) :</strong> Compte tous les éléments HTML (<code>div</code>, <code>h1</code>) et pseudo-éléments (<code>::before</code>).',
       ],

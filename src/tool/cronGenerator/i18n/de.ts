@@ -21,7 +21,7 @@ const faqData = [
   {
     question: 'Was bedeutet das Sternchen (*) in Cron?',
     answer:
-      'Das Sternchen ist ein Platzhalter, der „alle“ bedeutet. Beispielsweise bedeutet ein * im Minutenfeld, dass die Aufgabe jede Minute des definierten Bereichs ausgeführt wird.',
+      'Das Sternchen ist ein Platzhalter, der "alle" bedeutet. Beispielsweise bedeutet ein * im Minutenfeld, dass die Aufgabe jede Minute des definierten Bereichs ausgeführt wird.',
   },
   {
     question: 'Wie kann ich die anstehenden Ausführungen überprüfen?',
@@ -37,7 +37,7 @@ const howToData = [
   },
   {
     name: 'Erweiterte Details konfigurieren',
-    text: 'Wechseln Sie zur Registerkarte „Erweitert“, um die genauen Minuten, Stunden oder特定 Wochentage manuell zu definieren.',
+    text: 'Wechseln Sie zur Registerkarte "Erweitert", um die genauen Minuten, Stunden oder特定 Wochentage manuell zu definieren.',
   },
   {
     name: 'Übersetzung und Daten überprüfen',
@@ -157,7 +157,7 @@ export const content: ToolLocaleContent<CronGeneratorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Obwohl wir im Zeitalter von <em>Serverless</em>-Servern und Cloud-Workflows leben, bleibt das <strong>Crontab</strong>-System das Rückgrat der globalen Technologieinfrastruktur. Von kleinen Blogs bis hin zu massiven Bankinfrastrukturen – die Aufgabenplanung sorgt dafür, dass die digitale Welt läuft.',
+      html: 'Obwohl wir im Zeitalter von <em>Serverless</em>-Servern und Cloud-Workflows leben, bleibt das <strong>Crontab</strong>-System das Rückgrat der globalen Technologieinfrastruktur. Von kleinen Blogs bis hin zu massiven Bankinfrastrukturen - die Aufgabenplanung sorgt dafür, dass die digitale Welt läuft.',
     },
     {
       type: 'title',
@@ -185,7 +185,7 @@ export const content: ToolLocaleContent<CronGeneratorUI> = {
     },
     {
       type: 'paragraph',
-      html: '90 % der Server laufen auf <strong>UTC</strong>. Wenn Sie eine Aufgabe für 02:00 Uhr morgens in Ihrer lokalen Zeitzone planen, wird sie möglicherweise zu einer unerwarteten Zeit ausgeführt. Außerdem hat Cron keinen Zugriff auf Ihren üblichen <code>$PATH</code> – verwenden Sie immer absolute Pfade wie <code>/usr/local/bin/node</code>.',
+      html: '90 % der Server laufen auf <strong>UTC</strong>. Wenn Sie eine Aufgabe für 02:00 Uhr morgens in Ihrer lokalen Zeitzone planen, wird sie möglicherweise zu einer unerwarteten Zeit ausgeführt. Außerdem hat Cron keinen Zugriff auf Ihren üblichen <code>$PATH</code> - verwenden Sie immer absolute Pfade wie <code>/usr/local/bin/node</code>.',
     },
   ],
 };

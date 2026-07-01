@@ -100,15 +100,15 @@ export const content: ToolLocaleContent<KeycodeUI> = {
   bibliographyTitle: '参考資料と標準',
   bibliography: [
     {
-      name: 'MDN Web Docs – KeyboardEvent',
+      name: 'MDN Web Docs - KeyboardEvent',
       url: 'https://developer.mozilla.org/ja/docs/Web/API/KeyboardEvent',
     },
     {
-      name: 'UI Events Specification (W3C) – KeyboardEvent',
+      name: 'UI Events Specification (W3C) - KeyboardEvent',
       url: 'https://www.w3.org/TR/uievents/#events-keyboardevents',
     },
     {
-      name: 'MDN – KeyboardEvent.code values',
+      name: 'MDN - KeyboardEvent.code values',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values',
     },
   ],
@@ -135,12 +135,12 @@ export const content: ToolLocaleContent<KeycodeUI> = {
     },
     {
       type: 'card',
-      title: 'event.code — 物理的なキー',
+      title: 'event.code: 物理的なキー',
       html: '<p>QWERTYの命名規則を使用して、キーボード上のキーの<strong>物理的な位置</strong>の識別子を返します。たとえば、AZERTYキーボードの「A」キーは<code>KeyQ</code>を返します。位置が重要であり文字ではないゲームコントロールに最適です。</p>',
     },
     {
       type: 'card',
-      title: 'event.key — 生成された文字',
+      title: 'event.key: 生成された文字',
       html: '<p>言語とアクティブな修飾キーに応じて生成された<strong>文字値</strong>を返します。Shift+Aを押すと<code>"A"</code>が返され、Shiftなしでは<code>"a"</code>が返されます。特殊キーの場合は<code>"Enter"</code>、<code>"Escape"</code>、<code>"ArrowUp"</code>などの名前が返されます。</p>',
     },
     {

@@ -21,7 +21,7 @@ const faqData = [
   {
     question: "Comment calculer la hauteur à partir de la largeur avec un ratio donné ?",
     answer:
-      "La formule est : Hauteur = Largeur × (Ratio Hauteur / Ratio Largeur). Par exemple, pour une largeur de 1280px avec un ratio 16:9, la hauteur serait : 1280 × (9/16) = 720px.",
+      "La formule est: Hauteur = Largeur × (Ratio Hauteur / Ratio Largeur). Par exemple, pour une largeur de 1280px avec un ratio 16:9, la hauteur serait: 1280 × (9/16) = 720px.",
   },
   {
     question: "Quel est le Ratio de Format standard pour les vidéos YouTube ?",

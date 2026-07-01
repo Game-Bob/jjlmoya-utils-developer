@@ -13,7 +13,7 @@ const faqData = [
   },
   {
     question: 'Apakah ini mempengaruhi fungsionalitas website?',
-    answer: 'Umumnya tidak. Parameter-parameter ini hampir sepenuhnya digunakan untuk analitik dan pemasaran. Saat Anda menghapusnya, halaman akan tetap terbuka seperti biasa — hanya saja pemilik website tidak bisa melacak dari mana asal klik Anda.',
+    answer: 'Umumnya tidak. Parameter-parameter ini hampir sepenuhnya digunakan untuk analitik dan pemasaran. Saat Anda menghapusnya, halaman akan tetap terbuka seperti biasa - hanya saja pemilik website tidak bisa melacak dari mana asal klik Anda.',
   },
   {
     question: 'Apakah aman memproses tautan saya di sini?',

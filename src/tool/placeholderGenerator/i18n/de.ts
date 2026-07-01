@@ -16,7 +16,7 @@ const faqData = [
   {
     question: 'Kann ich im Generator jede beliebige Auflösung verwenden?',
     answer:
-      'Ja, Sie können beliebige numerische Werte für Breite und Höhe eingeben. Der Generator erstellt eine Arbeitsfläche mit exakt den angeforderten Abmessungen – ideal für präzise Raster oder spezifische Werbeformate.',
+      'Ja, Sie können beliebige numerische Werte für Breite und Höhe eingeben. Der Generator erstellt eine Arbeitsfläche mit exakt den angeforderten Abmessungen - ideal für präzise Raster oder spezifische Werbeformate.',
   },
   {
     question: 'In welchem Format werden die Bilder heruntergeladen?',
@@ -45,7 +45,7 @@ const howToData = [
   },
   {
     name: 'Bild herunterladen',
-    text: 'Klicken Sie auf die Schaltfläche „Herunterladen", um das erstellte Platzhalterbild direkt auf Ihrem Gerät zu speichern.',
+    text: 'Klicken Sie auf die Schaltfläche "Herunterladen", um das erstellte Platzhalterbild direkt auf Ihrem Gerät zu speichern.',
   },
 ];
 
@@ -159,7 +159,7 @@ export const content: ToolLocaleContent<PlaceholderGeneratorUI> = {
       type: 'list',
       items: [
         '<strong>Pixel-genaue Auflösung:</strong> Der native HTML5 Canvas stellt sicher, dass die exportierte Arbeitsfläche arithmetisch exakt den vom Nutzer angegebenen Koordinaten entspricht.',
-        '<strong>Typografisches Autoscaling:</strong> Im automatischen Modus berechnet die Schriftgröße die Umfangsfläche und Zeichenanzahl, um den Text elegant einzupassen – ohne unerwünschte <em>Overflows</em>.',
+        '<strong>Typografisches Autoscaling:</strong> Im automatischen Modus berechnet die Schriftgröße die Umfangsfläche und Zeichenanzahl, um den Text elegant einzupassen - ohne unerwünschte <em>Overflows</em>.',
         '<strong>Hexadezimale Synchronisation:</strong> Bidirektionale Zustandskontrolle zwischen nativen HTML-Farbwählern und Texteingaben sorgt für präzise Kontraste, die Ihrer Figma- oder Penpot-Palette entsprechen.',
       ],
     },
@@ -170,7 +170,7 @@ export const content: ToolLocaleContent<PlaceholderGeneratorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Kein monolithisches Projekt und kein Micro-Frontend kommt ohne Grundlagenarbeit aus – erst recht nicht bei anspruchsvollen Kunden oder Product Managern mit klarer Vision. Wer grafische Iterationen zügig durchführen kann, ohne fertige <em>Assets</em> mitschleppen zu müssen, hat einen klaren Vorteil. Dieser Generator greift direkt auf die moderne JS-API <code>toDataURL()</code> auf Ihrer lokalen Maschine zurück und liefert ein professionelles Ergebnis ohne fragwürdige Zwischenverarbeitung.',
+      html: 'Kein monolithisches Projekt und kein Micro-Frontend kommt ohne Grundlagenarbeit aus - erst recht nicht bei anspruchsvollen Kunden oder Product Managern mit klarer Vision. Wer grafische Iterationen zügig durchführen kann, ohne fertige <em>Assets</em> mitschleppen zu müssen, hat einen klaren Vorteil. Dieser Generator greift direkt auf die moderne JS-API <code>toDataURL()</code> auf Ihrer lokalen Maschine zurück und liefert ein professionelles Ergebnis ohne fragwürdige Zwischenverarbeitung.',
     },
   ],
 };

@@ -5,7 +5,7 @@ import type { DuplicateCssRemoverUI } from '../ui';
 const slug = 'doppeltes-css-entfernen';
 const title = 'Doppelten CSS Code online entfernen. Stylesheets vereinheitlichen und bereinigen';
 const description =
-  'Kostenloses Tool zum Bereinigen und Entfernen doppelter CSS-Regeln. Fasst redundante Selektoren zusammen, respektiert die Kaskade und reduziert sofort die Dateigröße – direkt im Browser.';
+  'Kostenloses Tool zum Bereinigen und Entfernen doppelter CSS-Regeln. Fasst redundante Selektoren zusammen, respektiert die Kaskade und reduziert sofort die Dateigröße - direkt im Browser.';
 
 const faqData = [
   {
@@ -26,22 +26,22 @@ const faqData = [
   {
     question: 'Wird mein CSS an einen Server übertragen?',
     answer:
-      'Nein. Die gesamte Verarbeitung findet direkt in Ihrem Browser per lokalem JavaScript statt. Kein Teil Ihres CSS wird an externe Server übertragen – Ihr Code bleibt vollständig privat.',
+      'Nein. Die gesamte Verarbeitung findet direkt in Ihrem Browser per lokalem JavaScript statt. Kein Teil Ihres CSS wird an externe Server übertragen - Ihr Code bleibt vollständig privat.',
   },
 ];
 
 const howToData = [
   {
     name: 'Ihren CSS Code einfügen',
-    text: 'Kopieren Sie den Inhalt Ihrer CSS-Datei mit wiederholten Selektoren und fügen Sie ihn in das linke Feld „Dirty / Duplicate CSS" ein.',
+    text: 'Kopieren Sie den Inhalt Ihrer CSS-Datei mit wiederholten Selektoren und fügen Sie ihn in das linke Feld "Dirty / Duplicate CSS" ein.',
   },
   {
     name: 'Bereinigung starten',
-    text: 'Klicken Sie auf „CSS bereinigen und vereinheitlichen". Das Tool durchsucht alle Selektoren, führt Eigenschaften zusammen und entfernt redundante Blöcke.',
+    text: 'Klicken Sie auf "CSS bereinigen und vereinheitlichen". Das Tool durchsucht alle Selektoren, führt Eigenschaften zusammen und entfernt redundante Blöcke.',
   },
   {
     name: 'Ergebnis prüfen und kopieren',
-    text: 'Sehen Sie sich die Byte-Einsparungen an und kopieren Sie das optimierte CSS über den Button „Code kopieren" direkt in Ihr Projekt.',
+    text: 'Sehen Sie sich die Byte-Einsparungen an und kopieren Sie das optimierte CSS über den Button "Code kopieren" direkt in Ihr Projekt.',
   },
 ];
 
@@ -141,7 +141,7 @@ export const content: ToolLocaleContent<DuplicateCssRemoverUI> = {
     },
     {
       type: 'tip',
-      html: 'Redundante Stile zu bereinigen ist keine reine Ordnungsfrage – es ist eine messbare und unmittelbare Verbesserung wichtiger Metriken wie dem <strong>First Contentful Paint (FCP)</strong>.',
+      html: 'Redundante Stile zu bereinigen ist keine reine Ordnungsfrage - es ist eine messbare und unmittelbare Verbesserung wichtiger Metriken wie dem <strong>First Contentful Paint (FCP)</strong>.',
     },
     {
       type: 'title',
@@ -161,7 +161,7 @@ export const content: ToolLocaleContent<DuplicateCssRemoverUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Schluss damit, Kilobytes toter Textdaten an die Mobilgeräte Ihrer Nutzer zu schicken. Vereinheitlichen Sie Ihren Code in Millisekunden – vollständig offline, direkt im Browser.',
+      html: 'Schluss damit, Kilobytes toter Textdaten an die Mobilgeräte Ihrer Nutzer zu schicken. Vereinheitlichen Sie Ihren Code in Millisekunden - vollständig offline, direkt im Browser.',
     },
   ],
 };

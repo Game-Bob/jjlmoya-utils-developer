@@ -185,7 +185,7 @@ export const content: ToolLocaleContent<CronGeneratorUI> = {
     },
     {
       type: 'paragraph',
-      html: '90% dos servidores funcionam em <strong>UTC</strong>. Se agendar uma tarefa às 02:00 da manhã pensando no seu fuso horário local, ela poderá ser executada num horário inesperado. Além disso, o Cron não tem acesso ao seu <code>$PATH</code> habitual — use sempre caminhos absolutos como <code>/usr/local/bin/node</code>.',
+      html: '90% dos servidores funcionam em <strong>UTC</strong>. Se agendar uma tarefa às 02:00 da manhã pensando no seu fuso horário local, ela poderá ser executada num horário inesperado. Além disso, o Cron não tem acesso ao seu <code>$PATH</code> habitual - use sempre caminhos absolutos como <code>/usr/local/bin/node</code>.',
     },
   ],
 };

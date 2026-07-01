@@ -21,7 +21,7 @@ const faqData = [
   {
     question: 'Cron 中的星号 (*) 是什么意思？',
     answer:
-      '星号是一个通配符，表示“所有”。例如，分钟字段中的 * 表示任务将在定义范围内的每分钟运行。',
+      '星号是一个通配符，表示"所有"。例如，分钟字段中的 * 表示任务将在定义范围内的每分钟运行。',
   },
   {
     question: '如何检查即将进行的执行？',
@@ -37,7 +37,7 @@ const howToData = [
   },
   {
     name: '配置高级细节',
-    text: '切换到“高级”选项卡，手动定义具体的分钟、小时或特定的星期。',
+    text: '切换到"高级"选项卡，手动定义具体的分钟、小时或特定的星期。',
   },
   {
     name: '验证翻译和日期',
@@ -185,7 +185,7 @@ export const content: ToolLocaleContent<CronGeneratorUI> = {
     },
     {
       type: 'paragraph',
-      html: '90% 的服务器运行在 <strong>UTC</strong> 时间。如果您按照当地时区计划在凌晨 02:00 运行任务，它可能会在意外的时间执行。此外，Cron 无法直接访问您的 <code>$PATH</code> 变量 —— 请始终使用绝对路径，例如 <code>/usr/local/bin/node</code>。',
+      html: '90% 的服务器运行在 <strong>UTC</strong> 时间。如果您按照当地时区计划在凌晨 02:00 运行任务，它可能会在意外的时间执行。此外，Cron 无法直接访问您的 <code>$PATH</code> 变量 - 请始终使用绝对路径，例如 <code>/usr/local/bin/node</code>。',
     },
   ],
 };

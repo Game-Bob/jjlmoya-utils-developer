@@ -4,7 +4,7 @@ export const content: CategoryLocaleContent = {
   slug: 'developpement-web',
   title: 'Développement Web',
   description:
-    "Outils gratuits de développement web : formateurs, calculatrices CSS, générateurs et utilitaires pour développeurs frontend et backend.",
+    "Outils gratuits de développement web: formateurs, calculatrices CSS, générateurs et utilitaires pour développeurs frontend et backend.",
   seo: [
     {
       type: 'summary',

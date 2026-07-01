@@ -119,11 +119,11 @@ export const content: ToolLocaleContent<CssSpecificityCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Specyficzność CSS to algorytm, według którego przeglądarki decydują, które wartości właściwości zastosować do danego elementu. To nic innego jak matematyczny wynik, który mówi przeglądarce, jak bardzo „szczegółowa" jest dana reguła.',
+      html: 'Specyficzność CSS to algorytm, według którego przeglądarki decydują, które wartości właściwości zastosować do danego elementu. To nic innego jak matematyczny wynik, który mówi przeglądarce, jak bardzo "szczegółowa" jest dana reguła.',
     },
     {
       type: 'paragraph',
-      html: 'Jeśli dwie reguły mają różne poziomy specyficzności, wygrywa ta o wyższej wadze — niezależnie od kolejności, w jakiej zostały napisane. Gdy obie mają tę samą wagę, decyduje ta zadeklarowana później w kodzie źródłowym.',
+      html: 'Jeśli dwie reguły mają różne poziomy specyficzności, wygrywa ta o wyższej wadze - niezależnie od kolejności, w jakiej zostały napisane. Gdy obie mają tę samą wagę, decyduje ta zadeklarowana później w kodzie źródłowym.',
     },
     {
       type: 'title',

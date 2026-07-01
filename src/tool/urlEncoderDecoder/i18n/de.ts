@@ -33,15 +33,15 @@ const faqData = [
 const howToData = [
   {
     name: 'Rohtext einfügen',
-    text: 'Geben Sie Ihre URL oder Zeichenfolge in das obere Feld „Rohtext (lesbar)“ ein oder fügen Sie sie ein.',
+    text: 'Geben Sie Ihre URL oder Zeichenfolge in das obere Feld "Rohtext (lesbar)" ein oder fügen Sie sie ein.',
   },
   {
     name: 'Kodieren oder Dekodieren',
-    text: 'Klicken Sie auf „URL kodieren“, um den Text in das sichere Percent-Encoding-Format zu konvertieren, oder auf „Dekodieren“, um eine kodierte URL wieder in ihre lesbare Form zu bringen.',
+    text: 'Klicken Sie auf "URL kodieren", um den Text in das sichere Percent-Encoding-Format zu konvertieren, oder auf "Dekodieren", um eine kodierte URL wieder in ihre lesbare Form zu bringen.',
   },
   {
     name: 'Ergebnis kopieren',
-    text: 'Verwenden Sie die Schaltfläche „Kopieren“ des entsprechenden Feldes, um das Ergebnis in Ihre Zwischenablage zu übernehmen.',
+    text: 'Verwenden Sie die Schaltfläche "Kopieren" des entsprechenden Feldes, um das Ergebnis in Ihre Zwischenablage zu übernehmen.',
   },
 ];
 
@@ -123,7 +123,7 @@ export const content: ToolLocaleContent<UrlEncoderDecoderUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Beim Surfen im Internet oder beim Senden von Anfragen an Server betrachtet man eine URL (Uniform Resource Locator) oft einfach als „Webadresse“. Das Internetprotokoll schreibt jedoch vor, dass URLs nur mit einem sehr eingeschränkten Satz von <strong>Standard-ASCII</strong>-Zeichen übertragen werden dürfen.',
+      html: 'Beim Surfen im Internet oder beim Senden von Anfragen an Server betrachtet man eine URL (Uniform Resource Locator) oft einfach als "Webadresse". Das Internetprotokoll schreibt jedoch vor, dass URLs nur mit einem sehr eingeschränkten Satz von <strong>Standard-ASCII</strong>-Zeichen übertragen werden dürfen.',
     },
     {
       type: 'paragraph',
@@ -136,7 +136,7 @@ export const content: ToolLocaleContent<UrlEncoderDecoderUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Wenn Sie dieses Tool verwenden, nimmt der Algorithmus jedes „unsichere“ Zeichen (wie ein Leerzeichen oder einen Umlaut wie ä) und ersetzt es durch ein Prozentzeichen <code>%</code> gefolgt von zwei hexadezimalen Ziffern, die seinem Wert im UTF-8-Standard entsprechen.',
+      html: 'Wenn Sie dieses Tool verwenden, nimmt der Algorithmus jedes "unsichere" Zeichen (wie ein Leerzeichen oder einen Umlaut wie ä) und ersetzt es durch ein Prozentzeichen <code>%</code> gefolgt von zwei hexadezimalen Ziffern, die seinem Wert im UTF-8-Standard entsprechen.',
     },
     {
       type: 'list',

@@ -91,7 +91,7 @@ const ui: MobileMockupGeneratorUI = {
   presetImageRight: 'Imagen Der.',
   confirmClear: '¿Estás seguro de eliminar todos los mockups?',
   processingExport: 'Procesando...',
-  exportDone: 'Listo!',
+  exportDone: '¡Listo!',
 };
 
 export const content: ToolLocaleContent<MobileMockupGeneratorUI> = {

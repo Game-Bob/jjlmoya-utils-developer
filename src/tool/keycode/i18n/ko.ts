@@ -100,15 +100,15 @@ export const content: ToolLocaleContent<KeycodeUI> = {
   bibliographyTitle: '참고 자료 및 표준',
   bibliography: [
     {
-      name: 'MDN Web Docs – KeyboardEvent',
+      name: 'MDN Web Docs - KeyboardEvent',
       url: 'https://developer.mozilla.org/ko/docs/Web/API/KeyboardEvent',
     },
     {
-      name: 'UI Events Specification (W3C) – KeyboardEvent',
+      name: 'UI Events Specification (W3C) - KeyboardEvent',
       url: 'https://www.w3.org/TR/uievents/#events-keyboardevents',
     },
     {
-      name: 'MDN – KeyboardEvent.code values',
+      name: 'MDN - KeyboardEvent.code values',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values',
     },
   ],
@@ -135,12 +135,12 @@ export const content: ToolLocaleContent<KeycodeUI> = {
     },
     {
       type: 'card',
-      title: 'event.code — 물리적 키',
+      title: 'event.code: 물리적 키',
       html: '<p>QWERTY 명명법을 사용하여 키보드에서 키의 <strong>물리적 위치</strong> 식별자를 반환합니다. 예를 들어 AZERTY 키보드의 "A" 키는 <code>KeyQ</code>를 반환합니다. 문자가 아닌 위치가 중요한 게임 컨트롤에 이상적입니다.</p>',
     },
     {
       type: 'card',
-      title: 'event.key — 생성된 문자',
+      title: 'event.key: 생성된 문자',
       html: '<p>언어와 활성화된 수정자에 따라 생성된 <strong>문자 값</strong>을 반환합니다. Shift+A를 누르면 <code>"A"</code>가 반환되고, Shift 없이 누르면 <code>"a"</code>가 반환됩니다. 특수 키의 경우 <code>"Enter"</code>, <code>"Escape"</code>, <code>"ArrowUp"</code>과 같은 이름을 반환합니다.</p>',
     },
     {

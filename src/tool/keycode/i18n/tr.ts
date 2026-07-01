@@ -100,15 +100,15 @@ export const content: ToolLocaleContent<KeycodeUI> = {
   bibliographyTitle: 'Referanslar ve Standartlar',
   bibliography: [
     {
-      name: 'MDN Web Docs – KeyboardEvent',
+      name: 'MDN Web Docs - KeyboardEvent',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent',
     },
     {
-      name: 'UI Events Specification (W3C) – KeyboardEvent',
+      name: 'UI Events Specification (W3C) - KeyboardEvent',
       url: 'https://www.w3.org/TR/uievents/#events-keyboardevents',
     },
     {
-      name: 'MDN – KeyboardEvent.code values',
+      name: 'MDN - KeyboardEvent.code values',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values',
     },
   ],
@@ -135,12 +135,12 @@ export const content: ToolLocaleContent<KeycodeUI> = {
     },
     {
       type: 'card',
-      title: 'event.code — Fiziksel Tuş',
+      title: 'event.code: Fiziksel Tuş',
       html: '<p>Tuşun klavyedeki <strong>fiziksel konumunun</strong> tanımlayıcısını QWERTY nomenklaturunu kullanarak döndürür. Örneğin, AZERTY klavyesindeki "A" tuşu <code>KeyQ</code> döndürür. Konum önemli olan, karakter değil, oyun kontrolleri için idealdir.</p>',
     },
     {
       type: 'card',
-      title: 'event.key — Oluşturulan Karakter',
+      title: 'event.key: Oluşturulan Karakter',
       html: '<p>Dil ve etkin değiştiricilere göre oluşturulan <strong>karakter değerini</strong> döndürür. Shift+A tuşuna basmak <code>"A"</code> döndürür; Shift olmadan <code>"a"</code> döndürür. Özel tuşlar için <code>"Enter"</code>, <code>"Escape"</code>, <code>"ArrowUp"</code> gibi adları döndürür.</p>',
     },
     {

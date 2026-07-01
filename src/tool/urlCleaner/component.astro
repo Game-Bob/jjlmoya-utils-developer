@@ -15,7 +15,7 @@ const t = (ui ?? {}) as UrlCleanerUI;
       <label for="uc-url-input" class="uc-label">{t.labelInput}</label>
       <div class="uc-input-group">
         <input type="url" id="uc-url-input" class="uc-input" placeholder="https://example.com?utm_source=twitter&fbclid=123..." />
-        <button id="uc-btn-clean" class="uc-btn-primary">
+        <button id="uc-btn-clean" class="uc-btn-primary" type="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.36 2.72L20.78 4.14L15.06 9.85C16.13 11.39 16.28 13.24 15.38 14.44L9.06 8.12C10.26 7.22 12.11 7.38 13.65 8.44L19.36 2.72M5.93 17.57C3.92 15.56 2.69 13.16 2.35 10.92L7.23 8.83L14.67 16.27L12.58 21.15C10.34 20.81 7.94 19.58 5.93 17.57Z"/></svg>
           {t.btnClean}
         </button>
@@ -26,7 +26,7 @@ const t = (ui ?? {}) as UrlCleanerUI;
       <div class="uc-result-card">
         <div class="uc-card-header">
           <h3 class="uc-card-title">{t.labelCleaned}</h3>
-          <button id="uc-btn-copy" class="uc-copy-btn">
+          <button id="uc-btn-copy" class="uc-copy-btn" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             {t.btnCopy}
           </button>
@@ -161,14 +161,32 @@ const t = (ui ?? {}) as UrlCleanerUI;
     if (e.key === 'Enter') cleanUrl();
   });
 
+  async function copyText(text: string): Promise<void> {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.inset = '0 auto auto 0';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+  }
+
   copyBtn.addEventListener('click', () => {
     const text = cleanedUrlEl.textContent || '';
-    navigator.clipboard.writeText(text).then(() => {
-      const origText = copyBtn.textContent;
+    copyText(text).then(() => {
+      const origHtml = copyBtn.innerHTML;
       copyBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg> ${t.btnCopied}`;
       copyBtn.classList.add('uc-copied');
       setTimeout(() => {
-        copyBtn.textContent = origText;
+        copyBtn.innerHTML = origHtml;
         copyBtn.classList.remove('uc-copied');
       }, 2000);
     });

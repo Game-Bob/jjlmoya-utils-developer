@@ -141,7 +141,7 @@ export const content: ToolLocaleContent<DuplicateCssRemoverUI> = {
     },
     {
       type: 'tip',
-      html: 'Usuwanie nadmiarowych stylów to nie tylko kwestia porządku w kodzie — to mierzalna i natychmiastowa poprawa kluczowych metryk, takich jak <strong>First Contentful Paint (FCP)</strong>.',
+      html: 'Usuwanie nadmiarowych stylów to nie tylko kwestia porządku w kodzie - to mierzalna i natychmiastowa poprawa kluczowych metryk, takich jak <strong>First Contentful Paint (FCP)</strong>.',
     },
     {
       type: 'title',

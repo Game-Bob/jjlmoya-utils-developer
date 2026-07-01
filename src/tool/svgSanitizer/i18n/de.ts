@@ -31,7 +31,7 @@ const faqData = [
 
 const howToData = [
   { name: 'SVG einfügen', text: 'Füge den SVG-Code aus Figma, Illustrator oder Inkscape in das Textfeld ein.' },
-  { name: 'Optionen konfigurieren', text: 'Aktiviere oder deaktiviere die Optionen: IDs entfernen, width/height entfernen und minifizieren – je nach Bedarf.' },
+  { name: 'Optionen konfigurieren', text: 'Aktiviere oder deaktiviere die Optionen: IDs entfernen, width/height entfernen und minifizieren - je nach Bedarf.' },
   { name: 'Bereinigen', text: 'Klicke auf SVG bereinigen, um den Code zu verarbeiten und das optimierte Ergebnis zu erhalten.' },
   { name: 'Kopieren oder herunterladen', text: 'Nutze die Schaltflächen Kopieren oder Herunterladen, um das bereinigte SVG für die Produktion zu sichern.' },
 ];
@@ -108,7 +108,7 @@ export const content: ToolLocaleContent<SvgSanitizerUI> = {
     { type: 'title', text: 'Warum sind exportierte SVGs so unordentlich?', level: 3 },
     {
       type: 'paragraph',
-      html: 'Wenn du ein SVG aus Figma exportierst, erhältst du eine Datei voller Attribute, die nur innerhalb der App einen Sinn ergeben: <code>data-name</code>, <code>xml:space</code>, Verweise auf interne Ebenen und Design-Metadaten. Das Ergebnis ist ein SVG, das 40–70 % größer als nötig sein kann.',
+      html: 'Wenn du ein SVG aus Figma exportierst, erhältst du eine Datei voller Attribute, die nur innerhalb der App einen Sinn ergeben: <code>data-name</code>, <code>xml:space</code>, Verweise auf interne Ebenen und Design-Metadaten. Das Ergebnis ist ein SVG, das 40-70 % größer als nötig sein kann.',
     },
     { type: 'title', text: 'Was der Bereiniger entfernt', level: 3 },
     {

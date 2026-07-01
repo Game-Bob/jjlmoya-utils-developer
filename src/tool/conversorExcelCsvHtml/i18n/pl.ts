@@ -40,7 +40,7 @@ const howToData = [
   },
   {
     name: 'Skopiuj kod',
-    text: 'Przełącz się na kartę „Kod HTML” i skopiuj wynik, aby wkleić go na swojej stronie internetowej.',
+    text: 'Przełącz się na kartę "Kod HTML" i skopiuj wynik, aby wkleić go na swojej stronie internetowej.',
   },
 ];
 

@@ -16,7 +16,7 @@ const faqData = [
   {
     question: 'Des propriétés seront-elles perdues lors de la suppression des doublons ?',
     answer:
-      'Non. L\'algorithme respecte strictement la cascade CSS : pour les propriétés en conflit sous le même sélecteur, il préserve toujours la dernière déclarée. Les propriétés uniques de chaque bloc sont combinées sous un sélecteur unifié.',
+      'Non. L\'algorithme respecte strictement la cascade CSS: pour les propriétés en conflit sous le même sélecteur, il préserve toujours la dernière déclarée. Les propriétés uniques de chaque bloc sont combinées sous un sélecteur unifié.',
   },
   {
     question: 'Fonctionne-t-il avec du CSS minifié ou des commentaires ?',

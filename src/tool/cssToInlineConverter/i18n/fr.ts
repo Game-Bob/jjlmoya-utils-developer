@@ -16,7 +16,7 @@ const faqData = [
   {
     question: 'Que se passe-t-il si un élément a déjà son propre attribut style ?',
     answer:
-      'L\'outil respecte les styles inline existants et ajoute les nouvelles propriétés à la suite, simulant le comportement de la cascade CSS : les propriétés déclarées plus tard écrasent les précédentes en cas de conflit.',
+      'L\'outil respecte les styles inline existants et ajoute les nouvelles propriétés à la suite, simulant le comportement de la cascade CSS: les propriétés déclarées plus tard écrasent les précédentes en cas de conflit.',
   },
   {
     question: 'Fonctionne-t-il avec des sélecteurs complexes comme :hover ou les media queries ?',
@@ -124,11 +124,11 @@ export const content: ToolLocaleContent<CssToInlineConverterUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Lors du développement d\'applications web modernes, nous sommes habitués à séparer les responsabilités : le HTML construit la structure, et un fichier CSS externe apporte tout le style visuel. Cependant, tous les environnements ne font pas confiance aux feuilles de style externes ni aux balises globales <code>&lt;style&gt;</code>.',
+      html: 'Lors du développement d\'applications web modernes, nous sommes habitués à séparer les responsabilités: le HTML construit la structure, et un fichier CSS externe apporte tout le style visuel. Cependant, tous les environnements ne font pas confiance aux feuilles de style externes ni aux balises globales <code>&lt;style&gt;</code>.',
     },
     {
       type: 'paragraph',
-      html: 'Le cas d\'usage le plus populaire où le CSS externe échoue est le <strong>Développement de Modèles d\'Email</strong>. Dans ces environnements, la seule façon fiable qu\'une police, couleur ou marge se rende correctement est qu\'elle soit imbriquée directement dans la balise : <code>&lt;span style="color: red;"&gt;</code>.',
+      html: 'Le cas d\'usage le plus populaire où le CSS externe échoue est le <strong>Développement de Modèles d\'Email</strong>. Dans ces environnements, la seule façon fiable qu\'une police, couleur ou marge se rende correctement est qu\'elle soit imbriquée directement dans la balise: <code>&lt;span style="color: red;"&gt;</code>.',
     },
     {
       type: 'title',

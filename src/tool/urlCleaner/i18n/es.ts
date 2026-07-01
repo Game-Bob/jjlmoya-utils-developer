@@ -98,7 +98,7 @@ export const content: ToolLocaleContent<UrlCleanerUI> = {
     { type: 'title', text: '¿Qué es un Limpiador de Tracking de URL y por qué lo necesitas?', level: 3 },
     {
       type: 'paragraph',
-      html: 'Alguna vez has copiado un enlace para enviárselo a un amigo y te has dado cuenta de que es tres veces más largo de lo que debería ser? Ese "ruido" extra son los parámetros de rastreo. Un <strong>limpiador de tracking</strong> es una herramienta diseñada para "desnudar" la dirección web de toda la información publicitaria y de seguimiento que las grandes plataformas inyectan en cada clic que haces.',
+      html: '¿Alguna vez has copiado un enlace para enviárselo a un amigo y te has dado cuenta de que es tres veces más largo de lo que debería ser? Ese "ruido" extra son los parámetros de rastreo. Un <strong>limpiador de tracking</strong> es una herramienta diseñada para "desnudar" la dirección web de toda la información publicitaria y de seguimiento que las grandes plataformas inyectan en cada clic que haces.',
     },
     { type: 'title', text: 'Parámetros de rastreo más comunes', level: 3 },
     {

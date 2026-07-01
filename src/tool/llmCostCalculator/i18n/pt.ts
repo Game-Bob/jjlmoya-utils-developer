@@ -21,7 +21,7 @@ const faqData = [
   {
     question: 'Por que os tokens de saída são mais caros que os de entrada?',
     answer:
-      'Gerar texto (saída) requer que o modelo compute cada token sequencialmente, o que é computacionalmente mais intensivo do que ler a entrada. A maioria dos provedores cobra 3–5x mais para tokens de saída do que de entrada.',
+      'Gerar texto (saída) requer que o modelo compute cada token sequencialmente, o que é computacionalmente mais intensivo do que ler a entrada. A maioria dos provedores cobra 3-5x mais para tokens de saída do que de entrada.',
   },
   {
     question: 'Como posso reduzir meus custos de API LLM?',
@@ -146,7 +146,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     {
       type: 'card',
       title: 'Tokens de saída',
-      html: '<p>Os tokens de saída são gerados um por um em sequência, tornando-os computacionalmente mais caros. A maioria dos provedores cobra <strong>3–5× mais</strong> para tokens de saída. Uma resposta de 300 palavras gera aproximadamente 400 tokens de saída. Manter as respostas concisas é uma das estratégias mais eficazes de economia de custos.</p>',
+      html: '<p>Os tokens de saída são gerados um por um em sequência, tornando-os computacionalmente mais caros. A maioria dos provedores cobra <strong>3-5× mais</strong> para tokens de saída. Uma resposta de 300 palavras gera aproximadamente 400 tokens de saída. Manter as respostas concisas é uma das estratégias mais eficazes de economia de custos.</p>',
     },
     {
       type: 'title',
@@ -155,7 +155,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     },
     {
       type: 'tip',
-      html: 'Comece com um modelo de nível médio capaz como <code>GPT-4o mini</code> ou <code>Gemini 1.5 Flash</code> e atualize apenas se a qualidade for insuficiente. A diferença de custo entre um modelo pequeno e grande pode ser 10–100×.',
+      html: 'Comece com um modelo de nível médio capaz como <code>GPT-4o mini</code> ou <code>Gemini 1.5 Flash</code> e atualize apenas se a qualidade for insuficiente. A diferença de custo entre um modelo pequeno e grande pode ser 10-100×.',
     },
     {
       type: 'paragraph',

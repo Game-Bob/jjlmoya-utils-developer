@@ -160,7 +160,7 @@ export const content: ToolLocaleContent<MusicalTypographyUI> = {
     {
       type: 'card',
       title: 'Warum "Musikalisch"',
-      html: '<p>Die Pythagoreer entdeckten, dass das Teilen einer Saite in einfache Proportionen (1:2, 2:3, 3:4) Konsonanz erzeugt. Diese Intervalle – Oktave, reine Quinte und reine Quarte – sind genau die typografischen Ratios. Du komponierst visuelle Musik.</p>',
+      html: '<p>Die Pythagoreer entdeckten, dass das Teilen einer Saite in einfache Proportionen (1:2, 2:3, 3:4) Konsonanz erzeugt. Diese Intervalle - Oktave, reine Quinte und reine Quarte - sind genau die typografischen Ratios. Du komponierst visuelle Musik.</p>',
     },
     {
       type: 'title',

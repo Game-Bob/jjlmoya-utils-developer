@@ -185,7 +185,7 @@ export const content: ToolLocaleContent<CronGeneratorUI> = {
     },
     {
       type: 'paragraph',
-      html: '90 % av alla servrar körs på <strong>UTC</strong>. Om du schemalägger en uppgift kl. 02:00 med din lokala tidszon i åtanke, kan den köras vid en oväntad tidpunkt. Cron har dessutom inte tillgång till din vanliga <code>$PATH</code> – använd alltid absoluta sökvägar som <code>/usr/local/bin/node</code>.',
+      html: '90 % av alla servrar körs på <strong>UTC</strong>. Om du schemalägger en uppgift kl. 02:00 med din lokala tidszon i åtanke, kan den köras vid en oväntad tidpunkt. Cron har dessutom inte tillgång till din vanliga <code>$PATH</code> - använd alltid absoluta sökvägar som <code>/usr/local/bin/node</code>.',
     },
   ],
 };

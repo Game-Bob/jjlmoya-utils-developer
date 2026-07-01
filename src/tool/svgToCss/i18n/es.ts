@@ -9,7 +9,7 @@ const description =
 
 const faqData = [
   {
-    question: '¿Es mejor usar Data URI o un archivo .svg externo?',
+    question: '¿Es mejor usar Data URI o un archivo SVG externo?',
     answer:
       'Depende del uso. Los Data URIs eliminan peticiones HTTP (ideal para iconos pequeños), pero aumentan el tamaño del CSS. Para ilustraciones grandes o ricas en detalles, es preferible un archivo externo.',
   },

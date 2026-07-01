@@ -21,14 +21,14 @@ const faqData = [
   },
   {
     question: 'Welche Felder sind in einer security.txt erforderlich?',
-    answer: 'Laut RFC 9116 sind die Pflichtfelder „Contact" (mit einer E-Mail-Adresse oder URL) und „Expires" (mit einem zukünftigen Datum im ISO-8601-Format).',
+    answer: 'Laut RFC 9116 sind die Pflichtfelder "Contact" (mit einer E-Mail-Adresse oder URL) und "Expires" (mit einem zukünftigen Datum im ISO-8601-Format).',
   },
 ];
 
 const howToData = [
   { name: 'Felder ausfüllen', text: 'Tragen Sie Ihre E-Mail-Adresse oder Kontakt-URL ein und wählen Sie ein Ablaufdatum.' },
   { name: 'Optionale Felder hinzufügen', text: 'Ergänzen Sie weitere Angaben wie Ihren PGP-Schlüssel, Ihre Sicherheitsrichtlinie oder Stellenangebote.' },
-  { name: 'Datei herunterladen oder kopieren', text: 'Klicken Sie auf „.txt herunterladen" oder kopieren Sie den Inhalt und speichern Sie ihn als security.txt.' },
+  { name: 'Datei herunterladen oder kopieren', text: 'Klicken Sie auf ".txt herunterladen" oder kopieren Sie den Inhalt und speichern Sie ihn als security.txt.' },
   { name: 'Auf den Server hochladen', text: 'Legen Sie die Datei im Ordner /.well-known/ Ihrer Domain ab.' },
 ];
 
@@ -112,7 +112,7 @@ export const content: ToolLocaleContent<GeneradorSecurityTxtUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Der Zweck von <strong>security.txt</strong> besteht darin, Sicherheitsforschern eine standardisierte Möglichkeit zu bieten, die Verantwortlichen einer Website zu kontaktieren, wenn sie eine Schwachstelle entdecken. Ohne diese Datei weiß ein ethischer Hacker, der einen Fehler in Ihrem System findet, möglicherweise nicht, an wen er sich wenden soll — mit der Folge, dass die Information verloren geht, ohne Vorwarnung veröffentlicht oder von Angreifern ausgenutzt wird.',
+      html: 'Der Zweck von <strong>security.txt</strong> besteht darin, Sicherheitsforschern eine standardisierte Möglichkeit zu bieten, die Verantwortlichen einer Website zu kontaktieren, wenn sie eine Schwachstelle entdecken. Ohne diese Datei weiß ein ethischer Hacker, der einen Fehler in Ihrem System findet, möglicherweise nicht, an wen er sich wenden soll - mit der Folge, dass die Information verloren geht, ohne Vorwarnung veröffentlicht oder von Angreifern ausgenutzt wird.',
     },
     { type: 'title', text: 'Security.txt nach RFC 9116 erstellen und einbinden', level: 2 },
     {
@@ -142,7 +142,7 @@ export const content: ToolLocaleContent<GeneradorSecurityTxtUI> = {
       items: [
         '<strong>Encryption:</strong> Ein Link zu Ihrem öffentlichen PGP-Schlüssel, damit Forscher Ihnen verschlüsselte Informationen zusenden können.',
         '<strong>Policy:</strong> Ein Link zu Ihrer Sicherheitsrichtlinien-Seite, auf der Sie den Prozess der verantwortungsvollen Offenlegung erläutern.',
-        '<strong>Acknowledgments:</strong> Ein Link zu Ihrer „Hall of Fame" oder Danksagungsseite für Sicherheitsforscher.',
+        '<strong>Acknowledgments:</strong> Ein Link zu Ihrer "Hall of Fame" oder Danksagungsseite für Sicherheitsforscher.',
         '<strong>Hiring:</strong> Ein Link zu Ihren offenen Stellen im Bereich Cybersicherheit.',
       ],
     },
@@ -163,7 +163,7 @@ export const content: ToolLocaleContent<GeneradorSecurityTxtUI> = {
     { type: 'title', text: 'Fazit: Ein einfacher Schritt für mehr Sicherheit im Web', level: 2 },
     {
       type: 'paragraph',
-      html: 'Kurz gesagt: <strong>security.txt herunterladen</strong> und auf Ihren Server hochladen gehört zu den schnellsten und wirkungsvollsten Sicherheitsmaßnahmen, die Sie noch heute umsetzen können. Sie erleichtern den „Guten" die Arbeit, schrecken Neugierige ab und signalisieren der Welt, dass Sie Datenschutz und Nutzerdaten ernst nehmen.',
+      html: 'Kurz gesagt: <strong>security.txt herunterladen</strong> und auf Ihren Server hochladen gehört zu den schnellsten und wirkungsvollsten Sicherheitsmaßnahmen, die Sie noch heute umsetzen können. Sie erleichtern den "Guten" die Arbeit, schrecken Neugierige ab und signalisieren der Welt, dass Sie Datenschutz und Nutzerdaten ernst nehmen.',
     },
     {
       type: 'paragraph',

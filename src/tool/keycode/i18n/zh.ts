@@ -100,15 +100,15 @@ export const content: ToolLocaleContent<KeycodeUI> = {
   bibliographyTitle: '参考资料和标准',
   bibliography: [
     {
-      name: 'MDN Web Docs – KeyboardEvent',
+      name: 'MDN Web Docs - KeyboardEvent',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent',
     },
     {
-      name: 'UI Events Specification (W3C) – KeyboardEvent',
+      name: 'UI Events Specification (W3C) - KeyboardEvent',
       url: 'https://www.w3.org/TR/uievents/#events-keyboardevents',
     },
     {
-      name: 'MDN – KeyboardEvent.code values',
+      name: 'MDN - KeyboardEvent.code values',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values',
     },
   ],
@@ -135,12 +135,12 @@ export const content: ToolLocaleContent<KeycodeUI> = {
     },
     {
       type: 'card',
-      title: 'event.code — 物理按键',
+      title: 'event.code: 物理按键',
       html: '<p>使用QWERTY命名法返回键盘上按键<strong>物理位置</strong>的标识符。例如，AZERTY键盘上的"A"键返回<code>KeyQ</code>。对于位置重要而不是字符的游戏控制非常理想。</p>',
     },
     {
       type: 'card',
-      title: 'event.key — 生成的字符',
+      title: 'event.key: 生成的字符',
       html: '<p>返回根据语言和活动修饰符生成的<strong>字符值</strong>。按Shift+A返回<code>"A"</code>；没有Shift时返回<code>"a"</code>。对于特殊按键，返回名称如<code>"Enter"</code>、<code>"Escape"</code>、<code>"ArrowUp"</code>。</p>',
     },
     {

@@ -21,11 +21,11 @@ const faqData = [
   },
   {
     question: 'Hur mycket bör min webbplats väga?',
-    answer: 'Google rekommenderar att startsidan laddas på mindre än 3 sekunder via en typisk 4G-anslutning. För detta bör en webbplats helst väga mellan 1 och 2 MB. Det globala genomsnittet ligger dock nära 2–3 MB.',
+    answer: 'Google rekommenderar att startsidan laddas på mindre än 3 sekunder via en typisk 4G-anslutning. För detta bör en webbplats helst väga mellan 1 och 2 MB. Det globala genomsnittet ligger dock nära 2-3 MB.',
   },
   {
     question: 'Hur kan jag minska min webbplats vikt?',
-    answer: 'Huvudstrategier: optimera bilder (50–80 % av vikten), minifiera CSS och JavaScript, använda lazy loading, implementera webbläsarcache och använda en CDN. Bildoptimering är vanligtvis den mest effektiva faktorn.',
+    answer: 'Huvudstrategier: optimera bilder (50-80 % av vikten), minifiera CSS och JavaScript, använda lazy loading, implementera webbläsarcache och använda en CDN. Bildoptimering är vanligtvis den mest effektiva faktorn.',
   },
   {
     question: 'Påverkar laddningshastigheten Google-rankningen?',
@@ -36,7 +36,7 @@ const faqData = [
 const howToData = [
   { name: 'Ange din webbplats vikt', text: 'Använd webbläsarens utvecklarverktyg eller WebPageTest för att hitta din sidas vikt. Ange det värdet i MB.' },
   { name: 'Observera laddningstider', text: 'Kalkylatorn visar hur många sekunder det tar för din webbplats att ladda via 3G, 4G och 5G. Tiderna i verkligheten är vanligtvis högre.' },
-  { name: 'Förstå livstidspåverkan', text: 'Procentandelen ”livstid” visar hur mycket av någons liv som spenderas på att vänta. Använd detta som motivation för att optimera.' },
+  { name: 'Förstå livstidspåverkan', text: 'Procentandelen "livstid" visar hur mycket av någons liv som spenderas på att vänta. Använd detta som motivation för att optimera.' },
   { name: 'Optimera och beräkna om', text: 'Mät igen och beräkna om efter optimeringen. Se hur små förbättringar har stor betydelse.' },
 ];
 
@@ -134,8 +134,8 @@ export const content: ToolLocaleContent<CalculadoraTiempoDatosUI> = {
     {
       type: 'list',
       items: [
-        '<strong>Bildoptimering:</strong> Representerar 50–80 % av vikten. Minska med 40–60 % med verktyg som TinyPNG.',
-        '<strong>Minifiering:</strong> Ta bort onödig kod från CSS och JavaScript. Spara 30–50 %.',
+        '<strong>Bildoptimering:</strong> Representerar 50-80 % av vikten. Minska med 40-60 % med verktyg som TinyPNG.',
+        '<strong>Minifiering:</strong> Ta bort onödig kod från CSS och JavaScript. Spara 30-50 %.',
         '<strong>Lazy Loading:</strong> Ladda bilder först när användaren scrollar till dem.',
         '<strong>Webbläsarcache:</strong> Cachelagra statiska filer i användarnas webbläsare.',
         '<strong>CDN:</strong> Leverera innehåll från servrar som ligger geografiskt nära.',

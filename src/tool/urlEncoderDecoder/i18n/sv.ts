@@ -33,15 +33,15 @@ const faqData = [
 const howToData = [
   {
     name: 'Klistra in råtexten',
-    text: 'Skriv eller klistra in din URL eller textsträng i det övre fältet ”Råtext (läsbar)”.',
+    text: 'Skriv eller klistra in din URL eller textsträng i det övre fältet "Råtext (läsbar)".',
   },
   {
     name: 'Koda eller avkoda',
-    text: 'Klicka på ”Koda URL” för att konvertera texten till det säkra Percent-Encoding-formatet, eller ”Avkoda” för att återställa en kodad URL till dess läsbara form.',
+    text: 'Klicka på "Koda URL" för att konvertera texten till det säkra Percent-Encoding-formatet, eller "Avkoda" för att återställa en kodad URL till dess läsbara form.',
   },
   {
     name: 'Kopiera resultatet',
-    text: 'Använd knappen ”Kopiera” i motsvarande fält för att ta resultatet till ditt urklipp.',
+    text: 'Använd knappen "Kopiera" i motsvarande fält för att ta resultatet till ditt urklipp.',
   },
 ];
 
@@ -123,7 +123,7 @@ export const content: ToolLocaleContent<UrlEncoderDecoderUI> = {
     },
     {
       type: 'paragraph',
-      html: 'När man surfar på internet eller skickar förfrågningar till servrar är det vanligt att tänka på en URL (Uniform Resource Locator) helt enkelt som en ”webbadress”. Internetprotokoll föreskriver dock att URL:er endast kan överföras med en mycket begränsad uppsättning <strong>standard-ASCII</strong>-tecken.',
+      html: 'När man surfar på internet eller skickar förfrågningar till servrar är det vanligt att tänka på en URL (Uniform Resource Locator) helt enkelt som en "webbadress". Internetprotokoll föreskriver dock att URL:er endast kan överföras med en mycket begränsad uppsättning <strong>standard-ASCII</strong>-tecken.',
     },
     {
       type: 'paragraph',
@@ -136,7 +136,7 @@ export const content: ToolLocaleContent<UrlEncoderDecoderUI> = {
     },
     {
       type: 'paragraph',
-      html: 'När du använder det här verktyget tar algoritmen alla ”osäkra” tecken (som ett blanksteg eller ett tecken med accent som ñ) och ersätter det med ett procenttecken <code>%</code> följt av två hexadecimala siffror som motsvarar dess värde i UTF-8-standarden.',
+      html: 'När du använder det här verktyget tar algoritmen alla "osäkra" tecken (som ett blanksteg eller ett tecken med accent som ñ) och ersätter det med ett procenttecken <code>%</code> följt av två hexadecimala siffror som motsvarar dess värde i UTF-8-standarden.',
     },
     {
       type: 'list',

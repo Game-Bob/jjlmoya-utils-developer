@@ -28,7 +28,7 @@ const faqData = [
 const howToData = [
   { name: 'Farbe auswählen', text: 'Verwenden Sie die Schieberegler für Rot, Grün und Blau oder geben Sie einen HEX-Code direkt in das Textfeld ein.' },
   { name: 'RGB-Kanäle anpassen', text: 'Bewegen Sie die Schieberegler, um die Intensität jedes Kanals zu ändern und die Aktualisierung in Echtzeit zu sehen.' },
-  { name: 'Format kopieren', text: 'Klicken Sie auf die Schaltfläche „Kopieren“ neben dem HEX-, RGB- oder HSL-Format, das Sie benötigen.' },
+  { name: 'Format kopieren', text: 'Klicken Sie auf die Schaltfläche "Kopieren" neben dem HEX-, RGB- oder HSL-Format, das Sie benötigen.' },
   { name: 'Harmonien erkunden', text: 'Klicken Sie auf die Harmoniefarben (komplementär, analog, triadisch), um sie in die Zwischenablage zu kopieren.' },
 ];
 

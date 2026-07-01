@@ -21,7 +21,7 @@ const faqData = [
   {
     question: 'Varför är utdatatoken dyrare än indatatoken?',
     answer:
-      'Att generera text (utdata) kräver att modellen beräknar varje token sekventiellt, vilket är mer beräkningsintensivt än att läsa indata. De flesta leverantörer tar ut 3–5 gånger mer för utdatatoken än indatatoken.',
+      'Att generera text (utdata) kräver att modellen beräknar varje token sekventiellt, vilket är mer beräkningsintensivt än att läsa indata. De flesta leverantörer tar ut 3-5 gånger mer för utdatatoken än indatatoken.',
   },
   {
     question: 'Hur kan jag minska mina LLM API-kostnader?',
@@ -146,7 +146,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     {
       type: 'card',
       title: 'Utdatatoken',
-      html: '<p>Utdatatoken genereras sekventiellt, en i taget, vilket gör dem beräkningsmässigt dyrare. De flesta leverantörer tar ut <strong>3–5× mer</strong> för utdatatoken. Ett svar på 300 ord genererar ungefär 400 utdatatoken. Att hålla svaren korta är en av de mest effektiva kostnadsbesparingsstrategi.</p>',
+      html: '<p>Utdatatoken genereras sekventiellt, en i taget, vilket gör dem beräkningsmässigt dyrare. De flesta leverantörer tar ut <strong>3-5× mer</strong> för utdatatoken. Ett svar på 300 ord genererar ungefär 400 utdatatoken. Att hålla svaren korta är en av de mest effektiva kostnadsbesparingsstrategi.</p>',
     },
     {
       type: 'title',
@@ -155,7 +155,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     },
     {
       type: 'tip',
-      html: 'Börja med en kapabel mellanniesemodell som <code>GPT-4o mini</code> eller <code>Gemini 1.5 Flash</code> och uppgradera bara om kvaliteten är otillräcklig. Skillnaden i kostnad mellan en liten och stor modell kan vara 10–100×.',
+      html: 'Börja med en kapabel mellanniesemodell som <code>GPT-4o mini</code> eller <code>Gemini 1.5 Flash</code> och uppgradera bara om kvaliteten är otillräcklig. Skillnaden i kostnad mellan en liten och stor modell kan vara 10-100×.',
     },
     {
       type: 'paragraph',

@@ -36,7 +36,7 @@ const faqData = [
 const howToData = [
   { name: 'Website-Gewicht eingeben', text: 'Verwenden Sie Browser-Entwicklertools oder WebPageTest, um das Gewicht Ihrer Seite zu ermitteln. Geben Sie diesen Wert in MB ein.' },
   { name: 'Ladezeiten beobachten', text: 'Der Rechner zeigt an, wie viele Sekunden Ihre Website zum Laden bei 3G, 4G und 5G benötigt. Die realen Zeiten sind meist höher.' },
-  { name: 'Lebenszeitauswirkung verstehen', text: 'Der Prozentsatz der „Lebenszeit“ zeigt, wie viel Zeit jemand mit Warten verbringt. Nutzen Sie dies als Motivation zur Optimierung.' },
+  { name: 'Lebenszeitauswirkung verstehen', text: 'Der Prozentsatz der "Lebenszeit" zeigt, wie viel Zeit jemand mit Warten verbringt. Nutzen Sie dies als Motivation zur Optimierung.' },
   { name: 'Optimieren und neu berechnen', text: 'Messen Sie nach der Optimierung erneut und berechnen Sie neu. Sehen Sie, wie kleine Verbesserungen große Auswirkungen haben.' },
 ];
 

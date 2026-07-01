@@ -8,7 +8,7 @@ const description = 'Convierte tus datos de Excel o CSV a tablas HTML semántica
 
 const faqData = [
   {
-    question: '¿Cómo convierto un archivo Excel (.xlsx) a HTML?',
+    question: '¿Cómo convierto un archivo Excel (XLSX) a HTML?',
     answer: 'Primero, abre tu archivo en Excel y guárdalo como CSV (delimitado por comas). Luego, sube ese archivo CSV a nuestra herramienta o pega su contenido para obtener el código HTML de la tabla.',
   },
   {

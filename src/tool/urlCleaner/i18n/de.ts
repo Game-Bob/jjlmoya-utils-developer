@@ -13,15 +13,15 @@ const faqData = [
   },
   {
     question: 'Beeinträchtigt das die Funktionalität der Website?',
-    answer: 'In der Regel nicht. Diese Parameter werden fast ausschließlich für Analyse und Marketing verwendet. Wenn du sie entfernst, lädt die Seite ganz normal – nur der Websitebetreiber kann nicht mehr nachvollziehen, woher dein Klick stammte.',
+    answer: 'In der Regel nicht. Diese Parameter werden fast ausschließlich für Analyse und Marketing verwendet. Wenn du sie entfernst, lädt die Seite ganz normal - nur der Websitebetreiber kann nicht mehr nachvollziehen, woher dein Klick stammte.',
   },
   {
     question: 'Ist es sicher, meine Links hier zu verarbeiten?',
-    answer: 'Absolut. Wie alle unsere Tools läuft der Prozess zu 100 % clientseitig ab. Deine Links werden niemals an unsere Server übertragen – alles geschieht privat in deinem eigenen Browser.',
+    answer: 'Absolut. Wie alle unsere Tools läuft der Prozess zu 100 % clientseitig ab. Deine Links werden niemals an unsere Server übertragen - alles geschieht privat in deinem eigenen Browser.',
   },
   {
     question: 'Warum sind meine Facebook-Links so lang?',
-    answer: 'Facebook hängt an jeden Link, der die Plattform verlässt, einen Parameter namens „fbclid" an. Damit können sie deine Aktivitäten auf anderen Websites verfolgen – selbst wenn du Drittanbieter-Werbung blockiert hast.',
+    answer: 'Facebook hängt an jeden Link, der die Plattform verlässt, einen Parameter namens "fbclid" an. Damit können sie deine Aktivitäten auf anderen Websites verfolgen - selbst wenn du Drittanbieter-Werbung blockiert hast.',
   },
 ];
 

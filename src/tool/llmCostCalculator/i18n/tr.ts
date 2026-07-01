@@ -21,7 +21,7 @@ const faqData = [
   {
     question: 'Çıkış token\'ları neden giriş token\'larından daha pahalıdır?',
     answer:
-      'Metin oluşturma (çıkış), modelin her token\'u sırayla hesaplamasını gerektirir ve bu, girişi okumaktan hesaplamalar açısından daha yoğundur. Çoğu sağlayıcı çıkış token\'ları için giriş token\'larından 3–5 kat daha fazla ücret alır.',
+      'Metin oluşturma (çıkış), modelin her token\'u sırayla hesaplamasını gerektirir ve bu, girişi okumaktan hesaplamalar açısından daha yoğundur. Çoğu sağlayıcı çıkış token\'ları için giriş token\'larından 3-5 kat daha fazla ücret alır.',
   },
   {
     question: 'LLM API maliyetlerimi nasıl azaltabilirim?',
@@ -146,7 +146,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     {
       type: 'card',
       title: 'Çıkış token\'ları',
-      html: '<p>Çıkış token\'ları sırayla, teker teker oluşturulur ve bu onları hesaplamalar açısından daha pahalı hale getirir. Çoğu sağlayıcı çıkış token\'ları için <strong>3–5 kat daha fazla</strong> ücret alır. 300 sözcüklük bir yanıt yaklaşık 400 çıkış token\'ı üretir. Yanıtları kısa tutmak en etkili maliyet tasarrufu stratejilerinden biridir.</p>',
+      html: '<p>Çıkış token\'ları sırayla, teker teker oluşturulur ve bu onları hesaplamalar açısından daha pahalı hale getirir. Çoğu sağlayıcı çıkış token\'ları için <strong>3-5 kat daha fazla</strong> ücret alır. 300 sözcüklük bir yanıt yaklaşık 400 çıkış token\'ı üretir. Yanıtları kısa tutmak en etkili maliyet tasarrufu stratejilerinden biridir.</p>',
     },
     {
       type: 'title',
@@ -155,7 +155,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     },
     {
       type: 'tip',
-      html: '<code>GPT-4o mini</code> veya <code>Gemini 1.5 Flash</code> gibi yetenekli bir orta katman modeliyle başlayın ve yalnızca kalite yetersizse yükseltin. Küçük ve büyük bir model arasındaki maliyet farkı 10–100× olabilir.',
+      html: '<code>GPT-4o mini</code> veya <code>Gemini 1.5 Flash</code> gibi yetenekli bir orta katman modeliyle başlayın ve yalnızca kalite yetersizse yükseltin. Küçük ve büyük bir model arasındaki maliyet farkı 10-100× olabilir.',
     },
     {
       type: 'paragraph',

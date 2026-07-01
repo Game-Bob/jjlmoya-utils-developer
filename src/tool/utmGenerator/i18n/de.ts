@@ -17,7 +17,7 @@ const faqData = [
   },
   {
     question: 'Unterscheidet Google Analytics bei UTM zwischen Groß- und Kleinschreibung?',
-    answer: 'Ja. „google“, „Google“ und „GOOGLE“ werden als unterschiedliche Quellen behandelt. Achten Sie immer auf Konsistenz, am besten verwenden Sie nur Kleinschreibung.',
+    answer: 'Ja. "google", "Google" und "GOOGLE" werden als unterschiedliche Quellen behandelt. Achten Sie immer auf Konsistenz, am besten verwenden Sie nur Kleinschreibung.',
   },
 ];
 
@@ -107,7 +107,7 @@ export const content: ToolLocaleContent<UtmGeneratorUI> = {
     {
       type: 'list',
       items: [
-        '<strong>Einheitliche Schreibweise:</strong> Tools unterscheiden zwischen „Google“, „GOOGLE“ und „google“. Verwenden Sie immer Kleinschreibung, um Duplikate zu vermeiden.',
+        '<strong>Einheitliche Schreibweise:</strong> Tools unterscheiden zwischen "Google", "GOOGLE" und "google". Verwenden Sie immer Kleinschreibung, um Duplikate zu vermeiden.',
         '<strong>Leerzeichen vermeiden:</strong> Leerzeichen werden zu %20. Verwenden Sie stattdessen Bindestriche (-) oder Unterstriche (_).',
         '<strong>Nicht bei internen Links verwenden:</strong> UTM-Tracking ist ausschließlich für externen Traffic gedacht. Bei internen Links unterbricht es die Sitzung und verfälscht wichtige Kennzahlen.',
         '<strong>Dokumentieren Sie Ihre Tags:</strong> Führen Sie Protokoll über alle verwendeten Kombinationen, um Inkonsistenzen zu vermeiden.',

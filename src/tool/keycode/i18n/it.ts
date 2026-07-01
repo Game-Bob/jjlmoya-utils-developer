@@ -100,15 +100,15 @@ export const content: ToolLocaleContent<KeycodeUI> = {
   bibliographyTitle: 'Riferimenti e Standard',
   bibliography: [
     {
-      name: 'MDN Web Docs – KeyboardEvent',
+      name: 'MDN Web Docs - KeyboardEvent',
       url: 'https://developer.mozilla.org/it/docs/Web/API/KeyboardEvent',
     },
     {
-      name: 'UI Events Specification (W3C) – KeyboardEvent',
+      name: 'UI Events Specification (W3C) - KeyboardEvent',
       url: 'https://www.w3.org/TR/uievents/#events-keyboardevents',
     },
     {
-      name: 'MDN – KeyboardEvent.code values',
+      name: 'MDN - KeyboardEvent.code values',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values',
     },
   ],
@@ -135,12 +135,12 @@ export const content: ToolLocaleContent<KeycodeUI> = {
     },
     {
       type: 'card',
-      title: 'event.code — Il tasto fisico',
+      title: 'event.code: Il tasto fisico',
       html: '<p>Restituisce l\'identificatore della <strong>posizione fisica</strong> del tasto sulla tastiera, usando la nomenclatura QWERTY. Ad esempio, il tasto "A" su una tastiera AZERTY restituisce <code>KeyQ</code>. Ideale per i controlli di gioco dove conta la posizione, non il carattere.</p>',
     },
     {
       type: 'card',
-      title: 'event.key — Il carattere generato',
+      title: 'event.key: Il carattere generato',
       html: '<p>Restituisce il <strong>valore del carattere</strong> generato in base alla lingua e ai modificatori attivi. Premendo Shift+A si ottiene <code>"A"</code>; senza Shift si ottiene <code>"a"</code>. Per i tasti speciali restituisce nomi come <code>"Enter"</code>, <code>"Escape"</code>, <code>"ArrowUp"</code>.</p>',
     },
     {

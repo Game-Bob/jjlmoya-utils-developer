@@ -21,7 +21,7 @@ const faqData = [
   {
     question: 'Mengapa token output lebih mahal daripada token input?',
     answer:
-      'Menghasilkan teks (output) mengharuskan model menghitung setiap token secara berurutan, yang secara komputasi lebih intensif daripada membaca input. Sebagian besar penyedia mengenakan biaya 3–5 kali lebih mahal untuk token output dibandingkan token input.',
+      'Menghasilkan teks (output) mengharuskan model menghitung setiap token secara berurutan, yang secara komputasi lebih intensif daripada membaca input. Sebagian besar penyedia mengenakan biaya 3-5 kali lebih mahal untuk token output dibandingkan token input.',
   },
   {
     question: 'Bagaimana cara mengurangi biaya API LLM saya?',
@@ -146,7 +146,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     {
       type: 'card',
       title: 'Token output',
-      html: '<p>Token output dihasilkan satu per satu secara berurutan, sehingga lebih intensif secara komputasi. Sebagian besar penyedia mengenakan biaya <strong>3–5× lebih mahal</strong> untuk token output. Respons 300 kata menghasilkan sekitar 400 token output. Menjaga respons tetap ringkas adalah salah satu strategi penghematan biaya yang paling efektif.</p>',
+      html: '<p>Token output dihasilkan satu per satu secara berurutan, sehingga lebih intensif secara komputasi. Sebagian besar penyedia mengenakan biaya <strong>3-5× lebih mahal</strong> untuk token output. Respons 300 kata menghasilkan sekitar 400 token output. Menjaga respons tetap ringkas adalah salah satu strategi penghematan biaya yang paling efektif.</p>',
     },
     {
       type: 'title',
@@ -155,7 +155,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     },
     {
       type: 'tip',
-      html: 'Mulailah dengan model kelas menengah yang mumpuni seperti <code>GPT-4o mini</code> atau <code>Gemini 1.5 Flash</code> dan naik ke model yang lebih besar hanya jika kualitasnya belum memadai. Perbedaan biaya antara model kecil dan besar bisa mencapai 10–100×.',
+      html: 'Mulailah dengan model kelas menengah yang mumpuni seperti <code>GPT-4o mini</code> atau <code>Gemini 1.5 Flash</code> dan naik ke model yang lebih besar hanya jika kualitasnya belum memadai. Perbedaan biaya antara model kecil dan besar bisa mencapai 10-100×.',
     },
     {
       type: 'paragraph',

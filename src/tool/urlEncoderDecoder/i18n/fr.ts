@@ -11,7 +11,7 @@ const faqData = [
   {
     question: 'Quels caractères sont encodés dans une URL ?',
     answer:
-      "Tous les caractères non autorisés dans le standard ASCII pour les URLs sont encodés : espaces, lettres accentuées, symboles tels que &, =, +, #, ?, / et d'autres. Par exemple, un espace devient %20 et ñ devient %C3%B1.",
+      "Tous les caractères non autorisés dans le standard ASCII pour les URLs sont encodés: espaces, lettres accentuées, symboles tels que &, =, +, #, ?, / et d'autres. Par exemple, un espace devient %20 et ñ devient %C3%B1.",
   },
   {
     question: 'Quelle est la différence entre encodeURI et encodeURIComponent ?',
@@ -141,7 +141,7 @@ export const content: ToolLocaleContent<UrlEncoderDecoderUI> = {
     {
       type: 'list',
       items: [
-        '<strong>Exemple Basique :</strong> Un simple espace sera remplacé par son équivalent sécurisé : <code>%20</code>.',
+        '<strong>Exemple Basique:</strong> Un simple espace sera remplacé par son équivalent sécurisé: <code>%20</code>.',
         '<strong>Support Étendu :</strong> La lettre <code>á</code> devient <code>%C3%A1</code>, et <code>ñ</code> devient <code>%C3%B1</code>.',
       ],
     },

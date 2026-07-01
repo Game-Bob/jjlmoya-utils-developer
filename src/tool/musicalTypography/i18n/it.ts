@@ -160,7 +160,7 @@ export const content: ToolLocaleContent<MusicalTypographyUI> = {
     {
       type: 'card',
       title: 'Perché "Musicale"',
-      html: "<p>I pitagorici scoprirono che dividere una corda in proporzioni semplici (1:2, 2:3, 3:4) produceva suoni consonanti. Questi intervalli — ottava, quinta giusta e quarta giusta — sono esattamente i rapporti tipografici. Stai componendo musica visiva.</p>",
+      html: "<p>I pitagorici scoprirono che dividere una corda in proporzioni semplici (1:2, 2:3, 3:4) produceva suoni consonanti. Questi intervalli - ottava, quinta giusta e quarta giusta - sono esattamente i rapporti tipografici. Stai componendo musica visiva.</p>",
     },
     {
       type: 'title',

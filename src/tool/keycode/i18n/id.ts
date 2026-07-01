@@ -100,15 +100,15 @@ export const content: ToolLocaleContent<KeycodeUI> = {
   bibliographyTitle: 'Referensi dan Standar',
   bibliography: [
     {
-      name: 'MDN Web Docs – KeyboardEvent',
+      name: 'MDN Web Docs - KeyboardEvent',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent',
     },
     {
-      name: 'UI Events Specification (W3C) – KeyboardEvent',
+      name: 'UI Events Specification (W3C) - KeyboardEvent',
       url: 'https://www.w3.org/TR/uievents/#events-keyboardevents',
     },
     {
-      name: 'MDN – KeyboardEvent.code values',
+      name: 'MDN - KeyboardEvent.code values',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values',
     },
   ],
@@ -135,12 +135,12 @@ export const content: ToolLocaleContent<KeycodeUI> = {
     },
     {
       type: 'card',
-      title: 'event.code — Tombol fisik',
+      title: 'event.code: Tombol fisik',
       html: '<p>Mengembalikan pengenal <strong>posisi fisik</strong> tombol pada keyboard, menggunakan nomenklatur QWERTY. Misalnya, tombol "A" pada keyboard AZERTY mengembalikan <code>KeyQ</code>. Ideal untuk kontrol game di mana posisi yang penting, bukan karakter.</p>',
     },
     {
       type: 'card',
-      title: 'event.key — Karakter yang dihasilkan',
+      title: 'event.key: Karakter yang dihasilkan',
       html: '<p>Mengembalikan <strong>nilai karakter</strong> yang dihasilkan berdasarkan bahasa dan modifier aktif. Menekan Shift+A mengembalikan <code>"A"</code>; tanpa Shift mengembalikan <code>"a"</code>. Untuk tombol khusus, mengembalikan nama seperti <code>"Enter"</code>, <code>"Escape"</code>, <code>"ArrowUp"</code>.</p>',
     },
     {

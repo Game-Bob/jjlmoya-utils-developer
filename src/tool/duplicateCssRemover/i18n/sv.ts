@@ -141,7 +141,7 @@ export const content: ToolLocaleContent<DuplicateCssRemoverUI> = {
     },
     {
       type: 'tip',
-      html: 'Att rensa bort redundanta stilar handlar inte bara om kodordning — det är en mätbar och omedelbar förbättring av viktiga mätvärden som <strong>First Contentful Paint (FCP)</strong>.',
+      html: 'Att rensa bort redundanta stilar handlar inte bara om kodordning - det är en mätbar och omedelbar förbättring av viktiga mätvärden som <strong>First Contentful Paint (FCP)</strong>.',
     },
     {
       type: 'title',

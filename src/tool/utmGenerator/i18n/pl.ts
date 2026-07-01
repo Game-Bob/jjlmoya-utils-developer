@@ -17,7 +17,7 @@ const faqData = [
   },
   {
     question: 'Czy Google Analytics rozróżnia wielkość liter w UTM?',
-    answer: 'Tak. „google”, „Google” i „GOOGLE” będą traktowane jako różne źródła. Zawsze zachowuj spójność, najlepiej używając tylko małych liter.',
+    answer: 'Tak. "google", "Google" i "GOOGLE" będą traktowane jako różne źródła. Zawsze zachowuj spójność, najlepiej używając tylko małych liter.',
   },
 ];
 
@@ -81,8 +81,8 @@ export const content: ToolLocaleContent<UtmGeneratorUI> = {
   faq: faqData,
   bibliographyTitle: 'Referencje',
   bibliography: [
-    { name: 'Gromadzenie danych kampanii za pomocą niestandardowych adresów URL — Pomoc Google Analytics (2024)', url: 'https://support.google.com/analytics/answer/1033863' },
-    { name: 'Najlepsze praktyki tagowania adresów URL kampanii — Blog VWO (2023)', url: 'https://vwo.com/blog/utm-tagging-best-practices/' },
+    { name: 'Gromadzenie danych kampanii za pomocą niestandardowych adresów URL - Pomoc Google Analytics (2024)', url: 'https://support.google.com/analytics/answer/1033863' },
+    { name: 'Najlepsze praktyki tagowania adresów URL kampanii - Blog VWO (2023)', url: 'https://vwo.com/blog/utm-tagging-best-practices/' },
   ],
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
@@ -99,7 +99,7 @@ export const content: ToolLocaleContent<UtmGeneratorUI> = {
         '<strong>Źródło kampanii:</strong> Identyfikuje wyszukiwarkę, sieć społecznościową lub pochodzenie ruchu. Przykład: google, newsletter, facebook.',
         '<strong>Medium kampanii:</strong> Odnosi się do kanału marketingowego. Przykład: cpc, e-mail, social, banner, organic.',
         '<strong>Nazwa kampanii:</strong> Konkretna nazwa Twojej kampanii. Przykład: oferta_letnia_2025, app_launch_v2.',
-        '<strong>Termin kampanii:</strong> W przypadku wyszukiwania płatnego — słowa kluczowe, na które licytujesz. Przykład: kup_buty_sportowe.',
+        '<strong>Termin kampanii:</strong> W przypadku wyszukiwania płatnego - słowa kluczowe, na które licytujesz. Przykład: kup_buty_sportowe.',
         '<strong>Treść kampanii:</strong> Do testów A/B. Rozróżnia podobne elementy w ramach kampanii. Przykład: header_v1, sidebar_v2.',
       ],
     },
@@ -107,7 +107,7 @@ export const content: ToolLocaleContent<UtmGeneratorUI> = {
     {
       type: 'list',
       items: [
-        '<strong>Spójność wielkości liter:</strong> Narzędzia rozróżniają „Google”, „GOOGLE” i „google”. Zawsze używaj małych liter, aby uniknąć duplikatów.',
+        '<strong>Spójność wielkości liter:</strong> Narzędzia rozróżniają "Google", "GOOGLE" i "google". Zawsze używaj małych liter, aby uniknąć duplikatów.',
         '<strong>Unikaj spacji:</strong> Spacje zmieniają się w %20. Zamiast nich używaj łączników (-) lub podkreśleń (_).',
         '<strong>Nie używaj w linkach wewnętrznych:</strong> Śledzenie UTM służy wyłącznie do ruchu zewnętrznego. W linkach wewnętrznych przerywa sesję i psuje kluczowe wskaźniki.',
         '<strong>Dokumentuj swoje tagi:</strong> Prowadź rejestr wszystkich używanych kombinacji, aby zapobiec niespójnościom.',

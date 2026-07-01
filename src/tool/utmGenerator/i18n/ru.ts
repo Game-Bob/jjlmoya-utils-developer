@@ -17,7 +17,7 @@ const faqData = [
   },
   {
     question: 'Различает ли Google Analytics регистр в UTM?',
-    answer: 'Да. «google», «Google» и «GOOGLE» будут рассматриваться как разные источники. Всегда соблюдайте единообразие, предпочтительно используя только строчные буквы.',
+    answer: 'Да. "google", "Google" и "GOOGLE" будут рассматриваться как разные источники. Всегда соблюдайте единообразие, предпочтительно используя только строчные буквы.',
   },
 ];
 
@@ -81,8 +81,8 @@ export const content: ToolLocaleContent<UtmGeneratorUI> = {
   faq: faqData,
   bibliographyTitle: 'Ссылки',
   bibliography: [
-    { name: 'Сбор данных кампании с помощью пользовательских URL — Справка Google Analytics (2024)', url: 'https://support.google.com/analytics/answer/1033863' },
-    { name: 'Лучшие практики для разметки URL кампаний — Блог VWO (2023)', url: 'https://vwo.com/blog/utm-tagging-best-practices/' },
+    { name: 'Сбор данных кампании с помощью пользовательских URL - Справка Google Analytics (2024)', url: 'https://support.google.com/analytics/answer/1033863' },
+    { name: 'Лучшие практики для разметки URL кампаний - Блог VWO (2023)', url: 'https://vwo.com/blog/utm-tagging-best-practices/' },
   ],
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
@@ -90,7 +90,7 @@ export const content: ToolLocaleContent<UtmGeneratorUI> = {
     { type: 'title', text: 'Генератор UTM: параметры отслеживания для Google Analytics', level: 2 },
     {
       type: 'paragraph',
-      html: 'Параметры <strong>UTM</strong> (Urchin Tracking Module) — это текстовые метки, добавляемые в конец URL-адреса для отслеживания веб-трафика. Наш генератор упрощает создание ссылок с отслеживанием для ваших цифровых маркетинговых кампаний.',
+      html: 'Параметры <strong>UTM</strong> (Urchin Tracking Module) - это текстовые метки, добавляемые в конец URL-адреса для отслеживания веб-трафика. Наш генератор упрощает создание ссылок с отслеживанием для ваших цифровых маркетинговых кампаний.',
     },
     { type: 'title', text: '5 столпов отслеживаемой ссылки', level: 3 },
     {
@@ -99,7 +99,7 @@ export const content: ToolLocaleContent<UtmGeneratorUI> = {
         '<strong>Источник кампании:</strong> определяет поисковую систему, социальную сеть или источник трафика. Пример: google, newsletter, facebook.',
         '<strong>Канал кампании:</strong> относится к маркетинговому каналу. Пример: cpc, email, social, banner, organic.',
         '<strong>Название кампании:</strong> конкретное название вашей кампании. Пример: summer_offer_2025, app_launch_v2.',
-        '<strong>Ключевое слово кампании:</strong> для платного поиска — ключевые слова, по которым вы делаете ставки. Пример: buy_sports_shoes.',
+        '<strong>Ключевое слово кампании:</strong> для платного поиска - ключевые слова, по которым вы делаете ставки. Пример: buy_sports_shoes.',
         '<strong>Контент кампании:</strong> для A/B-тестирования. Позволяет различать похожие элементы в рамках одной кампании. Пример: header_v1, sidebar_v2.',
       ],
     },
@@ -107,7 +107,7 @@ export const content: ToolLocaleContent<UtmGeneratorUI> = {
     {
       type: 'list',
       items: [
-        '<strong>Единообразие регистра:</strong> инструменты различают «Google», «GOOGLE» и «google». Всегда используйте строчные буквы, чтобы избежать дубликатов.',
+        '<strong>Единообразие регистра:</strong> инструменты различают "Google", "GOOGLE" и "google". Всегда используйте строчные буквы, чтобы избежать дубликатов.',
         '<strong>Избегайте пробелов:</strong> пробелы превращаются в %20. Вместо них используйте дефисы (-) или подчеркивания (_).',
         '<strong>Не используйте на внутренних ссылках:</strong> отслеживание UTM предназначено исключительно для внешнего трафика. На внутренних ссылках оно прерывает сеанс и портит ключевые показатели.',
         '<strong>Документируйте свои теги:</strong> ведите учет всех используемых вами комбинаций, чтобы предотвратить несоответствия.',

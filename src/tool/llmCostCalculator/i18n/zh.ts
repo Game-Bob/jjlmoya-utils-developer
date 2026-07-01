@@ -21,7 +21,7 @@ const faqData = [
   {
     question: '为什么输出代币比输入代币更昂贵？',
     answer:
-      '生成文本（输出）需要模型依次计算每个代币，这在计算上比读取输入更密集。大多数提供商对输出代币的收费是输入代币的 3–5 倍。',
+      '生成文本（输出）需要模型依次计算每个代币，这在计算上比读取输入更密集。大多数提供商对输出代币的收费是输入代币的 3-5 倍。',
   },
   {
     question: '如何降低我的 LLM API 成本？',
@@ -146,7 +146,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     {
       type: 'card',
       title: '输出代币',
-      html: '<p>输出代币按顺序逐个生成，使其在计算上更昂贵。大多数提供商对输出代币的收费<strong>多出 3–5 倍</strong>。一个 300 字的响应会生成大约 400 个输出代币。保持响应简洁是最有效的成本节省策略之一。</p>',
+      html: '<p>输出代币按顺序逐个生成，使其在计算上更昂贵。大多数提供商对输出代币的收费<strong>多出 3-5 倍</strong>。一个 300 字的响应会生成大约 400 个输出代币。保持响应简洁是最有效的成本节省策略之一。</p>',
     },
     {
       type: 'title',
@@ -155,7 +155,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     },
     {
       type: 'tip',
-      html: '从有能力的中等层级模型开始，例如 <code>GPT-4o mini</code> 或 <code>Gemini 1.5 Flash</code>，仅在质量不足时升级。小型和大型模型之间的成本差异可能是 10–100×。',
+      html: '从有能力的中等层级模型开始，例如 <code>GPT-4o mini</code> 或 <code>Gemini 1.5 Flash</code>，仅在质量不足时升级。小型和大型模型之间的成本差异可能是 10-100×。',
     },
     {
       type: 'paragraph',

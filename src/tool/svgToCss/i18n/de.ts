@@ -16,7 +16,7 @@ const faqData = [
   {
     question: 'Wie ändere ich die Farbe eines in CSS eingebetteten SVGs?',
     answer:
-      'Der beste Weg ist über „mask-image“. Indem Sie das SVG als Maske definieren, können Sie die „background-color“ verwenden, um die Farbe dynamisch zu ändern, sogar in :hover-Zuständen.',
+      'Der beste Weg ist über "mask-image". Indem Sie das SVG als Maske definieren, können Sie die "background-color" verwenden, um die Farbe dynamisch zu ändern, sogar in :hover-Zuständen.',
   },
   {
     question: 'Welche Browser unterstützen CSS-Masken?',
@@ -46,7 +46,7 @@ const howToData = [
   },
   {
     name: 'Ergebnis kopieren',
-    text: 'Klicken Sie auf „Kopieren“, um den generierten CSS-Code in Ihre Zwischenablage zu übernehmen.',
+    text: 'Klicken Sie auf "Kopieren", um den generierten CSS-Code in Ihre Zwischenablage zu übernehmen.',
   },
   {
     name: 'In Ihr Projekt übernehmen',

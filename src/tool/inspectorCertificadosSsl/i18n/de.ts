@@ -105,7 +105,7 @@ export const content: ToolLocaleContent<InspectorCertificadosSslUI> = {
   bibliography: [
     { name: 'RFC 5280: Internet X.509 Public Key Infrastructure Certificate and CRL Profile', url: 'https://datatracker.ietf.org/doc/html/rfc5280' },
     { name: 'NIST: FIPS 180-4 Secure Hash Standard (SHA)', url: 'https://csrc.nist.gov/publications/detail/fips/180/4/final' },
-    { name: 'Mozilla: SSL/TLS Verschlüsselung – Übersicht', url: 'https://developer.mozilla.org/de/docs/Glossary/TLS' },
+    { name: 'Mozilla: SSL/TLS Verschlüsselung - Übersicht', url: 'https://developer.mozilla.org/de/docs/Glossary/TLS' },
     { name: 'OpenSSL: X.509 Zertifikatsformat Dokumentation', url: 'https://www.openssl.org/docs/man1.1.1/man1/x509.html' },
   ],
   howTo: howToData,
@@ -166,12 +166,12 @@ export const content: ToolLocaleContent<InspectorCertificadosSslUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Selbst wenn Ihre Datei eine ungewöhnliche Erweiterung hat – sofern die interne Struktur ein standardkonformes X.509-Zertifikat ist, kann unser auf <strong>node-forge</strong> basierender Parser es problemlos verarbeiten.',
+      html: 'Selbst wenn Ihre Datei eine ungewöhnliche Erweiterung hat - sofern die interne Struktur ein standardkonformes X.509-Zertifikat ist, kann unser auf <strong>node-forge</strong> basierender Parser es problemlos verarbeiten.',
     },
     { type: 'title', text: 'Warum dieses Tool statt OpenSSL nutzen?', level: 2 },
     {
       type: 'paragraph',
-      html: 'OpenSSL ist das Schweizer Taschenmesser der Kryptografie – aber seine Befehle sind schwer zu merken. Um ein Zertifikat über die Kommandozeile anzuzeigen, müssten Sie Folgendes eingeben:',
+      html: 'OpenSSL ist das Schweizer Taschenmesser der Kryptografie - aber seine Befehle sind schwer zu merken. Um ein Zertifikat über die Kommandozeile anzuzeigen, müssten Sie Folgendes eingeben:',
     },
     { type: 'code', text: 'openssl x509 -in certificado.crt -text -noout' },
     {
@@ -183,7 +183,7 @@ export const content: ToolLocaleContent<InspectorCertificadosSslUI> = {
       items: [
         '<strong>Schnelligkeit:</strong> Kein Terminal öffnen, keine komplexen Flags merken.',
         '<strong>Übersichtlichkeit:</strong> Feldnamen (Locality, Organization) werden lesbar formatiert, nicht als kryptische Kürzel wie "L" oder "O".',
-        '<strong>Gültigkeitswarnungen:</strong> Automatische Berechnung, ob das Zertifikat heute noch gültig ist – kein manueller Datumsabgleich nötig.',
+        '<strong>Gültigkeitswarnungen:</strong> Automatische Berechnung, ob das Zertifikat heute noch gültig ist - kein manueller Datumsabgleich nötig.',
         '<strong>Plattformunabhängig:</strong> Funktioniert auf jedem Betriebssystem mit einem modernen Browser, ohne Installation zusätzlicher Software.',
       ],
     },
@@ -204,10 +204,10 @@ export const content: ToolLocaleContent<InspectorCertificadosSslUI> = {
     {
       type: 'list',
       items: [
-        '<strong>Server-Debugging:</strong> Wenn Sie ein Zertifikat installiert haben, die Website aber weiterhin Fehler wirft – um sicherzustellen, dass nicht versehentlich das alte Zertifikat geladen wurde.',
+        '<strong>Server-Debugging:</strong> Wenn Sie ein Zertifikat installiert haben, die Website aber weiterhin Fehler wirft - um sicherzustellen, dass nicht versehentlich das alte Zertifikat geladen wurde.',
         '<strong>Kettenprüfung:</strong> Um festzustellen, ob eine Datei das Endzertifikat oder ein Zwischenzertifikat enthält.',
         '<strong>Asset-Audit:</strong> Um nachzuvollziehen, welche Zertifizierungsstelle in einem älteren Projekt verwendet wurde.',
-        '<strong>Integritätsprüfung:</strong> Beim Verschieben von Zertifikaten zwischen Servern – durch Vergleich des SHA-256-Fingerabdrucks lässt sich sicherstellen, dass die Datei nicht beschädigt ist.',
+        '<strong>Integritätsprüfung:</strong> Beim Verschieben von Zertifikaten zwischen Servern - durch Vergleich des SHA-256-Fingerabdrucks lässt sich sicherstellen, dass die Datei nicht beschädigt ist.',
       ],
     },
   ],

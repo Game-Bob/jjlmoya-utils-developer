@@ -109,19 +109,19 @@ export const content: ToolLocaleContent<JsonFormatterUI> = {
   bibliographyTitle: 'Referências e Padrões',
   bibliography: [
     {
-      name: 'RFC 8259 – The JavaScript Object Notation (JSON) Data Interchange Format (IETF)',
+      name: 'RFC 8259 - The JavaScript Object Notation (JSON) Data Interchange Format (IETF)',
       url: 'https://datatracker.ietf.org/doc/html/rfc8259',
     },
     {
-      name: 'ECMA-404 – The JSON Data Interchange Syntax (Ecma International)',
+      name: 'ECMA-404 - The JSON Data Interchange Syntax (Ecma International)',
       url: 'https://www.ecma-international.org/publications-and-standards/standards/ecma-404/',
     },
     {
-      name: 'JSON.org – Introdução ao JSON',
+      name: 'JSON.org - Introdução ao JSON',
       url: 'https://www.json.org/json-en.html',
     },
     {
-      name: 'MDN Web Docs – JSON',
+      name: 'MDN Web Docs - JSON',
       url: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON',
     },
   ],

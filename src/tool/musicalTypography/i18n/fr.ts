@@ -155,7 +155,7 @@ export const content: ToolLocaleContent<MusicalTypographyUI> = {
     {
       type: 'card',
       title: 'La formule',
-      html: '<p>La progression est simple : <code>Taille = Base × Ratio<sup>n</sup></code>. L\'étape 0 est votre texte de base. L\'étape 1 est un petit sous-titre. L\'étape 4 ou 5 pourrait être votre H1 principal. La même constante multiplicative garantit que toutes les relations sont cohérentes.</p>',
+      html: '<p>La progression est simple: <code>Taille = Base × Ratio<sup>n</sup></code>. L\'étape 0 est votre texte de base. L\'étape 1 est un petit sous-titre. L\'étape 4 ou 5 pourrait être votre H1 principal. La même constante multiplicative garantit que toutes les relations sont cohérentes.</p>',
     },
     {
       type: 'card',

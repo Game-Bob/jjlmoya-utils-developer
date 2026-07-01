@@ -36,7 +36,7 @@ const faqData = [
 const howToData = [
   { name: 'Wpisz wagę swojej strony', text: 'Użyj narzędzi deweloperskich przeglądarki lub WebPageTest, aby sprawdzić wagę strony. Wpisz tę wartość w MB.' },
   { name: 'Obserwuj czasy ładowania', text: 'Kalkulator pokazuje, ile sekund zajmuje ładowanie strony w sieciach 3G, 4G i 5G. Czasy w rzeczywistości są zazwyczaj wyższe.' },
-  { name: 'Zrozum wpływ na czas życia', text: 'Procent „czasu życia” pokazuje, ile czyjegoś życia mija na czekaniu. Użyj tego jako motywacji do optymalizacji.' },
+  { name: 'Zrozum wpływ na czas życia', text: 'Procent "czasu życia" pokazuje, ile czyjegoś życia mija na czekaniu. Użyj tego jako motywacji do optymalizacji.' },
   { name: 'Optymalizuj i oblicz ponownie', text: 'Po optymalizacji zmierz ponownie i wykonaj obliczenia. Zobacz, jak małe ulepszenia mają duży wpływ.' },
 ];
 

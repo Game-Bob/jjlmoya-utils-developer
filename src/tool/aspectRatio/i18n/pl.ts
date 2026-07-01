@@ -42,7 +42,7 @@ const howToData = [
   },
   {
     name: 'Dostosuj skalę',
-    text: 'Zmień wartość szerokości lub wysokości w sekcji „Rzeczywista skala”. Narzędzie automatycznie obliczy drugą wartość, aby zachować proporcje.',
+    text: 'Zmień wartość szerokości lub wysokości w sekcji "Rzeczywista skala". Narzędzie automatycznie obliczy drugą wartość, aby zachować proporcje.',
   },
   {
     name: 'Sprawdź podgląd',
@@ -137,7 +137,7 @@ export const content: ToolLocaleContent<AspectRatioUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Błędne zarządzanie proporcjami jest częstą przyczyną spłaszczonych zdjęć, filmów z nieoczekiwanym przycięciem (letterboxing) lub komponentów stron internetowych, które tracą swój układ przy przeglądaniu na różnych urządzeniach – od telefonów po monitory panoramiczne.',
+      html: 'Błędne zarządzanie proporcjami jest częstą przyczyną spłaszczonych zdjęć, filmów z nieoczekiwanym przycięciem (letterboxing) lub komponentów stron internetowych, które tracą swój układ przy przeglądaniu na różnych urządzeniach - od telefonów po monitory panoramiczne.',
     },
     {
       type: 'title',

@@ -21,7 +21,7 @@ const faqData = [
   {
     question: 'Que signifie la propriété location ?',
     answer:
-      'La propriété location indique où la touche est physiquement située sur le clavier : Standard (position normale), Left (modificateur gauche), Right (modificateur droit) ou Numpad (pavé numérique). Elle est utile pour distinguer la touche CTRL gauche de la droite, par exemple.',
+      'La propriété location indique où la touche est physiquement située sur le clavier: Standard (position normale), Left (modificateur gauche), Right (modificateur droit) ou Numpad (pavé numérique). Elle est utile pour distinguer la touche CTRL gauche de la droite, par exemple.',
   },
   {
     question: 'Fonctionne-t-il avec les claviers internationaux et les dispositions non-QWERTY ?',
@@ -100,15 +100,15 @@ export const content: ToolLocaleContent<KeycodeUI> = {
   bibliographyTitle: 'Références et standards',
   bibliography: [
     {
-      name: 'MDN Web Docs – KeyboardEvent',
+      name: 'MDN Web Docs - KeyboardEvent',
       url: 'https://developer.mozilla.org/fr/docs/Web/API/KeyboardEvent',
     },
     {
-      name: 'Spécification UI Events (W3C) – KeyboardEvent',
+      name: 'Spécification UI Events (W3C) - KeyboardEvent',
       url: 'https://www.w3.org/TR/uievents/#events-keyboardevents',
     },
     {
-      name: 'MDN – Valeurs de KeyboardEvent.code',
+      name: 'MDN - Valeurs de KeyboardEvent.code',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values',
     },
   ],
@@ -122,7 +122,7 @@ export const content: ToolLocaleContent<KeycodeUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Lorsqu\'un utilisateur appuie sur une touche, le navigateur déclenche trois événements : <code>keydown</code>, <code>keypress</code> et <code>keyup</code>. Chacun expose des propriétés avec des informations sur la touche pressée, mais elles ne sont pas toutes équivalentes ni recommandées.',
+      html: 'Lorsqu\'un utilisateur appuie sur une touche, le navigateur déclenche trois événements: <code>keydown</code>, <code>keypress</code> et <code>keyup</code>. Chacun expose des propriétés avec des informations sur la touche pressée, mais elles ne sont pas toutes équivalentes ni recommandées.',
     },
     {
       type: 'title',
@@ -135,12 +135,12 @@ export const content: ToolLocaleContent<KeycodeUI> = {
     },
     {
       type: 'card',
-      title: 'event.code — La touche physique',
+      title: 'event.code: La touche physique',
       html: '<p>Retourne l\'identifiant de la <strong>position physique</strong> de la touche sur le clavier, en utilisant la nomenclature QWERTY. Par exemple, la touche "A" sur un clavier AZERTY retourne <code>KeyQ</code>. Idéal pour les contrôles de jeu où la position importe, pas le caractère.</p>',
     },
     {
       type: 'card',
-      title: 'event.key — Le caractère généré',
+      title: 'event.key: Le caractère généré',
       html: '<p>Retourne la <strong>valeur du caractère</strong> généré selon la langue et les modificateurs actifs. Appuyer sur Shift+A retourne <code>"A"</code> ; sans Shift retourne <code>"a"</code>. Pour les touches spéciales, retourne des noms comme <code>"Enter"</code>, <code>"Escape"</code>, <code>"ArrowUp"</code>.</p>',
     },
     {

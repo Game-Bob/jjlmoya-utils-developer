@@ -141,7 +141,7 @@ export const content: ToolLocaleContent<DuplicateCssRemoverUI> = {
     },
     {
       type: 'tip',
-      html: 'Membuang gaya yang redundan bukan sekadar soal kerapian kode — ini adalah peningkatan nyata dan terukur pada metrik penting seperti <strong>First Contentful Paint (FCP)</strong>.',
+      html: 'Membuang gaya yang redundan bukan sekadar soal kerapian kode - ini adalah peningkatan nyata dan terukur pada metrik penting seperti <strong>First Contentful Paint (FCP)</strong>.',
     },
     {
       type: 'title',

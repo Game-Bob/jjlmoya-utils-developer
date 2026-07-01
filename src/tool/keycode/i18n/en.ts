@@ -100,15 +100,15 @@ export const content: ToolLocaleContent<KeycodeUI> = {
   bibliographyTitle: 'References and Standards',
   bibliography: [
     {
-      name: 'MDN Web Docs – KeyboardEvent',
+      name: 'MDN Web Docs - KeyboardEvent',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent',
     },
     {
-      name: 'UI Events Specification (W3C) – KeyboardEvent',
+      name: 'UI Events Specification (W3C) - KeyboardEvent',
       url: 'https://www.w3.org/TR/uievents/#events-keyboardevents',
     },
     {
-      name: 'MDN – KeyboardEvent.code values',
+      name: 'MDN - KeyboardEvent.code values',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values',
     },
   ],
@@ -135,12 +135,12 @@ export const content: ToolLocaleContent<KeycodeUI> = {
     },
     {
       type: 'card',
-      title: 'event.code — The physical key',
+      title: 'event.code: The physical key',
       html: '<p>Returns the identifier of the <strong>physical position</strong> of the key on the keyboard, using QWERTY nomenclature. For example, the "A" key on an AZERTY keyboard returns <code>KeyQ</code>. Ideal for game controls where position matters, not the character.</p>',
     },
     {
       type: 'card',
-      title: 'event.key — The generated character',
+      title: 'event.key: The generated character',
       html: '<p>Returns the <strong>character value</strong> generated according to language and active modifiers. Pressing Shift+A returns <code>"A"</code>; without Shift returns <code>"a"</code>. For special keys it returns names like <code>"Enter"</code>, <code>"Escape"</code>, <code>"ArrowUp"</code>.</p>',
     },
     {

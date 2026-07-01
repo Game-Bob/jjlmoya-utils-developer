@@ -9,7 +9,7 @@ const description = 'Prüfen Sie den echten Kontrast Ihrer Designs mit APCA (WCA
 const faqData = [
   {
     question: 'Was ist APCA und warum unterscheidet es sich von WCAG 2.1?',
-    answer: 'APCA ist der Advanced Perceptual Contrast Algorithm, der für WCAG 3.0 entwickelt wurde. Anders als das alte einfache Verhältnis verwendet APCA mathematische Modelle, die nachbilden, wie das menschliche Gehirn Kontrast wahrnimmt – unter Berücksichtigung der Polarität (heller vs. dunkler Hintergrund) und der Schriftgröße bzw. des Schriftgewichts.',
+    answer: 'APCA ist der Advanced Perceptual Contrast Algorithm, der für WCAG 3.0 entwickelt wurde. Anders als das alte einfache Verhältnis verwendet APCA mathematische Modelle, die nachbilden, wie das menschliche Gehirn Kontrast wahrnimmt - unter Berücksichtigung der Polarität (heller vs. dunkler Hintergrund) und der Schriftgröße bzw. des Schriftgewichts.',
   },
   {
     question: 'Was bedeutet der Lc-Wert?',
@@ -108,7 +108,7 @@ export const content: ToolLocaleContent<ReadabilityCalculatorUI> = {
     { type: 'title', text: 'Visueller Lesbarkeitsrechner (WCAG vs APCA)', level: 2 },
     {
       type: 'paragraph',
-      html: 'Verstehen Sie, wie Farben und Typografie die tatsächliche Lesbarkeit beeinflussen – mit dem neuen wahrnehmungsbasierten Barrierefreiheitsstandard. WCAG 2.1 nutzt eine einfache Formel aus dem Jahr 2008. <strong>APCA</strong> ist das neue Modell für <strong>WCAG 3.0</strong>, das menschliche Wahrnehmung nachbildet.',
+      html: 'Verstehen Sie, wie Farben und Typografie die tatsächliche Lesbarkeit beeinflussen - mit dem neuen wahrnehmungsbasierten Barrierefreiheitsstandard. WCAG 2.1 nutzt eine einfache Formel aus dem Jahr 2008. <strong>APCA</strong> ist das neue Modell für <strong>WCAG 3.0</strong>, das menschliche Wahrnehmung nachbildet.',
     },
     { type: 'title', text: 'Kernpunkte von APCA', level: 3 },
     {

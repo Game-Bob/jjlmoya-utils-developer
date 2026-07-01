@@ -100,7 +100,7 @@ const ui: CronGeneratorUI = {
   hintDow: '0 = Domingo, 6 = Sábado',
   labelNextRuns: 'Próximas Ejecuciones',
   btnCopy: 'Copiar Expresión',
-  btnCopied: 'Copiado!',
+  btnCopied: '¡Copiado!',
   msgNoRuns: 'No se encontraron ejecuciones próximas razonables.',
   msgError: 'Error al calcular fechas.',
   presetEveryMinute: 'Cada minuto',
@@ -185,7 +185,7 @@ export const content: ToolLocaleContent<CronGeneratorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'El 90% de los servidores funcionan en <strong>UTC</strong>. Si programas una tarea a las 02:00 AM pensando en tu horario local, podrías ejecutarla en un momento inesperado. Además, Cron no tiene acceso a tu <code>$PATH</code> habitual — usa siempre rutas absolutas como <code>/usr/local/bin/node</code>.',
+      html: 'El 90% de los servidores funcionan en <strong>UTC</strong>. Si programas una tarea a las 02:00 AM pensando en tu horario local, podrías ejecutarla en un momento inesperado. Además, Cron no tiene acceso a tu <code>$PATH</code> habitual - usa siempre rutas absolutas como <code>/usr/local/bin/node</code>.',
     },
   ],
 };

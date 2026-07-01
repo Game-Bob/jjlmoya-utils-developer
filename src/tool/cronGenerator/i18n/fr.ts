@@ -96,7 +96,7 @@ const ui: CronGeneratorUI = {
   fieldDom: 'Jour du Mois (1-31)',
   fieldMonth: 'Mois (1-12)',
   fieldDow: 'Jour de la Semaine (0-6)',
-  hintMinute: 'Ex : *, */5, 0,30',
+  hintMinute: 'Ex: *, */5, 0,30',
   hintDow: '0 = Dimanche, 6 = Samedi',
   labelNextRuns: 'Prochaines exécutions',
   btnCopy: 'Copier l\'expression',
@@ -139,11 +139,11 @@ export const content: ToolLocaleContent<CronGeneratorUI> = {
   bibliographyTitle: 'Références et documentation',
   bibliography: [
     {
-      name: 'Manuel GNU Crontab : Expressions Cron sous Linux',
+      name: 'Manuel GNU Crontab: Expressions Cron sous Linux',
       url: 'https://www.gnu.org/software/mcron/manual/html_node/Crontab-file.html',
     },
     {
-      name: 'Cron sur Wikipedia : Histoire et syntaxe',
+      name: 'Cron sur Wikipedia: Histoire et syntaxe',
       url: 'https://en.wikipedia.org/wiki/Cron',
     },
   ],
@@ -181,11 +181,11 @@ export const content: ToolLocaleContent<CronGeneratorUI> = {
     },
     {
       type: 'tip',
-      html: 'Utilisez le slash <code>/</code> pour définir des pas : <code>*/5</code> en minutes s\'exécute toutes les 5 minutes. La virgule <code>,</code> crée des listes (<code>1,3,5</code>) et le tiret <code>-</code> définit des plages (<code>1-5</code>).',
+      html: 'Utilisez le slash <code>/</code> pour définir des pas: <code>*/5</code> en minutes s\'exécute toutes les 5 minutes. La virgule <code>,</code> crée des listes (<code>1,3,5</code>) et le tiret <code>-</code> définit des plages (<code>1-5</code>).',
     },
     {
       type: 'paragraph',
-      html: '90% des serveurs fonctionnent en <strong>UTC</strong>. Si vous planifiez une tâche à 02h00 en pensant à votre fuseau local, elle peut s\'exécuter à un moment inattendu. De plus, Cron n\'a pas accès à votre <code>$PATH</code> habituel — utilisez toujours des chemins absolus comme <code>/usr/local/bin/node</code>.',
+      html: '90% des serveurs fonctionnent en <strong>UTC</strong>. Si vous planifiez une tâche à 02h00 en pensant à votre fuseau local, elle peut s\'exécuter à un moment inattendu. De plus, Cron n\'a pas accès à votre <code>$PATH</code> habituel - utilisez toujours des chemins absolus comme <code>/usr/local/bin/node</code>.',
     },
   ],
 };

@@ -13,7 +13,7 @@ const faqData = [
   },
   {
     question: 'Работает ли это с SVG из Illustrator?',
-    answer: 'Да. Illustrator экспортирует SVG с XML-объявлениями, метаданными и собственными пространствами имён, которые очиститель удаляет. Результат — это SVG, совместимый со всеми современными браузерами.',
+    answer: 'Да. Illustrator экспортирует SVG с XML-объявлениями, метаданными и собственными пространствами имён, которые очиститель удаляет. Результат - это SVG, совместимый со всеми современными браузерами.',
   },
   {
     question: 'Какая разница между очисткой и минификацией?',
@@ -21,7 +21,7 @@ const faqData = [
   },
   {
     question: 'Может ли удаление ID-элементов повредить SVG?',
-    answer: 'Только если элемент в SVG ссылается на другой по ID, например через fill="url(#gradient)". В этом случае отключите опцию «Удалить ID». Она отключена по умолчанию именно чтобы избежать этой проблемы.',
+    answer: 'Только если элемент в SVG ссылается на другой по ID, например через fill="url(#gradient)". В этом случае отключите опцию "Удалить ID". Она отключена по умолчанию именно чтобы избежать этой проблемы.',
   },
   {
     question: 'Передаётся ли код SVG на какой-нибудь сервер?',
@@ -32,7 +32,7 @@ const faqData = [
 const howToData = [
   { name: 'Вставьте SVG', text: 'Вставьте код SVG, экспортированный из Figma, Illustrator или Inkscape, в текстовое поле.' },
   { name: 'Настройте параметры', text: 'Включите или отключите опции: удалить ID, убрать ширину/высоту и минифицировать в зависимости от ваших нужд.' },
-  { name: 'Очистите', text: 'Нажмите «Очистить SVG», чтобы обработать код и получить оптимизированный результат.' },
+  { name: 'Очистите', text: 'Нажмите "Очистить SVG", чтобы обработать код и получить оптимизированный результат.' },
   { name: 'Скопируйте или скачайте', text: 'Используйте кнопки копирования или загрузки, чтобы получить чистый SVG, готовый для продакшена.' },
 ];
 
@@ -93,9 +93,9 @@ export const content: ToolLocaleContent<SvgSanitizerUI> = {
   faq: faqData,
   bibliographyTitle: 'Ссылки',
   bibliography: [
-    { name: 'SVG Specification — W3C', url: 'https://www.w3.org/TR/SVG2/' },
-    { name: 'Figma SVG Export — Official Documentation', url: 'https://help.figma.com/hc/en-us/articles/360040028114-Export-from-Figma' },
-    { name: 'SVGO — SVG Optimizer (open source reference)', url: 'https://github.com/svg/svgo' },
+    { name: 'SVG Specification - W3C', url: 'https://www.w3.org/TR/SVG2/' },
+    { name: 'Figma SVG Export - Official Documentation', url: 'https://help.figma.com/hc/en-us/articles/360040028114-Export-from-Figma' },
+    { name: 'SVGO - SVG Optimizer (open source reference)', url: 'https://github.com/svg/svgo' },
   ],
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
@@ -108,7 +108,7 @@ export const content: ToolLocaleContent<SvgSanitizerUI> = {
     { type: 'title', text: 'Почему экспортированные SVG такие грязные?', level: 3 },
     {
       type: 'paragraph',
-      html: 'Когда вы экспортируете SVG из Figma, вы получаете файл, перегруженный атрибутами, которые имеют смысл только внутри приложения: <code>data-name</code>, <code>xml:space</code>, ссылки на внутренние слои и метаданные дизайна. Результат — это SVG, весящий на 40-70% больше необходимого.',
+      html: 'Когда вы экспортируете SVG из Figma, вы получаете файл, перегруженный атрибутами, которые имеют смысл только внутри приложения: <code>data-name</code>, <code>xml:space</code>, ссылки на внутренние слои и метаданные дизайна. Результат - это SVG, весящий на 40-70% больше необходимого.',
     },
     { type: 'title', text: 'Что удаляет очиститель', level: 3 },
     {

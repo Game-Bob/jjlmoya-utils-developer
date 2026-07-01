@@ -112,7 +112,7 @@ export const content: ToolLocaleContent<PromptLibraryUI> = {
       type: 'list',
       items: [
         '<strong>Sofortsuche:</strong> Finde jene spezifische Anweisung, die du vor Monaten verwendet hast, mit einer einfachen Textsuche.',
-        '<strong>Tag-Klassifizierung:</strong> Verschlagworte deine Prompts mit „Marketing", „Programmierung" oder „Copywriting", um schnell zu filtern.',
+        '<strong>Tag-Klassifizierung:</strong> Verschlagworte deine Prompts mit "Marketing", "Programmierung" oder "Copywriting", um schnell zu filtern.',
         '<strong>Ein-Klick-Kopieren:</strong> Den vollständigen Text mit einem einzigen Klick in die Zwischenablage kopieren.',
         '<strong>Vollständige Privatsphäre:</strong> Alle deine Daten werden lokal im Browser über localStorage gespeichert.',
       ],

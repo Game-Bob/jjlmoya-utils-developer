@@ -14,7 +14,7 @@ const faqData = [
       'Безусловно. Вся обработка происходит на 100% в вашем браузере (на стороне клиента). Ваши данные JSON никогда не отправляются на сервер, что обеспечивает полную конфиденциальность ваших структур данных.',
   },
   {
-    question: 'Что вызывает ошибку «Invalid JSON»?',
+    question: 'Что вызывает ошибку "Invalid JSON"?',
     answer:
       'Обычно она вызвана лишними запятыми в конце объекта, отсутствием двойных кавычек вокруг ключей или невидимыми символами. Наш инструмент подсвечивает точную строку с ошибкой, чтобы вы могли ее исправить.',
   },
@@ -109,19 +109,19 @@ export const content: ToolLocaleContent<JsonFormatterUI> = {
   bibliographyTitle: 'Ссылки и стандарты',
   bibliography: [
     {
-      name: 'RFC 8259 – The JavaScript Object Notation (JSON) Data Interchange Format (IETF)',
+      name: 'RFC 8259 - The JavaScript Object Notation (JSON) Data Interchange Format (IETF)',
       url: 'https://datatracker.ietf.org/doc/html/rfc8259',
     },
     {
-      name: 'ECMA-404 – The JSON Data Interchange Syntax (Ecma International)',
+      name: 'ECMA-404 - The JSON Data Interchange Syntax (Ecma International)',
       url: 'https://www.ecma-international.org/publications-and-standards/standards/ecma-404/',
     },
     {
-      name: 'JSON.org – Введение в JSON',
+      name: 'JSON.org - Введение в JSON',
       url: 'https://www.json.org/json-en.html',
     },
     {
-      name: 'MDN Web Docs – JSON',
+      name: 'MDN Web Docs - JSON',
       url: 'https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON',
     },
   ],

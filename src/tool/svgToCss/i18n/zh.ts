@@ -16,7 +16,7 @@ const faqData = [
   {
     question: '如何更改嵌入 CSS 的 SVG 的颜色？',
     answer:
-      '最好的方法是通过“mask-image”。通过将 SVG 定义为遮罩（mask），您可以使用“background-color”动态更改其颜色，甚至在 :hover 状态下也可以。',
+      '最好的方法是通过"mask-image"。通过将 SVG 定义为遮罩（mask），您可以使用"background-color"动态更改其颜色，甚至在 :hover 状态下也可以。',
   },
   {
     question: '哪些浏览器支持 CSS 遮罩（Masks）？',
@@ -46,7 +46,7 @@ const howToData = [
   },
   {
     name: '复制结果',
-    text: '点击“复制”将生成的 CSS 代码获取到剪贴板中。',
+    text: '点击"复制"将生成的 CSS 代码获取到剪贴板中。',
   },
   {
     name: '在项目中使用',

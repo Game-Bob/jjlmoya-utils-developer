@@ -137,7 +137,7 @@ export const content: ToolLocaleContent<AspectRatioUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Falsch gehandhabte Seitenverhältnisse sind eine häufige Ursache für gestauchte Fotos, Videos mit unerwartetem Beschnitt (Letterboxing) oder Webkomponenten, deren Layout beim Betrachten auf unterschiedlichen Geräten – vom Smartphone bis hin zu Ultra-Wide-Monitoren – fehlerhaft dargestellt wird.',
+      html: 'Falsch gehandhabte Seitenverhältnisse sind eine häufige Ursache für gestauchte Fotos, Videos mit unerwartetem Beschnitt (Letterboxing) oder Webkomponenten, deren Layout beim Betrachten auf unterschiedlichen Geräten - vom Smartphone bis hin zu Ultra-Wide-Monitoren - fehlerhaft dargestellt wird.',
     },
     {
       type: 'title',

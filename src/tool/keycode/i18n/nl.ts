@@ -100,15 +100,15 @@ export const content: ToolLocaleContent<KeycodeUI> = {
   bibliographyTitle: 'Referenties en Standaarden',
   bibliography: [
     {
-      name: 'MDN Web Docs – KeyboardEvent',
+      name: 'MDN Web Docs - KeyboardEvent',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent',
     },
     {
-      name: 'UI Events Specification (W3C) – KeyboardEvent',
+      name: 'UI Events Specification (W3C) - KeyboardEvent',
       url: 'https://www.w3.org/TR/uievents/#events-keyboardevents',
     },
     {
-      name: 'MDN – KeyboardEvent.code values',
+      name: 'MDN - KeyboardEvent.code values',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values',
     },
   ],
@@ -135,12 +135,12 @@ export const content: ToolLocaleContent<KeycodeUI> = {
     },
     {
       type: 'card',
-      title: 'event.code — De fysieke toets',
+      title: 'event.code: De fysieke toets',
       html: '<p>Geeft de identifier terug van de <strong>fysieke positie</strong> van de toets op het toetsenbord, met behulp van QWERTY-nomenclatuur. De "A"-toets op een AZERTY-toetsenbord geeft bijvoorbeeld <code>KeyQ</code> terug. Ideaal voor spelbesturingen waarbij de positie telt, niet het teken.</p>',
     },
     {
       type: 'card',
-      title: 'event.key — Het gegenereerde teken',
+      title: 'event.key: Het gegenereerde teken',
       html: '<p>Geeft de <strong>tekenwaarde</strong> terug die gegenereerd wordt op basis van taal en actieve modifiers. Shift+A indrukken geeft <code>"A"</code> terug; zonder Shift geeft het <code>"a"</code>. Voor speciale toetsen geeft het namen terug zoals <code>"Enter"</code>, <code>"Escape"</code>, <code>"ArrowUp"</code>.</p>',
     },
     {

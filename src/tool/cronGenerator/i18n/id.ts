@@ -185,7 +185,7 @@ export const content: ToolLocaleContent<CronGeneratorUI> = {
     },
     {
       type: 'paragraph',
-      html: '90% server berjalan pada <strong>UTC</strong>. Jika Anda menjadwalkan tugas pada pukul 02:00 pagi berdasarkan zona waktu lokal Anda, tugas tersebut mungkin berjalan pada waktu yang tidak terduga. Selain itu, Cron tidak memiliki akses ke <code>$PATH</code> Anda yang biasa — selalu gunakan jalur absolut seperti <code>/usr/local/bin/node</code>.',
+      html: '90% server berjalan pada <strong>UTC</strong>. Jika Anda menjadwalkan tugas pada pukul 02:00 pagi berdasarkan zona waktu lokal Anda, tugas tersebut mungkin berjalan pada waktu yang tidak terduga. Selain itu, Cron tidak memiliki akses ke <code>$PATH</code> Anda yang biasa - selalu gunakan jalur absolut seperti <code>/usr/local/bin/node</code>.',
     },
   ],
 };

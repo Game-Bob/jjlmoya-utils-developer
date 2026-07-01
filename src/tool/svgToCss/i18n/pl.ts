@@ -46,7 +46,7 @@ const howToData = [
   },
   {
     name: 'Skopiuj wynik',
-    text: 'Kliknij „Kopiuj”, aby pobrać wygenerowany kod CSS do schowka.',
+    text: 'Kliknij "Kopiuj", aby pobrać wygenerowany kod CSS do schowka.',
   },
   {
     name: 'Zastosuj w swoim projekcie',

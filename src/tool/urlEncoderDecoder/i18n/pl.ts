@@ -33,15 +33,15 @@ const faqData = [
 const howToData = [
   {
     name: 'Wklej surowy tekst',
-    text: 'Wpisz lub wklej swój adres URL lub ciąg tekstowy w górnym polu „Tekst surowy (czytelny)”.',
+    text: 'Wpisz lub wklej swój adres URL lub ciąg tekstowy w górnym polu "Tekst surowy (czytelny)".',
   },
   {
     name: 'Zakoduj lub dekoduj',
-    text: 'Kliknij „Koduj URL”, aby przekonwertować tekst na bezpieczny format Percent-Encoding, lub „Dekoduj”, aby przywrócić zakodowany adres URL do jego czytelnej formy.',
+    text: 'Kliknij "Koduj URL", aby przekonwertować tekst na bezpieczny format Percent-Encoding, lub "Dekoduj", aby przywrócić zakodowany adres URL do jego czytelnej formy.',
   },
   {
     name: 'Skopiuj wynik',
-    text: 'Użyj przycisku „Kopiuj” w odpowiednim polu, aby przenieść wynik do schowka.',
+    text: 'Użyj przycisku "Kopiuj" w odpowiednim polu, aby przenieść wynik do schowka.',
   },
 ];
 
@@ -123,7 +123,7 @@ export const content: ToolLocaleContent<UrlEncoderDecoderUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Podczas przeglądania Internetu lub wysyłania żądań do serwerów często myślimy o adresie URL (Uniform Resource Locator) po prostu jako o „adresie internetowym”. Jednak protokół internetowy dyktuje, że adresy URL mogą być przesyłane wyłącznie przy użyciu bardzo ograniczonego zestawu <strong>standardowych znaków ASCII</strong>.',
+      html: 'Podczas przeglądania Internetu lub wysyłania żądań do serwerów często myślimy o adresie URL (Uniform Resource Locator) po prostu jako o "adresie internetowym". Jednak protokół internetowy dyktuje, że adresy URL mogą być przesyłane wyłącznie przy użyciu bardzo ograniczonego zestawu <strong>standardowych znaków ASCII</strong>.',
     },
     {
       type: 'paragraph',
@@ -136,7 +136,7 @@ export const content: ToolLocaleContent<UrlEncoderDecoderUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Gdy korzystasz z tego narzędzia, algorytm pobiera dowolny „niebezpieczny” znak (taki jak spacja lub litera z akcentem, np. ñ) i zastępuje go znakiem procenta <code>%</code>, po którym następują dwie cyfry szesnastkowe odpowiadające jego wartości w standardzie UTF-8.',
+      html: 'Gdy korzystasz z tego narzędzia, algorytm pobiera dowolny "niebezpieczny" znak (taki jak spacja lub litera z akcentem, np. ñ) i zastępuje go znakiem procenta <code>%</code>, po którym następują dwie cyfry szesnastkowe odpowiadające jego wartości w standardzie UTF-8.',
     },
     {
       type: 'list',

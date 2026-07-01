@@ -13,7 +13,7 @@ const faqData = [
   },
   {
     question: 'Heeft dit invloed op de werking van de website?',
-    answer: 'Doorgaans niet. Deze parameters worden vrijwel uitsluitend gebruikt voor analyse en marketing. Als je ze verwijdert, laadt de pagina gewoon — alleen kan de websitebeheerder niet meer zien waar jouw klik vandaan kwam.',
+    answer: 'Doorgaans niet. Deze parameters worden vrijwel uitsluitend gebruikt voor analyse en marketing. Als je ze verwijdert, laadt de pagina gewoon - alleen kan de websitebeheerder niet meer zien waar jouw klik vandaan kwam.',
   },
   {
     question: 'Is het veilig om mijn links hier te verwerken?',

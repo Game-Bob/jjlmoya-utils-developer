@@ -41,7 +41,7 @@ const howToData = [
   },
   {
     name: 'Codeausschnitte verwenden',
-    text: 'Im Bereich „Schnelle Codeausschnitte" finden Sie JavaScript-Codeblöcke, die Sie direkt in Ihr Projekt einfügen können.',
+    text: 'Im Bereich "Schnelle Codeausschnitte" finden Sie JavaScript-Codeblöcke, die Sie direkt in Ihr Projekt einfügen können.',
   },
 ];
 
@@ -100,15 +100,15 @@ export const content: ToolLocaleContent<KeycodeUI> = {
   bibliographyTitle: 'Referenzen und Standards',
   bibliography: [
     {
-      name: 'MDN Web Docs – KeyboardEvent',
+      name: 'MDN Web Docs - KeyboardEvent',
       url: 'https://developer.mozilla.org/de/docs/Web/API/KeyboardEvent',
     },
     {
-      name: 'UI Events Specification (W3C) – KeyboardEvent',
+      name: 'UI Events Specification (W3C) - KeyboardEvent',
       url: 'https://www.w3.org/TR/uievents/#events-keyboardevents',
     },
     {
-      name: 'MDN – KeyboardEvent.code values',
+      name: 'MDN - KeyboardEvent.code values',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values',
     },
   ],
@@ -135,12 +135,12 @@ export const content: ToolLocaleContent<KeycodeUI> = {
     },
     {
       type: 'card',
-      title: 'event.code — Die physische Taste',
-      html: '<p>Gibt den Bezeichner der <strong>physischen Position</strong> der Taste auf der Tastatur zurück, unter Verwendung der QWERTY-Nomenklatur. Die Taste „A" auf einer AZERTY-Tastatur gibt zum Beispiel <code>KeyQ</code> zurück. Ideal für Spielsteuerungen, bei denen die Position zählt, nicht das Zeichen.</p>',
+      title: 'event.code: Die physische Taste',
+      html: '<p>Gibt den Bezeichner der <strong>physischen Position</strong> der Taste auf der Tastatur zurück, unter Verwendung der QWERTY-Nomenklatur. Die Taste "A" auf einer AZERTY-Tastatur gibt zum Beispiel <code>KeyQ</code> zurück. Ideal für Spielsteuerungen, bei denen die Position zählt, nicht das Zeichen.</p>',
     },
     {
       type: 'card',
-      title: 'event.key — Das erzeugte Zeichen',
+      title: 'event.key: Das erzeugte Zeichen',
       html: '<p>Gibt den <strong>Zeichenwert</strong> zurück, der je nach Sprache und aktiven Modifikatoren erzeugt wird. Shift+A ergibt <code>"A"</code>; ohne Shift ergibt sich <code>"a"</code>. Bei Sondertasten werden Namen wie <code>"Enter"</code>, <code>"Escape"</code> oder <code>"ArrowUp"</code> zurückgegeben.</p>',
     },
     {

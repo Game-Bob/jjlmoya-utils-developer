@@ -185,7 +185,7 @@ export const content: ToolLocaleContent<CronGeneratorUI> = {
     },
     {
       type: 'paragraph',
-      html: '90% van de servers draait op <strong>UTC</strong>. Als u een taak plant om 02:00 uur \'s nachts op basis van uw lokale tijdzone, kan deze op een onverwacht tijdstip worden uitgevoerd. Bovendien heeft Cron geen toegang tot uw gebruikelijke <code>$PATH</code> — gebruik altijd absolute paden zoals <code>/usr/local/bin/node</code>.',
+      html: '90% van de servers draait op <strong>UTC</strong>. Als u een taak plant om 02:00 uur \'s nachts op basis van uw lokale tijdzone, kan deze op een onverwacht tijdstip worden uitgevoerd. Bovendien heeft Cron geen toegang tot uw gebruikelijke <code>$PATH</code> - gebruik altijd absolute paden zoals <code>/usr/local/bin/node</code>.',
     },
   ],
 };

@@ -141,7 +141,7 @@ export const content: ToolLocaleContent<DuplicateCssRemoverUI> = {
     },
     {
       type: 'tip',
-      html: 'Purgar estilos redundantes não é apenas uma questão de organização do código — é uma melhoria mensurável e imediata em métricas vitais como o <strong>First Contentful Paint (FCP)</strong>.',
+      html: 'Purgar estilos redundantes não é apenas uma questão de organização do código - é uma melhoria mensurável e imediata em métricas vitais como o <strong>First Contentful Paint (FCP)</strong>.',
     },
     {
       type: 'title',

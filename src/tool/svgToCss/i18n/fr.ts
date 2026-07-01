@@ -164,7 +164,7 @@ export const content: ToolLocaleContent<SvgToCssUI> = {
     },
     {
       type: 'paragraph',
-      html: "Beaucoup de développeurs utilisent simplement <code>background-image</code> pour intégrer des vecteurs, mais cela a une limitation : vous ne pouvez pas changer la couleur du SVG dynamiquement depuis le CSS.",
+      html: "Beaucoup de développeurs utilisent simplement <code>background-image</code> pour intégrer des vecteurs, mais cela a une limitation: vous ne pouvez pas changer la couleur du SVG dynamiquement depuis le CSS.",
     },
     {
       type: 'paragraph',

@@ -33,15 +33,15 @@ const faqData = [
 const howToData = [
   {
     name: '粘贴原始文本',
-    text: '在上方“原始文本（可读）”字段中输入或粘贴您的 URL 或文本字符串。',
+    text: '在上方"原始文本（可读）"字段中输入或粘贴您的 URL 或文本字符串。',
   },
   {
     name: '编码或解码',
-    text: '点击“URL 编码”将文本转换为安全的百分比编码格式，或点击“解码”将已编码的 URL 恢复为可读形式。',
+    text: '点击"URL 编码"将文本转换为安全的百分比编码格式，或点击"解码"将已编码的 URL 恢复为可读形式。',
   },
   {
     name: '复制结果',
-    text: '使用对应字段的“复制”按钮将结果保存到剪贴板。',
+    text: '使用对应字段的"复制"按钮将结果保存到剪贴板。',
   },
 ];
 
@@ -123,7 +123,7 @@ export const content: ToolLocaleContent<UrlEncoderDecoderUI> = {
     },
     {
       type: 'paragraph',
-      html: '在浏览互联网或向服务器发送请求时，人们通常将 URL（统一资源定位符）简单地视为“网址”。然而，互联网协议规定 URL 只能使用非常有限的 <strong>标准 ASCII</strong> 字符集进行传输。',
+      html: '在浏览互联网或向服务器发送请求时，人们通常将 URL（统一资源定位符）简单地视为"网址"。然而，互联网协议规定 URL 只能使用非常有限的 <strong>标准 ASCII</strong> 字符集进行传输。',
     },
     {
       type: 'paragraph',
@@ -136,7 +136,7 @@ export const content: ToolLocaleContent<UrlEncoderDecoderUI> = {
     },
     {
       type: 'paragraph',
-      html: '当您使用此工具时，算法会将任何“不安全”的字符（如空格或 ñ 等带重音符号的字母）替换为百分号 <code>%</code>，后跟与其在 UTF-8 标准中的值相对应的两个十六进制数字。',
+      html: '当您使用此工具时，算法会将任何"不安全"的字符（如空格或 ñ 等带重音符号的字母）替换为百分号 <code>%</code>，后跟与其在 UTF-8 标准中的值相对应的两个十六进制数字。',
     },
     {
       type: 'list',

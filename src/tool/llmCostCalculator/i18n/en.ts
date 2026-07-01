@@ -21,7 +21,7 @@ const faqData = [
   {
     question: 'Why are output tokens more expensive than input tokens?',
     answer:
-      'Generating text (output) requires the model to compute each token sequentially, which is computationally more intensive than reading the input. Most providers charge 3–5x more for output tokens than input tokens.',
+      'Generating text (output) requires the model to compute each token sequentially, which is computationally more intensive than reading the input. Most providers charge 3-5x more for output tokens than input tokens.',
   },
   {
     question: 'How can I reduce my LLM API costs?',
@@ -146,7 +146,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     {
       type: 'card',
       title: 'Output tokens',
-      html: '<p>Output tokens are generated one by one in sequence, making them more computationally expensive. Most providers charge <strong>3–5× more</strong> for output tokens. A 300-word response generates roughly 400 output tokens. Keeping responses concise is one of the most effective cost-saving strategies.</p>',
+      html: '<p>Output tokens are generated one by one in sequence, making them more computationally expensive. Most providers charge <strong>3-5× more</strong> for output tokens. A 300-word response generates roughly 400 output tokens. Keeping responses concise is one of the most effective cost-saving strategies.</p>',
     },
     {
       type: 'title',
@@ -155,7 +155,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
     },
     {
       type: 'tip',
-      html: 'Start with a capable mid-tier model like <code>GPT-4o mini</code> or <code>Gemini 1.5 Flash</code> and only upgrade if quality falls short. The cost difference between a small and large model can be 10–100×.',
+      html: 'Start with a capable mid-tier model like <code>GPT-4o mini</code> or <code>Gemini 1.5 Flash</code> and only upgrade if quality falls short. The cost difference between a small and large model can be 10-100×.',
     },
     {
       type: 'paragraph',

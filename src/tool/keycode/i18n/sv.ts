@@ -100,15 +100,15 @@ export const content: ToolLocaleContent<KeycodeUI> = {
   bibliographyTitle: 'Referenser och Standarder',
   bibliography: [
     {
-      name: 'MDN Web Docs – KeyboardEvent',
+      name: 'MDN Web Docs - KeyboardEvent',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent',
     },
     {
-      name: 'UI Events Specification (W3C) – KeyboardEvent',
+      name: 'UI Events Specification (W3C) - KeyboardEvent',
       url: 'https://www.w3.org/TR/uievents/#events-keyboardevents',
     },
     {
-      name: 'MDN – KeyboardEvent.code values',
+      name: 'MDN - KeyboardEvent.code values',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values',
     },
   ],
@@ -135,12 +135,12 @@ export const content: ToolLocaleContent<KeycodeUI> = {
     },
     {
       type: 'card',
-      title: 'event.code — Den fysiska tangenten',
+      title: 'event.code: Den fysiska tangenten',
       html: '<p>Returnerar identifieraren för tangentens <strong>fysiska position</strong> på tangentbordet, med QWERTY-nomenklatur. Till exempel returnerar tangenten "A" på ett AZERTY-tangentbord <code>KeyQ</code>. Idealisk för spelkontroller där position spelar roll, inte tecknet.</p>',
     },
     {
       type: 'card',
-      title: 'event.key — Det genererade tecknet',
+      title: 'event.key: Det genererade tecknet',
       html: '<p>Returnerar det <strong>genererade teckenvärde</strong> enligt språk och aktiva modifierare. Att trycka Shift+A returnerar <code>"A"</code>; utan Shift returnerar <code>"a"</code>. För specialtangenter returneras namn som <code>"Enter"</code>, <code>"Escape"</code>, <code>"ArrowUp"</code>.</p>',
     },
     {
