@@ -1,0 +1,218 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { VisualCssGridFlexboxGeneratorUI } from './ui';
+import './visual-css-grid-flexbox-generator.css';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as VisualCssGridFlexboxGeneratorUI;
+---
+
+<div id="vcg-root" class="vcg-root" data-i18n={JSON.stringify(t)}>
+  <section class="vcg-card">
+    <div class="vcg-stage-panel">
+      <div class="vcg-toolbar">
+        <div class="vcg-mode" role="group" aria-label={t.modeLabel}>
+          <button id="vcg-flex" class="vcg-mode-button vcg-active" type="button" aria-pressed="true">
+            <Icon name="mdi:format-align-justify" />
+            {t.flexMode}
+          </button>
+          <button id="vcg-grid" class="vcg-mode-button" type="button" aria-pressed="false">
+            <Icon name="mdi:grid" />
+            {t.gridMode}
+          </button>
+        </div>
+        <div class="vcg-actions">
+          <button id="vcg-add" class="vcg-icon-button" type="button" aria-label={t.addItem} title={t.addItem}>
+            <Icon name="mdi:plus" />
+          </button>
+          <button id="vcg-remove" class="vcg-icon-button" type="button" aria-label={t['removeItem']} title={t['removeItem']}>
+            <Icon name="mdi:minus" />
+          </button>
+          <button id="vcg-reset" class="vcg-icon-button" type="button" aria-label={t.resetLayout} title={t.resetLayout}>
+            <Icon name="mdi:restore" />
+          </button>
+        </div>
+      </div>
+
+      <div class="vcg-presets" id="vcg-presets" role="group" aria-label={t.presetsLabel}>
+        <button class="vcg-preset-button" data-preset="navbar" type="button">
+          <Icon name="mdi:menu" />{t.presetNavbar}
+        </button>
+        <button class="vcg-preset-button" data-preset="cards" type="button">
+          <Icon name="mdi:view-dashboard" />{t.presetCards}
+        </button>
+        <button class="vcg-preset-button" data-preset="hero" type="button">
+          <Icon name="mdi:image-area" />{t.presetHero}
+        </button>
+        <button class="vcg-preset-button" data-preset="sidebar" type="button">
+          <Icon name="mdi:page-layout-sidebar-left" />{t.presetSidebar}
+        </button>
+        <button class="vcg-preset-button" data-preset="gallery" type="button">
+          <Icon name="mdi:view-gallery" />{t.presetGallery}
+        </button>
+      </div>
+
+      <div class="vcg-canvas-shell" id="vcg-canvas-shell">
+        <div id="vcg-canvas" class="vcg-canvas" aria-label={t.canvasLabel}>
+          <div class="vcg-item" data-item="1"><span>{t.itemPrefix} 1</span></div>
+          <div class="vcg-item" data-item="2"><span>{t.itemPrefix} 2</span></div>
+          <div class="vcg-item" data-item="3"><span>{t.itemPrefix} 3</span></div>
+          <div class="vcg-item" data-item="4"><span>{t.itemPrefix} 4</span></div>
+          <div class="vcg-item" data-item="5"><span>{t.itemPrefix} 5</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vcg-control-panel">
+      <div class="vcg-slider-grid">
+        <label class="vcg-control" for="vcg-gap">
+          <span>{t.gapLabel}</span>
+          <strong id="vcg-gap-value">24px</strong>
+          <input id="vcg-gap" type="range" min="0" max="80" value="24" />
+        </label>
+
+        <label class="vcg-control vcg-grid-only vcg-hidden" id="vcg-columns-wrap" for="vcg-columns">
+          <span>{t.columnsLabel}</span>
+          <strong id="vcg-columns-value">3</strong>
+          <input id="vcg-columns" type="range" min="1" max="8" value="3" />
+        </label>
+
+        <label class="vcg-control" for="vcg-width">
+          <span>{t.widthLabel}</span>
+          <strong id="vcg-width-value">760px</strong>
+          <input id="vcg-width" type="range" min="280" max="1200" value="760" />
+        </label>
+
+        <label class="vcg-control" for="vcg-height">
+          <span>{t.heightLabel}</span>
+          <strong id="vcg-height-value">380px</strong>
+          <input id="vcg-height" type="range" min="180" max="700" value="380" />
+        </label>
+
+        <label class="vcg-control" for="vcg-item-size">
+          <span>{t.itemSizeLabel}</span>
+          <strong id="vcg-item-size-value">104px</strong>
+          <input id="vcg-item-size" type="range" min="56" max="200" value="104" />
+        </label>
+      </div>
+
+      <div class="vcg-select-grid">
+        <label class="vcg-select-wrap vcg-flex-only" id="vcg-direction-wrap" for="vcg-direction">
+          <span>{t.directionLabel}</span>
+          <select id="vcg-direction" class="vcg-select">
+            <option value="row" selected>{t.directionRow}</option>
+            <option value="row-reverse">{t.directionRowReverse}</option>
+            <option value="column">{t.directionColumn}</option>
+            <option value="column-reverse">{t.directionColumnReverse}</option>
+          </select>
+        </label>
+
+        <label class="vcg-select-wrap vcg-flex-only" id="vcg-wrap-wrap" for="vcg-wrap">
+          <span>{t.wrapLabel}</span>
+          <select id="vcg-wrap" class="vcg-select">
+            <option value="nowrap">{t.wrapNoWrap}</option>
+            <option value="wrap" selected>{t.wrapWrap}</option>
+            <option value="wrap-reverse">{t.wrapWrapReverse}</option>
+          </select>
+        </label>
+
+        <label class="vcg-select-wrap" for="vcg-justify">
+          <span>{t.justifyLabel}</span>
+          <select id="vcg-justify" class="vcg-select">
+            <option value="start">{t.justifyStart}</option>
+            <option value="center" selected>{t.justifyCenter}</option>
+            <option value="end">{t.justifyEnd}</option>
+            <option value="space-between">{t.justifyBetween}</option>
+            <option value="space-around">{t.justifyAround}</option>
+            <option value="space-evenly">{t.justifyEvenly}</option>
+          </select>
+        </label>
+
+        <label class="vcg-select-wrap" for="vcg-align">
+          <span>{t.alignLabel}</span>
+          <select id="vcg-align" class="vcg-select">
+            <option value="start">{t.alignStart}</option>
+            <option value="center" selected>{t.alignCenter}</option>
+            <option value="end">{t.alignEnd}</option>
+            <option value="stretch">{t.alignStretch}</option>
+            <option value="baseline">{t.alignBaseline}</option>
+          </select>
+        </label>
+
+        <label class="vcg-select-wrap vcg-flex-only" id="vcg-align-content-wrap" for="vcg-align-content">
+          <span>{t.alignContentLabel}</span>
+          <select id="vcg-align-content" class="vcg-select">
+            <option value="start">{t.alignContentStart}</option>
+            <option value="center">{t.alignContentCenter}</option>
+            <option value="end">{t.alignContentEnd}</option>
+            <option value="space-between">{t.alignContentBetween}</option>
+            <option value="space-around">{t.alignContentAround}</option>
+            <option value="space-evenly">{t.alignContentEvenly}</option>
+            <option value="stretch" selected>{t.alignContentStretch}</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="vcg-code-panel" id="vcg-code-panel">
+        <div class="vcg-code-header">
+          <h2>{t.codeTitle}</h2>
+          <button id="vcg-copy" class="vcg-copy-button" type="button" aria-label={t.copyCode} title={t.copyCode}>
+            <Icon name="mdi:content-copy" />
+          </button>
+        </div>
+        <pre id="vcg-code" class="vcg-code" aria-label={t.outputLabel}></pre>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  import type { VisualCssGridFlexboxGeneratorUI } from './ui';
+  import { createWorkspace, setupSpanHandler, spawnConfetti } from './workspace';
+
+  const root = document.getElementById('vcg-root') as HTMLElement;
+  const t = JSON.parse(root.dataset.i18n ?? '{}') as VisualCssGridFlexboxGeneratorUI;
+  const ws = createWorkspace(root, t);
+
+  setupSpanHandler(ws.canvas, () => ws.readState().mode, t.itemPrefix, () => ws.update());
+
+  [
+    ws.gapInput, ws.columnsInput, ws.widthInput, ws.heightInput, ws.itemSizeInput,
+    ws.justifySelect, ws.alignSelect, ws.directionSelect, ws.wrapSelect, ws.alignContentSelect,
+  ].forEach((el) => {
+    el.addEventListener('input', () => ws.update());
+    el.addEventListener('change', () => ws.update());
+  });
+
+  document.getElementById('vcg-flex')?.addEventListener('click', () => ws.setMode('flex'));
+  document.getElementById('vcg-grid')?.addEventListener('click', () => ws.setMode('grid'));
+  document.getElementById('vcg-add')?.addEventListener('click', () => ws.addItem());
+  document.getElementById('vcg-remove')?.addEventListener('click', () => ws['removeItem']());
+  document.getElementById('vcg-reset')?.addEventListener('click', () => ws.resetLayout());
+
+  document.querySelectorAll('.vcg-preset-button').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const preset = (btn as HTMLElement).dataset.preset;
+      if (preset) ws.applyPreset(preset);
+    });
+  });
+
+  const copyBtn = document.getElementById('vcg-copy') as HTMLButtonElement | null;
+  copyBtn?.addEventListener('click', async () => {
+    const rect = copyBtn.getBoundingClientRect();
+    await navigator.clipboard.writeText(ws.code.textContent ?? '');
+    copyBtn.dataset.copied = t.copied;
+    copyBtn.classList.add('vcg-copied');
+    spawnConfetti(rect.left + rect.width / 2, rect.top);
+    window.setTimeout(() => {
+      delete copyBtn.dataset.copied;
+      copyBtn.classList.remove('vcg-copied');
+    }, 1400);
+  });
+
+  ws.update();
+</script>

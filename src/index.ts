@@ -68,3 +68,5 @@ export { CONVERSOR_EXCEL_CSV_HTML_TOOL } from './tool/conversorExcelCsvHtml/inde
 export { SERP_PIXEL_SIMULATOR_TOOL } from './tool/serpPixelSimulator/index';
 
 export { JWT_DECODER_TOOL } from './tool/jwtDecoder/index';
+
+export { VISUAL_CSS_GRID_FLEXBOX_GENERATOR_TOOL } from './tool/visualCssGridFlexboxGenerator/index';
