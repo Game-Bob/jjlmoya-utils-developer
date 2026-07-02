@@ -1,0 +1,209 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { JwtDecoderUI } from './ui';
+import './jwt-decoder-parser-and-claims-inspector.css';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as JwtDecoderUI;
+---
+
+<div id="jwt-root" class="jwt-root" data-i18n={JSON.stringify(t)}>
+  <section class="jwt-card">
+    <div class="jwt-input-panel">
+      <div class="jwt-token-field">
+        <label for="jwt-token" class="jwt-label">
+          <Icon name="mdi:key-variant" class="jwt-label-icon" />
+          {t.tokenLabel}
+        </label>
+        <textarea id="jwt-token" class="jwt-token-input" spellcheck="false" placeholder={t.tokenPlaceholder}>{t.sampleToken}</textarea>
+      </div>
+
+      <div class="jwt-action-row">
+        <button id="jwt-sample" class="jwt-action jwt-action-primary" type="button">
+          <Icon name="mdi:test-tube" class="jwt-button-icon" />
+          {t.sampleButton}
+        </button>
+        <button id="jwt-clear" class="jwt-action" type="button">
+          <Icon name="mdi:eraser" class="jwt-button-icon" />
+          {t.clearButton}
+        </button>
+        <button id="jwt-copy-all" class="jwt-action" type="button">
+          <Icon name="mdi:content-copy" class="jwt-button-icon" />
+          {t.copyAll}
+        </button>
+      </div>
+
+      <p id="jwt-status" class="jwt-status jwt-status-waiting" aria-live="polite">{t.statusWaiting}</p>
+      <p class="jwt-privacy">{t.privacyNote}</p>
+    </div>
+
+    <div class="jwt-output-grid">
+      <article class="jwt-json-panel">
+        <div class="jwt-panel-heading">
+          <h2>{t.headerTitle}</h2>
+          <button class="jwt-copy" type="button" data-copy-target="jwt-header-output" title={t.copyHeader} aria-label={t.copyHeader}>
+            <Icon name="mdi:content-copy" />
+          </button>
+        </div>
+        <pre id="jwt-header-output" class="jwt-code">{t.emptyJson}</pre>
+      </article>
+
+      <article class="jwt-json-panel jwt-json-panel-main">
+        <div class="jwt-panel-heading">
+          <h2>{t.payloadTitle}</h2>
+          <button class="jwt-copy" type="button" data-copy-target="jwt-payload-output" title={t.copyPayload} aria-label={t.copyPayload}>
+            <Icon name="mdi:content-copy" />
+          </button>
+        </div>
+        <pre id="jwt-payload-output" class="jwt-code">{t.emptyJson}</pre>
+      </article>
+
+      <article class="jwt-json-panel">
+        <div class="jwt-panel-heading">
+          <h2>{t.signatureTitle}</h2>
+          <button class="jwt-copy" type="button" data-copy-target="jwt-signature-output" title={t.copySignature} aria-label={t.copySignature}>
+            <Icon name="mdi:content-copy" />
+          </button>
+        </div>
+        <pre id="jwt-signature-output" class="jwt-code jwt-signature-code">{t.signatureMissing}</pre>
+      </article>
+    </div>
+
+    <aside class="jwt-claims-panel" aria-label={t.claimsTitle}>
+      <h2>{t.claimsTitle}</h2>
+      <dl class="jwt-claims">
+        <div><dt>{t.algorithmLabel}</dt><dd id="jwt-claim-alg">{t.claimMissing}</dd></div>
+        <div><dt>{t.typeLabel}</dt><dd id="jwt-claim-typ">{t.claimMissing}</dd></div>
+        <div><dt>{t.issuerLabel}</dt><dd id="jwt-claim-iss">{t.claimMissing}</dd></div>
+        <div><dt>{t.subjectLabel}</dt><dd id="jwt-claim-sub">{t.claimMissing}</dd></div>
+        <div><dt>{t.audienceLabel}</dt><dd id="jwt-claim-aud">{t.claimMissing}</dd></div>
+        <div><dt>{t.issuedAtLabel}</dt><dd id="jwt-claim-iat">{t.claimMissing}</dd></div>
+        <div><dt>{t.notBeforeLabel}</dt><dd id="jwt-claim-nbf">{t.claimMissing}</dd></div>
+        <div><dt>{t.expiresAtLabel}</dt><dd id="jwt-claim-exp">{t.claimMissing}</dd></div>
+      </dl>
+    </aside>
+  </section>
+</div>
+
+<script>
+  import { decodeJwt, formatClaimDate, formatClaimValue, formatJson } from './logic';
+  import type { JwtDecoderUI } from './ui';
+
+  const root = document.getElementById('jwt-root') as HTMLElement;
+  const t = JSON.parse(root.dataset.i18n ?? '{}') as JwtDecoderUI;
+  const tokenInput = document.getElementById('jwt-token') as HTMLTextAreaElement;
+  const headerOutput = document.getElementById('jwt-header-output') as HTMLElement;
+  const payloadOutput = document.getElementById('jwt-payload-output') as HTMLElement;
+  const signatureOutput = document.getElementById('jwt-signature-output') as HTMLElement;
+  const status = document.getElementById('jwt-status') as HTMLElement;
+  const claims = {
+    alg: document.getElementById('jwt-claim-alg'),
+    typ: document.getElementById('jwt-claim-typ'),
+    iss: document.getElementById('jwt-claim-iss'),
+    sub: document.getElementById('jwt-claim-sub'),
+    aud: document.getElementById('jwt-claim-aud'),
+    iat: document.getElementById('jwt-claim-iat'),
+    nbf: document.getElementById('jwt-claim-nbf'),
+    exp: document.getElementById('jwt-claim-exp'),
+  };
+
+  function setStatus(text: string, tone: string) {
+    status.textContent = text;
+    status.className = `jwt-status jwt-status-${tone}`;
+  }
+
+  function setClaim(key: keyof typeof claims, value: string | null) {
+    const element = claims[key];
+    if (element) element.textContent = value ?? t.claimMissing;
+  }
+
+  function resetOutputs() {
+    headerOutput.textContent = t.emptyJson;
+    payloadOutput.textContent = t.emptyJson;
+    signatureOutput.textContent = t.signatureMissing;
+    Object.keys(claims).forEach((key) => setClaim(key as keyof typeof claims, null));
+    setStatus(t.statusWaiting, 'waiting');
+  }
+
+  function renderDecodedClaims(decoded: ReturnType<typeof decodeJwt>) {
+    headerOutput.textContent = formatJson(decoded.header);
+    payloadOutput.textContent = formatJson(decoded.payload);
+    signatureOutput.textContent = decoded.signature ? decoded.signature : t.signatureMissing;
+    setClaim('alg', formatClaimValue(decoded.header['alg']));
+    setClaim('typ', formatClaimValue(decoded.header['typ']));
+    setClaim('iss', formatClaimValue(decoded.payload['iss']));
+    setClaim('sub', formatClaimValue(decoded.payload['sub']));
+    setClaim('aud', formatClaimValue(decoded.payload['aud']));
+    setClaim('iat', formatClaimDate(decoded.payload['iat']) ?? formatClaimValue(decoded.payload['iat']));
+    setClaim('nbf', formatClaimDate(decoded.payload['nbf']) ?? formatClaimValue(decoded.payload['nbf']));
+    setClaim('exp', formatClaimDate(decoded.payload['exp']) ?? formatClaimValue(decoded.payload['exp']));
+  }
+
+  function renderDecodedStatus(decoded: ReturnType<typeof decodeJwt>) {
+    if (decoded.expired) {
+      setStatus(t.statusExpired, 'expired');
+    } else if (decoded.unsigned) {
+      setStatus(t.statusUnsigned, 'unsigned');
+    } else {
+      setStatus(`${t.statusValid} ${t.signaturePresent}`, 'valid');
+    }
+  }
+
+  function renderInvalidToken(error: ReturnType<typeof decodeJwt>['error']) {
+    resetOutputs();
+    headerOutput.textContent = t.invalidTokenTitle;
+    payloadOutput.textContent = error === 'invalid-segments' ? t.invalidSegmentError : t.invalidDecodeError;
+    setStatus(t.statusInvalid, 'invalid');
+  }
+
+  function updateDecoder() {
+    const token = tokenInput.value.trim();
+    if (!token) {
+      resetOutputs();
+      return;
+    }
+
+    const decoded = decodeJwt(token);
+    if (!decoded.valid) {
+      renderInvalidToken(decoded.error);
+      return;
+    }
+
+    renderDecodedClaims(decoded);
+    renderDecodedStatus(decoded);
+  }
+
+  async function copyText(text: string) {
+    if (!text || text === t.emptyJson || text === t.signatureMissing) return;
+    await navigator.clipboard.writeText(text);
+  }
+
+  tokenInput.addEventListener('input', updateDecoder);
+  document.getElementById('jwt-sample')?.addEventListener('click', () => {
+    tokenInput.value = t.sampleToken;
+    updateDecoder();
+  });
+  document.getElementById('jwt-clear')?.addEventListener('click', () => {
+    tokenInput.value = '';
+    resetOutputs();
+  });
+  document.getElementById('jwt-copy-all')?.addEventListener('click', () => {
+    copyText([headerOutput.textContent, payloadOutput.textContent, signatureOutput.textContent].join('\n\n'));
+  });
+  document.querySelectorAll<HTMLButtonElement>('.jwt-copy').forEach((button) => {
+    button.addEventListener('click', () => {
+      const target = document.getElementById(button.dataset.copyTarget ?? '');
+      copyText(target?.textContent ?? '');
+      button.dataset.copied = t.copiedLabel;
+      window.setTimeout(() => {
+        delete button.dataset.copied;
+      }, 1400);
+    });
+  });
+
+  updateDecoder();
+</script>

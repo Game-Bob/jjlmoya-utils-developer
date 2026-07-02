@@ -66,3 +66,5 @@ export { INSPECTOR_CERTIFICADOS_SSL_TOOL } from './tool/inspectorCertificadosSsl
 export { CONVERSOR_EXCEL_CSV_HTML_TOOL } from './tool/conversorExcelCsvHtml/index';
 
 export { SERP_PIXEL_SIMULATOR_TOOL } from './tool/serpPixelSimulator/index';
+
+export { JWT_DECODER_TOOL } from './tool/jwtDecoder/index';
