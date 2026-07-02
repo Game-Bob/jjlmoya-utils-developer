@@ -1,0 +1,234 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { CssBoxShadowGeneratorUI } from './ui';
+import './box-shadow-generator.css';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as CssBoxShadowGeneratorUI;
+---
+
+<div id="bsg-root" class="bsg-root" data-i18n={JSON.stringify(t)}>
+  <div class="bsg-card">
+    <div class="bsg-preview-area">
+      <div id="bsg-preview" class="bsg-preview-box" aria-label={t.previewLabel}></div>
+    </div>
+
+    <div class="bsg-presets-row">
+      <button class="bsg-chip" data-preset="card" type="button">{t.presetCard}</button>
+      <button class="bsg-chip" data-preset="float" type="button">{t.presetFloat}</button>
+      <button class="bsg-chip" data-preset="inset" type="button">{t.presetInset}</button>
+      <button class="bsg-chip" data-preset="glow" type="button">{t.presetGlow}</button>
+      <button class="bsg-chip" data-preset="layered" type="button">{t.presetLayered}</button>
+      <span class="bsg-grow"></span>
+      <button id="bsg-add-layer" class="bsg-icon-sm" type="button" title={t.addLayer}><Icon name="mdi:plus" /></button>
+      <button id="bsg-remove-layer" class="bsg-icon-sm" type="button" title={t.removeLayer}><Icon name="mdi:minus" /></button>
+      <button id="bsg-reset" class="bsg-icon-sm" type="button" title={t.resetAll}><Icon name="mdi:restore" /></button>
+    </div>
+
+    <div class="bsg-layers" id="bsg-layers">
+      <button class="bsg-layer-tab bsg-active" data-layer="0">
+        <span class="bsg-dot" style="background:#059669"></span>{t.layerPrefix} 1
+      </button>
+    </div>
+
+    <div class="bsg-sliders">
+      <div class="bsg-slider">
+        <label for="bsg-ox">{t.offsetXLabel} <output id="bsg-ox-val">0</output></label>
+        <input id="bsg-ox" type="range" min="-80" max="80" value="0" />
+      </div>
+      <div class="bsg-slider">
+        <label for="bsg-oy">{t.offsetYLabel} <output id="bsg-oy-val">16</output></label>
+        <input id="bsg-oy" type="range" min="-80" max="80" value="16" />
+      </div>
+      <div class="bsg-slider">
+        <label for="bsg-blur">{t.blurLabel} <output id="bsg-blur-val">32</output></label>
+        <input id="bsg-blur" type="range" min="0" max="120" value="32" />
+      </div>
+      <div class="bsg-slider">
+        <label for="bsg-spread">{t.spreadLabel} <output id="bsg-spread-val">-8</output></label>
+        <input id="bsg-spread" type="range" min="-40" max="40" value="-8" />
+      </div>
+      <div class="bsg-slider">
+        <label for="bsg-opacity">{t.opacityLabel} <output id="bsg-opacity-val">0.28</output></label>
+        <input id="bsg-opacity" type="range" min="0" max="100" value="28" />
+      </div>
+    </div>
+
+    <div class="bsg-inline-opts">
+      <label class="bsg-switch">
+        <input id="bsg-inset" type="checkbox" />
+        <span>{t.insetLabel}</span>
+      </label>
+      <label class="bsg-color-pick">
+        <input id="bsg-color" type="color" value="#059669" />
+        <code id="bsg-color-hex">#059669</code>
+      </label>
+      <label class="bsg-color-pick">
+        <span>{t.bgColorLabel}</span>
+        <input id="bsg-bg" type="color" value="#ffffff" />
+      </label>
+    </div>
+
+    <div class="bsg-code-block">
+      <div class="bsg-code-bar">
+        <span>CSS</span>
+        <button id="bsg-copy" class="bsg-copy-btn" type="button"><Icon name="mdi:content-copy" /> {t.copyCode}</button>
+      </div>
+      <pre id="bsg-code" class="bsg-code"></pre>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { buildShadowCss, buildShadowValue } from './logic';
+  import type { ShadowLayer } from './logic';
+  import type { CssBoxShadowGeneratorUI } from './ui';
+
+  const root = document.getElementById('bsg-root') as HTMLElement;
+  const t = JSON.parse(root.dataset.i18n ?? '{}') as CssBoxShadowGeneratorUI;
+
+  const preview = document.getElementById('bsg-preview') as HTMLElement;
+  const code = document.getElementById('bsg-code') as HTMLElement;
+  const ox = document.getElementById('bsg-ox') as HTMLInputElement;
+  const oy = document.getElementById('bsg-oy') as HTMLInputElement;
+  const blur = document.getElementById('bsg-blur') as HTMLInputElement;
+  const spread = document.getElementById('bsg-spread') as HTMLInputElement;
+  const opacity = document.getElementById('bsg-opacity') as HTMLInputElement;
+  const color = document.getElementById('bsg-color') as HTMLInputElement;
+  const bg = document.getElementById('bsg-bg') as HTMLInputElement;
+  const inset = document.getElementById('bsg-inset') as HTMLInputElement;
+  const layersEl = document.getElementById('bsg-layers') as HTMLElement;
+
+  let activeLayer = 0;
+  const layers: ShadowLayer[] = [
+    { offsetX: 0, offsetY: 16, blur: 32, spread: -8, color: '#059669', opacity: 0.28, inset: false },
+  ];
+
+  const PRESETS: Record<string, ShadowLayer[]> = {
+    card: [{ offsetX: 0, offsetY: 6, blur: 16, spread: -2, color: '#0f172a', opacity: 0.15, inset: false }],
+    float: [{ offsetX: 0, offsetY: 16, blur: 40, spread: -8, color: '#0f172a', opacity: 0.2, inset: false }],
+    inset: [{ offsetX: 0, offsetY: 3, blur: 10, spread: -1, color: '#0f172a', opacity: 0.18, inset: true }],
+    glow: [{ offsetX: 0, offsetY: 0, blur: 30, spread: 6, color: '#3b82f6', opacity: 0.45, inset: false }],
+    layered: [
+      { offsetX: 0, offsetY: 1, blur: 2, spread: 0, color: '#0f172a', opacity: 0.12, inset: false },
+      { offsetX: 0, offsetY: 10, blur: 28, spread: -6, color: '#0f172a', opacity: 0.14, inset: false },
+      { offsetX: 0, offsetY: 28, blur: 60, spread: -12, color: '#0f172a', opacity: 0.08, inset: false },
+    ],
+  };
+
+  function readLayer(): ShadowLayer {
+    return {
+      offsetX: Number(ox.value), offsetY: Number(oy.value),
+      blur: Number(blur.value), spread: Number(spread.value),
+      color: color.value, opacity: Number(opacity.value) / 100,
+      inset: inset.checked,
+    };
+  }
+
+  function showLayer(l: ShadowLayer) {
+    ox.value = String(l.offsetX); oy.value = String(l.offsetY);
+    blur.value = String(l.blur); spread.value = String(l.spread);
+    color.value = l.color; opacity.value = String(Math.round(l.opacity * 100));
+    inset.checked = l.inset;
+  }
+
+  function sync() {
+    const l = layers[activeLayer];
+    (document.getElementById('bsg-ox-val')!).textContent = String(l.offsetX);
+    (document.getElementById('bsg-oy-val')!).textContent = String(l.offsetY);
+    (document.getElementById('bsg-blur-val')!).textContent = String(l.blur);
+    (document.getElementById('bsg-spread-val')!).textContent = String(l.spread);
+    (document.getElementById('bsg-opacity-val')!).textContent = l.opacity.toFixed(2);
+    (document.getElementById('bsg-color-hex')!).textContent = l.color;
+    preview.style.boxShadow = buildShadowValue(layers);
+    preview.style.backgroundColor = bg.value;
+    code.textContent = buildShadowCss(layers);
+  }
+
+  function renderTabs() {
+    layersEl.innerHTML = '';
+    layers.forEach((l, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'bsg-layer-tab' + (i === activeLayer ? ' bsg-active' : '');
+      const dot = document.createElement('span');
+      dot.className = 'bsg-dot';
+      dot.style.backgroundColor = l.color;
+      btn.append(dot, `${t.layerPrefix} ${i + 1}`);
+      btn.addEventListener('click', () => {
+        layers[activeLayer] = readLayer();
+        activeLayer = i;
+        showLayer(layers[i]);
+        renderTabs();
+        sync();
+      });
+      layersEl.append(btn);
+    });
+  }
+
+  function onInput() { layers[activeLayer] = readLayer(); sync(); }
+
+  function addLayer() {
+    if (layers.length >= 5) return;
+    layers[activeLayer] = readLayer();
+    layers.push({ offsetX: 4, offsetY: 4, blur: 10, spread: 0, color: '#6366f1', opacity: 0.35, inset: false });
+    activeLayer = layers.length - 1;
+    showLayer(layers[activeLayer]);
+    renderTabs();
+    sync();
+  }
+
+  function removeLayer() {
+    if (layers.length <= 1) return;
+    layers.splice(activeLayer, 1);
+    if (activeLayer >= layers.length) activeLayer = layers.length - 1;
+    showLayer(layers[activeLayer]);
+    renderTabs();
+    sync();
+  }
+
+  function resetAll() {
+    layers.splice(0, layers.length, { offsetX: 0, offsetY: 16, blur: 32, spread: -8, color: '#059669', opacity: 0.28, inset: false });
+    activeLayer = 0;
+    bg.value = '#ffffff';
+    showLayer(layers[0]);
+    document.querySelectorAll('.bsg-chip').forEach((b) => b.classList.remove('bsg-active'));
+    renderTabs();
+    sync();
+  }
+
+  [ox, oy, blur, spread, opacity, color, inset, bg].forEach((el) => {
+    el.addEventListener('input', onInput);
+  });
+
+  document.getElementById('bsg-add-layer')!.addEventListener('click', addLayer);
+  document.getElementById('bsg-remove-layer')!.addEventListener('click', removeLayer);
+  document.getElementById('bsg-reset')!.addEventListener('click', resetAll);
+
+  document.querySelectorAll('.bsg-chip').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const name = (btn as HTMLElement).dataset.preset;
+      if (!name || !PRESETS[name]) return;
+      document.querySelectorAll('.bsg-chip').forEach((b) => b.classList.remove('bsg-active'));
+      btn.classList.add('bsg-active');
+      layers.splice(0, layers.length, ...PRESETS[name].map((l) => ({ ...l })));
+      activeLayer = 0;
+      showLayer(layers[0]);
+      renderTabs();
+      sync();
+    });
+  });
+
+  const copyBtn = document.getElementById('bsg-copy')!;
+  copyBtn.addEventListener('click', async () => {
+    await navigator.clipboard.writeText(code.textContent ?? '');
+    copyBtn.dataset.copied = t.copied;
+    window.setTimeout(() => { delete copyBtn.dataset.copied; }, 1400);
+  });
+
+  renderTabs();
+  sync();
+</script>
