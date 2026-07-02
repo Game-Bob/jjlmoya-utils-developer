@@ -10,7 +10,7 @@ const description = 'Incolla un JSON Web Token, decodifica header e payload all\
 const howTo = [
   {
     name: 'Incolla il JWT',
-    text: 'Copia un token da un header Authorization, cookie, voce di log o provider di identita e incollalo nel campo di input.',
+    text: 'Copia un token da un header Authorization, cookie, voce di log o provider di identità e incollalo nel campo di input.',
   },
   {
     name: 'Leggi header e payload decodificati',
@@ -18,7 +18,7 @@ const howTo = [
   },
   {
     name: 'Controlla i claims importanti',
-    text: 'Esamina algoritmo, emittente, audience, soggetto, data di emissione, data di inizio validita e data di scadenza senza convertire manualmente i timestamp Unix.',
+    text: 'Esamina algoritmo, emittente, audience, soggetto, data di emissione, data di inizio validità e data di scadenza senza convertire manualmente i timestamp Unix.',
   },
   {
     name: 'Copia i dati che ti servono',
@@ -28,16 +28,16 @@ const howTo = [
 
 const faq = [
   {
-    question: 'Decodificare un JWT dimostra che il token e valido?',
-    answer: 'No. La decodifica rivela solo l\'header e il payload codificati in base64url. Un token e affidabile solo dopo che la firma, l\'emittente, l\'audience, la scadenza e i claims correlati sono stati convalidati dall\'applicazione o dal provider di identita.',
+    question: 'Decodificare un JWT dimostra che il token è valido?',
+    answer: 'No. La decodifica rivela solo l\'header e il payload codificati in base64url. Un token è affidabile solo dopo che la firma, l\'emittente, l\'audience, la scadenza e i claims correlati sono stati convalidati dall\'applicazione o dal provider di identità.',
   },
   {
     question: 'Posso usare questo decodificatore JWT per access token e ID token?',
-    answer: 'Si. Il decodificatore e utile per ispezionare access token OAuth, ID token OpenID Connect, token di sessione e token da servizio a servizio, purche utilizzino il formato JWT standard in tre parti.',
+    answer: 'Sì. Il decodificatore è utile per ispezionare access token OAuth, ID token OpenID Connect, token di sessione e token da servizio a servizio, purché utilizzino il formato JWT standard in tre parti.',
   },
   {
-    question: 'Perche il pannello della firma non verifica il token?',
-    answer: 'La verifica JWT richiede il segreto corretto, la chiave pubblica o la configurazione JWKS. Questo strumento si concentra intenzionalmente sulla decodifica e sull\'ispezione, cosi che gli sviluppatori possano vedere il contenuto del token senza fingere che una stringa di firma visibile sia una prova di validita.',
+    question: 'Perché il pannello della firma non verifica il token?',
+    answer: 'La verifica JWT richiede il segreto corretto, la chiave pubblica o la configurazione JWKS. Questo strumento si concentra intenzionalmente sulla decodifica e sull\'ispezione, così che gli sviluppatori possano vedere il contenuto del token senza fingere che una stringa di firma visibile sia una prova di validità.',
   },
   {
     question: 'Cosa dovrei controllare per primo quando faccio debug di un JWT?',
@@ -53,8 +53,8 @@ const ui: JwtDecoderUI = {
   statusWaiting: 'Incolla un token per decodificare il suo header JSON, payload e claims.',
   statusValid: 'JWT decodificato con successo.',
   statusInvalid: 'Questo non sembra un JWT valido in tre parti.',
-  statusExpired: 'JWT decodificato, ma il claim exp e gia scaduto.',
-  statusUnsigned: 'JWT decodificato, ma non e firmato o utilizza l\'algoritmo none.',
+  statusExpired: 'JWT decodificato, ma il claim exp è già scaduto.',
+  statusUnsigned: 'JWT decodificato, ma non è firmato o utilizza l\'algoritmo none.',
   headerTitle: 'Header',
   payloadTitle: 'Payload',
   signatureTitle: 'Firma',
@@ -69,7 +69,7 @@ const ui: JwtDecoderUI = {
   invalidSegmentError: 'Verifica che il token abbia tre segmenti base64url separati da punti.',
   invalidDecodeError: 'L\'header o il payload non hanno potuto essere decodificati come JSON valido.',
   emptyJson: '{}',
-  signaturePresent: 'Il segmento della firma e presente; verificalo nel tuo livello di autenticazione con la chiave corretta.',
+  signaturePresent: 'Il segmento della firma è presente; verificalo nel tuo livello di autenticazione con la chiave corretta.',
   signatureMissing: 'Nessun segmento di firma',
   algorithmLabel: 'Algoritmo',
   typeLabel: 'Tipo',
@@ -144,13 +144,13 @@ export const content: ToolLocaleContent<JwtDecoderUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Un JSON Web Token sembra compatto, ma spesso contiene il dettaglio esatto che spiega un errore di autenticazione: l\'algoritmo di firma, l\'emittente, l\'audience, il soggetto, la data di emissione, la data di inizio validita, la scadenza e i claims di autorizzazione specifici dell\'applicazione. Questo <strong>decodificatore JWT, parser e ispettore di claims</strong> trasforma i tre segmenti del token in JSON leggibile per aiutarti a fare debug dei flussi di autenticazione piu velocemente.',
+      html: 'Un JSON Web Token sembra compatto, ma spesso contiene il dettaglio esatto che spiega un errore di autenticazione: l\'algoritmo di firma, l\'emittente, l\'audience, il soggetto, la data di emissione, la data di inizio validità, la scadenza e i claims di autorizzazione specifici dell\'applicazione. Questo <strong>decodificatore JWT, parser e ispettore di claims</strong> trasforma i tre segmenti del token in JSON leggibile per aiutarti a fare debug dei flussi di autenticazione più velocemente.',
     },
     {
       type: 'diagnostic',
       variant: 'warning',
       title: 'Decodificato non significa affidabile',
-      html: 'Chiunque puo decodificare un JWT in base64url. La fiducia inizia solo dopo che la tua applicazione ha verificato la firma con il segreto, la chiave pubblica o il JWKS corretti, e poi ha convalidato emittente, audience, scadenza ed eventuali claims specifici del dominio. Usa questo strumento per ispezionare i dati, non per accettare un token come autentico.',
+      html: 'Chiunque può decodificare un JWT in base64url. La fiducia inizia solo dopo che la tua applicazione ha verificato la firma con il segreto, la chiave pubblica o il JWKS corretti, e poi ha convalidato emittente, audience, scadenza ed eventuali claims specifici del dominio. Usa questo strumento per ispezionare i dati, non per accettare un token come autentico.',
     },
     {
       type: 'title',
@@ -162,7 +162,7 @@ export const content: ToolLocaleContent<JwtDecoderUI> = {
       headers: ['Segmento', 'Contenuto tipico', 'Valore di debug'],
       rows: [
         ['Header', 'Algoritmo, tipo di token e ID chiave opzionale', 'Mostra se il token prevede HS256, RS256, ES256 o un\'altra strategia di verifica.'],
-        ['Payload', 'Claims registrati e claims applicativi', 'Rivela identita, tenant, scope, ruoli, scadenza e disallineamenti di audience.'],
+        ['Payload', 'Claims registrati e claims applicativi', 'Rivela identità, tenant, scope, ruoli, scadenza e disallineamenti di audience.'],
         ['Firma', 'Byte della firma crittografica codificati come base64url', 'Conferma che esiste un segmento di firma, ma deve essere verificato con la chiave corretta altrove.'],
       ],
     },
@@ -174,11 +174,11 @@ export const content: ToolLocaleContent<JwtDecoderUI> = {
     {
       type: 'list',
       items: [
-        '<strong>exp:</strong> se il token e scaduto, la logica di refresh o le impostazioni dell\'orologio potrebbero essere errate.',
-        '<strong>nbf:</strong> se il token non e ancora attivo, gli orologi del server e del provider di identita potrebbero non essere sincronizzati.',
+        '<strong>exp:</strong> se il token è scaduto, la logica di refresh o le impostazioni dell\'orologio potrebbero essere errate.',
+        '<strong>nbf:</strong> se il token non è ancora attivo, gli orologi del server e del provider di identità potrebbero non essere sincronizzati.',
         '<strong>iss:</strong> se l\'URL dell\'emittente differisce dalla configurazione, il token potrebbe provenire dal tenant o dall\'ambiente sbagliato.',
-        '<strong>aud:</strong> se l\'audience non corrisponde all\'identificatore dell\'API, il token e stato emesso per un\'altra risorsa.',
-        '<strong>alg:</strong> se l\'algoritmo e inaspettato, il tuo verificatore potrebbe rifiutare il token o esporre un pericoloso errore di configurazione.',
+        '<strong>aud:</strong> se l\'audience non corrisponde all\'identificatore dell\'API, il token è stato emesso per un\'altra risorsa.',
+        '<strong>alg:</strong> se l\'algoritmo è inaspettato, il tuo verificatore potrebbe rifiutare il token o esporre un pericoloso errore di configurazione.',
       ],
     },
     {
@@ -204,7 +204,7 @@ export const content: ToolLocaleContent<JwtDecoderUI> = {
           points: ['Convalida la forma dell\'audience', 'Individua disallineamenti dell\'emittente', 'Ispeziona i bearer token'],
         },
         {
-          title: 'Configurazione del provider di identita',
+          title: 'Configurazione del provider di identità',
           description: 'Verifica se i claims di Auth0, Azure AD, Cognito, Keycloak o di un provider personalizzato sono strutturati come la tua app si aspetta.',
           icon: 'mdi:account-key',
           points: ['Esamina i dati del tenant', 'Controlla i claims personalizzati', 'Confronta i mapping del provider'],
@@ -222,15 +222,15 @@ export const content: ToolLocaleContent<JwtDecoderUI> = {
       items: [
         {
           pro: 'Vedi immediatamente i token malformati.',
-          con: 'Non puo conoscere l\'audience o l\'emittente che ti aspetti.',
+          con: 'Non può conoscere l\'audience o l\'emittente che ti aspetti.',
         },
         {
           pro: 'Converti i claims timestamp Unix in date leggibili.',
-          con: 'Non puo verificare una firma senza il materiale della chiave reale.',
+          con: 'Non può verificare una firma senza il materiale della chiave reale.',
         },
         {
           pro: 'Individua valori mancanti di emittente, audience, soggetto o tipo.',
-          con: 'Non puo dimostrare che scope e ruoli sono sicuri per la tua applicazione.',
+          con: 'Non può dimostrare che scope e ruoli sono sicuri per la tua applicazione.',
         },
       ],
     },

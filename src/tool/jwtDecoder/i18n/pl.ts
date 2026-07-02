@@ -5,69 +5,69 @@ import { bibliography } from '../bibliography';
 
 const slug = 'dekoder-jwt-parser-i-inspektor-claims';
 const title = 'Dekoder JWT, Parser i Inspektor Claims';
-const description = 'Wklej JSON Web Token, natychmiast zdekoduj jego naglowek i payload, sprawdz zarejestrowane claims, wykryj wygasle tokeny i skopiuj czysty JSON do debugowania procesow uwierzytelniania.';
+const description = 'Wklej JSON Web Token, natychmiast zdekoduj jego nagłówek i payload, sprawdź zarejestrowane claims, wykryj wygasłe tokeny i skopiuj czysty JSON do debugowania procesów uwierzytelniania.';
 
 const howTo = [
   {
     name: 'Wklej JWT',
-    text: 'Skopiuj token z naglowka Authorization, ciasteczka, wpisu w logu lub dostawcy tozsamosci i wklej go w pole wejsciowe.',
+    text: 'Skopiuj token z nagłówka Authorization, ciasteczka, wpisu w logu lub dostawcy tożsamości i wklej go w pole wejściowe.',
   },
   {
-    name: 'Odczytaj odkodowany naglowek i payload',
-    text: 'Narzedzie dzieli token na naglowek, payload i podpis, a nastepnie renderuje segmenty JSON w oddzielnych panelach do szybkiej inspekcji.',
+    name: 'Odczytaj odkodowany nagłówek i payload',
+    text: 'Narzędzie dzieli token na nagłówek, payload i podpis, a następnie renderuje segmenty JSON w oddzielnych panelach do szybkiej inspekcji.',
   },
   {
-    name: 'Sprawdz wazne claims',
-    text: 'Przejrzyj algorytm, wystawce, odbiorce, temat, czas wystawienia, czas waznosci od i czas wygasniecia bez recznego przeliczania znacznikow czasu Unix.',
+    name: 'Sprawdź ważne claims',
+    text: 'Przejrzyj algorytm, wystawcę, odbiorcę, temat, czas wystawienia, czas ważności od i czas wygaśnięcia bez ręcznego przeliczania znaczników czasu Unix.',
   },
   {
     name: 'Skopiuj potrzebne dane',
-    text: 'Skopiuj jedna odkodowana sekcje lub cale odkodowane dane wyjsciowe, gdy potrzebujesz udostepnic oczyszczona migawke debugowania swojemu zespolowi.',
+    text: 'Skopiuj jedną odkodowaną sekcję lub całe odkodowane dane wyjściowe, gdy potrzebujesz udostępnić oczyszczoną migawkę debugowania swojemu zespołowi.',
   },
 ];
 
 const faq = [
   {
-    question: 'Czy odkodowanie JWT dowodzi, ze token jest wazny?',
-    answer: 'Nie. Odkodowanie ujawnia tylko naglowek i payload zakodowane w base64url. Token jest godny zaufania dopiero po zweryfikowaniu podpisu, wystawcy, odbiorcy, daty wygasniecia i powiazanych claims przez aplikacje lub dostawce tozsamosci.',
+    question: 'Czy odkodowanie JWT dowodzi, że token jest ważny?',
+    answer: 'Nie. Odkodowanie ujawnia tylko nagłówek i payload zakodowane w base64url. Token jest godny zaufania dopiero po zweryfikowaniu podpisu, wystawcy, odbiorcy, daty wygaśnięcia i powiązanych claims przez aplikację lub dostawcę tożsamości.',
   },
   {
-    question: 'Czy moge uzywac tego dekodera JWT do access tokenow i ID tokenow?',
-    answer: 'Tak. Dekoder jest przydatny do inspekcji access tokenow OAuth, ID tokenow OpenID Connect, tokenow sesyjnych i tokenow service-to-service, o ile uzywaja standardowego trzyczesciowego formatu JWT.',
+    question: 'Czy mogę używać tego dekodera JWT do access tokenów i ID tokenów?',
+    answer: 'Tak. Dekoder jest przydatny do inspekcji access tokenów OAuth, ID tokenów OpenID Connect, tokenów sesyjnych i tokenów service-to-service, o ile używają standardowego trzyczęściowego formatu JWT.',
   },
   {
     question: 'Dlaczego panel podpisu nie weryfikuje tokena?',
-    answer: 'Weryfikacja JWT wymaga poprawnego sekretu, klucza publicznego lub konfiguracji JWKS. To narzedzie celowo koncentruje sie na odkodowaniu i inspekcji, aby programisci mogli zobaczyc zawartosc tokena bez udawania, ze widoczny ciag podpisu jest dowodem waznosci.',
+    answer: 'Weryfikacja JWT wymaga poprawnego sekretu, klucza publicznego lub konfiguracji JWKS. To narzędzie celowo koncentruje się na odkodowaniu i inspekcji, aby programiści mogli zobaczyć zawartość tokena bez udawania, że widoczny ciąg podpisu jest dowodem ważności.',
   },
   {
-    question: 'Co powinienem sprawdzic najpierw podczas debugowania JWT?',
-    answer: 'Zacznij od exp, nbf, iss, aud i alg. Wiekszosc rzeczywistych problemow produkcyjnych wynika z wygaslych tokenow, rozbieznosci zegarow, nieprawidlowych wartosci odbiorcy, nieoczekiwanych adresow URL wystawcy lub niebezpiecznych zalozen dotyczacych algorytmu.',
+    question: 'Co powinienem sprawdzić najpierw podczas debugowania JWT?',
+    answer: 'Zacznij od exp, nbf, iss, aud i alg. Większość rzeczywistych problemów produkcyjnych wynika z wygasłych tokenów, rozbieżności zegarów, nieprawidłowych wartości odbiorcy, nieoczekiwanych adresów URL wystawcy lub niebezpiecznych założeń dotyczących algorytmu.',
   },
 ];
 
 const ui: JwtDecoderUI = {
   tokenLabel: 'Token JWT',
-  tokenPlaceholder: 'Wklej tutaj JWT: naglowek.payload.podpis',
-  sampleButton: 'Wczytaj przyklad',
-  clearButton: 'Wyczysc',
-  statusWaiting: 'Wklej token, aby odkodowac jego naglowek JSON, payload i claims.',
-  statusValid: 'JWT pomyslnie odkodowany.',
-  statusInvalid: 'To nie wyglada na poprawny trzyczesciowy JWT.',
-  statusExpired: 'JWT odkodowany, ale claim exp jest juz wygasly.',
-  statusUnsigned: 'JWT odkodowany, ale nie jest podpisany lub uzywa algorytmu none.',
-  headerTitle: 'Naglowek',
+  tokenPlaceholder: 'Wklej tutaj JWT: nagłówek.payload.podpis',
+  sampleButton: 'Wczytaj przykład',
+  clearButton: 'Wyczyść',
+  statusWaiting: 'Wklej token, aby odkodować jego nagłówek JSON, payload i claims.',
+  statusValid: 'JWT pomyślnie odkodowany.',
+  statusInvalid: 'To nie wygląda na poprawny trzyczęściowy JWT.',
+  statusExpired: 'JWT odkodowany, ale claim exp jest już wygasły.',
+  statusUnsigned: 'JWT odkodowany, ale nie jest podpisany lub używa algorytmu none.',
+  headerTitle: 'Nagłówek',
   payloadTitle: 'Payload',
   signatureTitle: 'Podpis',
   claimsTitle: 'Zarejestrowane claims',
-  copyHeader: 'Kopiuj odkodowany naglowek',
+  copyHeader: 'Kopiuj odkodowany nagłówek',
   copyPayload: 'Kopiuj odkodowany payload',
   copySignature: 'Kopiuj podpis',
   copyAll: 'Kopiuj wszystko',
   copiedLabel: 'Skopiowano',
-  invalidTokenTitle: 'Nieprawidlowy JWT',
-  invalidTokenBody: 'Sprawdz, czy token ma trzy segmenty base64url oddzielone kropkami.',
-  invalidSegmentError: 'Sprawdz, czy token ma trzy segmenty base64url oddzielone kropkami.',
-  invalidDecodeError: 'Naglowek lub payload nie mogl zostac odkodowany jako prawidlowy JSON.',
+  invalidTokenTitle: 'Nieprawidłowy JWT',
+  invalidTokenBody: 'Sprawdź, czy token ma trzy segmenty base64url oddzielone kropkami.',
+  invalidSegmentError: 'Sprawdź, czy token ma trzy segmenty base64url oddzielone kropkami.',
+  invalidDecodeError: 'Nagłówek lub payload nie mógł zostać odkodowany jako prawidłowy JSON.',
   emptyJson: '{}',
   signaturePresent: 'Segment podpisu jest obecny; zweryfikuj go w swojej warstwie uwierzytelniania z poprawnym kluczem.',
   signatureMissing: 'Brak segmentu podpisu',
@@ -77,10 +77,10 @@ const ui: JwtDecoderUI = {
   subjectLabel: 'Temat',
   audienceLabel: 'Odbiorca',
   issuedAtLabel: 'Wystawiony',
-  notBeforeLabel: 'Wazny od',
+  notBeforeLabel: 'Ważny od',
   expiresAtLabel: 'Wygasa',
   claimMissing: 'Nieobecny',
-  privacyNote: 'Dekodowanie odbywa sie w sesji przegladarki. Nie wklejaj sekretow produkcyjnych do zadnego narzedzia, chyba ze zezwala na to Twoja polityka bezpieczenstwa.',
+  privacyNote: 'Dekodowanie odbywa się w sesji przeglądarki. Nie wklejaj sekretów produkcyjnych do żadnego narzędzia, chyba że zezwala na to Twoja polityka bezpieczeństwa.',
   sampleToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnYW1lYm9iLXVzZXItNDIiLCJuYW1lIjoiR2FtZUJvYiBEZXZlbG9wZXIiLCJpc3MiOiJodHRwczovL3d3dy5nYW1lYm9iLmRldiIsImF1ZCI6ImRldmVsb3Blci10b29scyIsImlhdCI6MTcxNzIwMDAwMCwibmJmIjoxNzE3MjAwMDAwLCJleHAiOjE4OTM0NTYwMDAsInJvbGUiOiJhZG1pbiJ9.demo-signature',
 };
 
@@ -131,53 +131,53 @@ export const content: ToolLocaleContent<JwtDecoderUI> = {
   ui,
   faqTitle: 'FAQ dekodera JWT',
   faq,
-  bibliographyTitle: 'Specyfikacje JWT i odniesienia bezpieczenstwa',
+  bibliographyTitle: 'Specyfikacje JWT i odniesienia bezpieczeństwa',
   bibliography,
   howTo,
   schemas: [appSchema, faqSchema, howToSchema],
   seo: [
     {
       type: 'title',
-      text: 'Dekoduj JWT bez utraty kontekstu bezpieczenstwa',
+      text: 'Dekoduj JWT bez utraty kontekstu bezpieczeństwa',
       level: 2,
     },
     {
       type: 'paragraph',
-      html: 'JSON Web Token wyglada na zwarty, ale czesto zawiera dokladnie te szczegoly, ktore wyjasniaja blad uwierzytelniania: algorytm podpisywania, wystawce, odbiorce, temat, czas wystawienia, czas waznosci od, date wygasniecia i claims autoryzacyjne specyficzne dla aplikacji. Ten <strong>dekoder JWT, parser i inspektor claims</strong> przeksztalca trzy segmenty tokena w czytelny JSON, dzieki czemu mozesz szybciej debugowac procesy uwierzytelniania.',
+      html: 'JSON Web Token wygląda na zwarty, ale często zawiera dokładnie te szczegóły, które wyjaśniają błąd uwierzytelniania: algorytm podpisywania, wystawcę, odbiorcę, temat, czas wystawienia, czas ważności od, datę wygaśnięcia i claims autoryzacyjne specyficzne dla aplikacji. Ten <strong>dekoder JWT, parser i inspektor claims</strong> przekształca trzy segmenty tokena w czytelny JSON, dzięki czemu możesz szybciej debugować procesy uwierzytelniania.',
     },
     {
       type: 'diagnostic',
       variant: 'warning',
       title: 'Odkodowany nie oznacza zaufany',
-      html: 'Kazdy moze zdekodowac JWT za pomoca base64url. Zaufanie zaczyna sie dopiero po zweryfikowaniu podpisu przez aplikacje przy uzyciu poprawnego sekretu, klucza publicznego lub JWKS, a nastepnie zwalidowaniu wystawcy, odbiorcy, daty wygasniecia i wszelkich claims specyficznych dla domeny. Uzywaj tego narzedzia do inspekcji danych, a nie do uznawania tokena za autentyczny.',
+      html: 'Każdy może zdekodować JWT za pomocą base64url. Zaufanie zaczyna się dopiero po zweryfikowaniu podpisu przez aplikację przy użyciu poprawnego sekretu, klucza publicznego lub JWKS, a następnie zwalidowaniu wystawcy, odbiorcy, daty wygaśnięcia i wszelkich claims specyficznych dla domeny. Używaj tego narzędzia do inspekcji danych, a nie do uznawania tokena za autentyczny.',
     },
     {
       type: 'title',
-      text: 'Co mowi kazdy segment JWT',
+      text: 'Co mówi każdy segment JWT',
       level: 3,
     },
     {
       type: 'table',
-      headers: ['Segment', 'Typowa zawartosc', 'Wartosc debugowania'],
+      headers: ['Segment', 'Typowa zawartość', 'Wartość debugowania'],
       rows: [
-        ['Naglowek', 'Algorytm, typ tokena i opcjonalny identyfikator klucza', 'Pokazuje, czy token oczekuje HS256, RS256, ES256 lub innej strategii weryfikacji.'],
-        ['Payload', 'Zarejestrowane claims i claims aplikacji', 'Ujawnia tozsamosc, dzierzawe, zakresy, role, wygasniecie i niezgodnosci odbiorcy.'],
-        ['Podpis', 'Bajty podpisu kryptograficznego zakodowane jako base64url', 'Potwierdza, ze segment podpisu istnieje, ale musi zostac zweryfikowany z odpowiednim kluczem w innym miejscu.'],
+        ['Nagłówek', 'Algorytm, typ tokena i opcjonalny identyfikator klucza', 'Pokazuje, czy token oczekuje HS256, RS256, ES256 lub innej strategii weryfikacji.'],
+        ['Payload', 'Zarejestrowane claims i claims aplikacji', 'Ujawnia tożsamość, dzierżawę, zakresy, role, wygaśnięcie i niezgodności odbiorcy.'],
+        ['Podpis', 'Bajty podpisu kryptograficznego zakodowane jako base64url', 'Potwierdza, że segment podpisu istnieje, ale musi zostać zweryfikowany z odpowiednim kluczem w innym miejscu.'],
       ],
     },
     {
       type: 'title',
-      text: 'Claims, ktore zwykle wyjasniaja nieudane uwierzytelnianie',
+      text: 'Claims, które zwykle wyjaśniają nieudane uwierzytelnianie',
       level: 3,
     },
     {
       type: 'list',
       items: [
-        '<strong>exp:</strong> jesli token wygasl, logika odswiezania lub ustawienia zegara moga byc nieprawidlowe.',
-        '<strong>nbf:</strong> jesli token nie jest jeszcze aktywny, zegary serwera i dostawcy tozsamosci moga byc rozsynchronizowane.',
-        '<strong>iss:</strong> jesli adres URL wystawcy rozni sie od konfiguracji, token moze pochodzic z niewlasciwej dzierzawy lub srodowiska.',
-        '<strong>aud:</strong> jesli odbiorca nie pasuje do identyfikatora API, token zostal wybity dla innego zasobu.',
-        '<strong>alg:</strong> jesli algorytm jest nieoczekiwany, weryfikator moze odrzucic token lub ujawnic niebezpieczny blad konfiguracji.',
+        '<strong>exp:</strong> jeśli token wygasł, logika odświeżania lub ustawienia zegara mogą być nieprawidłowe.',
+        '<strong>nbf:</strong> jeśli token nie jest jeszcze aktywny, zegary serwera i dostawcy tożsamości mogą być rozsynchronizowane.',
+        '<strong>iss:</strong> jeśli adres URL wystawcy różni się od konfiguracji, token może pochodzić z niewłaściwej dzierżawy lub środowiska.',
+        '<strong>aud:</strong> jeśli odbiorca nie pasuje do identyfikatora API, token został wybity dla innego zasobu.',
+        '<strong>alg:</strong> jeśli algorytm jest nieoczekiwany, weryfikator może odrzucić token lub ujawnić niebezpieczny błąd konfiguracji.',
       ],
     },
     {
@@ -191,28 +191,28 @@ export const content: ToolLocaleContent<JwtDecoderUI> = {
       items: [
         {
           title: 'Debugowanie frontendu',
-          description: 'Sprawdzaj ID tokeny i access tokeny otrzymane po zalogowaniu, aby potwierdzic zakresy, role i claims profilu.',
+          description: 'Sprawdzaj ID tokeny i access tokeny otrzymane po zalogowaniu, aby potwierdzić zakresy, role i claims profilu.',
           icon: 'mdi:monitor-dashboard',
-          points: ['Sprawdz claims profilu', 'Potwierdz zakresy i role', 'Porownaj srodowiska logowania'],
+          points: ['Sprawdź claims profilu', 'Potwierdź zakresy i role', 'Porównaj środowiska logowania'],
         },
         {
           title: 'QA API backendu',
-          description: 'Porownaj oczekiwane wartosci wystawcy i odbiorcy z tokenem faktycznie wyslanym w naglowku Authorization.',
+          description: 'Porównaj oczekiwane wartości wystawcy i odbiorcy z tokenem faktycznie wysłanym w nagłówku Authorization.',
           icon: 'mdi:api',
           highlight: true,
-          points: ['Zweryfikuj ksztalt odbiorcy', 'Wykryj niezgodnosci wystawcy', 'Sprawdz bearer tokeny'],
+          points: ['Zweryfikuj kształt odbiorcy', 'Wykryj niezgodności wystawcy', 'Sprawdź bearer tokeny'],
         },
         {
-          title: 'Konfiguracja dostawcy tozsamosci',
-          description: 'Sprawdz, czy claims z Auth0, Azure AD, Cognito, Keycloak lub niestandardowego dostawcy sa uksztaltowane zgodnie z oczekiwaniami aplikacji.',
+          title: 'Konfiguracja dostawcy tożsamości',
+          description: 'Sprawdź, czy claims z Auth0, Azure AD, Cognito, Keycloak lub niestandardowego dostawcy są ukształtowane zgodnie z oczekiwaniami aplikacji.',
           icon: 'mdi:account-key',
-          points: ['Przejrzyj dane dzierzawcy', 'Sprawdz niestandardowe claims', 'Porownaj mapowania dostawcow'],
+          points: ['Przejrzyj dane dzierżawcy', 'Sprawdź niestandardowe claims', 'Porównaj mapowania dostawców'],
         },
       ],
     },
     {
       type: 'title',
-      text: 'Typowe bledy JWT, ktore ten inspektor uwidacznia',
+      text: 'Typowe błędy JWT, które ten inspektor uwidacznia',
       level: 3,
     },
     {
@@ -220,16 +220,16 @@ export const content: ToolLocaleContent<JwtDecoderUI> = {
       title: 'Szybkie kontrole a decyzje o zaufaniu',
       items: [
         {
-          pro: 'Natychmiast zobacz nieprawidlowo sformulowane tokeny.',
-          con: 'Nie moze znac oczekiwanego odbiorcy ani wystawcy.',
+          pro: 'Natychmiast zobacz nieprawidłowo sformułowane tokeny.',
+          con: 'Nie może znać oczekiwanego odbiorcy ani wystawcy.',
         },
         {
           pro: 'Konwertuj claims ze znacznikami czasu Unix na czytelne daty.',
-          con: 'Nie moze zweryfikowac podpisu bez rzeczywistego materialu klucza.',
+          con: 'Nie może zweryfikować podpisu bez rzeczywistego materiału klucza.',
         },
         {
-          pro: 'Wykryj brakujace wartosci wystawcy, odbiorcy, tematu lub typu.',
-          con: 'Nie moze udowodnic, ze zakresy i role sa bezpieczne dla Twojej aplikacji.',
+          pro: 'Wykryj brakujące wartości wystawcy, odbiorcy, tematu lub typu.',
+          con: 'Nie może udowodnić, że zakresy i role są bezpieczne dla Twojej aplikacji.',
         },
       ],
     },
@@ -237,10 +237,10 @@ export const content: ToolLocaleContent<JwtDecoderUI> = {
       type: 'summary',
       title: 'Najlepsze praktyki pracy',
       items: [
-        'Odkoduj token, aby zrozumiec, co klient lub API faktycznie otrzymalo.',
-        'Sprawdz exp, nbf, iss, aud, sub i alg przed analiza logiki aplikacji.',
+        'Odkoduj token, aby zrozumieć, co klient lub API faktycznie otrzymało.',
+        'Sprawdź exp, nbf, iss, aud, sub i alg przed analizą logiki aplikacji.',
         'Weryfikuj podpisy i decyzje o zaufaniu tylko w warstwie uwierzytelniania.',
-        'Unikaj udostepniania wrazliwych produkcyjnych JWT w zgloszeniach, logach lub zrzutach ekranu.',
+        'Unikaj udostępniania wrażliwych produkcyjnych JWT w zgłoszeniach, logach lub zrzutach ekranu.',
       ],
     },
   ],

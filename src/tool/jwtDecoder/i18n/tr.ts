@@ -238,7 +238,7 @@ export const content: ToolLocaleContent<JwtDecoderUI> = {
       type: 'summary',
       title: 'En iyi uygulama is akısı',
       items: [
-        'Istemcinin veya API'nin gercekte ne aldıgını anlamak icin tokeni cozun.',
+        'Istemcinin veya API\'nin gercekte ne aldıgını anlamak icin tokeni cozun.',
         'Uygulama mantıgına dalmadan once exp, nbf, iss, aud, sub ve algyi kontrol edin.',
         'Imzaları ve guven kararlarını yalnızca kimlik dogrulama katmanınızda dogrulayın.',
         'Hassas uretim JWTlerini biletlerde, loglarda veya ekran goruntulerinde paylasmaktan kacının.',
