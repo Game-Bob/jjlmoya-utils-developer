@@ -33,6 +33,14 @@
             "rules": {
                 "property-disallowed-list": null
             }
+        },
+        {
+            "files": [
+                "src/tool/serpPixelSimulator/serp-pixel-simulator.css"
+            ],
+            "rules": {
+                "property-disallowed-list": null
+            }
         }
     ],
     "plugins": [

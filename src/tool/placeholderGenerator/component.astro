@@ -43,14 +43,14 @@ const t = (ui ?? {}) as PlaceholderGeneratorUI;
             <label class="pg-label" for="p-bg-color">{t.labelBgColor}</label>
             <div class="pg-color-wrapper">
               <input type="color" id="p-bg-color" value="#e2e8f0" />
-              <input class="pg-color-text" type="text" id="p-bg-text" value="#e2e8f0" maxlength="7" />
+              <input class="pg-color-text" type="text" id="p-bg-text" value="#e2e8f0" maxlength="7" aria-label={t.labelBgColor} />
             </div>
           </div>
           <div class="pg-control-group">
             <label class="pg-label" for="p-text-color">{t.labelTextColor}</label>
             <div class="pg-color-wrapper">
               <input type="color" id="p-text-color" value="#64748b" />
-              <input class="pg-color-text" type="text" id="p-text-text" value="#64748b" maxlength="7" />
+              <input class="pg-color-text" type="text" id="p-text-text" value="#64748b" maxlength="7" aria-label={t.labelTextColor} />
             </div>
           </div>
         </div>

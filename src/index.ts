@@ -64,3 +64,5 @@ export { CALCULADORA_TIEMPO_DATOS_TOOL } from './tool/calculadoraTiempoDatos/ind
 export { INSPECTOR_CERTIFICADOS_SSL_TOOL } from './tool/inspectorCertificadosSsl/index';
 
 export { CONVERSOR_EXCEL_CSV_HTML_TOOL } from './tool/conversorExcelCsvHtml/index';
+
+export { SERP_PIXEL_SIMULATOR_TOOL } from './tool/serpPixelSimulator/index';

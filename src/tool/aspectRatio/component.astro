@@ -137,12 +137,14 @@ const t = (ui ?? {}) as AspectRatioUI;
     const { rw, rh, cw, ch } = getInputValues();
     const divisor = calculateGcd(Math.round(rw * 100), Math.round(rh * 100)) / 100;
     const ratioText = `${Math.round(rw / divisor)}:${Math.round(rh / divisor)}`;
+    const viewWidth = viewport.clientWidth - 80;
+    const viewHeight = viewport.clientHeight - 80;
+    const { w, h } = computeBoxDimensions(rw, rh, viewWidth, viewHeight);
 
     arcBoxRatio.textContent = ratioText;
     arcBoxRes.innerHTML = `${cw} &times; ${ch}px`;
     arcBadge.textContent = ratioText;
 
-    const { w, h } = computeBoxDimensions(rw, rh, viewport.clientWidth - 80, viewport.clientHeight - 80);
     arcBox.style.width = w + 'px';
     arcBox.style.height = h + 'px';
   };

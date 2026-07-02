@@ -19,10 +19,11 @@ import { readabilityCalculator } from '../tool/readabilityCalculator/index';
 import { svgSanitizer } from '../tool/svgSanitizer/index';
 import { utmGenerator } from '../tool/utmGenerator/index';
 import { urlCleaner } from '../tool/urlCleaner/index';
+import { serpPixelSimulator } from '../tool/serpPixelSimulator/index';
 
 export const developerCategory: DeveloperCategoryEntry = {
   icon: 'mdi:code-tags',
-  tools: [jsonFormatter, svgToCss, aspectRatio, placeholderGenerator, urlEncoderDecoder, duplicateCssRemover, cssToInlineConverter, cssSpecificityCalculator, cronGenerator, keycode, llmCostCalculator, musicalTypography, mobileMockupGenerator, hashGenerator, promptLibrary, colorConverter, readabilityCalculator, svgSanitizer, utmGenerator, urlCleaner],
+  tools: [jsonFormatter, svgToCss, aspectRatio, placeholderGenerator, urlEncoderDecoder, duplicateCssRemover, cssToInlineConverter, cssSpecificityCalculator, cronGenerator, keycode, llmCostCalculator, musicalTypography, mobileMockupGenerator, hashGenerator, promptLibrary, colorConverter, readabilityCalculator, svgSanitizer, utmGenerator, urlCleaner, serpPixelSimulator],
   i18n: {
     de: () => import('./i18n/de').then((m) => m.content),
     en: () => import('./i18n/en').then((m) => m.content),

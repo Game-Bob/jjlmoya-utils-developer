@@ -1,0 +1,12 @@
+---
+import type { SerpPixelSimulatorUI } from './ui';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as SerpPixelSimulatorUI;
+---
+
+<section class="tool-seo" aria-label={t.previewLabel}></section>

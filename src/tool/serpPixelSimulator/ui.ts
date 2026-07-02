@@ -1,0 +1,33 @@
+export interface SerpPixelSimulatorUI extends Record<string, string> {
+  titleLabel: string;
+  titlePlaceholder: string;
+  urlLabel: string;
+  urlPlaceholder: string;
+  descriptionLabel: string;
+  descriptionPlaceholder: string;
+  deviceLabel: string;
+  desktopLabel: string;
+  mobileLabel: string;
+  titlePixelsLabel: string;
+  descriptionPixelsLabel: string;
+  charactersLabel: string;
+  previewLabel: string;
+  tooLongLabel: string;
+  goodLabel: string;
+  emptyTitle: string;
+  emptyDescription: string;
+  defaultTitle: string;
+  defaultUrl: string;
+  defaultDescription: string;
+  fallbackUrl: string;
+  fallbackFaviconText: string;
+  pixelUnit: string;
+  ellipsis: string;
+  fetchButtonLabel: string;
+  fetchLoadingLabel: string;
+  fetchSuccessLabel: string;
+  fetchCorsError: string;
+  fetchInvalidUrlError: string;
+  fetchNoMetadataError: string;
+  fetchGenericError: string;
+}

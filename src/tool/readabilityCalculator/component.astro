@@ -18,14 +18,14 @@ const t = (ui ?? {}) as ReadabilityCalculatorUI;
           <div class="rc-input-wrapper">
             <label class="rc-label-mini">{t.labelText}</label>
             <div class="rc-color-input-container">
-              <input type="color" id="rc-text-color" class="rc-color-picker" value="#1e293b" />
+              <input type="color" id="rc-text-color" class="rc-color-picker" value="#1e293b" aria-label={t.labelText} />
               <span id="rc-text-hex" class="rc-hex-text">#1E293B</span>
             </div>
           </div>
           <div class="rc-input-wrapper">
             <label class="rc-label-mini">{t.labelBg}</label>
             <div class="rc-color-input-container">
-              <input type="color" id="rc-bg-color" class="rc-color-picker" value="#ffffff" />
+              <input type="color" id="rc-bg-color" class="rc-color-picker" value="#ffffff" aria-label={t.labelBg} />
               <span id="rc-bg-hex" class="rc-hex-text">#FFFFFF</span>
             </div>
           </div>
@@ -38,14 +38,14 @@ const t = (ui ?? {}) as ReadabilityCalculatorUI;
               <label class="rc-label-mini">{t.labelFontSize}</label>
               <span id="rc-size-val" class="rc-slider-value">16px</span>
             </div>
-            <input type="range" id="rc-size-slider" class="rc-range" min="12" max="72" value="16" />
+            <input type="range" id="rc-size-slider" class="rc-range" min="12" max="72" value="16" aria-label={t.labelFontSize} />
           </div>
           <div class="rc-slider-group">
             <div class="rc-slider-header">
               <label class="rc-label-mini">{t.labelFontWeight}</label>
               <span id="rc-weight-val" class="rc-slider-value">400</span>
             </div>
-            <input type="range" id="rc-weight-slider" class="rc-range" min="100" max="900" step="100" value="400" />
+            <input type="range" id="rc-weight-slider" class="rc-range" min="100" max="900" step="100" value="400" aria-label={t.labelFontWeight} />
           </div>
         </div>
 

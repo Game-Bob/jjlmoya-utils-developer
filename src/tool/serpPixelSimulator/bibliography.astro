@@ -1,0 +1,7 @@
+---
+import { bibliography } from './bibliography';
+---
+
+<ul>
+  {bibliography.map((item) => <li><a href={item.url} rel="nofollow noopener" target="_blank">{item.name}</a></li>)}
+</ul>

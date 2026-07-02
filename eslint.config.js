@@ -197,5 +197,12 @@ export default [
             "complexity": "off",
         },
     },
+    {
+        files: ["**/tool/serpPixelSimulator/controller.ts"],
+        rules: {
+            "max-lines": "off",
+            "max-lines-per-function": "off",
+            "max-params": "off",
+        },
+    },
 ];
-

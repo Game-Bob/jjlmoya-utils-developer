@@ -1,0 +1,84 @@
+---
+import type { SerpPixelSimulatorUI } from './ui';
+import './serp-pixel-simulator.css';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as SerpPixelSimulatorUI;
+---
+
+<div id="sps-root" class="sps-root" data-i18n={JSON.stringify(t)}>
+  <section class="sps-card">
+    <div class="sps-shell">
+      <div class="sps-panel" aria-label={t.titleLabel}>
+        <div class="sps-field">
+          <label class="sps-label" for="sps-title">{t.titleLabel}</label>
+          <input id="sps-title" class="sps-input" type="text" maxlength="180" placeholder={t.titlePlaceholder} value={t.defaultTitle} />
+        </div>
+
+        <div class="sps-field">
+          <label class="sps-label" for="sps-url">{t.urlLabel}</label>
+          <div class="sps-url-control">
+            <input id="sps-url" class="sps-input sps-url-input" type="url" placeholder={t.urlPlaceholder} value={t.defaultUrl} />
+            <button id="sps-fetch" class="sps-fetch-button" type="button">{t.fetchButtonLabel}</button>
+          </div>
+          <p id="sps-fetch-message" class="sps-fetch-message" aria-live="polite"></p>
+        </div>
+
+        <div class="sps-field">
+          <label class="sps-label" for="sps-description">{t.descriptionLabel}</label>
+          <textarea id="sps-description" class="sps-textarea" maxlength="360" placeholder={t.descriptionPlaceholder}>{t.defaultDescription}</textarea>
+        </div>
+
+        <div class="sps-device">
+          <span class="sps-device-label">{t.deviceLabel}</span>
+          <div class="sps-segment" role="group" aria-label={t.deviceLabel}>
+            <button id="sps-desktop" type="button" aria-pressed="true">{t.desktopLabel}</button>
+            <button id="sps-mobile" type="button" aria-pressed="false">{t.mobileLabel}</button>
+          </div>
+        </div>
+
+        <div id="sps-title-meter" class="sps-meter">
+          <div class="sps-meter-top">
+            <span>{t.titlePixelsLabel}</span>
+            <span id="sps-title-count">0 {t.pixelUnit} / 580 {t.pixelUnit}</span>
+          </div>
+          <div class="sps-track"><span id="sps-title-fill" class="sps-fill"></span></div>
+          <span id="sps-title-status" class="sps-meter-status">{t.goodLabel}</span>
+        </div>
+
+        <div id="sps-description-meter" class="sps-meter">
+          <div class="sps-meter-top">
+            <span>{t.descriptionPixelsLabel}</span>
+            <span id="sps-description-count">0 {t.pixelUnit} / 920 {t.pixelUnit}</span>
+          </div>
+          <div class="sps-track"><span id="sps-description-fill" class="sps-fill"></span></div>
+          <span id="sps-description-status" class="sps-meter-status">{t.goodLabel}</span>
+        </div>
+      </div>
+
+      <div class="sps-preview-wrap" aria-label={t.previewLabel}>
+        <h2 class="sps-preview-title">{t.previewLabel}</h2>
+        <article id="sps-serp" class="sps-serp">
+          <div class="sps-url-line">
+            <span id="sps-favicon-fallback" class="sps-favicon" aria-hidden="true">{t.fallbackFaviconText}</span>
+            <img id="sps-favicon-image" class="sps-favicon-image sps-hidden" alt="" />
+            <div id="sps-preview-url" class="sps-url-text">{t.fallbackUrl}</div>
+          </div>
+          <h3 id="sps-preview-title" class="sps-serp-title">{t.emptyTitle}</h3>
+          <p id="sps-preview-description" class="sps-description">{t.emptyDescription}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  import { initSerpPixelSimulator } from './controller';
+
+  const root = document.getElementById('sps-root') as HTMLElement;
+  initSerpPixelSimulator(root);
+</script>

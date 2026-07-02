@@ -90,16 +90,16 @@ const t = (ui ?? {}) as MobileMockupGeneratorUI;
           </div>
           <div id="mmg-presets" class="mmg-presets-row"></div>
           <div class="mmg-gradient-inputs">
-            <input type="color" id="mmg-grad-start" value="#6366f1" class="mmg-color-picker" />
+            <input type="color" id="mmg-grad-start" value="#6366f1" class="mmg-color-picker" aria-label={t.labelBackground} />
             <Icon name="mdi:arrow-right" class="mmg-arrow-icon" />
-            <input type="color" id="mmg-grad-end" value="#a855f7" class="mmg-color-picker" />
+            <input type="color" id="mmg-grad-end" value="#a855f7" class="mmg-color-picker" aria-label={t.labelBackground} />
           </div>
           <div class="mmg-angle-section">
             <div class="mmg-angle-row">
               <span>{t.labelAngle}</span>
               <span id="mmg-angle-val">135&deg;</span>
             </div>
-            <input type="range" id="mmg-grad-angle" min="0" max="360" value="135" class="mmg-range" />
+            <input type="range" id="mmg-grad-angle" min="0" max="360" value="135" class="mmg-range" aria-label={t.labelAngle} />
           </div>
         </div>
 
@@ -111,7 +111,7 @@ const t = (ui ?? {}) as MobileMockupGeneratorUI;
             </button>
           </div>
           <div class="mmg-safe-color-row">
-            <input type="color" id="mmg-safe-color" value="#000000" class="mmg-color-picker-sm" />
+            <input type="color" id="mmg-safe-color" value="#000000" class="mmg-color-picker-sm" aria-label={t.labelSafeAreaColor} />
             <span class="mmg-safe-color-label">{t.labelSafeAreaColor}</span>
           </div>
         </div>
@@ -135,4 +135,3 @@ const t = (ui ?? {}) as MobileMockupGeneratorUI;
   import { App } from './app';
   new App();
 </script>
-

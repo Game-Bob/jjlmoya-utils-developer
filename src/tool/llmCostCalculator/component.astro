@@ -59,7 +59,7 @@ const t = (ui ?? {}) as LlmCostCalculatorUI;
                 step="100"
                 value="1000"
               />
-              <input class="llm-req-num" type="number" id="llm-requests-num" value="1000" min="1" />
+              <input class="llm-req-num" type="number" id="llm-requests-num" value="1000" min="1" aria-label={t.labelRequests} />
             </div>
           </div>
         </div>
@@ -232,4 +232,3 @@ const t = (ui ?? {}) as LlmCostCalculatorUI;
 
   init();
 </script>
-
