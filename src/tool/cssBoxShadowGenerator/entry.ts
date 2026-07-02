@@ -7,7 +7,7 @@ export const cssBoxShadowGenerator: DeveloperToolEntry<CssBoxShadowGeneratorUI> 
   id: 'css-box-shadow-generator',
   icons: {
     bg: 'mdi:cube-outline',
-    fg: 'mdi:shadow',
+    fg: 'mdi:blur',
   },
   i18n: {
     de: async () => (await import('./i18n/de')).content,
