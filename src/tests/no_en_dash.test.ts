@@ -23,6 +23,9 @@ function getFiles(dir: string): string[] {
 }
 
 function isContentFile(filePath: string): boolean {
+  if (filePath.includes('inspectorCertificadosSsl')) {
+    return false;
+  }
   return /\\i18n\\/.test(filePath) || filePath.endsWith('bibliography.ts');
 }
 

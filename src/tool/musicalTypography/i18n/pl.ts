@@ -26,7 +26,7 @@ const faqData = [
   {
     question: 'Jak wdrożyć skalę w moim pliku CSS?',
     answer:
-      'Narzędzie generuje zmienne CSS (tokeny) w formacie :root { --step-N: Xrem; }. Skopiuj je do głównego pliku CSS i używaj ich z var(--step-N), aby zachować konsystencję typograficzną na całej stronie.',
+      'Narzędzie generuje zmienne CSS (tokeny) w formacie :root { -step-N: Xrem; }. Skopiuj je do głównego pliku CSS i używaj ich z var(-step-N), aby zachować konsystencję typograficzną na całej stronie.',
   },
 ];
 

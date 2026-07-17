@@ -10,7 +10,7 @@ const faqData = [
   { question: 'Vad är en typografisk modulär skala?', answer: 'Det är en metod för att bestämma teckenstorlekar baserat på ett konstant matematiskt förhållande. Precis som i musik, där noter har harmoniska relationer, skapar den modulära skalan en balanserad och förutsebar visuell hierarki.' },
   { question: 'Varför använda musikaliska intervaller för design?', answer: 'Musikaliska intervaller är proportioner som den mänskliga hjärnan uppfattar som harmoniska. Att tillämpa dem på textstorlekar skapar en visuell struktur som känns korrekt och professionell, snarare än godtyckligt valda storlekar.' },
   { question: 'Vad är det gyllene snittet i typografi?', answer: 'Det är proportionen 1.618, känd som den gyllene sektionen. Det skapar mycket dramatiska och eleganta skalor där varje steg i hierarkin växer exponentiellt. Perfekt för portfölj- eller konstfokuserade webbplatser.' },
-  { question: 'Hur implementerar jag skalan i min CSS-fil?', answer: 'Verktyget genererar CSS-variabler (tokens) i formatet :root { --step-N: Xrem; }. Kopiera dem till din huvudsakliga CSS-fil och använd dem med var(--step-N) för att bibehålla typografisk konsistens på din webbplats.' },
+  { question: 'Hur implementerar jag skalan i min CSS-fil?', answer: 'Verktyget genererar CSS-variabler (tokens) i formatet :root { -step-N: Xrem; }. Kopiera dem till din huvudsakliga CSS-fil och använd dem med var(-step-N) för att bibehålla typografisk konsistens på din webbplats.' },
 ];
 
 const howToData = [

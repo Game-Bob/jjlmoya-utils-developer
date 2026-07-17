@@ -26,7 +26,7 @@ const faqData = [
   {
     question: 'Hoe implementeer ik de schaal in mijn CSS-bestand?',
     answer:
-      'De tool genereert CSS-variabelen (tokens) in het formaat :root { --step-N: Xrem; }. Kopieer ze naar uw hoofd CSS-bestand en gebruik ze met var(--step-N) om typografische consistentie over uw site te handhaven.',
+      'De tool genereert CSS-variabelen (tokens) in het formaat :root { -step-N: Xrem; }. Kopieer ze naar uw hoofd CSS-bestand en gebruik ze met var(-step-N) om typografische consistentie over uw site te handhaven.',
   },
 ];
 

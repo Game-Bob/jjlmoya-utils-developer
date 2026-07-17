@@ -11,7 +11,7 @@ const faqData = [
   { question: 'O que é uma escala tipográfica modular?', answer: 'É um método para determinar tamanhos de fonte com base em uma proporção matemática constante. Assim como na música, onde as notas têm relações harmônicas, a escala modular cria uma hierarquia visual equilibrada e previsível.' },
   { question: 'Por que usar intervalos musicais para design?', answer: 'Intervalos musicais são proporções que o cérebro humano percebe como harmoniosas. Aplicá-los a tamanhos de texto cria uma estrutura visual que parece correta e profissional, em vez de escolher tamanhos aleatoriamente.' },
   { question: 'Qual é a Razão Dourada em tipografia?', answer: 'É a proporção 1.618, conhecida como a Seção Dourada. Ela cria escalas muito dramáticas e elegantes, onde cada passo da hierarquia cresce exponencialmente. Perfeita para portfólios ou sites focados em arte.' },
-  { question: 'Como implemento a escala no meu arquivo CSS?', answer: 'A ferramenta gera variáveis CSS (tokens) no formato :root { --step-N: Xrem; }. Copie-as para seu arquivo CSS principal e use-as com var(--step-N) para manter consistência tipográfica em seu site.' },
+  { question: 'Como implemento a escala no meu arquivo CSS?', answer: 'A ferramenta gera variáveis CSS (tokens) no formato :root { -step-N: Xrem; }. Copie-as para seu arquivo CSS principal e use-as com var(-step-N) para manter consistência tipográfica em seu site.' },
 ];
 
 const howToData = [

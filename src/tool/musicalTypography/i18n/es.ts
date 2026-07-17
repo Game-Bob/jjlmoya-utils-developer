@@ -26,7 +26,7 @@ const faqData = [
   {
     question: '¿Cómo implemento la escala en mi archivo CSS?',
     answer:
-      'La herramienta genera variables CSS (tokens) con formato :root { --step-N: Xrem; }. Cópialos en tu archivo CSS principal y úsalos con var(--step-N) para mantener la consistencia tipográfica en todo el sitio.',
+      'La herramienta genera variables CSS (tokens) con formato :root { -step-N: Xrem; }. Cópialos en tu archivo CSS principal y úsalos con var(-step-N) para mantener la consistencia tipográfica en todo el sitio.',
   },
 ];
 

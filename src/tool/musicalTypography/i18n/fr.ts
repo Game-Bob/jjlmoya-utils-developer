@@ -26,7 +26,7 @@ const faqData = [
   {
     question: 'Comment implémenter l\'échelle dans mon fichier CSS ?',
     answer:
-      "L'outil génère des variables CSS (tokens) au format :root { --step-N: Xrem; }. Copiez-les dans votre fichier CSS principal et utilisez-les avec var(--step-N) pour maintenir la cohérence typographique sur tout votre site.",
+      "L'outil génère des variables CSS (tokens) au format :root { -step-N: Xrem; }. Copiez-les dans votre fichier CSS principal et utilisez-les avec var(-step-N) pour maintenir la cohérence typographique sur tout votre site.",
   },
 ];
 

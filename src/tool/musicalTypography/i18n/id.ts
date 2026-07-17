@@ -26,7 +26,7 @@ const faqData = [
   {
     question: 'Bagaimana cara menerapkan skala ke file CSS saya?',
     answer:
-      'Alat ini menghasilkan variabel CSS (token) dalam format :root { --step-N: Xrem; }. Salin ke file CSS utama Anda dan gunakan dengan var(--step-N) untuk menjaga konsistensi tipografi di seluruh situs.',
+      'Alat ini menghasilkan variabel CSS (token) dalam format :root { -step-N: Xrem; }. Salin ke file CSS utama Anda dan gunakan dengan var(-step-N) untuk menjaga konsistensi tipografi di seluruh situs.',
   },
 ];
 

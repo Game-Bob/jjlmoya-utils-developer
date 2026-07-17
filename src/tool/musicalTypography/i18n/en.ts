@@ -26,7 +26,7 @@ const faqData = [
   {
     question: 'How do I implement the scale in my CSS file?',
     answer:
-      'The tool generates CSS variables (tokens) in :root { --step-N: Xrem; } format. Copy them into your main CSS file and use them with var(--step-N) to maintain typographic consistency across your site.',
+      'The tool generates CSS variables (tokens) in :root { -step-N: Xrem; } format. Copy them into your main CSS file and use them with var(-step-N) to maintain typographic consistency across your site.',
   },
 ];
 

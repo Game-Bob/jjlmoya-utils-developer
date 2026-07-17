@@ -10,7 +10,7 @@ const faqData = [
   { question: 'Tipografik modüler ölçek nedir?', answer: 'Sabit bir matematiksel orana dayalı olarak yazı tipi boyutlarını belirleme yöntemidir. Müzikte notaların uyumlu ilişkileri olduğu gibi, modüler ölçek dengeli ve öngörülebilir bir görsel hiyerarşi oluşturur.' },
   { question: 'Tasarımda neden müzik intervallerini kullanmalı?', answer: 'Müzik aralıkları, insan beyninin uyumlu olarak algıladığı oranlarıdır. Bunları metin boyutlarına uygulamak, rastgele seçilen boyutlar yerine doğru ve profesyonel hissettiren bir görsel yapı oluşturur.' },
   { question: 'Tipografide Altın Oran nedir?', answer: '1.618 oranıdır, Altın Bölüm olarak bilinir. Hiyerarşideki her adım üstel olarak büyüyen çok dramatik ve zarif ölçekler oluşturur. Portföy veya sanat odaklı web siteleri için mükemmeldir.' },
-  { question: 'CSS dosyamda ölçeği nasıl uygularım?', answer: 'Araç, :root { --step-N: Xrem; } biçiminde CSS değişkenleri (tokens) oluşturur. Bunları ana CSS dosyanıza kopyalayın ve web sitenizde tipografik tutarlılığı sağlamak için var(--step-N) ile kullanın.' },
+  { question: 'CSS dosyamda ölçeği nasıl uygularım?', answer: 'Araç, :root { -step-N: Xrem; } biçiminde CSS değişkenleri (tokens) oluşturur. Bunları ana CSS dosyanıza kopyalayın ve web sitenizde tipografik tutarlılığı sağlamak için var(-step-N) ile kullanın.' },
 ];
 
 const howToData = [

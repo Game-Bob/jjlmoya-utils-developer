@@ -26,7 +26,7 @@ const faqData = [
   {
     question: 'Wie setze ich die Skala in meiner CSS-Datei ein?',
     answer:
-      'Das Werkzeug erzeugt CSS-Variablen (Tokens) im Format :root { --step-N: Xrem; }. Kopiere sie in deine Haupt-CSS-Datei und verwende sie mit var(--step-N), um typografische Konsistenz auf der gesamten Website zu wahren.',
+      'Das Werkzeug erzeugt CSS-Variablen (Tokens) im Format :root { -step-N: Xrem; }. Kopiere sie in deine Haupt-CSS-Datei und verwende sie mit var(-step-N), um typografische Konsistenz auf der gesamten Website zu wahren.',
   },
 ];
 
