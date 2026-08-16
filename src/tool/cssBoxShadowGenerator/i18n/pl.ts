@@ -63,7 +63,9 @@ export const content: ToolLocaleContent<CssBoxShadowGeneratorUI> = {
     { type: 'stats', columns: 3, items: [{ value: '5', label: 'Warstw cienia na element', icon: 'mdi:layers' }, { value: 'Na żywo', label: 'Podgląd przy każdej zmianie', icon: 'mdi:eye' }, { value: '5', label: 'Szybkie presety', icon: 'mdi:star' }] },
     { type: 'title', text: 'Układaj wiele cieni dla realistycznej głębi', level: 3 },
     { type: 'paragraph', html: 'Prawdziwe cienie rzadko są jednolitym rozmyciem. Nakładanie ciasnego cienia blisko elementu z bardziej miękkim, szerszym tworzy naturalną głębię. Użyj <strong>+</strong> do dodawania warstw.' },
+    { type: 'title', text: 'Zrozumienie każdego ustawienia', level: 3 },
     { type: 'table', headers: ['Kontrolka', 'Wartość CSS', 'Efekt'], rows: [['Offset X', '1. długość', 'Przesunięcie poziome.'], ['Offset Y', '2. długość', 'Przesunięcie pionowe.'], ['Rozmycie', '3. długość', 'Promień rozmycia.'], ['Rozprz.', '4. długość', 'Powiększa lub zmniejsza cień.'], ['Kolor i przezrocz.', 'rgba()', 'Kolor cienia z niezależną przezroczystością.'], ['Wewn.', 'inset', 'Cień wewnątrz krawędzi elementu.']] },
+    { type: 'tip', title: 'Użyj delikatnej siatki tła', html: 'Podgląd pokazuje siatkę punktów, dzięki której widać zasięg cienia. Ujemny spread utrzymuje cień bliżej elementu.' },
     { type: 'summary', title: 'Zalecany workflow', items: ['Zacznij od presetu.', 'Dodaj warstwy dla realistycznej głębi.', 'Użyj ujemnego spread dla efektu unoszenia karty.', 'Skopiuj wygenerowany CSS i wklej.'] },
   ],
 };

@@ -63,7 +63,9 @@ export const content: ToolLocaleContent<CssBoxShadowGeneratorUI> = {
     { type: 'stats', columns: 3, items: [{ value: '5', label: 'Camadas de sombra por elemento', icon: 'mdi:layers' }, { value: 'Ao vivo', label: 'Pré-visualização a cada mudança', icon: 'mdi:eye' }, { value: '5', label: 'Presets rápidos', icon: 'mdi:star' }] },
     { type: 'title', text: 'Empilhe múltiplas sombras para profundidade realista', level: 3 },
     { type: 'paragraph', html: 'Sombras reais raramente são um blur uniforme. Empilhar uma sombra apertada perto do elemento com uma mais suave e ampla cria profundidade natural. Use <strong>+</strong> para adicionar camadas.' },
+    { type: 'title', text: 'Compreender cada controlo', level: 3 },
     { type: 'table', headers: ['Controle', 'Valor CSS', 'Efeito'], rows: [['Offset X', '1º comprimento', 'Deslocamento horizontal.'], ['Offset Y', '2º comprimento', 'Deslocamento vertical.'], ['Desfoque', '3º comprimento', 'Raio de blur.'], ['Expansão', '4º comprimento', 'Expande ou encolhe a sombra.'], ['Cor e Opacidade', 'rgba()', 'Cor da sombra com opacidade independente.'], ['Interno', 'inset', 'Sombra dentro da borda do elemento.']] },
+    { type: 'tip', title: 'Use uma grelha de fundo discreta', html: 'A pré-visualização mostra uma grelha de pontos para revelar a extensão da sombra. Use um spread negativo para a manter mais próxima do elemento.' },
     { type: 'summary', title: 'Workflow recomendado', items: ['Comece com um preset.', 'Adicione camadas para profundidade realista.', 'Use spread negativo para efeito de card flutuante.', 'Copie o CSS gerado e cole.'] },
   ],
 };

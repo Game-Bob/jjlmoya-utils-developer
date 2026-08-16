@@ -63,7 +63,9 @@ export const content: ToolLocaleContent<CssBoxShadowGeneratorUI> = {
     { type: 'stats', columns: 3, items: [{ value: '5', label: 'Lapisan bayangan per elemen', icon: 'mdi:layers' }, { value: 'Live', label: 'Pratinjau setiap perubahan', icon: 'mdi:eye' }, { value: '5', label: 'Preset cepat', icon: 'mdi:star' }] },
     { type: 'title', text: 'Tumpuk beberapa bayangan untuk kedalaman realistis', level: 3 },
     { type: 'paragraph', html: 'Bayangan nyata jarang berupa blur seragam. Menumpuk bayangan ketat dekat elemen dengan yang lebih lembut dan lebar menciptakan kedalaman alami. Gunakan <strong>+</strong> untuk menambah lapisan.' },
+    { type: 'title', text: 'Memahami setiap kontrol', level: 3 },
     { type: 'table', headers: ['Kontrol', 'Nilai CSS', 'Efek'], rows: [['Offset X', 'Panjang ke-1', 'Pergeseran horizontal.'], ['Offset Y', 'Panjang ke-2', 'Pergeseran vertikal.'], ['Blur', 'Panjang ke-3', 'Radius blur.'], ['Sebaran', 'Panjang ke-4', 'Memperbesar atau mengecilkan bayangan.'], ['Warna & Opasitas', 'rgba()', 'Warna bayangan dengan opasitas independen.'], ['Dalam', 'inset', 'Bayangan di dalam batas elemen.']] },
+    { type: 'tip', title: 'Gunakan kisi latar belakang yang halus', html: 'Area pratinjau menampilkan kisi titik agar Anda dapat melihat jangkauan bayangan. Gunakan spread negatif untuk membuatnya lebih rapat dengan elemen.' },
     { type: 'summary', title: 'Alur kerja yang direkomendasikan', items: ['Mulai dengan preset.', 'Tambahkan lapisan untuk kedalaman realistis.', 'Gunakan spread negatif untuk efek kartu mengambang.', 'Salin CSS yang dihasilkan dan tempel.'] },
   ],
 };

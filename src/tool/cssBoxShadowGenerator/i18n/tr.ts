@@ -63,7 +63,9 @@ export const content: ToolLocaleContent<CssBoxShadowGeneratorUI> = {
     { type: 'stats', columns: 3, items: [{ value: '5', label: 'Öğe başına gölge katmanı', icon: 'mdi:layers' }, { value: 'Canlı', label: 'Her değişiklikte önizleme', icon: 'mdi:eye' }, { value: '5', label: 'Hızlı hazır ayarlar', icon: 'mdi:star' }] },
     { type: 'title', text: 'Gerçekçi derinlik için birden fazla gölge istifleyin', level: 3 },
     { type: 'paragraph', html: 'Gerçek gölgeler nadiren tekdüze bulanıklıktır. Öğeye yakın sıkı bir gölgeyi daha yumuşak, daha geniş bir gölgeyle istiflemek doğal derinlik oluşturur. Katman eklemek için <strong>+</strong> kullanın.' },
+    { type: 'title', text: 'Her CSS kontrolünü anlama', level: 3 },
     { type: 'table', headers: ['Kontrol', 'CSS Değeri', 'Etki'], rows: [['Ofset X', '1. uzunluk', 'Yatay kaydırma.'], ['Ofset Y', '2. uzunluk', 'Dikey kaydırma.'], ['Bulanıklık', '3. uzunluk', 'Bulanıklık yarıçapı.'], ['Yayılma', '4. uzunluk', 'Gölgeyi büyütür veya küçültür.'], ['Renk & Opaklık', 'rgba()', 'Bağımsız opaklıklı gölge rengi.'], ['İç', 'inset', 'Öğe kenarının içinde gölge.']] },
+    { type: 'tip', title: 'Sade bir arka plan ızgarası kullanın', html: 'Önizleme alanındaki noktalı ızgara gölgenin ne kadar yayıldığını gösterir. Negatif spread, gölgeyi öğeye daha yakın tutar.' },
     { type: 'summary', title: 'Önerilen İş Akışı', items: ['Bir hazır ayarla başlayın.', 'Gerçekçi derinlik için katman ekleyin.', 'Yüzen kart efekti için negatif spread kullanın.', 'Oluşturulan CSS\'i kopyalayıp yapıştırın.'] },
   ],
 };

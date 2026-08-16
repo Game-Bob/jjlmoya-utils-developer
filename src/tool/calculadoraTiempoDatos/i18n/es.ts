@@ -116,24 +116,12 @@ export const content: ToolLocaleContent<CalculadoraTiempoDatosUI> = {
       type: 'paragraph',
       html: 'En la era digital actual, la velocidad de carga de un sitio web no es un lujo, sino una <strong>necesidad absoluta</strong>. Cada milisegundo cuenta cuando se trata de retener usuarios, mejorar el posicionamiento en buscadores y maximizar las conversiones. La realidad es que los usuarios modernos tienen expectativas muy altas: esperan que una página web cargue en menos de 3 segundos.',
     },
-    {
-      type: 'paragraph',
-      html: 'El peso de tu sitio web es uno de los factores más directamente relacionados con la velocidad de carga. Esta calculadora te ayuda a entender exactamente cuánto tiempo pierden tus visitantes esperando que tu página se cargue.',
-    },
     { type: 'title', text: 'El Impacto de la Velocidad en la Experiencia del Usuario', level: 3 },
     {
       type: 'paragraph',
       html: 'La velocidad de carga afecta directamente a varios aspectos críticos de tu presencia en línea. Los estudios demuestran que el 53% de los visitantes de sitios móviles abandonan una página si tarda más de 3 segundos en cargar.',
     },
-    {
-      type: 'paragraph',
-      html: 'Las tasas de conversión caen un 7% por cada segundo adicional de latencia. Si tu tienda online pierde 100 ventas al día porque tu sitio tarda 5 segundos en lugar de 2, estás perdiendo decenas de miles de euros anualmente.',
-    },
     { type: 'title', text: 'Entendiendo las Diferentes Velocidades de Conexión', level: 3 },
-    {
-      type: 'paragraph',
-      html: 'Las velocidades de conexión varían enormemente según la geografía y la tecnología disponible:',
-    },
     {
       type: 'table',
       headers: ['Tecnología', 'Velocidad', 'Disponibilidad', 'Tiempo de Carga (5MB)'],

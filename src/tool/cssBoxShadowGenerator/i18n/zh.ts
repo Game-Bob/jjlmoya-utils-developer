@@ -63,7 +63,9 @@ export const content: ToolLocaleContent<CssBoxShadowGeneratorUI> = {
     { type: 'stats', columns: 3, items: [{ value: '5', label: '每个元素的阴影图层', icon: 'mdi:layers' }, { value: '实时', label: '每次更改时预览更新', icon: 'mdi:eye' }, { value: '5', label: '快速预设', icon: 'mdi:star' }] },
     { type: 'title', text: '堆叠多个阴影实现逼真深度', level: 3 },
     { type: 'paragraph', html: '真实阴影很少是均匀模糊的。将紧贴元素的紧密阴影与更柔和、更宽的阴影堆叠在一起，创造自然深度。使用<strong>+</strong>添加图层。' },
+    { type: 'title', text: '理解每个 CSS 控件', level: 3 },
     { type: 'table', headers: ['控件', 'CSS值', '效果'], rows: [['X偏移', '第一个长度', '水平位移。'], ['Y偏移', '第二个长度', '垂直位移。'], ['模糊', '第三个长度', '模糊半径。'], ['扩散', '第四个长度', '扩大或缩小阴影。'], ['颜色和不透明度', 'rgba()', '带独立不透明度的阴影颜色。'], ['内阴影', 'inset', '在元素边框内渲染阴影。']] },
+    { type: 'tip', title: '使用低调的背景网格', html: '预览区域显示点状网格，便于观察阴影的延伸范围。使用负 spread 可以让阴影更贴近元素。' },
     { type: 'summary', title: '推荐工作流程', items: ['从预设开始。', '添加图层实现逼真深度。', '使用负spread实现悬浮卡片效果。', '复制生成的CSS并粘贴。'] },
   ],
 };

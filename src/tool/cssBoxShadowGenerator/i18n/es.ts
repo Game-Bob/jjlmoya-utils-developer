@@ -63,7 +63,9 @@ export const content: ToolLocaleContent<CssBoxShadowGeneratorUI> = {
     { type: 'stats', columns: 3, items: [{ value: '5', label: 'Capas de sombra por elemento', icon: 'mdi:layers' }, { value: 'En vivo', label: 'Previsualización con cada cambio', icon: 'mdi:eye' }, { value: '5', label: 'Presets rápidos', icon: 'mdi:star' }] },
     { type: 'title', text: 'Apila múltiples sombras para profundidad realista', level: 3 },
     { type: 'paragraph', html: 'Las sombras del mundo real rara vez son un blur uniforme. Apilar una sombra ajustada cerca del elemento con otra más suave y amplia crea profundidad natural. Usa el botón <strong>+</strong> para añadir capas y las pestañas para cambiar entre ellas.' },
+    { type: 'title', text: 'Entender cada control', level: 3 },
     { type: 'table', headers: ['Control', 'Valor CSS', 'Efecto'], rows: [['Offset X', 'Primera longitud', 'Desplazamiento horizontal. Positivo mueve la sombra a la derecha.'], ['Offset Y', 'Segunda longitud', 'Desplazamiento vertical. Positivo mueve la sombra hacia abajo.'], ['Desenfoque', 'Tercera longitud', 'Radio de blur. Más grande crea sombras más suaves.'], ['Expansión', 'Cuarta longitud', 'Expande o encoge la sombra. Negativo encoge.'], ['Color y Opacidad', 'rgba()', 'Color de sombra con control de opacidad independiente.'], ['Interior', 'inset', 'Renderiza la sombra dentro del borde del elemento.']] },
+    { type: 'tip', title: 'Usa una cuadrícula de fondo sutil', html: 'La vista previa muestra una cuadrícula de puntos para ver cómo se extiende la sombra. Usa un spread negativo para mantenerla cerca del elemento.' },
     { type: 'summary', title: 'Flujo de trabajo recomendado', items: ['Empieza con un preset que coincida con tu dirección de diseño.', 'Añade capas para construir profundidad realista.', 'Usa spread negativo en la sombra suave para un efecto de tarjeta flotante.', 'Copia el CSS generado y pégalo en tu stylesheet.'] },
   ],
 };

@@ -63,7 +63,9 @@ export const content: ToolLocaleContent<CssBoxShadowGeneratorUI> = {
     { type: 'stats', columns: 3, items: [{ value: '5', label: 'Schaduwlagen per element', icon: 'mdi:layers' }, { value: 'Live', label: 'Voorbeeld bij elke wijziging', icon: 'mdi:eye' }, { value: '5', label: 'Snelle presets', icon: 'mdi:star' }] },
     { type: 'title', text: 'Stapel meerdere schaduwen voor realistische diepte', level: 3 },
     { type: 'paragraph', html: 'Echte schaduwen zijn zelden uniform. Een strakke schaduw dicht bij het element stapelen met een zachtere, bredere creëert natuurlijke diepte. Gebruik <strong>+</strong> om lagen toe te voegen.' },
+    { type: 'title', text: 'Elke CSS-instelling begrijpen', level: 3 },
     { type: 'table', headers: ['Bediening', 'CSS-waarde', 'Effect'], rows: [['Offset X', '1e lengte', 'Horizontale verplaatsing.'], ['Offset Y', '2e lengte', 'Verticale verplaatsing.'], ['Vervaging', '3e lengte', 'Blur-radius.'], ['Spreiding', '4e lengte', 'Vergroot of verkleint de schaduw.'], ['Kleur & Dekking', 'rgba()', 'Schaduwkleur met onafhankelijke dekking.'], ['Binnen', 'inset', 'Schaduw binnen de elementrand.']] },
+    { type: 'tip', title: 'Gebruik een subtiel achtergrondraster', html: 'Het voorbeeld toont een raster met punten zodat je de uitloop van de schaduw ziet. Gebruik een negatieve spread om de schaduw dichter bij het element te houden.' },
     { type: 'summary', title: 'Aanbevolen workflow', items: ['Begin met een preset.', 'Voeg lagen toe voor realistische diepte.', 'Gebruik negatieve spread voor zwevende kaarten.', 'Kopieer de CSS en plak deze.'] },
   ],
 };

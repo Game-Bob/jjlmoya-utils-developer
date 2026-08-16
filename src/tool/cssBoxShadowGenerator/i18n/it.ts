@@ -63,7 +63,9 @@ export const content: ToolLocaleContent<CssBoxShadowGeneratorUI> = {
     { type: 'stats', columns: 3, items: [{ value: '5', label: 'Strati ombra per elemento', icon: 'mdi:layers' }, { value: 'Live', label: 'Anteprima ad ogni modifica', icon: 'mdi:eye' }, { value: '5', label: 'Preset rapidi', icon: 'mdi:star' }] },
     { type: 'title', text: 'Sovrapponi più ombre per profondità realistica', level: 3 },
     { type: 'paragraph', html: 'Le ombre reali non sono mai un blur uniforme. Sovrapporre un\'ombra stretta vicino all\'elemento con una più morbida e ampia crea profondità naturale. Usa <strong>+</strong> per aggiungere strati.' },
+    { type: 'title', text: 'Capire ogni controllo', level: 3 },
     { type: 'table', headers: ['Controllo', 'Valore CSS', 'Effetto'], rows: [['Offset X', '1a lunghezza', 'Spostamento orizzontale.'], ['Offset Y', '2a lunghezza', 'Spostamento verticale.'], ['Sfocatura', '3a lunghezza', 'Raggio di blur.'], ['Espansione', '4a lunghezza', 'Allarga o restringe l\'ombra.'], ['Colore & Opacità', 'rgba()', 'Colore ombra con opacità indipendente.'], ['Interno', 'inset', 'Ombra dentro il bordo dell\'elemento.']] },
+    { type: 'tip', title: 'Usa una griglia di sfondo discreta', html: 'L\'anteprima mostra una griglia a punti per vedere quanto si estende l\'ombra. Usa uno spread negativo per mantenerla più vicina all\'elemento.' },
     { type: 'summary', title: 'Workflow consigliato', items: ['Inizia con un preset.', 'Aggiungi strati per profondità realistica.', 'Usa spread negativo per effetto card fluttuante.', 'Copia il CSS e incollalo.'] },
   ],
 };

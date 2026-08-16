@@ -63,7 +63,9 @@ export const content: ToolLocaleContent<CssBoxShadowGeneratorUI> = {
     { type: 'stats', columns: 3, items: [{ value: '5', label: 'Skugglager per element', icon: 'mdi:layers' }, { value: 'Live', label: 'Förhandsvisning vid varje ändring', icon: 'mdi:eye' }, { value: '5', label: 'Snabba förval', icon: 'mdi:star' }] },
     { type: 'title', text: 'Stapla flera skuggor för realistiskt djup', level: 3 },
     { type: 'paragraph', html: 'Verkliga skuggor är sällan enhetlig oskärpa. Att stapla en tight skugga nära elementet med en mjukare, bredare skapar naturligt djup. Använd <strong>+</strong> för att lägga till lager.' },
+    { type: 'title', text: 'Förstå varje CSS-kontroll', level: 3 },
     { type: 'table', headers: ['Kontroll', 'CSS-värde', 'Effekt'], rows: [['Offset X', '1:a längd', 'Horisontell förskjutning.'], ['Offset Y', '2:a längd', 'Vertikal förskjutning.'], ['Oskärpa', '3:e längd', 'Oskärperadie.'], ['Spridning', '4:e längd', 'Expanderar eller krymper skuggan.'], ['Färg & Opacitet', 'rgba()', 'Skuggfärg med oberoende opacitet.'], ['Inre', 'inset', 'Skugga innanför elementkanten.']] },
+    { type: 'tip', title: 'Använd ett diskret bakgrundsrutnät', html: 'Förhandsvisningen visar ett punktnät så att du ser hur långt skuggan sträcker sig. Ett negativt spread håller den närmare elementet.' },
     { type: 'summary', title: 'Rekommenderat arbetsflöde', items: ['Börja med en förinställning.', 'Lägg till lager för realistiskt djup.', 'Använd negativ spread för svävande kort.', 'Kopiera CSS:en och klistra in.'] },
   ],
 };

@@ -122,5 +122,10 @@ export const content: ToolLocaleContent<PromptLibraryUI> = {
       type: 'paragraph',
       html: 'Utilisez la notation <strong>[VARIABLE]</strong> dans vos prompts pour cr\u00e9er des champs \u00e0 remplir dynamiquement. Quand vous ouvrez une carte, des champs apparaissent pour chaque variable d\u00e9finie.',
     },
+    { type: 'title', text: 'Partager vos prompts', level: 3 },
+    {
+      type: 'paragraph',
+      html: 'Chaque prompt peut être partagé par une URL. Le bouton de partage génère un lien qui ouvre le formulaire prérempli avec le contenu du prompt, afin de pouvoir le réutiliser ou le transmettre facilement.',
+    },
   ],
 };

@@ -63,7 +63,9 @@ export const content: ToolLocaleContent<CssBoxShadowGeneratorUI> = {
     { type: 'stats', columns: 3, items: [{ value: '5', label: 'Schattenebenen pro Element', icon: 'mdi:layers' }, { value: 'Live', label: 'Vorschau bei jeder Änderung', icon: 'mdi:eye' }, { value: '5', label: 'Schnellstart-Presets', icon: 'mdi:star' }] },
     { type: 'title', text: 'Mehrere Schatten für realistische Tiefe stapeln', level: 3 },
     { type: 'paragraph', html: 'Echte Schatten sind selten ein einheitlicher Blur. Einen engen Schatten nah am Element mit einem weicheren, breiteren zu stapeln erzeugt natürliche Tiefe. Nutze <strong>+</strong> zum Hinzufügen.' },
+    { type: 'title', text: 'Die einzelnen CSS-Steuerelemente verstehen', level: 3 },
     { type: 'table', headers: ['Steuerung', 'CSS-Wert', 'Effekt'], rows: [['Offset X', 'Erste Länge', 'Horizontale Verschiebung.'], ['Offset Y', 'Zweite Länge', 'Vertikale Verschiebung.'], ['Weichzeichner', 'Dritte Länge', 'Blur-Radius. Größer = weicher.'], ['Ausbreitung', 'Vierte Länge', 'Vergrößert oder verkleinert den Schatten.'], ['Farbe & Deckkraft', 'rgba()', 'Schattenfarbe mit unabhängiger Deckkraft.'], ['Innen', 'inset', 'Rendert den Schatten innerhalb des Elements.']] },
+    { type: 'tip', title: 'Arbeite mit einem dezenten Hintergrundraster', html: 'Die Vorschau zeigt ein Punkteraster, damit du die Ausdehnung des Schattens siehst. Mit negativem Spread bleibt er näher am Element.' },
     { type: 'summary', title: 'Empfohlener Workflow', items: ['Starte mit einem Preset.', 'Füge Ebenen für realistische Tiefe hinzu.', 'Nutze negativen Spread für schwebende Karten.', 'Kopiere das CSS und füge es ein.'] },
   ],
 };

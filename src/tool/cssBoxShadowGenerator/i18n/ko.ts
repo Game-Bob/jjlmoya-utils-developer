@@ -63,7 +63,9 @@ export const content: ToolLocaleContent<CssBoxShadowGeneratorUI> = {
     { type: 'stats', columns: 3, items: [{ value: '5', label: '요소당 그림자 레이어', icon: 'mdi:layers' }, { value: '실시간', label: '변경 시 미리보기 업데이트', icon: 'mdi:eye' }, { value: '5', label: '빠른 프리셋', icon: 'mdi:star' }] },
     { type: 'title', text: '현실적인 깊이를 위해 여러 그림자 쌓기', level: 3 },
     { type: 'paragraph', html: '실제 그림자는 균일한 블러가 아닙니다. 요소 가까이에 타이트한 그림자를 더 부드럽고 넓은 그림자와 쌓으면 자연스러운 깊이가 만들어집니다. <strong>+</strong>로 레이어를 추가하세요.' },
+    { type: 'title', text: '각 CSS 제어 항목 이해하기', level: 3 },
     { type: 'table', headers: ['컨트롤', 'CSS 값', '효과'], rows: [['오프셋 X', '첫 번째 길이', '수평 변위.'], ['오프셋 Y', '두 번째 길이', '수직 변위.'], ['블러', '세 번째 길이', '블러 반경.'], ['스프레드', '네 번째 길이', '그림자 확대 또는 축소.'], ['색상 및 불투명도', 'rgba()', '독립적인 불투명도의 그림자 색상.'], ['내부', 'inset', '요소 경계 내부에 그림자.']] },
+    { type: 'tip', title: '은은한 배경 격자 사용하기', html: '미리보기 영역의 점 격자로 그림자의 확장 범위를 확인할 수 있습니다. 음수 spread를 사용하면 그림자를 요소 가까이에 둘 수 있습니다.' },
     { type: 'summary', title: '권장 워크플로우', items: ['프리셋으로 시작하세요.', '현실적인 깊이를 위해 레이어를 추가하세요.', '떠 있는 카드 효과에 음수 스프레드를 사용하세요.', '생성된 CSS를 복사하여 붙여넣으세요.'] },
   ],
 };

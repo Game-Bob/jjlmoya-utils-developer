@@ -63,7 +63,9 @@ export const content: ToolLocaleContent<CssBoxShadowGeneratorUI> = {
     { type: 'stats', columns: 3, items: [{ value: '5', label: 'Couches d\'ombre par élément', icon: 'mdi:layers' }, { value: 'Direct', label: 'Aperçu à chaque modification', icon: 'mdi:eye' }, { value: '5', label: 'Presets rapides', icon: 'mdi:star' }] },
     { type: 'title', text: 'Superposez plusieurs ombres pour une profondeur réaliste', level: 3 },
     { type: 'paragraph', html: 'Les ombres réelles sont rarement un flou uniforme. Superposer une ombre serrée près de l\'élément avec une ombre plus douce et large crée une profondeur naturelle. Utilisez <strong>+</strong> pour ajouter des couches.' },
+    { type: 'title', text: 'Comprendre chaque réglage', level: 3 },
     { type: 'table', headers: ['Contrôle', 'Valeur CSS', 'Effet'], rows: [['Offset X', '1re longueur', 'Déplacement horizontal.'], ['Offset Y', '2e longueur', 'Déplacement vertical.'], ['Flou', '3e longueur', 'Rayon de flou.'], ['Expansion', '4e longueur', 'Agrandit ou réduit l\'ombre.'], ['Couleur & Opacité', 'rgba()', 'Couleur avec opacité indépendante.'], ['Intérieur', 'inset', 'Ombre à l\'intérieur de l\'élément.']] },
+    { type: 'tip', title: 'Utilisez une grille discrète pour le fond', html: 'La zone d\'aperçu affiche une grille de points pour visualiser l\'extension de l\'ombre. Utilisez une propagation négative pour la rapprocher de l\'élément.' },
     { type: 'summary', title: 'Workflow recommandé', items: ['Commencez par un preset.', 'Ajoutez des couches pour une profondeur réaliste.', 'Utilisez un spread négatif pour un effet de carte flottante.', 'Copiez le CSS généré et collez-le.'] },
   ],
 };

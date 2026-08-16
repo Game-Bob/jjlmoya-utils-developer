@@ -63,7 +63,9 @@ export const content: ToolLocaleContent<CssBoxShadowGeneratorUI> = {
     { type: 'stats', columns: 3, items: [{ value: '5', label: '要素あたりの影レイヤー', icon: 'mdi:layers' }, { value: 'ライブ', label: '変更ごとにプレビュー更新', icon: 'mdi:eye' }, { value: '5', label: 'クイックプリセット', icon: 'mdi:star' }] },
     { type: 'title', text: '複数の影を重ねてリアルな奥行きを', level: 3 },
     { type: 'paragraph', html: '実際の影は均一なぼかしではありません。要素の近くにタイトな影を、より柔らかく広い影と重ねることで自然な奥行きが生まれます。<strong>+</strong>でレイヤーを追加できます。' },
+    { type: 'title', text: '各コントロールを理解する', level: 3 },
     { type: 'table', headers: ['コントロール', 'CSS値', '効果'], rows: [['オフセットX', '1番目の長さ', '水平方向の変位。'], ['オフセットY', '2番目の長さ', '垂直方向の変位。'], ['ぼかし', '3番目の長さ', 'ぼかしの半径。'], ['スプレッド', '4番目の長さ', '影を拡大または縮小。'], ['色と不透明度', 'rgba()', '独立した不透明度の影の色。'], ['内側', 'inset', '要素の境界内に影を描画。']] },
+    { type: 'tip', title: '控えめな背景グリッドを使う', html: 'プレビューにはドットグリッドが表示され、影の広がりを確認できます。負のスプレッドを使うと影を要素の近くに保てます。' },
     { type: 'summary', title: '推奨ワークフロー', items: ['プリセットから始める。', 'レイヤーを追加してリアルな奥行きを。', '浮遊カード効果には負のスプレッドを使用。', '生成されたCSSをコピーして貼り付け。'] },
   ],
 };
