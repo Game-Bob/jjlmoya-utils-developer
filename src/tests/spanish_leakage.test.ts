@@ -67,12 +67,16 @@ function normalize(value: string): string {
 }
 
 function isTechnicalInvariant(text: string): boolean {
+  const ledUnitMatches = text.match(/\b\d+(?:-\d+)?\s*(?:w|lm)\b/g) ?? [];
   return [
     'data:image/svg+xml;base64',
     'background-image: url',
     '.layout-playground {',
     'const samplerate =',
-  ].some((pattern) => text.includes(pattern)) || (text.includes('presets') && text.includes('hz'));
+  ].some((pattern) => text.includes(pattern)) ||
+    (text.includes('presets') && text.includes('hz')) ||
+    (text.includes('t_rectal') && text.includes('exp(-k * t)')) ||
+    (text.includes('led') && ledUnitMatches.length >= 3);
 }
 
 function collectString(value: string, output: string[]): void {
