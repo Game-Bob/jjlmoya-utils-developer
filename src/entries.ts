@@ -54,6 +54,8 @@ export { visualCssGridFlexboxGenerator } from './tool/visualCssGridFlexboxGenera
 export type { VisualCssGridFlexboxGeneratorLocaleContent } from './tool/visualCssGridFlexboxGenerator/entry';
 export { cssBoxShadowGenerator } from './tool/cssBoxShadowGenerator/entry';
 export type { CssBoxShadowGeneratorLocaleContent } from './tool/cssBoxShadowGenerator/entry';
+export { promoteThisWebsite } from './tool/promoteThisWebsite/entry';
+export type { PromoteThisWebsiteLocaleContent } from './tool/promoteThisWebsite/entry';
 export { developerCategory } from './category';
 import { aspectRatio } from './tool/aspectRatio/entry';
 import { calculadoraTiempoDatos } from './tool/calculadoraTiempoDatos/entry';
@@ -83,4 +85,5 @@ import { serpPixelSimulator } from './tool/serpPixelSimulator/entry';
 import { jwtDecoder } from './tool/jwtDecoder/entry';
 import { visualCssGridFlexboxGenerator } from './tool/visualCssGridFlexboxGenerator/entry';
 import { cssBoxShadowGenerator } from './tool/cssBoxShadowGenerator/entry';
-export const ALL_ENTRIES = [aspectRatio, calculadoraTiempoDatos, colorConverter, conversorExcelCsvHtml, cronGenerator, cssSpecificityCalculator, cssToInlineConverter, duplicateCssRemover, generadorSecurityTxt, hashGenerator, inspectorCertificadosSsl, jsonFormatter, keycode, llmCostCalculator, mobileMockupGenerator, musicalTypography, placeholderGenerator, promptLibrary, readabilityCalculator, svgSanitizer, svgToCss, urlCleaner, urlEncoderDecoder, utmGenerator, serpPixelSimulator, jwtDecoder, visualCssGridFlexboxGenerator, cssBoxShadowGenerator];
+import { promoteThisWebsite } from './tool/promoteThisWebsite/entry';
+export const ALL_ENTRIES = [aspectRatio, calculadoraTiempoDatos, colorConverter, conversorExcelCsvHtml, cronGenerator, cssSpecificityCalculator, cssToInlineConverter, duplicateCssRemover, generadorSecurityTxt, hashGenerator, inspectorCertificadosSsl, jsonFormatter, keycode, llmCostCalculator, mobileMockupGenerator, musicalTypography, placeholderGenerator, promptLibrary, readabilityCalculator, svgSanitizer, svgToCss, urlCleaner, urlEncoderDecoder, utmGenerator, serpPixelSimulator, jwtDecoder, visualCssGridFlexboxGenerator, cssBoxShadowGenerator, promoteThisWebsite];
