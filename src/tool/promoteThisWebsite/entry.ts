@@ -11,5 +11,6 @@ export const promoteThisWebsite: DeveloperToolEntry<PromoteThisWebsiteUI> = {
   },
   i18n: {
     en: async () => (await import('./i18n/en')).content,
+    es: async () => (await import('./i18n/es')).content,
   },
 };
