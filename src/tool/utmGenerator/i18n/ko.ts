@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { UtmGeneratorUI } from '../ui';
@@ -80,10 +81,7 @@ export const content: ToolLocaleContent<UtmGeneratorUI> = {
   faqTitle: '자주 묻는 질문',
   faq: faqData,
   bibliographyTitle: '참고 자료',
-  bibliography: [
-    { name: '맞춤 URL을 사용하여 캠페인 데이터 수집 - Google 애널리틱스 고객센터 (2024)', url: 'https://support.google.com/analytics/answer/1033863' },
-    { name: '캠페인 URL 태깅을 위한 모범 사례 - VWO 블로그 (2023)', url: 'https://vwo.com/blog/utm-tagging-best-practices/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

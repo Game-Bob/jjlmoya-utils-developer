@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DuplicateCssRemoverUI } from '../ui';
@@ -100,20 +101,7 @@ export const content: ToolLocaleContent<DuplicateCssRemoverUI> = {
   faqTitle: 'Часто задаваемые вопросы',
   faq: faqData,
   bibliographyTitle: 'Ссылки и документация',
-  bibliography: [
-    {
-      name: 'Web Vitals: влияние CSS на Render-Blocking и FCP',
-      url: 'https://web.dev/articles/render-blocking-resources',
-    },
-    {
-      name: 'Спецификация W3C: каскад и наследование CSS',
-      url: 'https://www.w3.org/TR/css-cascade-4/',
-    },
-    {
-      name: 'Clean CSS: библиотека и методы минификации CSS',
-      url: 'https://github.com/clean-css/clean-css',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

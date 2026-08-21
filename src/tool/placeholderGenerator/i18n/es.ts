@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { PlaceholderGeneratorUI } from '../ui';
@@ -106,20 +107,7 @@ export const content: ToolLocaleContent<PlaceholderGeneratorUI> = {
   faqTitle: 'Preguntas Frecuentes',
   faq: faqData,
   bibliographyTitle: 'Referencias y Documentación',
-  bibliography: [
-    {
-      name: 'MDN Web Docs: HTMLCanvasElement.toDataURL()',
-      url: 'https://developer.mozilla.org/es/docs/Web/API/HTMLCanvasElement/toDataURL',
-    },
-    {
-      name: 'MDN Web Docs: CanvasRenderingContext2D',
-      url: 'https://developer.mozilla.org/es/docs/Web/API/CanvasRenderingContext2D',
-    },
-    {
-      name: 'W3C: HTML Canvas 2D Context',
-      url: 'https://www.w3.org/TR/2dcontext/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -158,9 +146,9 @@ export const content: ToolLocaleContent<PlaceholderGeneratorUI> = {
     {
       type: 'list',
       items: [
-        '<strong>Resolución Pixel Perfect:</strong> HTML5 Canvas nativo asegura que el lienzo exportado corresponde aritméticamente a las coordenadas estipuladas por el usuario.',
+        '<strong>Resolución Pixel Perfect:</strong> HTML5 Canvas nativo mantiene el lienzo exportado alineado con las coordenadas indicadas por el usuario.',
         '<strong>Autoscaling Tipográfico:</strong> En el modo Automático, la dimensión de la fuente calcula el área perimetral y el número de caracteres para acoplar con elegancia el texto a lo largo y ancho sin provocar <em>overflows</em> indeseados.',
-        '<strong>Fusión Hexadecimal:</strong> Control de estado bidireccional entre selectores de ecosistema nativo HTML e inputs mecanografiados garantizando contrastes precisos dictados por la paleta del UI/UX de tu Figma o Penpot original.',
+        '<strong>Fusión Hexadecimal:</strong> Control de estado bidireccional entre selectores de ecosistema nativo HTML e inputs mecanografiados para ajustar los contrastes de la paleta de tu Figma o Penpot original.',
       ],
     },
     {

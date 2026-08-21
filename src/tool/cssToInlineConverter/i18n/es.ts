@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CssToInlineConverterUI } from '../ui';
@@ -11,7 +12,7 @@ const faqData = [
   {
     question: '¿Por qué los emails necesitan CSS inline y no externo?',
     answer:
-      'Los clientes de correo como Outlook, Gmail o Apple Mail filtran o ignoran las etiquetas <link> y <style> por razones de seguridad. La única forma garantizada de que un estilo se aplique correctamente en un email es incrustarlo directamente en el atributo style de cada elemento HTML.',
+      'Los clientes de correo como Outlook, Gmail o Apple Mail filtran o ignoran las etiquetas <link> y <style> por razones de seguridad. La opción más compatible es incrustar el estilo directamente en el atributo style de cada elemento HTML.',
   },
   {
     question: '¿Qué ocurre si un elemento tiene ya un atributo style propio?',
@@ -26,7 +27,7 @@ const faqData = [
   {
     question: '¿Mi código HTML y CSS se envía a algún servidor?',
     answer:
-      'No. Todo el procesamiento ocurre 100% en tu navegador usando la DOMParser API nativa. Ningún byte de tu código sale de tu dispositivo, lo que garantiza privacidad total para plantillas con contenido sensible.',
+      'No. Todo el procesamiento ocurre en tu navegador usando la DOMParser API nativa. La herramienta no envía tu código a un servidor, así que la plantilla permanece en tu dispositivo durante la conversión.',
   },
 ];
 
@@ -100,20 +101,7 @@ export const content: ToolLocaleContent<CssToInlineConverterUI> = {
   faqTitle: 'Preguntas Frecuentes',
   faq: faqData,
   bibliographyTitle: 'Referencias y Documentación',
-  bibliography: [
-    {
-      name: 'Can I email: La matriz de soporte HTML y CSS para Emails',
-      url: 'https://www.caniemail.com/',
-    },
-    {
-      name: 'MDN Web Docs: El atributo global de estilo (style)',
-      url: 'https://developer.mozilla.org/es/docs/Web/HTML/Global_attributes/style',
-    },
-    {
-      name: 'DOMParser API: Parseo seguro en el navegador',
-      url: 'https://developer.mozilla.org/es/docs/Web/API/DOMParser',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -153,7 +141,7 @@ export const content: ToolLocaleContent<CssToInlineConverterUI> = {
       items: [
         '<strong>Parseo Seguro:</strong> Utiliza la <code>DOMParser API</code> para transformar temporalmente el HTML de entrada en un DOM virtual seguro dentro de tu navegador.',
         '<strong>Simulación de Cascada:</strong> Analiza tus reglas CSS, aplica pesos de especificidad a los selectores y muta los atributos <code>style</code> de los elementos seleccionados inyectando el código.',
-        '<strong>100% Offline:</strong> Ningún byte de tu código sale de tu dispositivo. Privacidad total para plantillas con contenido sensible.',
+        '<strong>Procesamiento local:</strong> La herramienta trabaja en tu navegador y no envía tu código a un servidor.',
       ],
     },
   ],

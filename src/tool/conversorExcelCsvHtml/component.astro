@@ -12,7 +12,7 @@ const { ui } = Astro.props;
 const content = (ui ?? {}) as ConversorExcelCsvHtmlUI;
 ---
 
-<div class="cec-container">
+<div class="cec-container" data-i18n={JSON.stringify(content)}>
   <div class="cec-converter-card">
     <div class="cec-input-grid">
       <div class="cec-input-group">
@@ -86,6 +86,8 @@ const content = (ui ?? {}) as ConversorExcelCsvHtmlUI;
   const previewOutput = document.getElementById('previewOutput');
   const htmlOutput = document.getElementById('htmlOutput') as HTMLTextAreaElement;
   const copyBtn = document.getElementById('copyBtn');
+  const root = document.querySelector('.cec-container') as HTMLElement;
+  const localized = JSON.parse(root?.dataset.i18n ?? '{}') as Record<string, string>;
   const tabs = document.querySelectorAll('.cec-tab-btn');
   const tabContents = document.querySelectorAll('.cec-tab-content');
 
@@ -226,10 +228,9 @@ const content = (ui ?? {}) as ConversorExcelCsvHtmlUI;
   copyBtn?.addEventListener('click', () => {
     navigator.clipboard.writeText(htmlOutput.value);
     const originalText = copyBtn.innerHTML;
-    copyBtn.innerHTML = '<Icon name="mdi:check" /> ¡Copiado!';
+    copyBtn.textContent = localized.copiedLabel;
     setTimeout(() => {
       copyBtn.innerHTML = originalText;
     }, 2000);
   });
 </script>
-

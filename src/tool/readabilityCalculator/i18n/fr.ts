@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ReadabilityCalculatorUI } from '../ui';
@@ -97,11 +98,7 @@ export const content: ToolLocaleContent<ReadabilityCalculatorUI> = {
   faqTitle: 'Questions Fr\u00e9quentes',
   faq: faqData,
   bibliographyTitle: 'Ressources sur le Contraste et APCA',
-  bibliography: [
-    { name: 'W3C: Brouillon WCAG 3.0 (Silver)', url: 'https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/' },
-    { name: 'Myndex: Guide de R\u00e9f\u00e9rence APCA', url: 'https://apcaw3.myndex.com/' },
-    { name: 'MDN: Accessibilit\u00e9 et Contraste des Couleurs', url: 'https://developer.mozilla.org/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CssToInlineConverterUI } from '../ui';
@@ -100,20 +101,7 @@ export const content: ToolLocaleContent<CssToInlineConverterUI> = {
   faqTitle: 'よくある質問',
   faq: faqData,
   bibliographyTitle: '参考資料とドキュメント',
-  bibliography: [
-    {
-      name: 'Can I email: メール向けHTMLおよびCSSサポートマトリクス',
-      url: 'https://www.caniemail.com/',
-    },
-    {
-      name: 'MDN Web Docs: グローバルstyle属性',
-      url: 'https://developer.mozilla.org/ja/docs/Web/HTML/Global_attributes/style',
-    },
-    {
-      name: 'DOMParser API: ブラウザ内の安全なパース処理',
-      url: 'https://developer.mozilla.org/ja/docs/Web/API/DOMParser',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

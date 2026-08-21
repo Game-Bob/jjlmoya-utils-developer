@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { MobileMockupGeneratorUI } from '../ui';
@@ -102,10 +103,7 @@ export const content: ToolLocaleContent<MobileMockupGeneratorUI> = {
   faqTitle: 'Sık Sorulan Sorular',
   faq: faqData,
   bibliographyTitle: 'Referanslar',
-  bibliography: [
-    { name: 'Apple App Store Ekran Görüntüsü Gereksinimleri', url: 'https://developer.apple.com/help/app-store-connect/reference/screenshot-specifications' },
-    { name: 'Google Play Ekran Görüntüsü Gereksinimleri', url: 'https://support.google.com/googleplay/android-developer/answer/9866151' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

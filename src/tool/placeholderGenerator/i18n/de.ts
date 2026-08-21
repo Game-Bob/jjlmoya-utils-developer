@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { PlaceholderGeneratorUI } from '../ui';
@@ -106,20 +107,7 @@ export const content: ToolLocaleContent<PlaceholderGeneratorUI> = {
   faqTitle: 'Häufig gestellte Fragen',
   faq: faqData,
   bibliographyTitle: 'Referenzen und Dokumentation',
-  bibliography: [
-    {
-      name: 'MDN Web Docs: HTMLCanvasElement.toDataURL()',
-      url: 'https://developer.mozilla.org/de/docs/Web/API/HTMLCanvasElement/toDataURL',
-    },
-    {
-      name: 'MDN Web Docs: CanvasRenderingContext2D',
-      url: 'https://developer.mozilla.org/de/docs/Web/API/CanvasRenderingContext2D',
-    },
-    {
-      name: 'W3C: HTML Canvas 2D Context',
-      url: 'https://www.w3.org/TR/2dcontext/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ReadabilityCalculatorUI } from '../ui';
@@ -25,11 +26,7 @@ export const content: ToolLocaleContent<ReadabilityCalculatorUI> = {
   faqTitle: '常见问题',
   faq: faqData,
   bibliographyTitle: '对比度和 APCA 资源',
-  bibliography: [
-    { name: 'W3C: WCAG 3.0 草案 (Silver)', url: 'https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/' },
-    { name: 'Myndex: APCA 参考指南', url: 'https://apcaw3.myndex.com/' },
-    { name: 'MDN: 可访问性和颜色对比', url: 'https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

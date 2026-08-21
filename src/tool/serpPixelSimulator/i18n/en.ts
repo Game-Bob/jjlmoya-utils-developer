@@ -32,7 +32,7 @@ const faq = [
     answer: 'Google search cards are constrained by visual width. A title with many narrow letters can fit more characters than a title with wide letters, uppercase words, or bold-looking glyphs. Pixel measurement gives a closer preview of the visible result.',
   },
   {
-    question: 'Does this guarantee exactly how Google will truncate my snippet?',
+    question: 'Does this predict exactly how Google will truncate my snippet?',
     answer: 'No. Google can rewrite title links and snippets, and rendering can vary by query, device, language and experiment. The tool is designed as a practical visual guardrail for writing metadata that is less likely to be cut off.',
   },
   {
@@ -197,7 +197,7 @@ export const content: ToolLocaleContent<SerpPixelSimulatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'No simulator can guarantee the exact snippet Google will show. Google may rewrite title links, bold query terms, choose page text instead of the meta description, or display different snippets for different searches. This tool is best used as a fast writing and QA step: it catches obvious visual overflow before the page reaches production.',
+      html: 'No simulator can know the exact snippet Google will show. Google may rewrite title links, bold query terms, choose page text instead of the meta description, or display different snippets for different searches. This tool is best used as a fast writing and QA step: it catches obvious visual overflow before the page reaches production.',
     },
     {
       type: 'summary',

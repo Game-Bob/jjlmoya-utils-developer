@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { MusicalTypographyUI } from '../ui';
@@ -29,11 +30,7 @@ const ui: MusicalTypographyUI = {
 };
 
 export const content: ToolLocaleContent<MusicalTypographyUI> = {
-  slug, title, description, ui, faqTitle: 'Часто Задаваемые Вопросы', faq: faqData, bibliographyTitle: 'Ссылки', bibliography: [
-    { name: 'Bringhurst, R. The Elements of Typographic Style', url: 'https://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style' },
-    { name: 'Brown, T. More Meaningful Typography. A List Apart', url: 'https://alistapart.com/article/more-meaningful-typography/' },
-    { name: 'Physics of Music. Musical Intervals and Scales', url: 'https://es.scribd.com/document/199729396/Physics-of-Music-Notes' },
-  ], howTo: howToData, schemas: [faqSchema, howToSchema, appSchema], seo: [
+  slug, title, description, ui, faqTitle: 'Часто Задаваемые Вопросы', faq: faqData, bibliographyTitle: 'Ссылки', bibliography, howTo: howToData, schemas: [faqSchema, howToSchema, appSchema], seo: [
     { type: 'title', text: 'Невидимая гармония веб-дизайна', level: 2 },
     { type: 'paragraph', html: '<strong>Музыкальная Типографическая Шкала</strong> применяет математику музыкальных интервалов к типографическому дизайну. Подобно тому, как музыкальная композиция управляется точными пропорциями, хороший дизайн выигрывает от математической структуры, которая связывает все размеры вместе.' },
     { type: 'title', text: 'Как работает модульная шкала', level: 3 },

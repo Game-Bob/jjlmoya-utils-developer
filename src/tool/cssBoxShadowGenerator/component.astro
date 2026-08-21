@@ -18,6 +18,7 @@ const t = (ui ?? {}) as CssBoxShadowGeneratorUI;
     </div>
 
     <div class="bsg-presets-row">
+      <span class="bsg-presets-label">{t.presetsLabel}</span>
       <button class="bsg-chip" data-preset="card" type="button">{t.presetCard}</button>
       <button class="bsg-chip" data-preset="float" type="button">{t.presetFloat}</button>
       <button class="bsg-chip" data-preset="inset" type="button">{t.presetInset}</button>
@@ -75,7 +76,7 @@ const t = (ui ?? {}) as CssBoxShadowGeneratorUI;
 
     <div class="bsg-code-block">
       <div class="bsg-code-bar">
-        <span>CSS</span>
+        <span>{t.codeTitle}</span>
         <button id="bsg-copy" class="bsg-copy-btn" type="button"><Icon name="mdi:content-copy" /> {t.copyCode}</button>
       </div>
       <pre id="bsg-code" class="bsg-code"></pre>

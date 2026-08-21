@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { UrlEncoderDecoderUI } from '../ui';
@@ -99,20 +100,7 @@ export const content: ToolLocaleContent<UrlEncoderDecoderUI> = {
   faqTitle: 'Perguntas Frequentes',
   faq: faqData,
   bibliographyTitle: 'Referências e Documentação',
-  bibliography: [
-    {
-      name: 'MDN Web Docs: encodeURIComponent()',
-      url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent',
-    },
-    {
-      name: 'IETF RFC 3986: URI Generic Syntax',
-      url: 'https://datatracker.ietf.org/doc/html/rfc3986',
-    },
-    {
-      name: 'W3C: URL Living Standard',
-      url: 'https://url.spec.whatwg.org/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

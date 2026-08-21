@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CssToInlineConverterUI } from '../ui';
@@ -11,7 +12,7 @@ const faqData = [
   {
     question: 'Why do emails need inline CSS instead of external stylesheets?',
     answer:
-      'Email clients like Outlook, Gmail, or Apple Mail filter or ignore <link> and <style> tags for security reasons. The only guaranteed way for a style to be applied correctly in an email is to embed it directly in the style attribute of each HTML element.',
+      'Email clients like Outlook, Gmail, or Apple Mail filter or ignore <link> and <style> tags for security reasons. The most compatible approach is to embed the style directly in the style attribute of each HTML element.',
   },
   {
     question: 'What happens if an element already has its own style attribute?',
@@ -26,7 +27,7 @@ const faqData = [
   {
     question: 'Is my HTML and CSS code sent to any server?',
     answer:
-      'No. All processing happens 100% in your browser using the native DOMParser API. No byte of your code leaves your device, guaranteeing total privacy for templates with sensitive content.',
+      'No. All processing happens in your browser using the native DOMParser API. The tool does not send your code to a server, so your template stays on your device during the conversion.',
   },
 ];
 
@@ -100,20 +101,7 @@ export const content: ToolLocaleContent<CssToInlineConverterUI> = {
   faqTitle: 'Frequently Asked Questions',
   faq: faqData,
   bibliographyTitle: 'References and Documentation',
-  bibliography: [
-    {
-      name: 'Can I email: HTML and CSS Support Matrix for Emails',
-      url: 'https://www.caniemail.com/',
-    },
-    {
-      name: 'MDN Web Docs: The global style attribute',
-      url: 'https://developer.mozilla.org/en/docs/Web/HTML/Global_attributes/style',
-    },
-    {
-      name: 'DOMParser API: Safe in-browser parsing',
-      url: 'https://developer.mozilla.org/en/docs/Web/API/DOMParser',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

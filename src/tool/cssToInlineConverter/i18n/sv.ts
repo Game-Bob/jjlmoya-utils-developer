@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CssToInlineConverterUI } from '../ui';
@@ -100,20 +101,7 @@ export const content: ToolLocaleContent<CssToInlineConverterUI> = {
   faqTitle: 'Vanliga Frågor',
   faq: faqData,
   bibliographyTitle: 'Referenser och Dokumentation',
-  bibliography: [
-    {
-      name: 'Can I email: HTML och CSS-stödmatris för Epost',
-      url: 'https://www.caniemail.com/',
-    },
-    {
-      name: 'MDN Web Docs: Det globala style-attributet',
-      url: 'https://developer.mozilla.org/en/docs/Web/HTML/Global_attributes/style',
-    },
-    {
-      name: 'DOMParser API: Säker parsning i webbläsaren',
-      url: 'https://developer.mozilla.org/en/docs/Web/API/DOMParser',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

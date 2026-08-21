@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { PromptLibraryUI } from '../ui';
@@ -95,10 +96,7 @@ export const content: ToolLocaleContent<PromptLibraryUI> = {
   faqTitle: '자주 묻는 질문',
   faq: faqData,
   bibliographyTitle: '프롬프트 엔지니어링 참고자료',
-  bibliography: [
-    { name: 'Prompt Engineering Guide (DAIR.AI)', url: 'https://www.promptingguide.ai/' },
-    { name: '프롬프트 엔지니어링이란 (Google Cloud)', url: 'https://cloud.google.com/discover/what-is-prompt-engineering' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

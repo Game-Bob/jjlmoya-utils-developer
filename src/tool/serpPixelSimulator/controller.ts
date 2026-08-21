@@ -232,6 +232,7 @@ function updatePreview(elements: Elements, context: CanvasRenderingContext2D, ui
   elements.previewDescription.textContent = trimToPixels(context, description, DESCRIPTION_LIMIT, descriptionFont, ui.ellipsis);
   elements.previewUrl.textContent = displayUrl(elements.urlInput.value, ui.fallbackUrl);
   updateMeter({ meter: elements.titleMeter, fill: elements.titleFill, count: elements.titleCount, status: elements.titleStatus }, measure(context, title, titleFont), titleLimit, ui.pixelUnit, ui.goodLabel, ui.tooLongLabel);
+  elements.titleCount.textContent = `${Math.round(measure(context, title, titleFont))} ${ui.pixelUnit} / ${titleLimit} ${ui.pixelUnit} · ${title.length} ${ui.charactersLabel}`;
   updateMeter({ meter: elements.descriptionMeter, fill: elements.descriptionFill, count: elements.descriptionCount, status: elements.descriptionStatus }, measure(context, description, descriptionFont), DESCRIPTION_LIMIT, ui.pixelUnit, ui.goodLabel, ui.tooLongLabel);
 }
 

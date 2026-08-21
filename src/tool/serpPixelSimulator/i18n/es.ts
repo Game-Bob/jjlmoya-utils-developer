@@ -32,7 +32,7 @@ const faq = [
     answer: 'Las tarjetas de resultados de Google están limitadas por el ancho visual. Un título con muchas letras estrechas puede albergar más caracteres que uno con letras anchas, mayúsculas o glifos de aspecto grueso. La medición en píxeles ofrece una vista previa más fiel del resultado visible.',
   },
   {
-    question: '¿Garantiza esto exactamente cómo truncará Google mi fragmento?',
+    question: '¿Predice esto exactamente cómo truncará Google mi fragmento?',
     answer: 'No. Google puede reescribir los enlaces de título y los fragmentos, y la representación puede variar según la consulta, el dispositivo, el idioma y los experimentos. La herramienta está diseñada como una guía visual práctica para redactar metadatos con menos probabilidades de ser cortados.',
   },
   {
@@ -198,7 +198,7 @@ export const content: ToolLocaleContent<SerpPixelSimulatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Ningún simulador puede garantizar el fragmento exacto que Google mostrará. Google puede reescribir los enlaces de título, poner en negrita los términos de la consulta, elegir texto de la página en lugar de la meta descripción o mostrar fragmentos distintos para diferentes búsquedas. Esta herramienta funciona mejor como un paso rápido de redacción y control de calidad: detecta desbordamientos visuales evidentes antes de que la página llegue a producción.',
+      html: 'Ningún simulador puede saber qué fragmento exacto mostrará Google. Google puede reescribir los enlaces de título, poner en negrita los términos de la consulta, elegir texto de la página en lugar de la meta descripción o mostrar fragmentos distintos para diferentes búsquedas. Esta herramienta funciona mejor como un paso rápido de redacción y control de calidad: detecta desbordamientos visuales evidentes antes de que la página llegue a producción.',
     },
     {
       type: 'summary',

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { UrlCleanerUI } from '../ui';
@@ -82,11 +83,7 @@ export const content: ToolLocaleContent<UrlCleanerUI> = {
   faqTitle: 'よくある質問',
   faq: faqData,
   bibliographyTitle: 'プライバシーとウェブトラッキングに関するリソース',
-  bibliography: [
-    { name: 'Electronic Frontier Foundation (EFF): オンライントラッキングガイド', url: 'https://www.eff.org/issues/online-behavioral-tracking' },
-    { name: 'Google Analytics: UTMパラメータのドキュメント', url: 'https://support.google.com/analytics/answer/1033863' },
-    { name: 'ウェブプライバシー：クリックIDの影響', url: 'https://www.w3.org/community/web-advertising/wiki/Click_Identifiers' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

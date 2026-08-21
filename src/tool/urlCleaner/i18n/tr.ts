@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { UrlCleanerUI } from '../ui';
@@ -25,11 +26,7 @@ export const content: ToolLocaleContent<UrlCleanerUI> = {
   faqTitle: 'Sık Sorulan Sorular',
   faq: faqData,
   bibliographyTitle: 'Gizlilik ve Web İzlemesi Kaynakları',
-  bibliography: [
-    { name: 'Electronic Frontier Foundation (EFF): Çevrimiçi İzleme Rehberi', url: 'https://www.eff.org/issues/online-behavioral-tracking' },
-    { name: 'Google Analytics: UTM Parametre Belgeleri', url: 'https://support.google.com/analytics/answer/1033863' },
-    { name: 'Web Gizliliği: Tıklatma Kimliklerinin Etkisi', url: 'https://www.w3.org/community/web-advertising/wiki/Click_Identifiers' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

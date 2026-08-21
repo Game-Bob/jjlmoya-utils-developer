@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CssToInlineConverterUI } from '../ui';
@@ -100,20 +101,7 @@ export const content: ToolLocaleContent<CssToInlineConverterUI> = {
   faqTitle: '常见问题',
   faq: faqData,
   bibliographyTitle: '参考资料和文档',
-  bibliography: [
-    {
-      name: 'Can I email：电子邮件的 HTML 和 CSS 支持矩阵',
-      url: 'https://www.caniemail.com/',
-    },
-    {
-      name: 'MDN Web Docs：全局 style 属性',
-      url: 'https://developer.mozilla.org/en/docs/Web/HTML/Global_attributes/style',
-    },
-    {
-      name: 'DOMParser API：浏览器中的安全解析',
-      url: 'https://developer.mozilla.org/en/docs/Web/API/DOMParser',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

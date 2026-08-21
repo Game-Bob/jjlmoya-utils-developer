@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { MusicalTypographyUI } from '../ui';
@@ -117,20 +118,7 @@ export const content: ToolLocaleContent<MusicalTypographyUI> = {
   faqTitle: 'Frequently Asked Questions',
   faq: faqData,
   bibliographyTitle: 'References',
-  bibliography: [
-    {
-      name: 'Bringhurst, R. The Elements of Typographic Style',
-      url: 'https://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style',
-    },
-    {
-      name: 'Brown, T. More Meaningful Typography. A List Apart',
-      url: 'https://alistapart.com/article/more-meaningful-typography/',
-    },
-    {
-      name: 'Physics of Music. Musical Intervals and Scales',
-      url: 'https://es.scribd.com/document/199729396/Physics-of-Music-Notes',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -155,7 +143,7 @@ export const content: ToolLocaleContent<MusicalTypographyUI> = {
     {
       type: 'card',
       title: 'The formula',
-      html: '<p>The progression is simple: <code>Size = Base × Ratio<sup>n</sup></code>. Step 0 is your base text. Step 1 is a small subtitle. Step 4 or 5 could be your main H1. The same multiplying constant (the ratio) ensures all relationships are consistent.</p>',
+      html: '<p>The progression is simple: <code>Size = Base × Ratio<sup>n</sup></code>. Step 0 is your base text. Step 1 is a small subtitle. Step 4 or 5 could be your main H1. The same multiplying constant (the ratio) keeps the relationships consistent.</p>',
     },
     {
       type: 'card',

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { HashGeneratorUI } from '../ui';
@@ -81,11 +82,7 @@ export const content: ToolLocaleContent<HashGeneratorUI> = {
   faqTitle: '常见问题',
   faq: faqData,
   bibliographyTitle: '哈希相关技术资源',
-  bibliography: [
-    { name: 'MDN Web Docs: SubtleCrypto.digest() API', url: 'https://developer.mozilla.org/zh-CN/docs/Web/API/SubtleCrypto/digest' },
-    { name: 'NIST: FIPS 180-4 Secure Hash Standard (SHA)', url: 'https://csrc.nist.gov/publications/detail/fips/180/4/final' },
-    { name: 'IETF: The MD5 Message-Digest Algorithm (RFC 1321)', url: 'https://datatracker.ietf.org/doc/html/rfc1321' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

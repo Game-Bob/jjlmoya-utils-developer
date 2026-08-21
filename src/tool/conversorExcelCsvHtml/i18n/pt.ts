@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConversorExcelCsvHtmlUI } from '../ui';
@@ -96,12 +97,7 @@ export const content: ToolLocaleContent<ConversorExcelCsvHtmlUI> = {
   faqTitle: 'Perguntas Frequentes',
   faq: faqData,
   bibliographyTitle: 'Recursos sobre Tabelas HTML e Formatos de Dados',
-  bibliography: [
-    { name: 'W3C: Tabelas HTML', url: 'https://www.w3.org/WAI/tutorials/tables/' },
-    { name: 'MDN: Elemento de tabela HTML', url: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/table' },
-    { name: 'RFC 4180: Formato CSV', url: 'https://tools.ietf.org/html/rfc4180' },
-    { name: 'Google Sheets: Faça o download dos seus dados', url: 'https://support.google.com/docs/answer/183965' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

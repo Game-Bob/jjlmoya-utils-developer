@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CssToInlineConverterUI } from '../ui';
@@ -100,20 +101,7 @@ export const content: ToolLocaleContent<CssToInlineConverterUI> = {
   faqTitle: 'Pertanyaan yang Sering Diajukan',
   faq: faqData,
   bibliographyTitle: 'Referensi dan Dokumentasi',
-  bibliography: [
-    {
-      name: 'Can I email: Matriks Dukungan HTML dan CSS untuk Email',
-      url: 'https://www.caniemail.com/',
-    },
-    {
-      name: 'MDN Web Docs: Atribut global style',
-      url: 'https://developer.mozilla.org/en/docs/Web/HTML/Global_attributes/style',
-    },
-    {
-      name: 'DOMParser API: Parsing aman di dalam browser',
-      url: 'https://developer.mozilla.org/en/docs/Web/API/DOMParser',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

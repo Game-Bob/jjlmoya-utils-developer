@@ -156,7 +156,8 @@ const t = (ui ?? {}) as JwtDecoderUI;
   function renderInvalidToken(error: ReturnType<typeof decodeJwt>['error']) {
     resetOutputs();
     headerOutput.textContent = t.invalidTokenTitle;
-    payloadOutput.textContent = error === 'invalid-segments' ? t.invalidSegmentError : t.invalidDecodeError;
+    const detail = error === 'invalid-segments' ? t.invalidSegmentError : t.invalidDecodeError;
+    payloadOutput.textContent = `${detail}\n${t.invalidTokenBody}`;
     setStatus(t.statusInvalid, 'invalid');
   }
 

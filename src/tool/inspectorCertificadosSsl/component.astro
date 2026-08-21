@@ -25,6 +25,7 @@ const t = (ui ?? {}) as InspectorCertificadosSslUI;
         <p class="ics-drop-zone-subtext">
           <small>{t.dragDropSubtext}</small>
         </p>
+        <small class="ics-supported-formats">{t.supportedFormats}</small>
       </div>
     </div>
 
@@ -38,6 +39,7 @@ const t = (ui ?? {}) as InspectorCertificadosSslUI;
         </div>
         <div class="ics-card-content">
           <div class="ics-data-item">
+            <span class="ics-data-label">{t.labelValidityStatus}</span>
             <div id="validez-status"></div>
           </div>
           <div class="ics-data-item">
@@ -186,8 +188,8 @@ const t = (ui ?? {}) as InspectorCertificadosSslUI;
       await displayCertInfo(cert as ForgeCert, buffer);
     } catch (err: unknown) {
       console.error('Error:', err);
-      const message = err instanceof Error ? err.message : 'Archivo no válido.';
-      errorMsg.textContent = `Error: ${message}`;
+      const message = err instanceof Error ? err.message : getUIData().errorMessageInvalid;
+      errorMsg.textContent = message;
       errorMsg.style.display = 'block';
     }
   }
@@ -316,4 +318,3 @@ const t = (ui ?? {}) as InspectorCertificadosSslUI;
     results.classList.add('ics-visible');
   }
 </script>
-

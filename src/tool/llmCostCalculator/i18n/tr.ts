@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { LlmCostCalculatorUI } from '../ui';
@@ -99,24 +100,7 @@ export const content: ToolLocaleContent<LlmCostCalculatorUI> = {
   faqTitle: 'Sık Sorulan Sorular',
   faq: faqData,
   bibliographyTitle: 'Referanslar ve Fiyatlandırma Kaynakları',
-  bibliography: [
-    {
-      name: 'OpenAI API Fiyatlandırması',
-      url: 'https://openai.com/pricing',
-    },
-    {
-      name: 'Anthropic API Fiyatlandırması',
-      url: 'https://www.anthropic.com/pricing',
-    },
-    {
-      name: 'Google AI Studio Fiyatlandırması',
-      url: 'https://ai.google.dev/pricing',
-    },
-    {
-      name: 'OpenAI Tokenizer',
-      url: 'https://platform.openai.com/tokenizer',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

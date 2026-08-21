@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ColorConverterUI } from '../ui';
@@ -17,11 +18,11 @@ const faqData = [
   },
   {
     question: '\u00bfQu\u00e9 es el valor de contraste relativo?',
-    answer: 'Es una m\u00e9trica que indica la legibilidad de un texto sobre un fondo basada en su luminancia. Un contraste alto asegura que personas con dificultades visuales puedan leer el contenido, siguiendo las pautas WCAG.',
+    answer: 'Es una m\u00e9trica que indica la legibilidad de un texto sobre un fondo basada en su luminancia. Un contraste alto puede facilitar la lectura y es una parte de la comprobaci\u00f3n de las pautas WCAG.',
   },
   {
     question: '\u00bfEs seguro usar este conversor de color online?',
-    answer: 'Totalmente. Al ser 100% client-side, los datos de color nunca salen de tu ordenador. Todo el proceso ocurre directamente en tu navegador, garantizando privacidad y rapidez instant\u00e1nea.',
+    answer: 'S\u00ed. Al ser 100% client-side, los datos de color se procesan directamente en tu navegador sin necesidad de enviarlos a un servidor.',
   },
 ];
 
@@ -86,11 +87,7 @@ export const content: ToolLocaleContent<ColorConverterUI> = {
   faqTitle: 'Preguntas Frecuentes',
   faq: faqData,
   bibliographyTitle: 'Recursos de Color y Dise\u00f1o Web',
-  bibliography: [
-    { name: 'W3C: Documentaci\u00f3n de Colores en CSS', url: 'https://www.w3.org/TR/css-color-4/' },
-    { name: 'MDN: Gu\u00eda del Modelo de Color HSL', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl' },
-    { name: 'WebAIM: Gu\u00eda de Contraste y Accesibilidad', url: 'https://webaim.org/resources/contrastchecker/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { SvgSanitizerUI } from '../ui';
@@ -92,11 +93,7 @@ export const content: ToolLocaleContent<SvgSanitizerUI> = {
   faqTitle: '자주 묻는 질문',
   faq: faqData,
   bibliographyTitle: '참고 자료',
-  bibliography: [
-    { name: 'SVG Specification - W3C', url: 'https://www.w3.org/TR/SVG2/' },
-    { name: 'Figma SVG Export - 공식 문서', url: 'https://help.figma.com/hc/en-us/articles/360040028114-Export-from-Figma' },
-    { name: 'SVGO - SVG Optimizer (오픈소스 레퍼런스)', url: 'https://github.com/svg/svgo' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

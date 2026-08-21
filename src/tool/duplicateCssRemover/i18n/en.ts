@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DuplicateCssRemoverUI } from '../ui';
@@ -26,7 +27,7 @@ const faqData = [
   {
     question: 'Is my CSS sent to any server?',
     answer:
-      'No. All processing happens directly in your browser via local JavaScript. No part of your CSS is transmitted to any external server, guaranteeing complete privacy of your code.',
+      'No. All processing happens directly in your browser via local JavaScript. No part of your CSS is transmitted to an external server during the cleanup.',
   },
 ];
 
@@ -100,20 +101,7 @@ export const content: ToolLocaleContent<DuplicateCssRemoverUI> = {
   faqTitle: 'Frequently Asked Questions',
   faq: faqData,
   bibliographyTitle: 'References and Documentation',
-  bibliography: [
-    {
-      name: 'Web Vitals: CSS Impact on Render-Blocking and FCP',
-      url: 'https://web.dev/articles/render-blocking-resources',
-    },
-    {
-      name: 'W3C Specification: CSS Cascade and Inheritance',
-      url: 'https://www.w3.org/TR/css-cascade-4/',
-    },
-    {
-      name: 'Clean CSS: Library and Methodologies for CSS Minification',
-      url: 'https://github.com/clean-css/clean-css',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -156,7 +144,7 @@ export const content: ToolLocaleContent<DuplicateCssRemoverUI> = {
       type: 'list',
       items: [
         'Imagine having the rule <code>.box { color: red; }</code> and a hundred lines later a <code>.box { padding: 10px; color: blue; }</code>. The tool will unify both blocks under the same selector <code>.box</code>, merging the padding.',
-        '<strong>CSS Cascade Preservation:</strong> For direct conflicts, the algorithm strictly preserves the last declared property. This ensures your original layout does not break when purging the document.',
+        '<strong>CSS Cascade Preservation:</strong> For direct conflicts, the algorithm preserves the last declared property, helping keep your original layout intact while the document is purged.',
       ],
     },
     {

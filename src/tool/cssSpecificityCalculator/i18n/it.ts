@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CssSpecificityCalculatorUI } from '../ui';
@@ -99,16 +100,7 @@ export const content: ToolLocaleContent<CssSpecificityCalculatorUI> = {
   faqTitle: 'Domande Frequenti',
   faq: faqData,
   bibliographyTitle: 'Riferimenti e Documentazione',
-  bibliography: [
-    {
-      name: 'MDN Web Docs: Specificità CSS',
-      url: 'https://developer.mozilla.org/it/docs/Web/CSS/Specificity',
-    },
-    {
-      name: 'W3C: Selectors Level 3 - Specificità',
-      url: 'https://www.w3.org/TR/selectors-3/#specificity',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

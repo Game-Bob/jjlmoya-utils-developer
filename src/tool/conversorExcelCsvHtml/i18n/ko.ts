@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConversorExcelCsvHtmlUI } from '../ui';
@@ -96,12 +97,7 @@ export const content: ToolLocaleContent<ConversorExcelCsvHtmlUI> = {
   faqTitle: '자주 묻는 질문',
   faq: faqData,
   bibliographyTitle: 'HTML 테이블 및 데이터 형식 관련 리소스',
-  bibliography: [
-    { name: 'W3C: HTML 테이블', url: 'https://www.w3.org/WAI/tutorials/tables/' },
-    { name: 'MDN: HTML table 요소', url: 'https://developer.mozilla.org/ko/docs/Web/HTML/Element/table' },
-    { name: 'RFC 4180: CSV 형식', url: 'https://tools.ietf.org/html/rfc4180' },
-    { name: 'Google 스프레드시트: 데이터 다운로드', url: 'https://support.google.com/docs/answer/183965' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

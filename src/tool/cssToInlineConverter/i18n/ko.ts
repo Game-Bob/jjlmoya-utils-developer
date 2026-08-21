@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CssToInlineConverterUI } from '../ui';
@@ -100,20 +101,7 @@ export const content: ToolLocaleContent<CssToInlineConverterUI> = {
   faqTitle: '자주 묻는 질문',
   faq: faqData,
   bibliographyTitle: '참고 자료 및 문서',
-  bibliography: [
-    {
-      name: 'Can I email: 이메일용 HTML 및 CSS 지원 매트릭스',
-      url: 'https://www.caniemail.com/',
-    },
-    {
-      name: 'MDN Web Docs: 글로벌 style 속성',
-      url: 'https://developer.mozilla.org/ko/docs/Web/HTML/Global_attributes/style',
-    },
-    {
-      name: 'DOMParser API: 브라우저 내 안전한 파싱',
-      url: 'https://developer.mozilla.org/ko/docs/Web/API/DOMParser',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

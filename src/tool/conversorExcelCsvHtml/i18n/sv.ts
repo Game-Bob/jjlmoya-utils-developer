@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConversorExcelCsvHtmlUI } from '../ui';
@@ -96,12 +97,7 @@ export const content: ToolLocaleContent<ConversorExcelCsvHtmlUI> = {
   faqTitle: 'Vanliga frågor',
   faq: faqData,
   bibliographyTitle: 'Resurser om HTML-tabeller och dataformat',
-  bibliography: [
-    { name: 'W3C: HTML-tabeller', url: 'https://www.w3.org/WAI/tutorials/tables/' },
-    { name: 'MDN: HTML table-element', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table' },
-    { name: 'RFC 4180: CSV-format', url: 'https://tools.ietf.org/html/rfc4180' },
-    { name: 'Google Sheets: Ladda ner dina data', url: 'https://support.google.com/docs/answer/183965' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

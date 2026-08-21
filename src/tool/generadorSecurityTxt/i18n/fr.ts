@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { GeneradorSecurityTxtUI } from '../ui';
@@ -97,11 +98,7 @@ export const content: ToolLocaleContent<GeneradorSecurityTxtUI> = {
   faqTitle: 'Questions Fréquemment Posées',
   faq: faqData,
   bibliographyTitle: 'Ressources Techniques sur Security.txt',
-  bibliography: [
-    { name: 'RFC 9116: A File Format to Aid in Security Vulnerability Disclosure', url: 'https://datatracker.ietf.org/doc/html/rfc9116' },
-    { name: 'Site Officiel de Security.txt', url: 'https://securitytxt.org/' },
-    { name: 'OWASP: Feuille de Triche sur la Divulgation de Vulnérabilité', url: 'https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

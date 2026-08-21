@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { SvgSanitizerUI } from '../ui';
@@ -92,11 +93,7 @@ export const content: ToolLocaleContent<SvgSanitizerUI> = {
   faqTitle: 'Questions Fr\u00e9quentes',
   faq: faqData,
   bibliographyTitle: 'R\u00e9f\u00e9rences',
-  bibliography: [
-    { name: 'SVG Specification - W3C', url: 'https://www.w3.org/TR/SVG2/' },
-    { name: 'Figma SVG Export - Documentation officielle', url: 'https://help.figma.com/hc/en-us/articles/360040028114-Export-from-Figma' },
-    { name: 'SVGO - SVG Optimizer (r\u00e9f\u00e9rence open source)', url: 'https://github.com/svg/svgo' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

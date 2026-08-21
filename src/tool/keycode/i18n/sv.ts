@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { KeycodeUI } from '../ui';
@@ -98,20 +99,7 @@ export const content: ToolLocaleContent<KeycodeUI> = {
   faqTitle: 'Vanliga Frågor',
   faq: faqData,
   bibliographyTitle: 'Referenser och Standarder',
-  bibliography: [
-    {
-      name: 'MDN Web Docs - KeyboardEvent',
-      url: 'https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent',
-    },
-    {
-      name: 'UI Events Specification (W3C) - KeyboardEvent',
-      url: 'https://www.w3.org/TR/uievents/#events-keyboardevents',
-    },
-    {
-      name: 'MDN - KeyboardEvent.code values',
-      url: 'https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

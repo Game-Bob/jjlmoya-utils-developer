@@ -202,7 +202,7 @@ const t = (ui ?? {}) as GeneradorSecurityTxtUI;
     navigator.clipboard.writeText(text).then(() => {
       const originalHTML = btnCopy.innerHTML;
       const uiData = getUIData();
-      btnCopy.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> ' + (uiData.copiedMessage || 'Copied');
+      btnCopy.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> ' + uiData.copiedMessage;
       setTimeout(() => {
         btnCopy.innerHTML = originalHTML;
       }, 2000);
@@ -239,4 +239,3 @@ const t = (ui ?? {}) as GeneradorSecurityTxtUI;
   btnCopy.addEventListener('click', copyToClipboard);
   btnDownload.addEventListener('click', downloadFile);
 </script>
-

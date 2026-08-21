@@ -65,14 +65,17 @@ const t = (ui ?? {}) as CalculadoraTiempoDatosUI;
       <label>{t.labelSpeed}</label>
       <div class="ctd-speed-buttons">
         <button class="ctd-speed-btn" data-speed="3g">
+          <span class="sr-only">{t.preset3g}</span>
           <span class="ctd-speed-label">{t.speedLabel3g}</span>
           <span class="ctd-speed-value">{t.speedValue3g}</span>
         </button>
         <button class="ctd-speed-btn active" data-speed="4g">
+          <span class="sr-only">{t.preset4g}</span>
           <span class="ctd-speed-label">{t.speedLabel4g}</span>
           <span class="ctd-speed-value">{t.speedValue4g}</span>
         </button>
         <button class="ctd-speed-btn" data-speed="5g">
+          <span class="sr-only">{t.preset5g}</span>
           <span class="ctd-speed-label">{t.speedLabel5g}</span>
           <span class="ctd-speed-value">{t.speedValue5g}</span>
         </button>
@@ -98,7 +101,8 @@ const t = (ui ?? {}) as CalculadoraTiempoDatosUI;
       </div>
     </div>
 
-    <div class="ctd-results">
+    <div class="ctd-results" aria-labelledby="ctd-results-title">
+      <h3 id="ctd-results-title" class="ctd-results-title">{t.resultTitle}</h3>
       <div class="ctd-result-single">
         <div class="ctd-result-label">{t.resultSingleLoad}</div>
         <div class="ctd-result-time" id="ctd-single-time">1.4s</div>
@@ -130,6 +134,7 @@ const t = (ui ?? {}) as CalculadoraTiempoDatosUI;
     <div class="ctd-message" id="ctd-message">
       <strong>{t.resultMessage}</strong>
     </div>
+    <span id="ctd-copy-status" class="sr-only" data-copy-message={t.copyMessage} aria-live="polite"></span>
   </div>
 </div>
 
@@ -302,4 +307,3 @@ const t = (ui ?? {}) as CalculadoraTiempoDatosUI;
     initCalculator();
   }
 </script>
-

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { UtmGeneratorUI } from '../ui';
@@ -80,10 +81,7 @@ export const content: ToolLocaleContent<UtmGeneratorUI> = {
   faqTitle: 'Sıkça Sorulan Sorular',
   faq: faqData,
   bibliographyTitle: 'Referanslar',
-  bibliography: [
-    { name: 'Özel URL\'lerle kampanya verilerini toplama - Google Analytics Yardımı (2024)', url: 'https://support.google.com/analytics/answer/1033863' },
-    { name: 'Kampanya URL Etiketleme için En İyi Uygulamalar - VWO Blog (2023)', url: 'https://vwo.com/blog/utm-tagging-best-practices/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

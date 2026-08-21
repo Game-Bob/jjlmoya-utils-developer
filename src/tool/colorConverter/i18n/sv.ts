@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ColorConverterUI } from '../ui';
@@ -86,11 +87,7 @@ export const content: ToolLocaleContent<ColorConverterUI> = {
   faqTitle: 'Vanliga frågor',
   faq: faqData,
   bibliographyTitle: 'Resurser för färg och webbdesign',
-  bibliography: [
-    { name: 'W3C: CSS färg-dokumentation', url: 'https://www.w3.org/TR/css-color-4/' },
-    { name: 'MDN: Guide till HSL-färgmodellen', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl' },
-    { name: 'WebAIM: Guide till kontrast och tillgänglighet', url: 'https://webaim.org/resources/contrastchecker/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

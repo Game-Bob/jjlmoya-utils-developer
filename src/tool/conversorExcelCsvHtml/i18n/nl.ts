@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConversorExcelCsvHtmlUI } from '../ui';
@@ -96,12 +97,7 @@ export const content: ToolLocaleContent<ConversorExcelCsvHtmlUI> = {
   faqTitle: 'Veelgestelde Vragen',
   faq: faqData,
   bibliographyTitle: 'Bronnen over HTML-tabellen en gegevensformaten',
-  bibliography: [
-    { name: 'W3C: HTML-tabellen', url: 'https://www.w3.org/WAI/tutorials/tables/' },
-    { name: 'MDN: HTML table-element', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table' },
-    { name: 'RFC 4180: CSV-formaat', url: 'https://tools.ietf.org/html/rfc4180' },
-    { name: 'Google Sheets: Download uw gegevens', url: 'https://support.google.com/docs/answer/183965' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

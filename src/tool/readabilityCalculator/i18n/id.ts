@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ReadabilityCalculatorUI } from '../ui';
@@ -97,11 +98,7 @@ export const content: ToolLocaleContent<ReadabilityCalculatorUI> = {
   faqTitle: 'Pertanyaan yang Sering Diajukan',
   faq: faqData,
   bibliographyTitle: 'Sumber tentang Kontras dan APCA',
-  bibliography: [
-    { name: 'W3C: Draf WCAG 3.0 (Silver)', url: 'https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/' },
-    { name: 'Myndex: Panduan Referensi APCA', url: 'https://apcaw3.myndex.com/' },
-    { name: 'MDN: Aksesibilitas dan Kontras Warna', url: 'https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

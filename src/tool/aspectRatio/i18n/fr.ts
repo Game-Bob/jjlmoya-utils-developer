@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { AspectRatioUI } from '../ui';
@@ -109,20 +110,7 @@ export const content: ToolLocaleContent<AspectRatioUI> = {
   faqTitle: 'Questions Fréquentes',
   faq: faqData,
   bibliographyTitle: 'Références et Documentation',
-  bibliography: [
-    {
-      name: 'MDN Web Docs: aspect-ratio (CSS)',
-      url: 'https://developer.mozilla.org/fr/docs/Web/CSS/aspect-ratio',
-    },
-    {
-      name: 'Wikipedia: Format d\'image',
-      url: 'https://fr.wikipedia.org/wiki/Format_d%27image',
-    },
-    {
-      name: 'W3C: CSS Box Sizing Level 4',
-      url: 'https://www.w3.org/TR/css-sizing-4/#aspect-ratio',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

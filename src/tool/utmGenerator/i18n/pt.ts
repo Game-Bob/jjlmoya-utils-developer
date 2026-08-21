@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { UtmGeneratorUI } from '../ui';
@@ -80,10 +81,7 @@ export const content: ToolLocaleContent<UtmGeneratorUI> = {
   faqTitle: 'Perguntas Frequentes',
   faq: faqData,
   bibliographyTitle: 'Referências',
-  bibliography: [
-    { name: 'Coletar dados de campanha com URLs personalizadas - Ajuda do Google Analytics (2024)', url: 'https://support.google.com/analytics/answer/1033863' },
-    { name: 'Melhores práticas para marcação de URL de campanha - Blog VWO (2023)', url: 'https://vwo.com/blog/utm-tagging-best-practices/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

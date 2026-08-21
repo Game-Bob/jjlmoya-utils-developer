@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { PlaceholderGeneratorUI } from '../ui';
@@ -106,20 +107,7 @@ export const content: ToolLocaleContent<PlaceholderGeneratorUI> = {
   faqTitle: 'Frequently Asked Questions',
   faq: faqData,
   bibliographyTitle: 'References and Documentation',
-  bibliography: [
-    {
-      name: 'MDN Web Docs: HTMLCanvasElement.toDataURL()',
-      url: 'https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL',
-    },
-    {
-      name: 'MDN Web Docs: CanvasRenderingContext2D',
-      url: 'https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D',
-    },
-    {
-      name: 'W3C: HTML Canvas 2D Context',
-      url: 'https://www.w3.org/TR/2dcontext/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -158,9 +146,9 @@ export const content: ToolLocaleContent<PlaceholderGeneratorUI> = {
     {
       type: 'list',
       items: [
-        '<strong>Pixel Perfect Resolution:</strong> Native HTML5 Canvas ensures the exported canvas corresponds arithmetically to the coordinates stipulated by the user.',
+        '<strong>Pixel Perfect Resolution:</strong> Native HTML5 Canvas keeps the exported canvas aligned with the coordinates stipulated by the user.',
         '<strong>Typographic Autoscaling:</strong> In Automatic mode, the font size calculates the perimeter area and number of characters to elegantly fit the text without causing unwanted <em>overflows</em>.',
-        '<strong>Hexadecimal Fusion:</strong> Bidirectional state control between native HTML ecosystem selectors and typed inputs, guaranteeing precise contrasts dictated by your Figma or Penpot UI/UX palette.',
+        '<strong>Hexadecimal Fusion:</strong> Bidirectional state control between native HTML ecosystem selectors and typed inputs, so you can match the contrast values from your Figma or Penpot UI/UX palette.',
       ],
     },
     {

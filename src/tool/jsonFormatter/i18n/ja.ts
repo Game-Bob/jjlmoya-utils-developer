@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { JsonFormatterUI } from '../ui';
@@ -107,24 +108,7 @@ export const content: ToolLocaleContent<JsonFormatterUI> = {
   faqTitle: 'よくある質問',
   faq: faqData,
   bibliographyTitle: '参考文献と標準',
-  bibliography: [
-    {
-      name: 'RFC 8259 - The JavaScript Object Notation (JSON) Data Interchange Format (IETF)',
-      url: 'https://datatracker.ietf.org/doc/html/rfc8259',
-    },
-    {
-      name: 'ECMA-404 - The JSON Data Interchange Syntax (Ecma International)',
-      url: 'https://www.ecma-international.org/publications-and-standards/standards/ecma-404/',
-    },
-    {
-      name: 'JSON.org - JSONの導入',
-      url: 'https://www.json.org/json-ja.html',
-    },
-    {
-      name: 'MDN Web Docs - JSON',
-      url: 'https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

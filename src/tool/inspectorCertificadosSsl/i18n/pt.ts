@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { InspectorCertificadosSslUI } from '../ui';
@@ -102,12 +103,7 @@ export const content: ToolLocaleContent<InspectorCertificadosSslUI> = {
   faqTitle: 'Perguntas Frequentes',
   faq: faqData,
   bibliographyTitle: 'Recursos Técnicos sobre Certificados SSL/TLS',
-  bibliography: [
-    { name: 'RFC 5280: Internet X.509 Public Key Infrastructure Certificate and CRL Profile', url: 'https://datatracker.ietf.org/doc/html/rfc5280' },
-    { name: 'NIST: FIPS 180-4 Secure Hash Standard (SHA)', url: 'https://csrc.nist.gov/publications/detail/fips/180/4/final' },
-    { name: 'Mozilla: Visão geral da encriptação SSL/TLS', url: 'https://developer.mozilla.org/pt-PT/docs/Glossary/TLS' },
-    { name: 'OpenSSL: Documentação do Formato de Certificado X.509', url: 'https://www.openssl.org/docs/man1.1.1/man1/x509.html' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

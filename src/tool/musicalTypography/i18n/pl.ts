@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { MusicalTypographyUI } from '../ui';
@@ -117,20 +118,7 @@ export const content: ToolLocaleContent<MusicalTypographyUI> = {
   faqTitle: 'Często Zadawane Pytania',
   faq: faqData,
   bibliographyTitle: 'Referencje',
-  bibliography: [
-    {
-      name: 'Bringhurst, R. The Elements of Typographic Style',
-      url: 'https://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style',
-    },
-    {
-      name: 'Brown, T. More Meaningful Typography. A List Apart',
-      url: 'https://alistapart.com/article/more-meaningful-typography/',
-    },
-    {
-      name: 'Physics of Music. Musical Intervals and Scales',
-      url: 'https://es.scribd.com/document/199729396/Physics-of-Music-Notes',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CssToInlineConverterUI } from '../ui';
@@ -100,20 +101,7 @@ export const content: ToolLocaleContent<CssToInlineConverterUI> = {
   faqTitle: 'Domande frequenti',
   faq: faqData,
   bibliographyTitle: 'Riferimenti e documentazione',
-  bibliography: [
-    {
-      name: 'Can I email: Matrice di supporto HTML e CSS per le email',
-      url: 'https://www.caniemail.com/',
-    },
-    {
-      name: 'MDN Web Docs: L\'attributo globale style',
-      url: 'https://developer.mozilla.org/it/docs/Web/HTML/Global_attributes/style',
-    },
-    {
-      name: 'DOMParser API: Parsing sicuro nel browser',
-      url: 'https://developer.mozilla.org/it/docs/Web/API/DOMParser',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

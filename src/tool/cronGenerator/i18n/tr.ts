@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CronGeneratorUI } from '../ui';
@@ -137,16 +138,7 @@ export const content: ToolLocaleContent<CronGeneratorUI> = {
   faqTitle: 'Sıkça Sorulan Sorular',
   faq: faqData,
   bibliographyTitle: 'Referanslar ve Dokümantasyon',
-  bibliography: [
-    {
-      name: 'GNU Crontab Kılavuzu: Linux\'ta Cron İfadeleri',
-      url: 'https://www.gnu.org/software/mcron/manual/html_node/Crontab-file.html',
-    },
-    {
-      name: 'Wikipedia\'da Cron: Tarihçe ve Sözdizimi',
-      url: 'https://tr.wikipedia.org/wiki/Cron',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

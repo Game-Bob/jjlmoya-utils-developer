@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConversorExcelCsvHtmlUI } from '../ui';
@@ -96,12 +97,7 @@ export const content: ToolLocaleContent<ConversorExcelCsvHtmlUI> = {
   faqTitle: '常见问题',
   faq: faqData,
   bibliographyTitle: '关于 HTML 表格和数据格式的资源',
-  bibliography: [
-    { name: 'W3C: HTML 表格', url: 'https://www.w3.org/WAI/tutorials/tables/' },
-    { name: 'MDN: HTML table 元素', url: 'https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table' },
-    { name: 'RFC 4180: CSV 格式', url: 'https://tools.ietf.org/html/rfc4180' },
-    { name: 'Google 表格：下载您的数据', url: 'https://support.google.com/docs/answer/183965' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

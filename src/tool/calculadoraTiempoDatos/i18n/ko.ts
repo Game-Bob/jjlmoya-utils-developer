@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CalculadoraTiempoDatosUI } from '../ui';
@@ -102,12 +103,7 @@ export const content: ToolLocaleContent<CalculadoraTiempoDatosUI> = {
   faqTitle: '자주 묻는 질문',
   faq: faqData,
   bibliographyTitle: '웹 최적화 관련 기술 리소스',
-  bibliography: [
-    { name: 'Google PageSpeed Insights', url: 'https://pagespeed.web.dev/' },
-    { name: 'WebPageTest - 웹사이트 속도 분석', url: 'https://www.webpagetest.org/' },
-    { name: 'Web.dev - Core Web Vitals', url: 'https://web.dev/vitals/' },
-    { name: 'MDN - 웹 성능', url: 'https://developer.mozilla.org/ko/docs/Web/Performance' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -27,9 +27,25 @@ function visibleWords(value: string): string {
     .trim();
 }
 
+const technicalLiteralPatterns = [
+  /^(?:\.|#|\[)/,
+  /^data-[a-z0-9-]+$/i,
+  /^(?:cc|ss)-copied$/i,
+  /^invalid-segments$/,
+  /^\(space\)$/,
+  /^(?:SHA-1|SHA-256|SHA-512|en-US)$/i,
+  /^(?:h|px|años)$/i,
+  /^\d+\s+[A-Z]$/,
+  /^(?:if \(|\{ key:)/,
+];
+
 function isTechnicalLiteral(value: string): boolean {
-  return ['.', '#', '['].some((prefix) => value.startsWith(prefix))
-    || /^data-[a-z0-9-]+$/i.test(value);
+  const trimmed = value.trim();
+  return value.includes('${t.')
+    || value.includes('${ui.')
+    || value.includes('${localized.')
+    || technicalLiteralPatterns.some((pattern) => pattern.test(value) || pattern.test(trimmed))
+    || (value.includes('${') && /(?:px|\bh\b|años)/i.test(value));
 }
 
 function hardcodedVisibleLiterals(source: string): VisibleLiteral[] {

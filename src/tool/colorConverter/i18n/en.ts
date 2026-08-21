@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ColorConverterUI } from '../ui';
@@ -17,11 +18,11 @@ const faqData = [
   },
   {
     question: 'What is the relative contrast value?',
-    answer: 'It is a metric that indicates the readability of text against a background based on its luminance. High contrast ensures people with visual impairments can read the content, following WCAG accessibility guidelines.',
+    answer: 'It is a metric that indicates the readability of text against a background based on its luminance. Higher contrast can make content easier to read and is one part of checking WCAG accessibility guidance.',
   },
   {
     question: 'Is it safe to use this online color converter?',
-    answer: 'Absolutely. Being 100% client-side, your color data never leaves your computer. All processing happens directly in your browser, guaranteeing privacy and instant performance.',
+    answer: 'Absolutely. Being 100% client-side, your color data is processed directly in your browser without needing to send it to a server.',
   },
 ];
 
@@ -86,11 +87,7 @@ export const content: ToolLocaleContent<ColorConverterUI> = {
   faqTitle: 'Frequently Asked Questions',
   faq: faqData,
   bibliographyTitle: 'Color and Web Design Resources',
-  bibliography: [
-    { name: 'W3C: CSS Color Documentation', url: 'https://www.w3.org/TR/css-color-4/' },
-    { name: 'MDN: HSL Color Model Guide', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl' },
-    { name: 'WebAIM: Contrast and Accessibility Guide', url: 'https://webaim.org/resources/contrastchecker/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -111,7 +108,7 @@ export const content: ToolLocaleContent<ColorConverterUI> = {
     { type: 'title', text: 'Contrast and WCAG Accessibility', level: 3 },
     {
       type: 'paragraph',
-      html: 'The calculator includes a <strong>relative contrast</strong> measurement based on luminance. This helps you meet <strong>WCAG</strong> guidelines, ensuring your text is readable against selected backgrounds.',
+      html: 'The calculator includes a <strong>relative contrast</strong> measurement based on luminance. This can help you compare your text against <strong>WCAG</strong> contrast guidance.',
     },
     { type: 'title', text: 'Automatic Color Harmonies', level: 3 },
     {

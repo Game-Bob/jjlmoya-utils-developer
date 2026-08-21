@@ -149,9 +149,13 @@ const advFields = [
 
   function describeDayPart(dom: string, mon: string, dow: string, t: CronGeneratorUI): string {
     let s = '';
+    const dayNames = t.descDays.split(',');
     if (dom !== '*') s += t.descOnDay.replace('{d}', dom);
     if (mon !== '*') s += t.descInMonth.replace('{mon}', mon);
-    if (dow !== '*') s += t.descIfDow.replace('{d}', dow);
+    if (dow !== '*') {
+      const day = /^\d+$/.test(dow) ? (dayNames[Number(dow)] ?? dow) : dow;
+      s += t.descIfDow.replace('{d}', day);
+    }
     return s;
   }
 

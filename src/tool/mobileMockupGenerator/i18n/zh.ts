@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { MobileMockupGeneratorUI } from '../ui';
@@ -102,10 +103,7 @@ export const content: ToolLocaleContent<MobileMockupGeneratorUI> = {
   faqTitle: '常见问题',
   faq: faqData,
   bibliographyTitle: '参考资料',
-  bibliography: [
-    { name: 'Apple App Store 截图要求', url: 'https://developer.apple.com/help/app-store-connect/reference/screenshot-specifications' },
-    { name: 'Google Play 截图要求', url: 'https://support.google.com/googleplay/android-developer/answer/9866151' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

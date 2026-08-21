@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { UrlCleanerUI } from '../ui';
@@ -25,11 +26,7 @@ export const content: ToolLocaleContent<UrlCleanerUI> = {
   faqTitle: 'Vanliga Frågor',
   faq: faqData,
   bibliographyTitle: 'Resurser om Integritet och Webbspårning',
-  bibliography: [
-    { name: 'Electronic Frontier Foundation (EFF): Vägledning till Online-spårning', url: 'https://www.eff.org/issues/online-behavioral-tracking' },
-    { name: 'Google Analytics: UTM-parameterdokumentation', url: 'https://support.google.com/analytics/answer/1033863' },
-    { name: 'Web Privacy: Effekten av Klick-ID:n', url: 'https://www.w3.org/community/web-advertising/wiki/Click_Identifiers' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

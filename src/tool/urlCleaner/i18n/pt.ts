@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { UrlCleanerUI } from '../ui';
@@ -25,11 +26,7 @@ export const content: ToolLocaleContent<UrlCleanerUI> = {
   faqTitle: 'Perguntas Frequentes',
   faq: faqData,
   bibliographyTitle: 'Recursos sobre Privacidade e Rastreamento Web',
-  bibliography: [
-    { name: 'Electronic Frontier Foundation (EFF): Guia para Rastreamento Online', url: 'https://www.eff.org/issues/online-behavioral-tracking' },
-    { name: 'Google Analytics: Documentação de Parâmetro UTM', url: 'https://support.google.com/analytics/answer/1033863' },
-    { name: 'Web Privacy: O Impacto de Click IDs', url: 'https://www.w3.org/community/web-advertising/wiki/Click_Identifiers' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

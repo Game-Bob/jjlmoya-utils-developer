@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConversorExcelCsvHtmlUI } from '../ui';
@@ -96,12 +97,7 @@ export const content: ToolLocaleContent<ConversorExcelCsvHtmlUI> = {
   faqTitle: 'Sıkça Sorulan Sorular',
   faq: faqData,
   bibliographyTitle: 'HTML Tabloları ve Veri Formatları Hakkında Kaynaklar',
-  bibliography: [
-    { name: 'W3C: HTML Tabloları', url: 'https://www.w3.org/WAI/tutorials/tables/' },
-    { name: 'MDN: HTML tablo öğesi', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table' },
-    { name: 'RFC 4180: CSV Formatı', url: 'https://tools.ietf.org/html/rfc4180' },
-    { name: 'Google Sheets: Verilerinizi indirin', url: 'https://support.google.com/docs/answer/183965' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

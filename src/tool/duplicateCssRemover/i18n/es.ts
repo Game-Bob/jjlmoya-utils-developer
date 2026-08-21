@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DuplicateCssRemoverUI } from '../ui';
@@ -26,7 +27,7 @@ const faqData = [
   {
     question: '¿Mis datos se envían a algún servidor?',
     answer:
-      'No. Todo el procesamiento ocurre directamente en tu navegador mediante JavaScript local. Ningún fragmento de tu CSS es transmitido a ningún servidor externo, garantizando la privacidad total de tu código.',
+      'No. Todo el procesamiento ocurre directamente en tu navegador mediante JavaScript local. La herramienta no transmite tu CSS a un servidor externo durante la limpieza.',
   },
 ];
 
@@ -100,20 +101,7 @@ export const content: ToolLocaleContent<DuplicateCssRemoverUI> = {
   faqTitle: 'Preguntas Frecuentes',
   faq: faqData,
   bibliographyTitle: 'Referencias y Documentación',
-  bibliography: [
-    {
-      name: 'Web Vitals: Impacto del CSS en Render-Blocking y FCP',
-      url: 'https://web.dev/articles/render-blocking-resources',
-    },
-    {
-      name: 'Especificación W3C: Cascada CSS y Herencia',
-      url: 'https://www.w3.org/TR/css-cascade-4/',
-    },
-    {
-      name: 'Clean CSS: Librería y metodologías para CSS minifier',
-      url: 'https://github.com/clean-css/clean-css',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -156,7 +144,7 @@ export const content: ToolLocaleContent<DuplicateCssRemoverUI> = {
       type: 'list',
       items: [
         'Imagina tener la regla <code>.box { color: red; }</code> y cien líneas más abajo un <code>.box { padding: 10px; color: blue; }</code>. La herramienta unificará ambos bloques bajo el mismo selector <code>.box</code> combinando el padding.',
-        '<strong>Preservación de la Cascada CSS:</strong> Ante conflictos directos, el algoritmo preserva estrictamente la última propiedad declarada. Así garantizamos que tu maquetado original no se rompa al purgar el documento.',
+        '<strong>Preservación de la Cascada CSS:</strong> Ante conflictos directos, el algoritmo conserva la última propiedad declarada para ayudar a mantener tu maquetado al purgar el documento.',
       ],
     },
     {

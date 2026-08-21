@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConversorExcelCsvHtmlUI } from '../ui';
@@ -96,12 +97,7 @@ export const content: ToolLocaleContent<ConversorExcelCsvHtmlUI> = {
   faqTitle: 'よくある質問',
   faq: faqData,
   bibliographyTitle: 'HTMLテーブルとデータ形式に関するリソース',
-  bibliography: [
-    { name: 'W3C: HTMLテーブル', url: 'https://www.w3.org/WAI/tutorials/tables/' },
-    { name: 'MDN: HTML table要素', url: 'https://developer.mozilla.org/ja/docs/Web/HTML/Element/table' },
-    { name: 'RFC 4180: CSV形式', url: 'https://tools.ietf.org/html/rfc4180' },
-    { name: 'Googleスプレッドシート：データのダウンロード', url: 'https://support.google.com/docs/answer/183965' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

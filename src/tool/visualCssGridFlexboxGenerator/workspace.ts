@@ -90,6 +90,7 @@ class WorkspaceImpl implements Workspace {
     };
     this.flexBtn = document.getElementById('vcg-flex') as HTMLButtonElement;
     this.gridBtn = document.getElementById('vcg-grid') as HTMLButtonElement;
+    this.c.canvas.setAttribute('title', this.t.spanHint);
     this.setupResizeObserver();
   }
 
@@ -152,7 +153,18 @@ class WorkspaceImpl implements Workspace {
 
   removeItem() {
     const items = getAllItems(this.c.canvas);
-    if (items.length <= 2) return;
+    if (items.length <= 2) {
+      const hint = this.root.querySelector<HTMLElement>('#vcg-hint');
+      if (hint) {
+        hint.textContent = this.t.shakeLimit;
+        hint.classList.add('vcg-shake');
+        window.setTimeout(() => {
+          hint.textContent = this.t.dragHint;
+          hint.classList.remove('vcg-shake');
+        }, 600);
+      }
+      return;
+    }
     const last = items[items.length - 1]!;
     last.classList.add('vcg-exit');
     last.addEventListener('animationend', () => {

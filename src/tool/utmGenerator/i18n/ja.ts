@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { UtmGeneratorUI } from '../ui';
@@ -80,10 +81,7 @@ export const content: ToolLocaleContent<UtmGeneratorUI> = {
   faqTitle: 'よくある質問',
   faq: faqData,
   bibliographyTitle: '参考文献',
-  bibliography: [
-    { name: 'カスタム URL を使用してキャンペーン データを収集する - Google アナリティクス ヘルプ (2024)', url: 'https://support.google.com/analytics/answer/1033863' },
-    { name: 'キャンペーン URL タグ付けのベスト プラクティス - VWO ブログ (2023)', url: 'https://vwo.com/blog/utm-tagging-best-practices/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

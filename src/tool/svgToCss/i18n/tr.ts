@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { SvgToCssUI } from '../ui';
@@ -110,24 +111,7 @@ export const content: ToolLocaleContent<SvgToCssUI> = {
   faqTitle: 'Sıkça Sorulan Sorular',
   faq: faqData,
   bibliographyTitle: 'Referanslar ve Dokümantasyon',
-  bibliography: [
-    {
-      name: 'CSS-Tricks: Background Olarak SVG Kullanımı',
-      url: 'https://css-tricks.com/using-svg/',
-    },
-    {
-      name: 'MDN Web Docs: mask-image',
-      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/mask-image',
-    },
-    {
-      name: 'MDN Web Docs: background-image',
-      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/background-image',
-    },
-    {
-      name: 'W3C: CSS Masking Module Level 1',
-      url: 'https://www.w3.org/TR/css-masking-1/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

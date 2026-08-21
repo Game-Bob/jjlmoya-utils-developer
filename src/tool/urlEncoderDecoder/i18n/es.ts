@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { UrlEncoderDecoderUI } from '../ui';
@@ -99,20 +100,7 @@ export const content: ToolLocaleContent<UrlEncoderDecoderUI> = {
   faqTitle: 'Preguntas Frecuentes',
   faq: faqData,
   bibliographyTitle: 'Referencias y Documentación',
-  bibliography: [
-    {
-      name: 'MDN Web Docs: encodeURIComponent()',
-      url: 'https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent',
-    },
-    {
-      name: 'IETF RFC 3986: Estructura de URIs',
-      url: 'https://datatracker.ietf.org/doc/html/rfc3986',
-    },
-    {
-      name: 'W3C: URL Living Standard',
-      url: 'https://url.spec.whatwg.org/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -156,7 +144,7 @@ export const content: ToolLocaleContent<UrlEncoderDecoderUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Esta herramienta garantiza cálculos limpios y automáticos con un 100% de ejecución en tu navegador local. Ninguna de tus cadenas URL es transmitida a servidores de terceros, asegurando la privacidad de tus tokens y parámetros analíticos.',
+      html: 'Esta herramienta realiza los cálculos directamente en tu navegador local. Ninguna de tus cadenas URL necesita enviarse a servidores de terceros, lo que ayuda a mantener privados tus tokens y parámetros analíticos.',
     },
   ],
 };
