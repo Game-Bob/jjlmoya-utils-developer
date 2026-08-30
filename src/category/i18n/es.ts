@@ -27,7 +27,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'tip',
-      title: 'Privacidad garantizada',
+      title: 'Privacidad local',
       html: 'Todas las herramientas procesan los datos localmente en tu navegador. Ningún código, dato ni archivo se envía a ningún servidor externo.',
     },
   ],

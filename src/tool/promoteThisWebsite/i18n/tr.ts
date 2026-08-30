@@ -24,7 +24,7 @@ const localized = {
     ],
     seoTitle: 'jjlmoya ve GameBob için resmi propaganda masası',
     seoIntro: 'Bu, branding kelimesini yeni keşfetmiş biri için genel bir sosyal görsel düzenleyici değil. Kediler denetlerken jjlmoya.es ve GameBob.dev sayfalarımızı tanıtmak için var.',
-    seoBody: "Gerçek bir ekran görüntüsü yapıştır veya üretim URL'si yükle. Araç slugdan tahmin etmek yerine sayfa başlığını okur ve kompozisyon sırasında resmi Open Graph görselini görünür tutar.",
+    seoBody: "Gerçek bir ekran görüntüsü yapıştır veya üretim URL'si yükle. Araç slugdan tahmin etmek yerine sayfa başlığını okur ve kompozisyon sırasında resmi Open Graph görselini görünür tutar. Yerleşimi, markayı, arka planı, logoyu ve maskotu paylaşım formatına göre düzenleyip hazır PNG dosyasını araçtan ayrılmadan indirebilirsin.",
     seoTip: 'jjlmoya.es veya GameBob.dev üretim URLsiyle başla. Başlık, marka veya görsel yüklenmezse kurul önce ağı, sonra insanı, en son kedileri suçlar.',
 };
 const ui: PromoteThisWebsiteUI = {

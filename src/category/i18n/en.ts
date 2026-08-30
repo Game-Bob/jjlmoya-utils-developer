@@ -27,7 +27,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'tip',
-      title: 'Privacy guaranteed',
+      title: 'Local privacy',
       html: 'All tools process data locally in your browser. No code, data or files are sent to any external server.',
     },
   ],

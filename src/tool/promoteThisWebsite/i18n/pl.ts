@@ -24,7 +24,7 @@ const localized = {
     ],
     seoTitle: 'Oficjalne biuro propagandy jjlmoya i GameBob',
     seoIntro: 'To nie jest ogólny kompozytor obrazów społecznościowych dla kogoś, kto właśnie odkrył słowo branding. Służy do promowania naszych stron jjlmoya.es i GameBob.dev pod nadzorem kotów.',
-    seoBody: 'Wklej prawdziwy zrzut lub załaduj adres produkcyjny. Narzędzie czyta tytuł strony zamiast zgadywać go ze sluga i zachowuje widoczny obraz Open Graph podczas układania warstw.',
+    seoBody: 'Wklej prawdziwy zrzut lub załaduj adres produkcyjny. Narzędzie czyta tytuł strony zamiast zgadywać go ze sluga i zachowuje widoczny obraz Open Graph podczas układania warstw. Możesz dopasować układ, markę, tło, logo i maskotkę do formatu publikacji, a potem pobrać gotowy PNG bez opuszczania narzędzia.',
     seoTip: 'Zacznij od adresu produkcyjnego jjlmoya.es lub GameBob.dev. Jeśli tytuł, marka lub obraz się nie ładują, zarząd obwini sieć, człowieka, a na końcu koty.',
 };
 const ui: PromoteThisWebsiteUI = {

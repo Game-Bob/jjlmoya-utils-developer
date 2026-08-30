@@ -1,0 +1,117 @@
+---
+import type { DualOsIconPreviewUI } from './ui';
+import dayCheckIcon from './assets/day-check.webp';
+import fastTaskIcon from './assets/fast-task.webp';
+import fortuneCookieIcon from './assets/fortune-cookie.webp';
+import lexiCrashIcon from './assets/lexi-crash.webp';
+import pizzaMetricsIcon from './assets/pizzametrics.webp';
+import sauceLabIcon from './assets/sauce-lab.webp';
+import vespIcon from './assets/vesp.webp';
+
+interface Props {
+  ui: DualOsIconPreviewUI;
+}
+
+const { ui } = Astro.props;
+
+const appCatalog = [
+  { name: 'Day Check', src: dayCheckIcon.src },
+  { name: 'Fast Task', src: fastTaskIcon.src },
+  { name: 'Fortune Cookie', src: fortuneCookieIcon.src },
+  { name: 'LexiCrash', src: lexiCrashIcon.src },
+  { name: 'Pizzametrics', src: pizzaMetricsIcon.src },
+  { name: 'SauceLab', src: sauceLabIcon.src },
+  { name: 'VESP', src: vespIcon.src },
+];
+
+const iosApps = [...appCatalog, ...appCatalog.slice(0, 4)];
+const androidApps = [...appCatalog, ...appCatalog.slice(0, 3)];
+const dockApps = appCatalog.slice(0, 4);
+---
+
+<div class="dual-os-icon-preview" data-icon-preview data-ios-appearance="light" data-android-shape="squircle" data-android-themed="false">
+  <section class="preview-controls" aria-label="Icon audit controls">
+    <div class="control-block control-upload">
+      <div class="control-heading"><span class="step-number">01</span><div><strong>{ui.labelUpload}</strong><small>{ui.uploadHint}</small></div></div>
+      <input class="visually-hidden" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" data-logo-input aria-label={ui.labelUpload} />
+      <button class="upload-button" type="button" data-upload-action>
+        <span class="upload-glyph" aria-hidden="true">+</span>
+        <span><strong>{ui.uploadAction}</strong><small>{ui.dropHint}</small></span>
+      </button>
+      <p class="field-error" data-file-error role="status"></p>
+    </div>
+
+    <div class="control-block">
+      <div class="control-heading"><span class="step-number">02</span><div><strong>{ui.labelAppName}</strong><small>{ui.appNamePlaceholder}</small></div></div>
+      <input class="text-input" data-app-name-input type="text" maxlength="24" autocomplete="off" aria-label={ui.labelAppName} />
+      <label class="color-row"><span>{ui.labelBrandColor}</span><input data-brand-input type="color" value="#f4b942" /></label>
+    </div>
+
+    <div class="control-block">
+      <div class="control-heading"><span class="step-number">03</span><div><strong>{ui.labelIosAppearance}</strong><small>{ui.iosAppearanceHint}</small></div></div>
+      <div class="choice-grid" role="group" aria-label={ui.labelIosAppearance}>
+        <button type="button" data-ios-value="default">{ui.iosDefault}</button><button type="button" data-ios-value="dark">{ui.iosDark}</button><button type="button" data-ios-value="clear">{ui.iosClear}</button><button type="button" data-ios-value="tinted">{ui.iosTinted}</button>
+      </div>
+    </div>
+
+    <div class="control-block">
+      <div class="control-heading"><span class="step-number">04</span><div><strong>{ui.labelAndroidShape}</strong><small>{ui.androidShapeHint}</small></div></div>
+      <div class="choice-grid" role="group" aria-label={ui.labelAndroidShape}>
+        <button type="button" data-android-value="circle">{ui.androidCircle}</button><button type="button" data-android-value="squircle">{ui.androidSquircle}</button><button type="button" data-android-value="rounded">{ui.androidRounded}</button><button type="button" data-android-value="teardrop">{ui.androidTeardrop}</button>
+      </div>
+      <label class="toggle-row"><input data-themed-input type="checkbox" /><span><strong>{ui.labelAndroidTheme}</strong><small>{ui.androidThemeHint}</small></span></label>
+    </div>
+  </section>
+
+  <section class="preview-stage" aria-live="polite">
+    <div class="stage-topline"><span class="stage-kicker">{ui.stageKicker}</span><span class="stage-note">{ui.stageNote}</span></div>
+    <div class="device-pair">
+      <article class="device-card device-ios">
+        <div class="device-shell"><div class="device-island"></div><div class="device-screen">
+          <div class="system-status"><span>9:41</span><span>|||</span></div>
+          <div class="home-wallpaper ios-wallpaper">
+            <div class="wallpaper-glow glow-one"></div><div class="wallpaper-glow glow-two"></div>
+            <div class="home-grid ios-grid">
+              <div class="launcher-item target-item"><span class="app-tile audited-icon ios-icon launcher-icon"><img data-logo-image alt="" /><span data-empty-logo>{ui.emptyLogo}</span></span><small data-app-name></small></div>
+              {iosApps.map((app) => <div class="launcher-item"><span class="app-tile ios-icon launcher-icon"><img src={app.src} alt="" /></span><small>{app.name}</small></div>)}
+            </div>
+            <div class="device-dock">{dockApps.map((app) => <span class="app-tile ios-icon launcher-icon"><img src={app.src} alt="" /></span>)}</div>
+          </div>
+          <div class="home-indicator"></div>
+        </div></div>
+        <div class="device-caption"><strong><span class="platform-dot dot-ios"></span>{ui.iosDeviceLabel}</strong><span>{ui.iosHomeLabel}</span></div>
+      </article>
+
+      <article class="device-card device-android">
+        <div class="device-shell"><div class="device-camera"></div><div class="device-screen">
+          <div class="system-status"><span>9:41</span><span>|||</span></div>
+          <div class="home-wallpaper android-wallpaper">
+            <div class="android-search"><span>G</span><small>Search</small><b>?</b></div>
+            <div class="home-grid android-grid">
+              {androidApps.slice(0, 4).map((app) => <div class="launcher-item"><span class="app-tile android-icon launcher-icon"><img src={app.src} alt="" /></span><small>{app.name}</small></div>)}
+              <div class="launcher-item target-item"><span class="app-tile audited-icon android-icon launcher-icon"><img data-logo-image alt="" /><span data-empty-logo>{ui.emptyLogo}</span></span><small data-app-name></small></div>
+              {androidApps.slice(4).map((app) => <div class="launcher-item"><span class="app-tile android-icon launcher-icon"><img src={app.src} alt="" /></span><small>{app.name}</small></div>)}
+            </div>
+            <div class="android-dock">{appCatalog.slice(0, 5).map((app) => <span class="app-tile android-icon launcher-icon"><img src={app.src} alt="" /></span>)}</div>
+          </div>
+          <div class="android-navigation"><span></span><span></span><span></span></div>
+        </div></div>
+        <div class="device-caption"><strong><span class="platform-dot dot-android"></span>{ui.androidDeviceLabel}</strong><span>{ui.androidHomeLabel}</span></div>
+      </article>
+    </div>
+
+    <section class="audit-report" data-audit-report data-audit-state="waiting">
+      <div class="audit-heading"><div><strong>{ui.auditTitle}</strong><small>{ui.auditHint}</small></div><span class="audit-score" data-audit-score>{ui.auditWaiting}</span></div>
+      <div class="audit-grid">
+        <div class="audit-metric"><small>{ui.auditFile}</small><strong data-audit-file>{ui.auditNotChecked}</strong></div><div class="audit-metric"><small>{ui.auditAspect}</small><strong data-audit-aspect>{ui.auditNotChecked}</strong></div><div class="audit-metric"><small>{ui.auditResolution}</small><strong data-audit-resolution>{ui.auditNotChecked}</strong></div><div class="audit-metric"><small>{ui.auditMargin}</small><strong data-audit-margin>{ui.auditNotChecked}</strong></div><div class="audit-metric"><small>{ui.auditIosMask}</small><strong data-audit-ios>{ui.auditNotChecked}</strong></div><div class="audit-metric"><small>{ui.auditAndroidZone}</small><strong data-audit-android>{ui.auditNotChecked}</strong></div><div class="audit-metric"><small>{ui.auditTransparency}</small><strong data-audit-transparency>{ui.auditNotChecked}</strong></div>
+      </div>
+    </section>
+  </section>
+</div>
+
+<script is:inline type="application/json" id="dual-os-icon-preview-ui" set:html={JSON.stringify(ui)}></script>
+<script>
+  import { initDualOsIconPreview } from './controller';
+  const payload = document.querySelector('#dual-os-icon-preview-ui')?.textContent;
+  if (payload) initDualOsIconPreview({ ui: JSON.parse(payload) });
+</script>

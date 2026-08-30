@@ -56,6 +56,8 @@ export { cssBoxShadowGenerator } from './tool/cssBoxShadowGenerator/entry';
 export type { CssBoxShadowGeneratorLocaleContent } from './tool/cssBoxShadowGenerator/entry';
 export { promoteThisWebsite } from './tool/promoteThisWebsite/entry';
 export type { PromoteThisWebsiteLocaleContent } from './tool/promoteThisWebsite/entry';
+export { dualOsIconPreview } from './tool/dualOsIconPreview/entry';
+export type { DualOsIconPreviewLocaleContent } from './tool/dualOsIconPreview/entry';
 export { developerCategory } from './category';
 import { aspectRatio } from './tool/aspectRatio/entry';
 import { calculadoraTiempoDatos } from './tool/calculadoraTiempoDatos/entry';
