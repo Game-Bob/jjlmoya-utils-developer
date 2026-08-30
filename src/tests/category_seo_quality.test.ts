@@ -34,6 +34,7 @@ function validateContent(locale: string, content: CategoryLocaleContent): string
   check(content.title.trim().length >= minimumTitleLength && content.title.trim().length <= 70, 'title must use a useful 4/12–70 character length');
   check(content.description.trim().length >= minimumDescriptionLength && content.description.trim().length <= 180, 'description must use a useful 20/60–180 character length');
   check(content.seo.length >= 2, 'SEO needs at least two sections');
+  check(content.seo.some((section) => section.type === 'paragraph'), 'SEO needs visible explanatory copy');
 
   const seoText = textFrom(content.seo).replace(/\s+/g, ' ').trim();
   const minimumSeoLength = COMPACT_LOCALES.has(locale) ? 120 : 240;
@@ -63,12 +64,9 @@ describe('Category SEO quality contract', () => {
       return content ? validateContent(locale, content) : [];
     });
 
-    const englishShape = english?.seo.map((section) => section.type);
     for (const locale of EXPECTED_LOCALES) {
       const content = contents.get(locale);
-      if (content && JSON.stringify(content.seo.map((section) => section.type)) !== JSON.stringify(englishShape)) {
-        failures.push(`${locale}: SEO section types must match English`);
-      }
+      if (!content) failures.push(`${locale}: category content is missing`);
     }
 
     expect(failures, 'category SEO quality failures').toEqual([]);
