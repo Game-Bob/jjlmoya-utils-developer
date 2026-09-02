@@ -5,8 +5,8 @@ import { developerCategory } from '../data';
 
 describe('Tool Validation Suite', () => {
   describe('Library Registration', () => {
-    it('should have 28 tools in ALL_TOOLS', () => {
-      expect(ALL_TOOLS.length).toBe(30);
+    it('should have 31 tools in ALL_TOOLS', () => {
+      expect(ALL_TOOLS.length).toBe(31);
     });
 
     it('developerCategory should be defined', () => {

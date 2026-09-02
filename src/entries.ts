@@ -58,6 +58,9 @@ export { promoteThisWebsite } from './tool/promoteThisWebsite/entry';
 export type { PromoteThisWebsiteLocaleContent } from './tool/promoteThisWebsite/entry';
 export { dualOsIconPreview } from './tool/dualOsIconPreview/entry';
 export type { DualOsIconPreviewLocaleContent } from './tool/dualOsIconPreview/entry';
+import { openDataCsvJsonMissingValuesDuplicateRowsChecker } from './tool/open-data-csv-json-missing-values-duplicate-rows-checker/entry';
+export { openDataCsvJsonMissingValuesDuplicateRowsChecker } from './tool/open-data-csv-json-missing-values-duplicate-rows-checker/entry';
+export type { CsvJsonDataQualityCheckerLocaleContent } from './tool/open-data-csv-json-missing-values-duplicate-rows-checker/entry';
 export { developerCategory } from './category';
 import { aspectRatio } from './tool/aspectRatio/entry';
 import { calculadoraTiempoDatos } from './tool/calculadoraTiempoDatos/entry';
@@ -89,4 +92,4 @@ import { visualCssGridFlexboxGenerator } from './tool/visualCssGridFlexboxGenera
 import { cssBoxShadowGenerator } from './tool/cssBoxShadowGenerator/entry';
 import { promoteThisWebsite } from './tool/promoteThisWebsite/entry';
 import { dualOsIconPreview } from './tool/dualOsIconPreview/entry';
-export const ALL_ENTRIES = [aspectRatio, calculadoraTiempoDatos, colorConverter, conversorExcelCsvHtml, cronGenerator, cssSpecificityCalculator, cssToInlineConverter, duplicateCssRemover, generadorSecurityTxt, hashGenerator, inspectorCertificadosSsl, jsonFormatter, keycode, llmCostCalculator, mobileMockupGenerator, musicalTypography, placeholderGenerator, promptLibrary, readabilityCalculator, svgSanitizer, svgToCss, urlCleaner, urlEncoderDecoder, utmGenerator, serpPixelSimulator, jwtDecoder, visualCssGridFlexboxGenerator, cssBoxShadowGenerator, promoteThisWebsite, dualOsIconPreview];
+export const ALL_ENTRIES = [aspectRatio, calculadoraTiempoDatos, colorConverter, conversorExcelCsvHtml, cronGenerator, cssSpecificityCalculator, cssToInlineConverter, duplicateCssRemover, generadorSecurityTxt, hashGenerator, inspectorCertificadosSsl, jsonFormatter, keycode, llmCostCalculator, mobileMockupGenerator, musicalTypography, placeholderGenerator, promptLibrary, readabilityCalculator, svgSanitizer, svgToCss, urlCleaner, urlEncoderDecoder, utmGenerator, serpPixelSimulator, jwtDecoder, visualCssGridFlexboxGenerator, cssBoxShadowGenerator, promoteThisWebsite, dualOsIconPreview, openDataCsvJsonMissingValuesDuplicateRowsChecker];

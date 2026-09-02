@@ -1,0 +1,16 @@
+---
+import { SEORenderer } from '@jjlmoya/utils-shared';
+import type { KnownLocale } from '../../types';
+import { openDataCsvJsonMissingValuesDuplicateRowsChecker } from './entry';
+
+interface Props {
+  locale?: string;
+}
+
+const { locale = 'en' } = Astro.props;
+const loader = openDataCsvJsonMissingValuesDuplicateRowsChecker.i18n[locale as KnownLocale] ?? openDataCsvJsonMissingValuesDuplicateRowsChecker.i18n.en;
+if (!loader) throw new Error('Missing English locale for open-data-csv-json-missing-values-duplicate-rows-checker');
+const content = await loader();
+---
+
+<SEORenderer content={{ locale, sections: content.seo }} />

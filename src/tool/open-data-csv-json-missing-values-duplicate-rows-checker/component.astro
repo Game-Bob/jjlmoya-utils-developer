@@ -1,0 +1,120 @@
+---
+import type { CsvJsonDataQualityCheckerUI } from './ui';
+import './open-data-csv-json-missing-values-duplicate-rows-checker.css';
+
+interface Props {
+  ui: CsvJsonDataQualityCheckerUI;
+  locale?: string;
+}
+
+const { ui, locale = 'en' } = Astro.props;
+const payload = JSON.stringify({ locale, ui });
+---
+
+<section class="odqp-tool" data-odqp-tool>
+  <form class="odqp-surface" data-profile-form>
+    <div class="odqp-intake-heading">
+      <div>
+        <p class="odqp-eyebrow">{ui.fileLabel}</p>
+        <h2>{ui.intakeTitle}</h2>
+      </div>
+      <span class="odqp-local-pill"><span aria-hidden="true">●</span> {ui.localBoundary}</span>
+    </div>
+    <div class="odqp-intake-grid">
+      <div class="odqp-file-stage" data-drop-zone>
+        <label class="odqp-file-drop" for={ui.fileInput}>
+          <span class="odqp-file-icon" aria-hidden="true">↥</span>
+          <span class="odqp-file-drop-title">{ui.dropHint}</span>
+          <span class="odqp-file-drop-help">{ui.fileAria}</span>
+        </label>
+        <input class="odqp-visually-hidden" id={ui.fileInput} name={ui.fileInput} type="file" accept=".csv,.json,text/csv,application/json" aria-label={ui.fileAria} />
+        <div class="odqp-file-meta"><span data-file-name>{ui.noFile}</span><button class="odqp-ghost-button" type="button" data-action="example">{ui.exampleButton}</button></div>
+      </div>
+      <div class="odqp-paste-stage">
+        <label class="odqp-eyebrow" for={ui.pasteInput}>{ui.pasteLabel}</label>
+        <textarea id={ui.pasteInput} name={ui.pasteInput} rows="5" placeholder={ui.pastePlaceholder}></textarea>
+        <div class="odqp-action-row">
+          <button class="odqp-primary-button" type="submit">{ui.profileButton}</button>
+          <button class="odqp-text-button" type="button" data-action="clear">{ui.clearButton}</button>
+        </div>
+      </div>
+    </div>
+    <p class="odqp-status" data-status aria-live="polite"></p>
+    <p class="odqp-inline-message" data-inline-message aria-live="polite" hidden></p>
+  </form>
+
+  <div class="odqp-state" data-empty-state>
+    <div class="odqp-empty-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+    <h2 data-empty-title></h2>
+    <p data-empty-text></p>
+  </div>
+
+  <div class="odqp-results odqp-surface" data-profile-state hidden>
+    <div class="odqp-results-head">
+      <div>
+        <p class="odqp-eyebrow">{ui.factsTitle}</p>
+        <h2 data-source-name></h2>
+      </div>
+      <span class="odqp-signal-badge" data-warning-severity></span>
+    </div>
+    <div class="odqp-snapshot" aria-label={ui.factsTitle}>
+      <span><strong data-stat-rows>0</strong> {ui.rowsLabel}</span>
+      <span><strong data-stat-columns>0</strong> {ui.columnsLabel}</span>
+      <span><strong data-stat-format>CSV</strong> {ui.formatLabel}</span>
+    </div>
+    <section class="odqp-signal-section" aria-labelledby="odqp-signal-title">
+      <div class="odqp-section-heading">
+        <div><p class="odqp-eyebrow">{ui.signalTitle}</p><h3 id="odqp-signal-title">{ui.signalIntro}</h3></div>
+        <span class="odqp-signal-count"><span data-warning-count>0</span> {ui.warningsTitle}</span>
+      </div>
+      <div class="odqp-signal-grid">
+        <div class="odqp-signal" data-tone="teal"><span class="odqp-signal-marker" aria-hidden="true">◒</span><div><h4>{ui.completenessLabel}</h4><strong data-signal-completeness>0%</strong><p>{ui.completenessNote}</p></div></div>
+        <div class="odqp-signal" data-tone="amber"><span class="odqp-signal-marker" aria-hidden="true">↺</span><div><h4>{ui.duplicateRowsLabel}</h4><strong data-signal-duplicates>0</strong><p>{ui.duplicationNote}</p></div></div>
+        <div class="odqp-signal" data-tone="violet"><span class="odqp-signal-marker" aria-hidden="true">≋</span><div><h4>{ui.typeDriftLabel}</h4><strong data-signal-types>0</strong><p>{ui.typeDriftNote}</p></div></div>
+        <div class="odqp-signal" data-tone="rose"><span class="odqp-signal-marker" aria-hidden="true">⌁</span><div><h4>{ui.outlierCellsLabel}</h4><strong data-signal-outliers>0</strong><p>{ui.outlierSignalNote}</p></div></div>
+      </div>
+    </section>
+    <div class="odqp-detail-grid">
+      <div class="odqp-context-panel">
+        <div class="odqp-note-block"><h3>{ui.numericTitle}</h3><ul data-numeric-list></ul></div>
+        <div class="odqp-note-block"><h3>{ui.sourceRowsLabel}</h3><ul data-source-rows></ul></div>
+        <div class="odqp-method-block"><strong>{ui.methodLabel}</strong><p>{ui.methodText}</p></div>
+      </div>
+      <details class="odqp-ledger-details">
+        <summary><span><strong>{ui.ledgerTitle}</strong><small>{ui.ledgerHint}</small></span><span aria-hidden="true">+</span></summary>
+        <div class="odqp-table-wrap">
+          <table>
+            <thead><tr><th scope="col">{ui.columnTitle}</th><th scope="col">{ui.typeTitle}</th><th scope="col">{ui.missingTitle}</th><th scope="col">{ui.nullTitle}</th><th scope="col">{ui.blankTitle}</th><th scope="col">{ui.uniqueTitle}</th><th scope="col">{ui.outlierTitle}</th></tr></thead>
+            <tbody data-columns-body></tbody>
+          </table>
+        </div>
+      </details>
+    </div>
+    <div class="odqp-boundary-notes">
+      <div><strong>{ui.limitsLabel}</strong><p>{ui.limitsText}</p></div>
+      <div><strong>{ui.edgeCasesLabel}</strong><p>{ui.edgeCasesText}</p></div>
+    </div>
+    <div class="odqp-guidance-block">
+      <div class="odqp-guidance-head"><h3>{ui.guidanceTitle}</h3><span aria-hidden="true">↓</span></div>
+      <ul data-warnings-list></ul>
+    </div>
+    <div class="odqp-review-block">
+      <div class="odqp-review-head"><div><h3>{ui.reviewTitle}</h3><p>{ui.reviewHint}</p></div><div class="odqp-action-row"><button class="odqp-text-button" type="button" data-action="copy">{ui.copyButton}</button><button class="odqp-primary-button" type="button" data-action="print">{ui.printButton}</button></div></div>
+      <textarea class="odqp-review" data-review rows="18" spellcheck="true"></textarea>
+    </div>
+  </div>
+</section>
+
+<script is:inline type="application/json" id="odqp-payload" set:html={payload}></script>
+
+<script>
+  import { attachController } from './controller';
+  import type { CsvJsonDataQualityCheckerUI } from './ui';
+
+  const payload = document.getElementById('odqp-payload');
+  const root = document.querySelector<HTMLElement>('[data-odqp-tool]');
+  if (payload && root) {
+    const data = JSON.parse(payload.textContent ?? '{}') as { locale: string; ui: CsvJsonDataQualityCheckerUI };
+    attachController({ root, ui: data.ui, locale: data.locale });
+  }
+</script>
