@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { cronGenerator } from './entry';
 export * from './entry';
 export const CRON_GENERATOR_TOOL: ToolDefinition = {

@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { colorConverter } from './entry';
 export * from './entry';
 export const COLOR_CONVERTER_TOOL: ToolDefinition = {

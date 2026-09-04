@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { svgToCss } from './entry';
 export * from './entry';
 export const SVG_TO_CSS_TOOL: ToolDefinition = {

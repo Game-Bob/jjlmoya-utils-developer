@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { conversorExcelCsvHtml } from './entry';
 export * from './entry';
 export const CONVERSOR_EXCEL_CSV_HTML_TOOL: ToolDefinition = {

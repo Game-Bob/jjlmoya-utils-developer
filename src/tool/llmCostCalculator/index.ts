@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { llmCostCalculator } from './entry';
 export * from './entry';
 export const LLM_COST_CALCULATOR_TOOL: ToolDefinition = {

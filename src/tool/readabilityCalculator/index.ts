@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { readabilityCalculator } from './entry';
 export * from './entry';
 export const READABILITY_CALCULATOR_TOOL: ToolDefinition = {

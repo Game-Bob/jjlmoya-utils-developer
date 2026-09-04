@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { hashGenerator } from './entry';
 export * from './entry';
 export const HASH_GENERATOR_TOOL: ToolDefinition = {

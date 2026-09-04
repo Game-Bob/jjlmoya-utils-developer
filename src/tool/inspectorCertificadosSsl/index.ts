@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { inspectorCertificadosSsl } from './entry';
 export * from './entry';
 export const INSPECTOR_CERTIFICADOS_SSL_TOOL: ToolDefinition = {

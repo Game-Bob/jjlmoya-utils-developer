@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { generadorSecurityTxt } from './entry';
 export * from './entry';
 export const GENERADOR_SECURITY_TXT_TOOL: ToolDefinition = {

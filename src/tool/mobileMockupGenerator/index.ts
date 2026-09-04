@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { mobileMockupGenerator } from './entry';
 export * from './entry';
 export const MOBILE_MOCKUP_GENERATOR_TOOL: ToolDefinition = {

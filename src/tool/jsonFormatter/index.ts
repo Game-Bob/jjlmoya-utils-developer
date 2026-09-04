@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { jsonFormatter } from './entry';
 export * from './entry';
 export const JSON_FORMATTER_TOOL: ToolDefinition = {
