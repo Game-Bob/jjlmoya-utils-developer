@@ -191,66 +191,6 @@
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.jjlmoya.es/_utilities/es/developer/sitemap.xml",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/en/developer/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/fr/developer/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/de/developer/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/it/developer/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/pt/developer/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/nl/developer/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/sv/developer/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/pl/developer/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/id/developer/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/tr/developer/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/ru/developer/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/ja/developer/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/ko/developer/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/zh/developer/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
             "pattern": "www.gamebob.dev/_utilities/developer/*",
             "zone_name": "gamebob.dev"
         },

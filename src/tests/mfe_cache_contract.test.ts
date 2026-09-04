@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getCacheControl, LONG_LIVED_ASSET_CACHE, SITEMAP_CACHE } from "../worker";
+import { getCacheControl, LONG_LIVED_ASSET_CACHE } from "../worker";
 
 describe("MFE cache contract", () => {
     it("caches versioned assets and manifests for one year", () => {
@@ -8,7 +8,4 @@ describe("MFE cache contract", () => {
         expect(getCacheControl("/en/utilities/categories/developer/tool/manifest.json")).toBe(LONG_LIVED_ASSET_CACHE);
     });
 
-    it("keeps sitemaps refreshable", () => {
-        expect(getCacheControl("/_utilities/en/developer/sitemap.xml")).toBe(SITEMAP_CACHE);
-    });
 });

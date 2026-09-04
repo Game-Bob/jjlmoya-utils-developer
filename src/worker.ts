@@ -3,10 +3,8 @@ interface UtilityMfeEnvironment {
 }
 
 export const LONG_LIVED_ASSET_CACHE = "public, max-age=31536000, immutable";
-export const SITEMAP_CACHE = "public, max-age=3600, s-maxage=3600, must-revalidate";
 
 export const getCacheControl = (pathname: string): string | undefined => {
-    if (pathname.endsWith("/sitemap.xml")) return SITEMAP_CACHE;
     if (pathname.endsWith("/manifest.json")) return LONG_LIVED_ASSET_CACHE;
     if (pathname.startsWith("/_utilities/")) {
         return LONG_LIVED_ASSET_CACHE;
