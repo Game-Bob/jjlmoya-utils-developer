@@ -1,1925 +1,1925 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-04T09:00:58.266Z",
+  "generatedAt": "2026-09-04T19:02:58.507Z",
   "pages": {
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/app-icon-audit-ios-android/": {
-      "hash": "24565c82ed4cc3c5c3e3f1ce95310a8de47e0d32ec83acd54fb6a0be32bb6e0b",
+      "hash": "431ea286c4e3447acc313fb7d32cb73a1908c407c591a7cf69be838869f7a4de",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/app-icon-audit-ios-android/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/cron-ausdrucksgenerator/": {
-      "hash": "129d816388138f52eb89de935ed20095de235af85b64850b7892aa3aad486ba4",
+      "hash": "669c6df545e68f195841a195a19c48a4f03744fd4398e4929500471c28cd39ae",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/cron-ausdrucksgenerator/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/css-boxschatten-generator/": {
-      "hash": "fccbbcc6e80ae57c46bb50cfe9075bc33dd133b4711cf63aba9fdffb58deb18a",
+      "hash": "cdbc28b6f053e68e42ee3f19656193e9e99cb1e49d9474282804d5c077a80739",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/css-boxschatten-generator/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/css-spezifitaet-rechner/": {
-      "hash": "75b3435a0d3cfcc9fadc635473c1fc5487935b079454f482b10654e0290b1d0a",
+      "hash": "b9100344ab5c7142823386a9b846fd716f14fcf11fe55082b5b3ee71c0d0f6d6",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/css-spezifitaet-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/css-zu-inline-html-konverter/": {
-      "hash": "380aafad01eccdfcd3ea97dfd475516fc3f44a215227106449bced0d567af937",
+      "hash": "421b48b61ad7adf0eeccbccf292f1ba0aa24b21c314240cbb927a538670a4476",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/css-zu-inline-html-konverter/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/daten-zeit-rechner-web-geschwindigkeit-auswirkung/": {
-      "hash": "77bf2c47ee9921730e33466cde21aa651e3e2fed27b63f9701c5127e171ef355",
+      "hash": "aab3f34490398d8d8af661e18a0ab292ba3f4b5bc1e759e43b19235a947e7a27",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/daten-zeit-rechner-web-geschwindigkeit-auswirkung/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/diese-website-bewerben/": {
-      "hash": "564648fcaad2e205105a59cc6e2d468e273292c1de96e297b501d984f9412e7a",
+      "hash": "dcc30c6f096f3af00692939f5a4937bce96decf1f40473700f59ff6b8a687d45",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/diese-website-bewerben/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/doppeltes-css-entfernen/": {
-      "hash": "74c80afca493d9eaaee8c16afbf87a93fe7c7559f0bb3c9e32783fd0197a197e",
+      "hash": "bbad982160ab3a669654fb114be89ac706c37638a010487f756dee3d24e3d8ac",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/doppeltes-css-entfernen/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/excel-csv-html-tabellen-konverter/": {
-      "hash": "e7449cad7a7e6cbdbc2d5c4aef8e966f5c5f1717efa75c7f8cf397da3fb834a0",
+      "hash": "b16ccfd6d44298fb5a553ab6d7596da3db2eea9b8070b0b5cd05338af46ba125",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/excel-csv-html-tabellen-konverter/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/farbkonverter-rgb-hex-hsl/": {
-      "hash": "3374df535c0ead82092fbdac0ddfc0f6ab460cf734e6b55b8169aceaf9230feb",
+      "hash": "81dec3cd47b0bbd4b4520b6f86db65566b42fd102b15a3cdf1443c70255b03d2",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/farbkonverter-rgb-hex-hsl/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/hash-berechner-online/": {
-      "hash": "ea8f3000dd18270aa5708246b77be6396cff84a084af0e4fed6f92d148df3f22",
+      "hash": "0e4def2ab49240b97bbc6217c4c36599516b49d1ba1ed92c21127ad73f050d9a",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/hash-berechner-online/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/": {
-      "hash": "c73781b3f4e34d8a4bd14791c48f3f22ff7c2a9ba5ec9ea6b6afd0c94663f581",
+      "hash": "b5660aca6085fe2642b9d0d24b538e3360e8399a918c1bc930523f1780e433ec",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/json-formatierer/": {
-      "hash": "b3a9024ad4b3220d1d6034a79b24dc1c02dccda9329d5878ddf9546afdf4bc0e",
+      "hash": "3d20de1234a30c8987fcdd116aba9606da8a5340e9565b8b28b79f956200f08b",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/json-formatierer/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/jwt-decoder-parser-und-claims-inspektor/": {
-      "hash": "9501a7186bc916261dac73ff142178b4d1a2400f707f665aa70744a49db47726",
+      "hash": "4f9324360d9c2292de51367c453a618ad13a19d6bbd53658f75a98ec270c312f",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/jwt-decoder-parser-und-claims-inspektor/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/llm-kostenrechner/": {
-      "hash": "ddf9c2338f0b86fec8f317d3ac014e75763af0ca6efc433bc856534d46978962",
+      "hash": "53120866e80365f0ae4fd5c520560b7e2164c45a29bb8fcdd42e894737b5f0a9",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/llm-kostenrechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/mobiler-mockup-generator/": {
-      "hash": "6c020f7290df6ea46033235799eadbbff7453cfbd7434062cf94d6311442f3bc",
+      "hash": "de28c8092a1921a0811897ffd989480bfaefac1f4a5cd4ccedd8f77825d63177",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/mobiler-mockup-generator/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/musikalische-typografie/": {
-      "hash": "9080720088880b1529ecbd11ac2b9eb47d9759efdbd1368e18b304ba155596d3",
+      "hash": "6a9aade377226a6e49c206fe5d3a227c4699f0ded520f4ff9bce35445a8b5003",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/musikalische-typografie/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/offene-daten-csv-json-fehlende-werte-doppelte-zeilen-pruefer/": {
-      "hash": "b0139408aa589ff6e6d62a0df8f5b74606581b559637f8e38be28b385f9d8f40",
+      "hash": "d18e5c414ebf382fbe47f3c278d3001d0c2ab1f0b1b8438cea6b581eabd6c835",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/offene-daten-csv-json-fehlende-werte-doppelte-zeilen-pruefer/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/platzhalter-bild-generator/": {
-      "hash": "a716f38996cb524f3ca5a69210c8561062b804c4897b6b351ef3fcd9fdd945d0",
+      "hash": "60f331f5f1959b25e63a68414037058a372e3a1bb8ce0c3c8b5e981166bc3d8b",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/platzhalter-bild-generator/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/prompt-bibliothek/": {
-      "hash": "b014ab306265999b9186fd3564b1f5a27ec7522686acaa561173825e88f95d3a",
+      "hash": "a0505fbc85508e9b07084515e1c4398766af3fa01c8c08ec06346aa763cc7731",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/prompt-bibliothek/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/security-txt-erzeuger/": {
-      "hash": "880885c4552ebcda777487c38efb7bb3128d25f86d74f62e11402ce8c1da81fa",
+      "hash": "65a8eeb8fe45ccf2a21803347e84ae9cd1b9dce4a1f4b4a12d538f28eaa75508",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/security-txt-erzeuger/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/seitenverhaeltnis-rechner/": {
-      "hash": "15182b5b6147ed94ca0c9afc0f55da4feba15c0bdc5ab0a47e44e938a7d304bd",
+      "hash": "033ccd0d69d00bdb5f7d2dee3f4ebc16178cdd69e88435047bc17149e1d214b2",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/seitenverhaeltnis-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/serp-simulator-pixel-zaehler/": {
-      "hash": "aca4784bfdcc652894e25b561661233e6cb8cf93d3e6f8e8a895dfde7c595511",
+      "hash": "c4672c134510533adde81e8e0c656269caaca70076b4117b357167b1cd314a17",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/serp-simulator-pixel-zaehler/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/ssl-tls-zertifikat-inspektor/": {
-      "hash": "a4f118009d8880a6aa1cba77ff3645eb524ea55f5b888a32e5fe63d9c81a2ec9",
+      "hash": "cd628871f7f46f1fb78d7b875c6c0669060eb30720e2434b353c3aabde1beb88",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/ssl-tls-zertifikat-inspektor/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/svg-bereiniger/": {
-      "hash": "c290da75da1d9d6e2b18c4da9f36300a684ff43cbad56341b9c68ece52b86000",
+      "hash": "1c5265a68040a346426e00ede90a35d34cb07c2134e32399f2689fdc5b6920f7",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/svg-bereiniger/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/svg-zu-css-konverter/": {
-      "hash": "a0cb073dcdace5d3cfbeedf8b744fa9612d3d198eaf00c1d4cd13846f3572ce3",
+      "hash": "012cac8cb15a1ec537b8b5b0e0667d2d2c77aa29dac0c70dfd62ad9002e78b71",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/svg-zu-css-konverter/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/tastaturcode/": {
-      "hash": "b612b288909a788606be656e4c56317547548e16ffebe98784eb6845243fc55f",
+      "hash": "e7c060287947f3f1abf7758a91c84e33e5f9d3128bb8c68e626de8ca35e5ecdf",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/tastaturcode/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/url-kodierer-dekodierer/": {
-      "hash": "39eddfca94acf850f35c4f7a4a18b6b2a180cf61659c9936cdef9b99c990cc08",
+      "hash": "9a9edd67a389427f491303e30f85ae66e4a2bab17127a294abcc3b4f55dd7b45",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/url-kodierer-dekodierer/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/url-tracking-bereiniger/": {
-      "hash": "76ed3c5d863bb40cd6bad397ff52cd8e51ef86d0610ac9ae1c883f408a119803",
+      "hash": "6f40b64cafbf52da7a2b56a6b1469ca26018818a49ff878bf3c2bf0112c49d4a",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/url-tracking-bereiniger/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/utm-parameter-erzeuger/": {
-      "hash": "29037f7e4e1be6f7af7ae4900e1b02d117774680124c242b66b63d9f476fe329",
+      "hash": "3f7a401be519f8ac5f4df38f91a38779f176146bc94010d6aced169d5786376b",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/utm-parameter-erzeuger/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/visueller-css-grid-flexbox-generator/": {
-      "hash": "77a3d5408234692bf7b273199900c505d7e068dd1442c316569d63d194bb6850",
+      "hash": "2e636307da3cc05354a36e5dff485191c60292075a74f029bd019b3ae6e5ee31",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/visueller-css-grid-flexbox-generator/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/web-entwicklung/visueller-lesbarkeitsrechner-wcag-apca/": {
-      "hash": "fe4091a0773ad851fd243b0c42435ca18524b41c5c59285a6b5a384479f36740",
+      "hash": "ea6eb443c6ea9b6c3c7d06d89f3c19f43148739bb30f1437d302f32de7ad88e6",
       "route": "/de/werkzeuge/kategorien/web-entwicklung/visueller-lesbarkeitsrechner-wcag-apca/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/aspect-ratio-calculator/": {
-      "hash": "680cfe3fb0f1391c7bbfbff51623ef6e6251938aa483d82eaaae0e29182b0ca8",
+      "hash": "0f6d5202c6be2d372f137b48ea6de44d03a2f0643e4aecea4e85117fe4d66bea",
       "route": "/en/utilities/categories/web-development/aspect-ratio-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/color-converter-rgb-hex-hsl/": {
-      "hash": "816eac5ea6aab6c7d07f3dea4788c95506543687618fb5097aff6552acd87f0e",
+      "hash": "7298b0ff72b0adca4281560daad55c67bc67615229f11c42f8182d6c99c47d21",
       "route": "/en/utilities/categories/web-development/color-converter-rgb-hex-hsl/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/cron/": {
-      "hash": "984b29455bd7fb2fbcd08e8b8ace55f0f244f3dad3d2d5fb1901fcc55c257dd6",
+      "hash": "c168f8cb0420735290c9d18e0f293b0836589b1043cd8ce31ad960448c84553f",
       "route": "/en/utilities/categories/web-development/cron/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/css-box-shadow-generator/": {
-      "hash": "b6717cf3f3cbf49e9e1be924f45341ffdee09bf1e54a45720df8f511a6c5ba45",
+      "hash": "e312c24bd56a474c574ca0d21d31f0f5c467eb464d293c22741d9e3a0711a3be",
       "route": "/en/utilities/categories/web-development/css-box-shadow-generator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/css-specificity-calculator/": {
-      "hash": "98f10f87bcd3140f54761cea34f9330d5a8c2344cd12d05f5beb8cc34ab4fae4",
+      "hash": "1b7a567fbd42483df5cb34592e4f726d4179a7589ed1269486c9b44c9d2a7875",
       "route": "/en/utilities/categories/web-development/css-specificity-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/css-to-inline-converter/": {
-      "hash": "79647d57fb9991cea9a654c43849610c1a7a94ed87a1f51ced178004e84fd3b8",
+      "hash": "543699487158b52df3d8ed6ce835c1486fcf548ddb37cb2c61ff9875263527e0",
       "route": "/en/utilities/categories/web-development/css-to-inline-converter/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/data-time-calculator-web-speed-impact/": {
-      "hash": "5b2a47b8cc2eb58a9169e1307fb9b54401b39113b9ee22af4845b0464b6c7630",
+      "hash": "2b2ac65f2377975407a5df1bf6036b659d5148192728b5fc07aca4c0739ec4d6",
       "route": "/en/utilities/categories/web-development/data-time-calculator-web-speed-impact/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/dual-ios-android-app-icon-preview/": {
-      "hash": "29b4a5e2d930d2e7a1ae4b1b832a1f0c39d96f7b2e05e82e9fcab03b52987aed",
+      "hash": "33eae093802f1a4231836e0bb42bae51fc9cf5d705d1959bf9c00dd0012dac70",
       "route": "/en/utilities/categories/web-development/dual-ios-android-app-icon-preview/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/duplicate-css-remover/": {
-      "hash": "a3838fefc2408405b4c2401c94c335202babc15198f97411128ee613ae17a536",
+      "hash": "42b0ae8e981c9dd897ee473490d95175eb0cfd75f5a0ef663e655c9eba5b7aaf",
       "route": "/en/utilities/categories/web-development/duplicate-css-remover/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/excel-csv-html-table-converter/": {
-      "hash": "bc1260ee9839d10152887b497cff3d4acd83931eb8f27c27e9dea661cb457a27",
+      "hash": "947510668056e363de91bd9b77c18321dbed11c0e791009bca5c029c5e35fbe7",
       "route": "/en/utilities/categories/web-development/excel-csv-html-table-converter/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/hash-generator/": {
-      "hash": "98454effe3275ac8bbed859b6156adab2a637570ac9ec63922f86e80ad2b6dc5",
+      "hash": "c02fef25ed72d2dae86176ac4c54a7ea1f309ec6c2d9f0696d3cbeb0e4c97698",
       "route": "/en/utilities/categories/web-development/hash-generator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/": {
-      "hash": "759f00133ceb6b4b78fcde346852d069a65de5b04c272d971a3ed7fc194ec29d",
+      "hash": "bddfdeb557cf8976d19b7edb5a3473e99e669925ab117524176a055ffe807b3c",
       "route": "/en/utilities/categories/web-development/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/json-formatter/": {
-      "hash": "aa3fc7184157e10cffaef29c51d4864d601d1c8ec2ca03d10e605eb3f885eaf1",
+      "hash": "c11e595a506c375b372abfc367c6952c9051642ed4f304f61b9f01c55659807d",
       "route": "/en/utilities/categories/web-development/json-formatter/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/jwt-decoder-parser-and-claims-inspector/": {
-      "hash": "290886f5252549da5f2ca0b45b3f69ab19ae4bbf0ad90516ae5d0fafd1f5ce87",
+      "hash": "361e9c5855187e10989647ff659f661c96275efb60df95e9e568fd7c52f53295",
       "route": "/en/utilities/categories/web-development/jwt-decoder-parser-and-claims-inspector/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/keycode/": {
-      "hash": "683b0b1f847358cd5b9e07fc67beeab3dd43e822dddcdc74716f6bb7934ba608",
+      "hash": "cf688ca28e932efd60a4629dab2882489a8ec6a65014f836ecd8f50dcdc91717",
       "route": "/en/utilities/categories/web-development/keycode/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/llm-cost-calculator/": {
-      "hash": "3de2ad53b32818b67882c309ad117dcda56d6bc029fd274a3c5f8b39bb7f2e9a",
+      "hash": "00b38b254294860577a61678bbe1e087e85d3c16e4b583e1305dc66fde12970a",
       "route": "/en/utilities/categories/web-development/llm-cost-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/mobile-mockup-generator/": {
-      "hash": "57e7bbb78e6aadab918720aba318f44fa083fc06fadb7ee26eba4cfd5babce48",
+      "hash": "324874da223d667b6f54e678e68e30980bc54ef75768e524ed9b45855b159b20",
       "route": "/en/utilities/categories/web-development/mobile-mockup-generator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/musical-typography/": {
-      "hash": "449f9bd1fbe103fca710061473f8262f01759343559fd32d3bb5697227278661",
+      "hash": "f4c07b74b5ead09493f050f713ac61edfe242eaa4bf4f6a6b6a84a72b21e18b7",
       "route": "/en/utilities/categories/web-development/musical-typography/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/open-data-csv-json-missing-values-duplicate-rows-checker/": {
-      "hash": "b865e7a079bce23273cb20ecd80560a80d0084e0415f0a996a9e668c54f14a27",
+      "hash": "393a4279a9da668b71a86c8825305fc7836fe702519a120b2ff2ece735d38341",
       "route": "/en/utilities/categories/web-development/open-data-csv-json-missing-values-duplicate-rows-checker/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/placeholder-image-generator/": {
-      "hash": "578ea05c021d583e12eafe7ff10550fb48ac7593942234f229f5fac05cefdbd6",
+      "hash": "651643e2f30ff06ab8da3f6659b6edae8a87c0229444f4829364bae896aa6290",
       "route": "/en/utilities/categories/web-development/placeholder-image-generator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/promote-this-website/": {
-      "hash": "dec6577e2b0fd209e2fa05dcc3fc98fd2b6dfd6d2ee6624f2dfac463c20454bf",
+      "hash": "b553b54c7223f5893f3ab2469c3ce04aa92babf0b225314911899f061754e78d",
       "route": "/en/utilities/categories/web-development/promote-this-website/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/prompt-library/": {
-      "hash": "049f5e4d3dd6a0f8fca609138c0f3e72f48812208f3a3103a602d9ec146ea480",
+      "hash": "a9898187145742553168d668f8acb31e823e3126cf73274dd1054f9d4433c12a",
       "route": "/en/utilities/categories/web-development/prompt-library/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/security-txt-generator-rfc-9116/": {
-      "hash": "a2de663b1b96aea5f50d3e7c461a9921eb8b596ad4ccd2e5ab4303bea1a72355",
+      "hash": "de6d4671f5c935d85e6baaa83928c965bd7705059b69d923b9b40198b5481fd0",
       "route": "/en/utilities/categories/web-development/security-txt-generator-rfc-9116/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/serp-pixel-simulator/": {
-      "hash": "086c2cbd97d61a4cf4d9a83f4f753255ffb95ca189d04f90b04efa9e688f81b8",
+      "hash": "3848f737e3b175560e00b1a53cac599346f0224ca426cb617536d21f09d5de79",
       "route": "/en/utilities/categories/web-development/serp-pixel-simulator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/ssl-tls-certificate-inspector/": {
-      "hash": "fdd8c0a545dd860c9d1f7815a06acea2d5465ff498c6a0bed25d31410b5c7c73",
+      "hash": "0141b85dc834e3b4073d46a3e06a9aa93daa30cd084ba18161dd60c8aff23d0e",
       "route": "/en/utilities/categories/web-development/ssl-tls-certificate-inspector/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/svg-sanitizer/": {
-      "hash": "5398548b83dc9fcc310af27292a8689d0e715aa1e12173d912177669931efb6f",
+      "hash": "84486dc0cbb49c3c8596a8f8e36d21d1bdf82fd7ad60d576c5fae7b7f3fe5cdc",
       "route": "/en/utilities/categories/web-development/svg-sanitizer/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/svg-to-css-converter/": {
-      "hash": "e8a708107c7298b9736dc2aa65bcdefd754668a1d537e5d6b47fb75def2c787a",
+      "hash": "c204aa41a9f6e6c9501f80b6e4d2f25a73455014dcdf1ab781176f65cea8124a",
       "route": "/en/utilities/categories/web-development/svg-to-css-converter/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/url-encoder-decoder/": {
-      "hash": "c454d45b77157e819b1a84a0b3c190fa3031f78692a642eea0727d558f35fc44",
+      "hash": "f02296d0d93c8b5a203f5e7d16c8feac585f58ed821ef9bb5f2d40cfcfe4fc39",
       "route": "/en/utilities/categories/web-development/url-encoder-decoder/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/url-tracking-cleaner/": {
-      "hash": "d2dbd295d0157245dd6254b722622053168f5b46acdc9858238ce997b2c7f803",
+      "hash": "c2dd14a2ca2f998244504ccf1c1092bd939f1633c5d655073e6984f4feb1fac2",
       "route": "/en/utilities/categories/web-development/url-tracking-cleaner/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/utm-generator/": {
-      "hash": "14e0aede4e375ddd8dfce6404d9dc3c66c1a6ff0c06d87c20d9c1b96fda706b1",
+      "hash": "373eaf3d6c1ac4471fd7cd9bdbb32227918fb5e36b426b6c9af392bc4161bdf2",
       "route": "/en/utilities/categories/web-development/utm-generator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/visual-css-grid-flexbox-generator/": {
-      "hash": "aa3e5fbcb8e8601d3a6d663f6ed7af88e6e87e6864214880282865d17a607692",
+      "hash": "a82feecc23cf2a0f9b7fb66a0441b36934201ac6c1f62fcb0cfcaa471ae7e3af",
       "route": "/en/utilities/categories/web-development/visual-css-grid-flexbox-generator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/web-development/visual-readability-calculator-wcag-apca/": {
-      "hash": "48f9aacf0263a7517e9e57061b68180ceee3ee38b6ff019fbd544919db40ce52",
+      "hash": "1f7eedf64702e3c0788a9cda6e5c23561f0c22b8bab7b4d90bc902e2fa7880df",
       "route": "/en/utilities/categories/web-development/visual-readability-calculator-wcag-apca/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/audit-icone-app-ios-android/": {
-      "hash": "661b6592f8de118cb0627ec4639e3def03fc0bd6836d6c05ff419de77121ea3f",
+      "hash": "2d837bad1b824196902809aeefe3bffabc12f5911483452e21e4571750eb0fb0",
       "route": "/fr/utilitaires/categories/developpement-web/audit-icone-app-ios-android/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/bibliotheque-prompts/": {
-      "hash": "73997496aec07bb127bd0261fa765b3493beca53e42cd10b08c6ac88527b4ee9",
+      "hash": "7bd3cac7e5ca27cf46bf5355e440c6bb43d6645305927cf235fc892b8eb8ec84",
       "route": "/fr/utilitaires/categories/developpement-web/bibliotheque-prompts/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/calculateur-couts-llm/": {
-      "hash": "192a598e037ea7a534ec5aaf205ca6ff6e6b89f69314089d8d278a13b4edb39f",
+      "hash": "a86623cd6ebf7d7ef538acc7484ce260e329354c7fc7ad35c20740f2ff23f32d",
       "route": "/fr/utilitaires/categories/developpement-web/calculateur-couts-llm/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/calculateur-lisibilite-visuelle-wcag-apca/": {
-      "hash": "9d1df71339c75aaa20a2dc721e9ecaed9a8311e5bbc361e39ac8b5b50f754d1f",
+      "hash": "003eee7208945e3aab93c98d663ecd2daf97a2cec273201fbede40dd5c7c7122",
       "route": "/fr/utilitaires/categories/developpement-web/calculateur-lisibilite-visuelle-wcag-apca/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/calculateur-ratio-format/": {
-      "hash": "d15df7145da9fa961f5fb94affd98a99181d0c884d765c69bcbb732bc608a130",
+      "hash": "72442ebfcd493ac7424247810e2b7a82ce4d383ac53014fb9581d9af78dd81c0",
       "route": "/fr/utilitaires/categories/developpement-web/calculateur-ratio-format/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/calculateur-specificite-css/": {
-      "hash": "cf13d527ced64298177817184d9eb9d12e5e06e7a3b08ff2e2c4ddf944b36bee",
+      "hash": "b314ee1d6de8386ed06d0bd832273fe0ebf59e9594a1c70b69316d925e8ecf67",
       "route": "/fr/utilitaires/categories/developpement-web/calculateur-specificite-css/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/calculatrice-temps-donnees-impact-vitesse-web/": {
-      "hash": "e97331b224fd69b3056017c05caabd9134b4e7163af818f6dd956bcb6e7b1372",
+      "hash": "ed14a677a4ccb3a740e651ab05ed7cbfd34084bedfe91da717cb8f26e49e5ed1",
       "route": "/fr/utilitaires/categories/developpement-web/calculatrice-temps-donnees-impact-vitesse-web/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/convertisseur-couleur-rgb-hex-hsl/": {
-      "hash": "e8fd250887e371938099f68409ec1bfc5848451c9d13d21f267db78d8eb1de4d",
+      "hash": "e53be46fa8d039a7738392e31324174b927eecce9cbccce6db43693e7ddf8ddf",
       "route": "/fr/utilitaires/categories/developpement-web/convertisseur-couleur-rgb-hex-hsl/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/convertisseur-css-inline/": {
-      "hash": "8201e4b77361e3c68f9d142e5a55e7241808a324896ab825f2ac72c697b80af8",
+      "hash": "a8a9f7f0043386dd6d8e4b970568840c67f51d03c54ed741392c799dc4ff5093",
       "route": "/fr/utilitaires/categories/developpement-web/convertisseur-css-inline/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/convertisseur-excel-csv-tableau-html/": {
-      "hash": "825435dfed0b917830017d1705e63ae9830102b514b6c86813dea99eae561edf",
+      "hash": "fadba080c8871bd1b8c7d5c3bb88245bc1987edcc17d12d9ed21c38f60f57eae",
       "route": "/fr/utilitaires/categories/developpement-web/convertisseur-excel-csv-tableau-html/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/convertisseur-svg-css/": {
-      "hash": "22fa45ced44316e0f65f819890393441a7a164fec0f72fa6f019cda0c21b69f5",
+      "hash": "f6e31aeb8a3f8bf9f87f58032b0147420ee079dd412abdad0030b59e4f23def5",
       "route": "/fr/utilitaires/categories/developpement-web/convertisseur-svg-css/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/decodeur-jwt-parser-et-inspecteur-de-claims/": {
-      "hash": "349fe759a63d74df71f368c57afaf9ab4466808e2784d889aedc9bc5b3c309e2",
+      "hash": "5df216acec0ae0bd8282b758d7d5cf68a122673e0f503823075105a8ee5baa11",
       "route": "/fr/utilitaires/categories/developpement-web/decodeur-jwt-parser-et-inspecteur-de-claims/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/donnees-ouvertes-csv-json-valeurs-manquantes-lignes-dupliquees/": {
-      "hash": "cac7437251a99f8eee74a974b22de7c700bf0a5d4337a1f059bc042b9febeaf0",
+      "hash": "322fe4b50d3aa254c5df4f0078e24633f480aa7374a42c4f27a46e43179ee1a1",
       "route": "/fr/utilitaires/categories/developpement-web/donnees-ouvertes-csv-json-valeurs-manquantes-lignes-dupliquees/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/encodeur-decodeur-url/": {
-      "hash": "a6db0cf0a86087c99d9c8e96f6db1d41f4dcdacb6a2a19e6f98ff56bc314f51c",
+      "hash": "bce9f77f23ac6c01185413f9aeabe4427ae55f9d913c0579fbd121def9251d31",
       "route": "/fr/utilitaires/categories/developpement-web/encodeur-decodeur-url/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/formateur-json-validateur/": {
-      "hash": "dc07484eed572a6dac7b00128dbf06f55d53fd5046cad58a9c55a52bcbaf66d3",
+      "hash": "30205e0d5dbf386f58ba7321189d3a9bc4909bba8c8dc80ca2043fb144c558c3",
       "route": "/fr/utilitaires/categories/developpement-web/formateur-json-validateur/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/generateur-expressions-cron/": {
-      "hash": "c3d50f71f636f112e829ca603172a5fe8b7395bb100968e0b00d38dcfa87e852",
+      "hash": "f9a49593ec096642c986e0a08ae25ebc72b285479d7ff363dc84979fba8f00dc",
       "route": "/fr/utilitaires/categories/developpement-web/generateur-expressions-cron/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/generateur-hashes/": {
-      "hash": "8ae5968f2c6280de0aafa62defc83cd2e05a25e34bf1480fbd12799887c8c1ca",
+      "hash": "b4b9bc8f55d901b1caa5eadda134d0ec50c588ec92ee34893933e329086f77b4",
       "route": "/fr/utilitaires/categories/developpement-web/generateur-hashes/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/generateur-images-placeholder/": {
-      "hash": "f9a0f1de2c7be9c91c59bab7f07bbba2311f656c3658a067ed10031b92b68a7d",
+      "hash": "29c3a2b7ee1e5572e3201035ef4a942f349fdb531285236a6adab80045768eb7",
       "route": "/fr/utilitaires/categories/developpement-web/generateur-images-placeholder/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/generateur-mockups-mobile/": {
-      "hash": "7ffd802e83cdd241e97e3b66693fc6594eb6392aa253f98d0569a17c2c6b00b8",
+      "hash": "b10eb3ee0c7bfdb2a0a87b2e027d80cadca9109d9e14ad7d7ae5e33abe74f50b",
       "route": "/fr/utilitaires/categories/developpement-web/generateur-mockups-mobile/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/generateur-ombres-css/": {
-      "hash": "8d9f5eccdd7c56acb2c746dcd5f5a31b67408f3b000d0fb3e1c0ff3b5496884b",
+      "hash": "7a61a1b717c5946bf79f05054a924d7139442b83e715913200ccf9dd6127ae27",
       "route": "/fr/utilitaires/categories/developpement-web/generateur-ombres-css/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/generateur-security-txt-rfc-9116/": {
-      "hash": "3046f1488bf1f86c5a8ff0331f03260af96176f00b410420c3ec02ccb9dc81d2",
+      "hash": "4601980897dfa058f85326d8c6e26b340040639ab9ea2e5372a189a4e56f9a6d",
       "route": "/fr/utilitaires/categories/developpement-web/generateur-security-txt-rfc-9116/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/generateur-utm/": {
-      "hash": "010d67ef33941a556f6763e2b84a0ab58e153d2c85183360a67a7f5403acabba",
+      "hash": "51f62587cedd64884e6963baf50ba1a9003eff305225611d4c977c57c171c296",
       "route": "/fr/utilitaires/categories/developpement-web/generateur-utm/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/generateur-visuel-css-grid-flexbox/": {
-      "hash": "073b99fb2a32298dbd54bea81922934d63837a4635b767e63e75812ca1f933d1",
+      "hash": "a688d0c1243e7ffdad13f9263d811f4273685e262c32dc36c5d6f5e9118001da",
       "route": "/fr/utilitaires/categories/developpement-web/generateur-visuel-css-grid-flexbox/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/": {
-      "hash": "1a68fbedad67b373110733732430e77d30fb372ee7468b224100c1331e62063b",
+      "hash": "a7539d130c8c047b48ec60f8f190dd75c3fd9fba451b0c293cce1e98d0b7b584",
       "route": "/fr/utilitaires/categories/developpement-web/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/inspecteur-certificats-ssl-tls/": {
-      "hash": "b2979d268267b7ca4427844c64d2c4582b02ab3d30aa2e11125fe14ecd18ac69",
+      "hash": "42020a5a68695330e317bf6ec1a7b9b7d4fce7cf3a60a242b61c8d41c17a2f23",
       "route": "/fr/utilitaires/categories/developpement-web/inspecteur-certificats-ssl-tls/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/nettoyeur-suivi-url/": {
-      "hash": "5be97b8380c3ec7307bb45c48897767df35e49e3a1375470be34f3a2ac8c973a",
+      "hash": "30f885135cbf94651fd5665b1f76c33095c94eb306fe46af6d1f3de586e3857e",
       "route": "/fr/utilitaires/categories/developpement-web/nettoyeur-suivi-url/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/nettoyeur-svg/": {
-      "hash": "19ab5a72df412e7ee3bfe0ac99d4694606a8699a8c9ca88a6d3341300eaed54e",
+      "hash": "d8f6c7239ee3cc5c76a48c15a24c75e96a66312d8962abb1f8e01f1d3cbdeca2",
       "route": "/fr/utilitaires/categories/developpement-web/nettoyeur-svg/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/promouvoir-ce-site/": {
-      "hash": "9ca7d2b9e7e079b3679cebb9f1d316e9c4ba6f4c52c5884b208169f48048fd62",
+      "hash": "0036c41f0d30aa7f5a1c6254568608f68a0a321b1d9302f952bb59d345ac3508",
       "route": "/fr/utilitaires/categories/developpement-web/promouvoir-ce-site/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/simulateur-serp-compteur-pixels/": {
-      "hash": "5f4fc8b911b30bba613869c40791ab1e64cb235603693a88e6522ff4cdf4790c",
+      "hash": "e8df7e2b29550e8a00dad46c6381fdd9b2d5778f1659377c48c19776b8385449",
       "route": "/fr/utilitaires/categories/developpement-web/simulateur-serp-compteur-pixels/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/suppression-css-duplique/": {
-      "hash": "1b6bf7ba247d0edeae8edbbd1d8ef85f4e34bee6d61992902e4b1433e95b5b8a",
+      "hash": "72445df6a6da471171e8f164b146ec6c07f3a9cae036f117a6e2c4b41106e438",
       "route": "/fr/utilitaires/categories/developpement-web/suppression-css-duplique/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/typographie-musicale/": {
-      "hash": "c524edd48b3d3209e02e6da686326e9143a88e21c1aca90ff11a2b01ed9c20f0",
+      "hash": "0de3ba84ae89fa9b6701261351453e62e3c12bc016957cc4aa31e59e0fd42fa5",
       "route": "/fr/utilitaires/categories/developpement-web/typographie-musicale/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/developpement-web/visualiseur-codes-clavier/": {
-      "hash": "d179cc43816cdf82f9a922761c2d9f2291477b0d69853cc4b442143caf0f97b3",
+      "hash": "8f83e5e70d6f764abc3e9a0d0fa95eb6ebb0f1d59ba24265cec71811dd8e0a0d",
       "route": "/fr/utilitaires/categories/developpement-web/visualiseur-codes-clavier/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/audit-ikon-aplikasi-ios-android/": {
-      "hash": "574e142a9830de6278947108c54be7cae4de1f98a3fc825d350a8f8f2adb18ee",
+      "hash": "1f21421bdfef00fb3cda49017a367afc90432853b090cbc6be0ae902b2d1d74d",
       "route": "/id/utilitas/kategori/pengembangan-web/audit-ikon-aplikasi-ios-android/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/data-terbuka-csv-json-nilai-hilang-baris-duplikat-pemeriksa/": {
-      "hash": "c1fa923a386c8abcb23c1549452a43e8966ad225a5a6e4ab1491fa7180028d4e",
+      "hash": "8074b909302e0bb570b46dd1610d4f3f4ef67c5ff644b58e56faea43b94642f4",
       "route": "/id/utilitas/kategori/pengembangan-web/data-terbuka-csv-json-nilai-hilang-baris-duplikat-pemeriksa/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/decoder-jwt-parser-dan-inspektur-klaim/": {
-      "hash": "e9934d8dbbd4a6fc9b3ebc61d9824ae13218cfc4edda092cdc9595199a4c8bb4",
+      "hash": "26c8b77ca220b038808116756c172f3cca5b45b21481444e3a761dfec7013f95",
       "route": "/id/utilitas/kategori/pengembangan-web/decoder-jwt-parser-dan-inspektur-klaim/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/format-validasi-json/": {
-      "hash": "c9b951e1aaf47dac407cf03d0d1306ab131e215861c1e15acfe9d4b7875908ed",
+      "hash": "2c0921de879277948dbee306940fd35be551091e8a9d724dbcb74bb686a3c75c",
       "route": "/id/utilitas/kategori/pengembangan-web/format-validasi-json/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/generator-bayangan-css/": {
-      "hash": "da5913e760067ba644925a3c874f0b0a7009763bc69e558a474406f6398a80a7",
+      "hash": "bc76a8013c79d619b1a375365544cfd5610eb3adf79aaf6389d2b7cbea6d2f85",
       "route": "/id/utilitas/kategori/pengembangan-web/generator-bayangan-css/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/generator-ekspresi-cron/": {
-      "hash": "dd3f13f1d4566cec60e0fb4a9951ff95155a2eccdbc22650f7c75d58d7a2501d",
+      "hash": "828739be84e5bc9076cc334e20d70dfa9954785ca21962ac73a241ceb0ef0e17",
       "route": "/id/utilitas/kategori/pengembangan-web/generator-ekspresi-cron/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/generator-gambar-placeholder/": {
-      "hash": "41a7858eb5f08a25993f1c1cc58c57b70eafe0d6e92af1aec608775badb58c32",
+      "hash": "4964b987f3b636d27c49d4f1417002369887334523684342e1ca16b2ca589a22",
       "route": "/id/utilitas/kategori/pengembangan-web/generator-gambar-placeholder/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/generator-hash-keamanan/": {
-      "hash": "aa1f15bf3ee415e5635cd27864a6a6a431eaf1c2cc6c78f84f2acfde8f45061d",
+      "hash": "f6d3cc24e1dcb7ffd4225886a10cdcaf41c4cceb6e52278bfe20b15375ec3a68",
       "route": "/id/utilitas/kategori/pengembangan-web/generator-hash-keamanan/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/generator-mockup-mobile/": {
-      "hash": "d1ece4e857d23c0cc76d48643c613000c353a23114af9b4f4c4231cd9ed03617",
+      "hash": "213d803c11a978d3b2c1c36bf8b35ae2a5ef7c8e465270eeeded29c3b9a3a90c",
       "route": "/id/utilitas/kategori/pengembangan-web/generator-mockup-mobile/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/generator-visual-css-grid-flexbox/": {
-      "hash": "fb93d336f5105fc304164f72525798676c1fa52569e128754a624a8e302fa5ae",
+      "hash": "82b238b0f12e27a6cfda19bc4c9215ba7d982b2f793076c288bdac0ef71f991e",
       "route": "/id/utilitas/kategori/pengembangan-web/generator-visual-css-grid-flexbox/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/": {
-      "hash": "5b4ccd1f030bcb94520cc725ee2909a5aa04d1fe16f59a5749fafd6e96e75c19",
+      "hash": "d5874e78737e486955defe7fa996aad06462cb139a3c32846537904b10b489a1",
       "route": "/id/utilitas/kategori/pengembangan-web/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/inspektur-sertifikat-ssl/": {
-      "hash": "ca12bbddbe0dfa76553d804f695454769557efa993623937fa966154b9ac9407",
+      "hash": "10d8722330fa5fa480439ad38ce2751687f94c0de8e42e0e6c661fcf65d8f127",
       "route": "/id/utilitas/kategori/pengembangan-web/inspektur-sertifikat-ssl/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/kalkulator-biaya-llm/": {
-      "hash": "60b7e76838538e595ee2585d0a74b49efea657c662f6deb70a84a22aa4d7f8b6",
+      "hash": "106bb0d29a585fddb27287fa64d397467609f54f76206e64b6cbb3bc63f6152a",
       "route": "/id/utilitas/kategori/pengembangan-web/kalkulator-biaya-llm/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/kalkulator-keterbacaan-visual-wcag-apca/": {
-      "hash": "5ef755d9ef689d2a599cc6da127e22e5e8594f7c767c4bb0e5347c35537f2957",
+      "hash": "7f3c26123132cd3346ead83f633f3afe852f0fcd76773349f267631811e6fc91",
       "route": "/id/utilitas/kategori/pengembangan-web/kalkulator-keterbacaan-visual-wcag-apca/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/kalkulator-rasio-aspek/": {
-      "hash": "1246bef60b8a9a34148be5835d8f421343cbb726a4d296ba5954a21dff501ba2",
+      "hash": "f9f5a54860e45729f6ec37f333a5b2d3f1f5e1f8b73cd0a587846f3f9c81fa9a",
       "route": "/id/utilitas/kategori/pengembangan-web/kalkulator-rasio-aspek/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/kalkulator-spesifisitas-css/": {
-      "hash": "b90285b3a1414c54e63a40c28ccd166b3309ecdb60e5f2adb3adc304c6546bba",
+      "hash": "988389e096d3f481d4b80221d435db6ef2fd212a7f3a4bd33f578d25396f5924",
       "route": "/id/utilitas/kategori/pengembangan-web/kalkulator-spesifisitas-css/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/kalkulator-waktu-data-dampak-kecepatan-web/": {
-      "hash": "78a857f76e3ab03e2bb72216e288b243e8a4227817a59f4afc934bb8039bc944",
+      "hash": "7382b5257a9bd12d16c9345eac8a0f6d694a59377868c1907488322a9dc642c3",
       "route": "/id/utilitas/kategori/pengembangan-web/kalkulator-waktu-data-dampak-kecepatan-web/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/konverter-css-inline-html/": {
-      "hash": "f86da04af93f134d1e514d9f53193961a85ee4725ecb877ea4a771e5c8fa1bc4",
+      "hash": "87bdcd4b34cd42ac6182d11058c9463e0973214ea153163e6d391a98820aad49",
       "route": "/id/utilitas/kategori/pengembangan-web/konverter-css-inline-html/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/konverter-svg-ke-css/": {
-      "hash": "e2b13450d03804578e1c9dd9c6b79b98e61b210a658f1a96f00da01e1235a1a6",
+      "hash": "9eb574140544856c8eb30a963ca2048c1ea574ae5bcb153ac3f109533347ff45",
       "route": "/id/utilitas/kategori/pengembangan-web/konverter-svg-ke-css/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/konverter-tabel-excel-csv-html/": {
-      "hash": "57933f12e94baaa0e1d8fd97b2df16d0d162f465c8a8fbfbf0490b366f93089d",
+      "hash": "5d1d88c23e0ab247bc21a3af3faea71294b2f68216dd0fbe7b5e4863572bd04a",
       "route": "/id/utilitas/kategori/pengembangan-web/konverter-tabel-excel-csv-html/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/konverter-warna-rgb-hex-hsl/": {
-      "hash": "c6d7a9d029896e44f6cab12821b4fd3486b3008a51dd1d4bdb3cc02571361c77",
+      "hash": "c8c3d7f9e0553b70abd6c87d102ab43ae9180faf34463785a318ee808c3ce7f2",
       "route": "/id/utilitas/kategori/pengembangan-web/konverter-warna-rgb-hex-hsl/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/pembersih-svg/": {
-      "hash": "1f7963f5a2e37ccb74f28eefa11dbc469daa796bed3f8d0a784402c1e18c34f3",
+      "hash": "50b5aa92ca38ef875f1500ca8a312fc2c5f7d1a7bd279ed641c50f8a23bed6f7",
       "route": "/id/utilitas/kategori/pengembangan-web/pembersih-svg/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/pembersih-tracking-url/": {
-      "hash": "196904f0614674703f02d0e81afc5416548e475aa8789a6107565ef45e6a78f7",
+      "hash": "2d4fc634c81a10caca772defbfa5adac20bd9778b65d45a7266b63117adebbc4",
       "route": "/id/utilitas/kategori/pengembangan-web/pembersih-tracking-url/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/pembuat-parameter-utm/": {
-      "hash": "e6c984a43686e7b2cf3e87083ece14d53201f757480935d71b9e0b20cec01208",
+      "hash": "bb95cc1062f9fcd6e6483fd256838741516244cf2e90c7136302345f41db1c5a",
       "route": "/id/utilitas/kategori/pengembangan-web/pembuat-parameter-utm/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/pembuat-security-txt/": {
-      "hash": "742c1b30b5ba66e8a4948d3be966b1fa4fe64fd7cebaee05605800380da2ee82",
+      "hash": "36984c78a33094bd38cda9f1dfa1e9105aa6dd63307b939710fd408bab0de0e5",
       "route": "/id/utilitas/kategori/pengembangan-web/pembuat-security-txt/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/penampil-kode-keyboard/": {
-      "hash": "821cdf532cefc307224c17447cb3c33a00f34396158f609efcaeae472c24643c",
+      "hash": "3f5bb6353e2ef56820ecc9ae6ed5933e62fbc20f6e08782cacc6fdffef1879b5",
       "route": "/id/utilitas/kategori/pengembangan-web/penampil-kode-keyboard/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/penghapus-css-duplikat/": {
-      "hash": "6dd653b91eb1c43e930f9f6973f35667c41fbb0e519bda7d7c876c5b6e44e972",
+      "hash": "4807a2a128f01449167c06b94fb4a0f1049e0650b4aaf8de908b5ae94a007b51",
       "route": "/id/utilitas/kategori/pengembangan-web/penghapus-css-duplikat/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/pengode-pendekode-url/": {
-      "hash": "63db530944d84580f39f470be8c47e9863959b02adf96b5b297f3e30cfcc995c",
+      "hash": "f5febbeda030ca8416226c02694dff434e62b28fa032f9cc67c5815de559bd8d",
       "route": "/id/utilitas/kategori/pengembangan-web/pengode-pendekode-url/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/perpustakaan-prompt/": {
-      "hash": "ba72201ec7698b1f678d38325312548426c3bab9fb623e30e96175299b591bf4",
+      "hash": "50cca47f486b0d10284af89e029d6b3ffa9e98082c953faa46cabe2c9f8ab8f2",
       "route": "/id/utilitas/kategori/pengembangan-web/perpustakaan-prompt/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/promosikan-situs-ini/": {
-      "hash": "8aa3bcb23bfdc1312ad4fdc2a5cb3cfc2637166db7f7a0bf3fdbc0c606342d03",
+      "hash": "d7d5090c06416ced95c58d79952c2593d6deed5a82d73ed51c235199742bcdc9",
       "route": "/id/utilitas/kategori/pengembangan-web/promosikan-situs-ini/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/simulator-serp-penghitung-piksel/": {
-      "hash": "2eb095ff76c4d5d24d8189e224cae4f0832db166a82e7066b1a03710bd1596a8",
+      "hash": "5234607c36e9a4640a16baa26d1ab929c6521ad1a7e6e240a354b5a6e95f6dd9",
       "route": "/id/utilitas/kategori/pengembangan-web/simulator-serp-penghitung-piksel/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pengembangan-web/tipografi-musikal/": {
-      "hash": "46292625a634d719238619879d726e9aeb9dac57fff57a995299d8ff5bf3c96f",
+      "hash": "88d9813fa995f9e207bc8f7d9a21b9b0c8212d00d0dd17dbefb03ccff59c4b59",
       "route": "/id/utilitas/kategori/pengembangan-web/tipografi-musikal/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/calcolatore-costi-llm/": {
-      "hash": "2997c06d7d44c65d2f0ed9827d399b68495ac756cc894ad3544d2b595690b6ae",
+      "hash": "f1ea2bbfcd6d1215096ddbad03dcee1ee973a1aa608b43e8cda6947ec0e69615",
       "route": "/it/utilita/categorie/sviluppo-web/calcolatore-costi-llm/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/calcolatore-leggibilita-visiva-wcag-apca/": {
-      "hash": "ed42e3c5e642c59ad2e8d40a5d77a725cf3fa3bdd6a0e4c9259d4f9393f13c11",
+      "hash": "964a48f0843673e14ad07a0a718e0177f7afcd87072a2e0958202855717b7abc",
       "route": "/it/utilita/categorie/sviluppo-web/calcolatore-leggibilita-visiva-wcag-apca/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/calcolatore-proporzioni/": {
-      "hash": "ea140dbf39e7f19a865ff7a6424435ce1d31cf217adbc6f60e4cc81ad829d7bf",
+      "hash": "708e2b9cfae24801176674bffd85b991e1f017db4ae0c9cfb9f78f1871f2d1b2",
       "route": "/it/utilita/categorie/sviluppo-web/calcolatore-proporzioni/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/calcolatore-specificita-css/": {
-      "hash": "47e85dff32b9018445219c3be51dee1ef48c627cbd448cea0ee6f9bc193a5aaa",
+      "hash": "9131c5c12ac134b78121c0787c2b387c5c27d1f0f4ab5c89e799ca54b3cecdec",
       "route": "/it/utilita/categorie/sviluppo-web/calcolatore-specificita-css/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/calcolatore-tempo-dati-impatto-velocita-web/": {
-      "hash": "8d23eedbd7d6d2c03b928a0de144731e49d891642864ba9cbc1714f599dd311e",
+      "hash": "c4bcae86b6e016cdee88ee36ece75d41843f7a5f17fed14cf17affac7b4f061d",
       "route": "/it/utilita/categorie/sviluppo-web/calcolatore-tempo-dati-impatto-velocita-web/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/codificatore-decodificatore-url/": {
-      "hash": "c61a5e671389f08cd55e318af686c681af6b68611421d337c584f8ee35bdb1e9",
+      "hash": "b2e72e0ed0c70873729cb18f82aa37f3290857730e229fc67178bf61fa84872a",
       "route": "/it/utilita/categorie/sviluppo-web/codificatore-decodificatore-url/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/convertitore-colore-rgb-hex-hsl/": {
-      "hash": "28d5f093379e61ccf40c1a5995feefbcde20db2c4b9795a23da8962069a9213c",
+      "hash": "354ec44241901d2a9b7c8c285746da83614898de5107675d5db4704bc1d71106",
       "route": "/it/utilita/categorie/sviluppo-web/convertitore-colore-rgb-hex-hsl/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/convertitore-css-inline-html/": {
-      "hash": "27ce13faa46c8a662f602077cc3805ef601352ddd10d1301d9a7d6b8174044ac",
+      "hash": "29598eb7cf1c4947940efeb50b4fa5b915054cea4d23504e61fe3f7de18a060c",
       "route": "/it/utilita/categorie/sviluppo-web/convertitore-css-inline-html/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/convertitore-excel-csv-html/": {
-      "hash": "15bf6fa11d88d442d21188cfb3327fb2c7dd7269f74f4a2e51621cae62cd3320",
+      "hash": "212e17f86c221f057c5c12454af77c73ea53456d037cfdc61558da466318ebc9",
       "route": "/it/utilita/categorie/sviluppo-web/convertitore-excel-csv-html/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/convertitore-svg-in-css/": {
-      "hash": "7f2c529b56e63c5eda6ce066ca7c755d47a4ff1d75176f7b13db0d0dbf3626da",
+      "hash": "ef4ef9d6777c9a68c5888f6cd63b85fe81d383edf7657cbe0029ad8a7504ebec",
       "route": "/it/utilita/categorie/sviluppo-web/convertitore-svg-in-css/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/dati-aperti-csv-json-valori-mancanti-righe-duplicate-controllo/": {
-      "hash": "6e4fc4c6cf759944c7bac74b42711b4eec2970f27757992802fe0f764508467e",
+      "hash": "a86fffc7d291bd195ab2c5c85da4409bd1466c8b22839b5a379466633e27e6ab",
       "route": "/it/utilita/categorie/sviluppo-web/dati-aperti-csv-json-valori-mancanti-righe-duplicate-controllo/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/decodificatore-jwt-parser-e-ispettore-di-claims/": {
-      "hash": "90dc6585c7595d1e904ebec635cd678bf6b99a5db66b879aca619facf3b00bcd",
+      "hash": "6ea97490d4f8c9f51442bba1be1b1d03429eb7728c4a11ac86516de8eb749904",
       "route": "/it/utilita/categorie/sviluppo-web/decodificatore-jwt-parser-e-ispettore-di-claims/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/formattatore-json/": {
-      "hash": "9ced0343d0da63ea8de8a43afac79d247b990b8427c750247d04f773c262e45b",
+      "hash": "a063a2134e370cd8638a18fd2be08a1ad4a3d41fc21fcff4439525f117a6fbb7",
       "route": "/it/utilita/categorie/sviluppo-web/formattatore-json/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/generatore-espressioni-cron/": {
-      "hash": "32656bef9639144f6730ba32afad52fe4f47f762db6356b3a13c4f5fbfbac0f3",
+      "hash": "0f503a8b07e6083047ffef6dfca78fa3a4c218ba35614b8e205d4dc9e6178e0c",
       "route": "/it/utilita/categorie/sviluppo-web/generatore-espressioni-cron/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/generatore-hash/": {
-      "hash": "f3a521c29dc8958d6350f23f58b1234dc44238aee6006e83fafd81346bd5f511",
+      "hash": "2110cbe5e0849b129c0d706af2acfd8fd026351a91b88fb369cc7c1f257c71af",
       "route": "/it/utilita/categorie/sviluppo-web/generatore-hash/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/generatore-immagini-placeholder/": {
-      "hash": "b9ca2fac13e55495f91a7784cb5c9a0a541ab80ff6434ca982426b7717814a73",
+      "hash": "5cc3e593fe769d0503d5fff588bdc28a2965c70669ebc7549d555426312d99f1",
       "route": "/it/utilita/categorie/sviluppo-web/generatore-immagini-placeholder/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/generatore-mockup-mobile/": {
-      "hash": "00fba547cee37708d719fded04c3a71e71f1d2c36057febc43b57118a0dde004",
+      "hash": "0023dba0cc259e250512b7afadaf7f8854d604744cb0cd40126e91a12bb57dcb",
       "route": "/it/utilita/categorie/sviluppo-web/generatore-mockup-mobile/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/generatore-ombre-css/": {
-      "hash": "9625fc1b9fc27ab627764678ea99977ecd949a53c2eda152917b14501d92271a",
+      "hash": "306dea1b4328db8e2ff69f7ab707caef10eb2f2f58be74c97f919aaf81786260",
       "route": "/it/utilita/categorie/sviluppo-web/generatore-ombre-css/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/generatore-parametri-utm/": {
-      "hash": "8aa8dd7522d2a6d10097fafaf4dcc4406d2d3e09887d8a45e693053fd8bfa62b",
+      "hash": "be7e038e4c2de9434687865158cebbb2ee0f31f3fd43e1f5546d84502e608d9d",
       "route": "/it/utilita/categorie/sviluppo-web/generatore-parametri-utm/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/generatore-security-txt/": {
-      "hash": "4a9359351f8a282277bc745b49a6dcc134bb15967d76533ade9814ffd4fc1007",
+      "hash": "3cdad324f423c0cfb44c8cd3e0f4d137246219a2f6e93b8082db9184b8d278e0",
       "route": "/it/utilita/categorie/sviluppo-web/generatore-security-txt/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/generatore-visuale-css-grid-flexbox/": {
-      "hash": "4bdaa930a6eb8f4eb27569fc590085537d4c6b774b6076a479ed6f848f593265",
+      "hash": "1c14ae00480723da60bcabfccfe056ce8699f39a7f40b472f72fa09e69c5e8ad",
       "route": "/it/utilita/categorie/sviluppo-web/generatore-visuale-css-grid-flexbox/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/": {
-      "hash": "daef45deeca7e9da23d2ebae2521416c25fee6f133e5fccb76138413c5db8c77",
+      "hash": "5de84a19d62cbe246abedf1da56115ebddff867811f0212728b0dabde83194ab",
       "route": "/it/utilita/categorie/sviluppo-web/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/ispettore-certificati-ssl-tls/": {
-      "hash": "05b42517fd3fac71ee985864787d4dccb05e88416c370b550f65f9eabede6900",
+      "hash": "2e27b5d29a9336af63e3f484bc4cf7676fad380d9a60332ac49172b5e26572d7",
       "route": "/it/utilita/categorie/sviluppo-web/ispettore-certificati-ssl-tls/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/libreria-prompts/": {
-      "hash": "837ac733a42d40ec2b14ad472f3f7ab43c91255c6b9be2e0c5debb835c2d164b",
+      "hash": "ee55cc144f14c76ae387c2cc0762afa979e89b4c401024ad8550cfae52852014",
       "route": "/it/utilita/categorie/sviluppo-web/libreria-prompts/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/promuovi-questo-sito/": {
-      "hash": "26a400cf118d99eeb0a393572301db3a781a2f74c38a4b261d6b7ff19fb4d4aa",
+      "hash": "3bd976342caf62011a37f808e7643c5a6b8fff901281484f5551ea1f3eb31bf9",
       "route": "/it/utilita/categorie/sviluppo-web/promuovi-questo-sito/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/pulizia-svg/": {
-      "hash": "9b0bfe46776cd81298bbe353ab6edf7fb25b38ccd50e4572498373dc833631b7",
+      "hash": "620e71ba72b03cf3cedec061f432a2ef9c18193cbc46bc680cee70c4b1f53037",
       "route": "/it/utilita/categorie/sviluppo-web/pulizia-svg/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/pulizia-tracking-url/": {
-      "hash": "09923dc3f2e9e35b78ade82db50c409afa273a76a57bb0c7c3a8eff58498d1b9",
+      "hash": "0f972705634bf6eae9822dbdd2cca8766262e0af90f6c267cd390fed930487cd",
       "route": "/it/utilita/categorie/sviluppo-web/pulizia-tracking-url/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/rimozione-css-duplicato/": {
-      "hash": "1a059245111102221e770ca5a552bb0853c394b32d7c51dec7573adf4d68ad8b",
+      "hash": "49528bbed290a0bc4efad084f7b537dab187906c27d835594536ccf297902105",
       "route": "/it/utilita/categorie/sviluppo-web/rimozione-css-duplicato/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/simulatore-serp-contatore-pixel/": {
-      "hash": "0e9d39ad2800590f5d9d726b4e7b2326d356335b4362c8b40bc9e720333a54ce",
+      "hash": "8a74fbda982dd36c51f3ef60a410136816454aea477634ed462a2d45141751a2",
       "route": "/it/utilita/categorie/sviluppo-web/simulatore-serp-contatore-pixel/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/tipografia-musicale/": {
-      "hash": "caf070645b9e3f53a3cb0e633c10528ce332cdde13c8bd0b8c51253e0e9f50c5",
+      "hash": "787aacb5e4cad1cb9d519eb0f818a8514a9445fd99423fa79a6bcdd0cad86b71",
       "route": "/it/utilita/categorie/sviluppo-web/tipografia-musicale/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/verifica-icone-app-ios-android/": {
-      "hash": "2807fe4acf9d13a226987832404a96560b5f785a1dde298e78344a5b3e7d828d",
+      "hash": "fca6f0394c321ac0ff97ef77be48dbf1bc8d26e462f018a87281e1f0573d0d4e",
       "route": "/it/utilita/categorie/sviluppo-web/verifica-icone-app-ios-android/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/sviluppo-web/visualizzatore-codici-tasto/": {
-      "hash": "8350b924b3e85b3f629c318aa82e72613f5d792f5ba14222dd22b11ac9907051",
+      "hash": "533572570c924265a724c00a19092062ebd2bfe4a6724c8d12cf91fa300ee88a",
       "route": "/it/utilita/categorie/sviluppo-web/visualizzatore-codici-tasto/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/aspect-ratio-calculator/": {
-      "hash": "7eec23456aecf502c185744ba00a3f7c1087738a1f7c6bb1a2633448b2f042d6",
+      "hash": "85d80df5f7b7de3ee57a36f583c47051bbd787d1531fdef601191c728ad384ed",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/aspect-ratio-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/color-converter-rgb-hex-hsl/": {
-      "hash": "5fb5b38738f5dbfa9846a28e061be15291c99353ae6e035a84d6d92aa5fb937e",
+      "hash": "c7f5fe7a8ab755bd31ede8e7e404f8bca4d5fc04ad39e4bed72ae769aeae951d",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/color-converter-rgb-hex-hsl/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/cron/": {
-      "hash": "00ceece7e1506ddbe23bc435abf8989240e79408b385139194866e629d79edda",
+      "hash": "7865be5c5c890b6edec11e039f021cdf1135be1f2be82e7a7e676bb1709a311c",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/cron/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/css-box-shadow-generator/": {
-      "hash": "eb916361e90985308531b0394aee3616202272484290fe3bcb571f9d71a4eea9",
+      "hash": "6cdc0663886cb357e8aaf32e91d36726ceb2e38e691b4031b7e0599c13717076",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/css-box-shadow-generator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/css-specificity-calculator/": {
-      "hash": "6df64d0de9214bad64ddce655947f543194b2284aff267e30b0760529a3216aa",
+      "hash": "eda950cf590e30dd7ebc6aeef9372f1e3f3fea0fe806dc34c2a17741a7035ba1",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/css-specificity-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/css-to-inline-converter/": {
-      "hash": "836828994e919a2577aeb3684eda1f1e438af1b719c9400214acf0b53231d51f",
+      "hash": "b50fee7df18dddf2e48afa8208e41d0c70a337e08eaea20f333bfa2c120f7f7c",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/css-to-inline-converter/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/data-time-calculator-web-speed-impact/": {
-      "hash": "84d2c7aae9db6fa684b7a88c48e77de8835a5471b8254666de3b67ca6294c052",
+      "hash": "4f33bcdfef61a02e33cfe0bc6e79a2e71c9bf8c578649a8c29404d35fdc833a9",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/data-time-calculator-web-speed-impact/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/dual-ios-android-app-icon-preview/": {
-      "hash": "91664f9556a2b2acdec5162e0d58e68354dd2f3e5ce9ee9ae0c7870b26834edd",
+      "hash": "8961f551b32c89dfc76a15f6613e24c6d35ba16de795199ee581693ca63075c7",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/dual-ios-android-app-icon-preview/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/duplicate-css-remover/": {
-      "hash": "89c8197d3fd70a39a444d1af7572850acf3c4a518690ebbc71cd4f1e992082a4",
+      "hash": "d13130f5e387c185723214e6b5b7b42fc5bf241782f87bcd5348a111a916b91b",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/duplicate-css-remover/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/excel-csv-html-table-converter/": {
-      "hash": "3fc8f648419cabf2026eb2dd49de27bbae2a0595a964643ab379d8721adfa077",
+      "hash": "1c6a12f54a2e60e125cccd8a827662d485ee68da9d6db1accf2e726a0ffbb27a",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/excel-csv-html-table-converter/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/hash-generator/": {
-      "hash": "b84d9c8e930ed7fccde1b99163b54963cc4fdae2bc7cc7eaa86b091363d52116",
+      "hash": "d09df36079feab079c174ad7ba8a8efeed9645f707b390cbc6f4b98b68da90bf",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/hash-generator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/": {
-      "hash": "06cb4ae889a175f4b70fa8ac7db845a82eacb71382e4286ea57c9bc5b32ff896",
+      "hash": "4e090d3fea60eb6ab93decabd38fe316680d57a499159ef634bde899daf9625e",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/json-formatter/": {
-      "hash": "92d0231a3626f36702d983827366f14c4661d5781433b0b31d84bd56d34a6a0c",
+      "hash": "8585bd785edc37f1252b73957cb22be15a7121dceffbcb3ae3bf139427ebf9a1",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/json-formatter/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/jwt-decoder-parser-and-claims-inspector/": {
-      "hash": "a28a98c1ec5e2cde980dd7cdef422f7ad8984ccb223a36debba6ac824cdfa168",
+      "hash": "46fac12efb09320df1bb52dc9ce54f231c2fda53ce23dea49c6655efa28622bd",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/jwt-decoder-parser-and-claims-inspector/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/keycode/": {
-      "hash": "981e4369ca01fd5ce7f97398173b1568fa37e24824c167aea8b897381492a935",
+      "hash": "6ca541aad8a35fdb87ce134e3868c8c122534efc86fdeca88d600cfb32b85565",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/keycode/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/llm-cost-calculator/": {
-      "hash": "65b7f771602d4fdb9e5795aa15867f549fb99d6f25b9c9c1c9d8f4874a69b842",
+      "hash": "973b3c06d20f473eff19525ed39f3f689844f6fe2fcc93c9ba53214b632a52db",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/llm-cost-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/mobile-mockup-generator/": {
-      "hash": "3f754af751088af609394785bec22418744700979b9fd8da7b7b798b6d699f5e",
+      "hash": "0315cd698b56503872efda06279f6bfa0696693be1953326632fc70336568bc6",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/mobile-mockup-generator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/musical-typography/": {
-      "hash": "2bb6bbc5e666e5dc9af2f0329c138b1a4bd290f030f89f9b16fc3aa18f8e44f3",
+      "hash": "cd0bddf14810c976558aef5e902b5748531676a9731f0eab211f1a0057b9c538",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/musical-typography/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/open-data-csv-json-missing-values-duplicate-rows-checker/": {
-      "hash": "821100af70222eaad6508c18e79f09c50067337b582c5825397de3daed87a4e7",
+      "hash": "82f8a41647e54befa2cb670e69fc58e297d530ce3f650a363c09d8c99fbe510f",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/open-data-csv-json-missing-values-duplicate-rows-checker/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/placeholder-image-generator/": {
-      "hash": "16f85c0db365604b7f63aed1d072667f40eb539b5b0cc021edd558e22433c779",
+      "hash": "b4a147f16bf448a355d37e537deff18acf9cb6afc58bee43a8244b0dd38dd65c",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/placeholder-image-generator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/promote-this-website/": {
-      "hash": "fc78c3f2c5c01c1e5633a9a16b80337b2fbeb126746856634c924db33a05730d",
+      "hash": "8d8223a172e2280a40c6d4b3ffb2967b4fc17c8474eda3cdedadc81ab40b1c53",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/promote-this-website/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/prompt-library/": {
-      "hash": "316fd608bfa14e3e0d5d68f027de7129b4b5861018e84dd475b549a93c00e398",
+      "hash": "07173e908d38486b941e002606273c4a7feea42edf6ba8ceec5000cd0c141ad6",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/prompt-library/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/security-txt-generator-rfc-9116/": {
-      "hash": "5bef8202895784476cd286216ec5535a2229434c4147f11e7943fc35c97214d1",
+      "hash": "cc1ef8109dc34a67203e1b0004fa4eccee0b3424a0e65bd979b69d5d98f41153",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/security-txt-generator-rfc-9116/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/serp-pixel-simulator/": {
-      "hash": "2beb4b77891137c984402709535d24f91611a64c192aae7b9bddd9389d2dc255",
+      "hash": "59f7a892e93bf9312cd22e413de05bb40ede30df2995b64cb441a3afc13de94a",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/serp-pixel-simulator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/ssl-tls-certificate-inspector/": {
-      "hash": "c641c405d8dfabf49364c0ded5d29603294ca0470fae5e5da6e2b4eb3a5dfaa4",
+      "hash": "c635af0c54a2fb94516f91a7d90e672f022f41f6ce0835a3a28fb867be59d421",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/ssl-tls-certificate-inspector/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/svg-sanitizer/": {
-      "hash": "f158cd8e1c079d6baaef2da17f15d3a08faf192000a235edfb008725dc729ba0",
+      "hash": "3b11eac618712b09da743827ce8280ce32c4eeb25e9330f25f832704741dc1cf",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/svg-sanitizer/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/svg-to-css-converter/": {
-      "hash": "704126a7af7340e80b81226bd6454b82a554c4246e7c721d16da3af282c63848",
+      "hash": "4d0801bd92541074802b16392c335b1052b6d68843b27e1090c93fe0ddb6df6c",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/svg-to-css-converter/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/url-encoder-decoder/": {
-      "hash": "cfd0bc4fc1fd507eaf41336433e602ca7fc00a6e9d79bf52af480358082d974d",
+      "hash": "3c5aa13cb9f095cd8218accdbcd5af2b9b47d31768648484af739f2b9de61c3e",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/url-encoder-decoder/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/url-tracking-cleaner/": {
-      "hash": "1263f626c8a11cf416912bdca9eae940be5a9c1b1f4563c916393a6c0d1285a5",
+      "hash": "e19238299925503a4838a7013122119d946c8d7fa948dd766eac5f2ce965a0e1",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/url-tracking-cleaner/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/utm-generator/": {
-      "hash": "c7902e9a7906988b0674751dfca2a3bbefe4ac3bf0ba3efdb245320455d8b739",
+      "hash": "145c8db1664bb07be3b85da2db4ad7b7d5b2548c152e35dba26cd47af0535ae7",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/utm-generator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/visual-css-grid-flexbox-generator/": {
-      "hash": "340115153ed310ec5ba3961c65d641131be3d006da42bcfda6fbcf2e76e922c6",
+      "hash": "6180883b3efe92f4eccb5c2b15e13708c2196a30216f32059dda9d4290bee1b0",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/visual-css-grid-flexbox-generator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/uebu-kaihatsu-tools/visual-readability-calculator-wcag-apca/": {
-      "hash": "fac1aaf0e041b01f55e07e93cdf6a105cf44ef1318813f1b6230ed647c4629f7",
+      "hash": "14627675c0f5a9458e502a4fd0aca4c3429105d2697ece98fe7c94da26d867ea",
       "route": "/ja/utilities/categories/uebu-kaihatsu-tools/visual-readability-calculator-wcag-apca/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/aspect-ratio-calculator/": {
-      "hash": "ae5571ecda73754ae3094e6a688efc505c59434a47439a4e3bbc244ccaaa327b",
+      "hash": "cb5a655448d5d7169790c470f59da009dda1e7599f2707447088e414556469e8",
       "route": "/ko/utilities/categories/web-gaebal/aspect-ratio-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/color-converter-rgb-hex-hsl/": {
-      "hash": "77c3f31f5a857819f4a64bb19ad5e207181ab1d0b9c994be77f2797f416cd9ca",
+      "hash": "c555109b538789d83beee5505542e7dc6cd1fae88f8d12a1e217f1412c790b98",
       "route": "/ko/utilities/categories/web-gaebal/color-converter-rgb-hex-hsl/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/cron/": {
-      "hash": "06a9834706bcf3e2b5f876b28a57796c4981ccd8cf7b0c18f705cc7bb8cf789f",
+      "hash": "0d7449779e49b0c5defb45234ca4620ea5237cafbe9373a16acbdf6c1a6e0080",
       "route": "/ko/utilities/categories/web-gaebal/cron/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/css-box-shadow-generator/": {
-      "hash": "13996d34eeacef190fa47c2afd1c34902c081249ddf74e6876157b6fc22a38ca",
+      "hash": "8a859ea4dd400b5d1e09d2c795caf877951b7fefb5f10480599e6416abcfa292",
       "route": "/ko/utilities/categories/web-gaebal/css-box-shadow-generator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/css-specificity-calculator/": {
-      "hash": "050f17759c8c68d4b6711730bdcd5bbbf10e5fd618a262c1161214455cbd9b35",
+      "hash": "51aaaf1c42a8f779f98a1be359e8db7dd399f8519a85a17d366f03c3bb7a51c0",
       "route": "/ko/utilities/categories/web-gaebal/css-specificity-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/css-to-inline-converter/": {
-      "hash": "19de20ad9556a7f32e8af10b8c292a45fe799e74b146d0a584ba5bfa007b2510",
+      "hash": "3ad8fc7d8366c104fd80fca2d9b288a2499ef33e82af1c54140206f05cf4eaeb",
       "route": "/ko/utilities/categories/web-gaebal/css-to-inline-converter/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/data-time-calculator-web-speed-impact/": {
-      "hash": "c4b1d0343e8a134e95039c32e4f998c2fec4719bae693e300abbd9e2ca0e13bd",
+      "hash": "e2dbe3e5c571bc9b9d31ea48044b581c24b8a02331392d57c19e2cc64602b1b8",
       "route": "/ko/utilities/categories/web-gaebal/data-time-calculator-web-speed-impact/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/dual-ios-android-app-icon-preview/": {
-      "hash": "0217f056997bbf6a3d642359ad82ea6031a287381c871de69efd5474b0295f9a",
+      "hash": "0343ef79c2f45ff48f68d9518d963b8fceacc67e709b3d94f0d33aee5107895a",
       "route": "/ko/utilities/categories/web-gaebal/dual-ios-android-app-icon-preview/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/duplicate-css-remover/": {
-      "hash": "206fe03d0ed22fb0379d6c1d88610e29c9df44c4ac989d35ac1be3a46c8a898d",
+      "hash": "c3232cdb15a4e0eb82fe0c32831031704e965bbdcd4489daca555bdce3fd7d35",
       "route": "/ko/utilities/categories/web-gaebal/duplicate-css-remover/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/excel-csv-html-table-converter/": {
-      "hash": "5e4f53212fc397273acd5b64853f2c7d9407d4233f0701807bd00597253b943e",
+      "hash": "e4e5fab385140c73b38bea85bbbddbc6355d3a58ea3d36975d4c161feee6f164",
       "route": "/ko/utilities/categories/web-gaebal/excel-csv-html-table-converter/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/hash-generator/": {
-      "hash": "4f44f65d96bde7ae1e61921956a64cd8f32b07a640e441ab6d4211754546ec87",
+      "hash": "565f35da59036b1a7cf17b5b0c4f6c9ee80eb43045d4e0caf76a33900421f37b",
       "route": "/ko/utilities/categories/web-gaebal/hash-generator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/": {
-      "hash": "4891308d56cf136419aad86e088be9a2e898e565bcd4ffcc94544ebddf0d22d4",
+      "hash": "ab55ed78006622639f81191b7eae862f6f1f787a57e4171ddb8c74c39461b8a0",
       "route": "/ko/utilities/categories/web-gaebal/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/json-formatter/": {
-      "hash": "a2b2ae288fbfe11957e92b2a4f5e5a77a4376c36e1e33b2fbfb6f6e9669a40b8",
+      "hash": "33c9907676b0bf0e1ae8068ad6d527ec3f8c0bcaec8c168e96d764ed517d5b8a",
       "route": "/ko/utilities/categories/web-gaebal/json-formatter/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/jwt-decoder-parser-and-claims-inspector/": {
-      "hash": "2f7933eb22f06cedba76882c7d3ed8c70c4d5b9c449e97f4533f935f167127eb",
+      "hash": "ad29faf61fdcc3b8cc417328ef58bbef0667a37eb3f5966bf6a37b6824a12093",
       "route": "/ko/utilities/categories/web-gaebal/jwt-decoder-parser-and-claims-inspector/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/keycode/": {
-      "hash": "3db64ea54c5068a0a2cd4146e9028e1241b8e5c10f4f0781e05d1c1a85cc4d6d",
+      "hash": "69dd7f5b6c004871c73fec7f07a23c809f694a53aa57f351220a19f179512f3e",
       "route": "/ko/utilities/categories/web-gaebal/keycode/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/llm-cost-calculator/": {
-      "hash": "1402e232c85c06596ac0bfb84a4905b7a31e4a88248ef3cf58f1b77b8e2160a1",
+      "hash": "84d34edd87f8ba0dd98d820ca3c40371e53a294c1a9da964328662c47f5b040c",
       "route": "/ko/utilities/categories/web-gaebal/llm-cost-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/mobile-mockup-generator/": {
-      "hash": "7f5da89764652690d3ba4b59e6fb07b47be99383d99308bc221960de6dade33c",
+      "hash": "548a5afc10d9ea3f92d80220f13f4bcfdbb67fd87a9912f3e20ece6e35cf7c7e",
       "route": "/ko/utilities/categories/web-gaebal/mobile-mockup-generator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/musical-typography/": {
-      "hash": "de311a9a4b8b12bff8d160b95b703c7522084d9d39398a1ba8395101722afa40",
+      "hash": "5bec78cfd944183cd7854406b82a563510ee6c64602658511bfbac896f66f1c3",
       "route": "/ko/utilities/categories/web-gaebal/musical-typography/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/open-data-csv-json-missing-values-duplicate-rows-checker/": {
-      "hash": "b365571359ceef8860c0ea3f21cb37e19b580c7b1fed84c29172446984cb65ff",
+      "hash": "0ac59895de0469c6c4a3d6daac9d30fd25808737a33898f966d1b7c35fac4b3b",
       "route": "/ko/utilities/categories/web-gaebal/open-data-csv-json-missing-values-duplicate-rows-checker/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/placeholder-image-generator/": {
-      "hash": "3e997133565eb8be2df75d035fe8f2ec7323c520b9ad5b2320e6bfe02120f25a",
+      "hash": "14826d5e628b1125cbca84ebd4d311fad7ecdc2982bcd765b4c9cb3a64ba42af",
       "route": "/ko/utilities/categories/web-gaebal/placeholder-image-generator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/promote-this-website/": {
-      "hash": "347b08aa63432744d313015fabf3fb8e50893e16acbb8c8a1591083059b77c3e",
+      "hash": "e2444d413c2301cabaaf46b18be269ff1b5e40a74b4d9d46473070c8b794b5d8",
       "route": "/ko/utilities/categories/web-gaebal/promote-this-website/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/prompt-library/": {
-      "hash": "7351c06d8ac05cf217d7f880c2ec0244402f662d829d6d82fa5dd31f4d80e72a",
+      "hash": "f4c5f03b48e7eac8fad30bfb609737bd597a89bf9ce3530ef6d69379dd28996c",
       "route": "/ko/utilities/categories/web-gaebal/prompt-library/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/security-txt-generator-rfc-9116/": {
-      "hash": "b5fb43aa3d9fa6fa4f13f2f55adfc1c25aea062313680458b2b127ce727c8622",
+      "hash": "64aec0b47072180e998b678531844a72f187deec605a6d25eaeda3de952f4e2c",
       "route": "/ko/utilities/categories/web-gaebal/security-txt-generator-rfc-9116/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/serp-pixel-simulator/": {
-      "hash": "312e701ad147190dfacfdbc591f6c41d352a6167cfb31fda7b82a84d35e784f2",
+      "hash": "2d78ee397bc43ff65d3c332f15b72f50711b4ce724c782c05e84e9d7d09e78dd",
       "route": "/ko/utilities/categories/web-gaebal/serp-pixel-simulator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/ssl-tls-certificate-inspector/": {
-      "hash": "2c1f7b78c31ba62967bb7b01fcb0cfe67964b0828894aebf48a81da1236f2836",
+      "hash": "b5ed0078cde6cdb782d1c414cb4ec608786d4d5e8701e9ab59ff3d71175f22ff",
       "route": "/ko/utilities/categories/web-gaebal/ssl-tls-certificate-inspector/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/svg-sanitizer/": {
-      "hash": "e6f6b5c527f1d8c5c61686bca73c8690d763a46304e358c26d0722d41167ddfc",
+      "hash": "f7be3f4f1495b27f6280b0c0181658dfc4f8d989e2fd9035ebb3323c6a5eec59",
       "route": "/ko/utilities/categories/web-gaebal/svg-sanitizer/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/svg-to-css-converter/": {
-      "hash": "d0e59b66aa150d65db89ba2e268cf7638e9b03873875668c0ce310d3e7d8ab10",
+      "hash": "9d9785953b1c760821e3a2c26ac6978414a03e6f27999c8f056ea2608b35609f",
       "route": "/ko/utilities/categories/web-gaebal/svg-to-css-converter/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/url-encoder-decoder/": {
-      "hash": "1ad951b31d4b01ab611f6d4fbcaa71ccea8f5bb64baaad0abedaa4053e801d77",
+      "hash": "9c1fcbfcd2573ef216bab767f0463ba942826bd81a2d601259e260321bd34518",
       "route": "/ko/utilities/categories/web-gaebal/url-encoder-decoder/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/url-tracking-cleaner/": {
-      "hash": "08a4ea72f0ea08f8354cea3892422d419eba5528bc238a3c14624b01088e414c",
+      "hash": "3c0a696bb05cec6e6df93ba2bd617c8411207e114719890910df4c39c0b45142",
       "route": "/ko/utilities/categories/web-gaebal/url-tracking-cleaner/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/utm-generator/": {
-      "hash": "3fc63a83c3cb7b4b32f3d47c18b53638fbbf9d42b745d66d641a4497de55a7d0",
+      "hash": "713864b8368dca8507286556e02eafe67686e8a21d62d1546ffb28935bdd0749",
       "route": "/ko/utilities/categories/web-gaebal/utm-generator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/visual-css-grid-flexbox-generator/": {
-      "hash": "90a5b9a415af221491c9c2a351a8f649f6ecdfba6384363998da4b842a17cde8",
+      "hash": "6dfbe0ef436c833f9892cae762f0f18c9232e0be4824b49a79a5a42de01fc05a",
       "route": "/ko/utilities/categories/web-gaebal/visual-css-grid-flexbox-generator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/web-gaebal/visual-readability-calculator-wcag-apca/": {
-      "hash": "8877d07f97ef4d8cff5a9f9fadc51891e3c804c4da0f186e9afc406be99931d4",
+      "hash": "91ed0f264c5560a1906a4dd35233e4a84b2bc1bc1b206830fc698a286e2cdd72",
       "route": "/ko/utilities/categories/web-gaebal/visual-readability-calculator-wcag-apca/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/ai-prompt-bibliotheek/": {
-      "hash": "fe4d1ecb32447bff8f1a5a7a726e21b35613095096f12f7ff415f514bf4d53b0",
+      "hash": "6570231d5b59fcdb412bd6c7c2ce8820ed86e6c0dc1e0d1dcdcbfa2077649a5f",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/ai-prompt-bibliotheek/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/appicoon-audit-ios-android/": {
-      "hash": "09ef928294a3266591273ebb28bf0b3baa59e8a4ed5a9354ed70d23bceccdcb2",
+      "hash": "10dced8ee53619dec3687d303489f0be24baf779385f51b6017e37d6e3215bee",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/appicoon-audit-ios-android/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/aspect-ratio-rekenmachine/": {
-      "hash": "4186ad6c00d4096e121ccc0e194f839870903bafd8035b33ef2dc812b107af0c",
+      "hash": "9578632b238d5bcff41872256ed58484f6c8ee9bdfddf5032d2adec7e5ef6281",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/aspect-ratio-rekenmachine/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/cron-expressie-generator/": {
-      "hash": "d1ea1b79b4c479f8601afbf3ddb6443e77e1e7a3f62006222aeba9f970671826",
+      "hash": "0539997a9d2bc445d73e0dbeb7af3bca08f79003e74da5921148f8b372fcbfbc",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/cron-expressie-generator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/css-box-schaduw-generator/": {
-      "hash": "9dbd2b599a3933008d11fdf6eb81bd62955f97d8cb0f6e05548c5ba93cf03b72",
+      "hash": "277a454391150dfc0e51d7e77997125b3d4cbe87bc022fc67ff46077cf68b121",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/css-box-schaduw-generator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/css-naar-inline-html-converter/": {
-      "hash": "a56b961e6655a0361641dcb80de6362dfaa7ef196844e108434069fda1cefeaf",
+      "hash": "46d7cd3b9f82b981dae12f576ada03dab95015491655c58cb57c9a216b044fb4",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/css-naar-inline-html-converter/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/css-specificiteit-calculator/": {
-      "hash": "11d3d54db84406eada6846c52228333be2aeace0a93ed8ca966b2fc4f16a4ccf",
+      "hash": "9b98f94d43cee4426d5a2b22cb36b7e59cf2b0b5a29f9ac951c1eb7dcb5d8bbb",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/css-specificiteit-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/data-tijd-calculator-web-snelheid-impact/": {
-      "hash": "3f453e31353ed560e5443317436c7b3c2e13807e985b8dd9bc8044a5ec370956",
+      "hash": "c8de72ca35219614520a8d863b191a3f1c71c3ff0c74036c36517edcd49cdd67",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/data-tijd-calculator-web-snelheid-impact/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/dubbele-css-verwijderen/": {
-      "hash": "ea16ca2afda77690942e0d42a13f66502458316e50c172c953dffe15c809e8ab",
+      "hash": "79e943907c06f290ae8126bd3be1600b99806281fba318d96926cd1771a0f397",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/dubbele-css-verwijderen/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/excel-csv-html-tabel-omzetter/": {
-      "hash": "52d5fed21e2d82cead008a36bb33720c0d15db50b3e4741bcc35cb1e8b347439",
+      "hash": "751138f89f4373750bca3005c383e1f1b92ffca05aa268e447d7bd2a9273fb3a",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/excel-csv-html-tabel-omzetter/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/hash-generator-beveiliging/": {
-      "hash": "4715737c4d59bba3a1813121cbfe735932b1cc82e1e85aa911084c89389fbca0",
+      "hash": "f2a0ac8df44cc267bf898d17218d58986ba4353cca899b846d7efdbd4b60ec6d",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/hash-generator-beveiliging/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/": {
-      "hash": "a5ff02dbdc9d5fa9e27aeb3cc83e82df928d8b6eb0da7dd58bb3088bf5782fd7",
+      "hash": "07a49f540a5b80d3f1fb2f936ee5895d5fa3dadce0f1ecd01941565a4a3bbaa9",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/json-formatter-validator/": {
-      "hash": "8feb686f2319704502b31f2e7eb9dc2a0c012c76903eb6d5298bad14ee2ea8b4",
+      "hash": "2d40e4d3eeddd814f5e7c37820182b00a36c7ab96495f0b94a2197652596b970",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/json-formatter-validator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/jwt-decoder-parser-en-claims-inspecteur/": {
-      "hash": "fad5123debfa04bf7972e1a381cfe8d3dec24fff325e2475277e02c5c38f0a54",
+      "hash": "fbc48c85c270852aa320139f4ed23454fa079448804b7bea67934c1ddfcbbd4a",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/jwt-decoder-parser-en-claims-inspecteur/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/kleuren-converter-rgb-hex-hsl/": {
-      "hash": "9f169d498d031b9e9a3496faca4ee4ff4b1f14695dd5b98e5fae211bf73c35c0",
+      "hash": "55240bde874e979ba6909a7f6dc31d29fc9a875d7d1476a9ecab405f223ea80f",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/kleuren-converter-rgb-hex-hsl/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/llm-kostencalculator/": {
-      "hash": "08756a34b7020ec6b15b41e8c87018b72e80c7352cb23d9c1866907ec731fa47",
+      "hash": "54eb2711bd3ca55ef5f055036ef61d5e26ca758343208209217015051ff72b13",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/llm-kostencalculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/mobiele-mockup-generator/": {
-      "hash": "9b0f73fcc521987ed0211fb27c61353d72e4d14601bc9c4e02d19fc39e940ef3",
+      "hash": "65ceefca65ac06f06700996d34f20a59b47afbd45824071728074e176f40cbc9",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/mobiele-mockup-generator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/muzikale-typografische-schaal/": {
-      "hash": "503fdb6ead4083e5637d6ae13385356e9aa1ce9660314f54ac31239ef0c1670d",
+      "hash": "f729e3ebe93b9bf494fd0776d8882c94ed7b6d2210a7877108e361256d152ea9",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/muzikale-typografische-schaal/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/open-data-csv-json-ontbrekende-waarden-dubbele-rijen-controle/": {
-      "hash": "e413f18917f7e9e68fecc2a94475df5ce0ad7ce96fc7206f244e1d6850c21785",
+      "hash": "dfe43bfb0e112b8daaa66909a9464564b8012613f72415c9dbf93b5ea4281a5b",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/open-data-csv-json-ontbrekende-waarden-dubbele-rijen-controle/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/placeholder-afbeelding-generator/": {
-      "hash": "dc0307e6ca6646fd6e5b6e80649562ab3c0748da872f7c6d1983dcdf384bcc9a",
+      "hash": "b176ed7f00e2f160692f7dbcbeaff64dc28cfc3400a914c96cf943ab50aac12a",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/placeholder-afbeelding-generator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/promoot-deze-website/": {
-      "hash": "b2d17b6c15438eb55307e48212c82732ac5e5fa3686bf504c26e3d0fb9d1208d",
+      "hash": "944d6c8807276583446ae7c495de9c3f0cd3f473261bcfb87a65a325fbd7de9c",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/promoot-deze-website/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/security-txt-maker/": {
-      "hash": "6633a83258423e5535e853ef3e35a441fd337e58e0f208d35b5db2e533826cee",
+      "hash": "3d2245b8bfe586f98a83bcf8c0cb2358809182a7cd1e92a77e90979869812ebd",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/security-txt-maker/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/serp-pixel-simulator-meten/": {
-      "hash": "c78000f7a15e217b664d75fbe571b44c7e07336b1ee2a25e2edbc9c1679f75b1",
+      "hash": "8f036bc2ab582aeba925532d85a0935a5fe63bafd8fde2944cb6c2defa5bb4c3",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/serp-pixel-simulator-meten/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/ssl-certificaatinspector/": {
-      "hash": "a832953acb57caad9aae384433a656ab506bee67cfaa0ca286d37a619771d090",
+      "hash": "18208b3c8720b929eb21fb86d88cab977cc804f58ae8e209d4cfc16e1c179a8c",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/ssl-certificaatinspector/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/svg-naar-css-converter/": {
-      "hash": "91d708f8bfd6c42fee22c3a85f3e69de94ed838cecfe4029fa279e2b3b3b35e8",
+      "hash": "cfa71b09ba8137fa85ceddb61239eb9fbc83b7ad2ed4abf0da8bb13c120dfdb8",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/svg-naar-css-converter/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/svg-opschoner/": {
-      "hash": "6196ca44675e5d450665ba94cc9af01a162aadf456908a09a28635d6cfff7203",
+      "hash": "a5734189178b90eef0f6bd79f71eac2590ff19dbd1b6cfae9c6fd6bbb55912d3",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/svg-opschoner/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/toetsenbord-keycode-visualizer/": {
-      "hash": "70f03a53d1b617ef87220011d35a99632d2726d2cfb6fe7017e756d45026025b",
+      "hash": "fd924bab59729184954bf1dde03fc4e4337d6f9933e1a4a91faac2da0f82eab1",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/toetsenbord-keycode-visualizer/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/url-codeertool/": {
-      "hash": "97b925a35a7be1f5f9238d8a0da5c850da609ebe2baa713b20699f2bf15d3d0a",
+      "hash": "be904350aad6b5ea5f283be629d8d57eeb744bd73f9588c907b9f69f6a3f6bc3",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/url-codeertool/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/url-tracking-verwijderaar/": {
-      "hash": "0bd581167b9c23d5bc0721c4e6833ff6eb98813cfa414c20756e356764141d2f",
+      "hash": "64d2c6af8a9c6bda4f77f863b4991b3e4f08d49b098f38c1a18c5e0bd9244f0d",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/url-tracking-verwijderaar/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/utm-parameter-generator/": {
-      "hash": "87c43f871de7950193619dd894a1a5f7e26823fcd4ee9efe83cf9055169710a0",
+      "hash": "4a11eed2f10cee1e310c6072a487b9c8375a4bb405febad0f4bc1d18b48df171",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/utm-parameter-generator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/visuele-css-grid-flexbox-generator/": {
-      "hash": "83d96039898e4ecc633a11946fb3cf3f0f43e1b919b08b2156e08b0b79091b02",
+      "hash": "bda346b4fd371a600334aef2e2e436cb6e533c6ff2eb20b91e74a24ae3a8d6f1",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/visuele-css-grid-flexbox-generator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/web-ontwikkeling/visuele-leesbaarheidsrekenmachine-wcag-apca/": {
-      "hash": "715b4e6e3e1e56888d436264dc7bb619a8b0443977803f9b60def20b2d17d230",
+      "hash": "a9056d63a694b51d037bf2cbca6d46b1f0772babda8c85d4bb110e0d0531e9ef",
       "route": "/nl/hulpmiddelen/categorieen/web-ontwikkeling/visuele-leesbaarheidsrekenmachine-wcag-apca/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/audyt-ikon-aplikacji-ios-android/": {
-      "hash": "cab4cdd41fefb9701af2a7c8af6c219a40f287dad196bd4d0ce6a062c00d474e",
+      "hash": "8b2848fb68c0b42d89d7f9b777ec2afd5513869037ab2e8a39e8c35d7f88b1cd",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/audyt-ikon-aplikacji-ios-android/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/dekoder-jwt-parser-i-inspektor-claims/": {
-      "hash": "f593dbb7ffcd318fdf530d4e14279878cc14c7beffec534c81add30cb15f748d",
+      "hash": "02f43173878dc0a1810b84e72e466fb1b18acc40426b6c135bbc736ac8e999a3",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/dekoder-jwt-parser-i-inspektor-claims/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/formater-json/": {
-      "hash": "95e028c5dd13f7c2ce248264447cc5dcc02462b6c1143a0c94641f9a1dd4dd7b",
+      "hash": "58c23b3f2f89392a260c465dc676dbd2cc0d28343a4de0e9c79e33ed93df8eeb",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/formater-json/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/generator-cieni-css/": {
-      "hash": "48e7d5237d15aeb0c6a8c9d0fd5ad213950f633d983c7910104809fc3687855b",
+      "hash": "0a102a997e5d1eaa88f79f05b725a15d3404998d685edfea4c73b5bb708eb052",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/generator-cieni-css/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/generator-hash/": {
-      "hash": "cfa7ce57234c5a4855dffb53dbe2f1bd154888617f08b35b4a3d9182d081393f",
+      "hash": "f645e7efbcad4fb9a9a7185b6d6805be9f855ad400120a635f8b5432a2bc9575",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/generator-hash/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/generator-makiety-mobilne-aplikacji/": {
-      "hash": "3bfc59de04b0cbb86e0943354b32aae665734844b3791f9ec6b653fa920fbb60",
+      "hash": "edcf421fcda894cd19c633f2e1a5259bb3cac2c70111da01487c0bc56a0f5ca6",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/generator-makiety-mobilne-aplikacji/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/generator-obrazu-zastepczego/": {
-      "hash": "74289682fe947fd9aeb717e664c36ba804a269b7b7f87812796b2c8973267959",
+      "hash": "7259ff7b61b042ec4a4e527d3b9782a6624eb5e1fda752ebac058e587f778d95",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/generator-obrazu-zastepczego/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/generator-utm/": {
-      "hash": "6a7a5753a70f8eead355ea5c3b73dd9c8ce5c23ea5a3a07cfbbf2f159e33ac5a",
+      "hash": "dcb4f791cc3cd0dbc1a62125e8ce60b28f93058abd79a12457b09a3591bad2fb",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/generator-utm/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/generator-wyrazenia-cron/": {
-      "hash": "ca29409ae74de7d3b5abf089ed8d343dc96418a03e10d1d30529201015eff546",
+      "hash": "f490eff9c5d0d4765bd03a0bf56076d4bd9fcf09f153ecf55ddaffcfe5e3aa32",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/generator-wyrazenia-cron/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/": {
-      "hash": "ecad12b469f2944ff89bd7ba385805e5c1ceb7cb5ec6be04b5ee0031feef28a9",
+      "hash": "8c4ef8d30bf0649208f6595127e3199c8731f6fe4946d0ab1effa02fbaa2fd41",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/inspektor-certyfikatow-ssl/": {
-      "hash": "c5bdfd5021be3e23908a0fea4938b9bc3cbe50f9ec88e68cc7cdfe5f7a6adf58",
+      "hash": "0a0b6a43626c1325d59731f436675847c15cdff92f0bdcbf4298d6e5aaa2e107",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/inspektor-certyfikatow-ssl/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/kalkulator-czasu-danych-wplyw-predkosci-strony/": {
-      "hash": "3e1a604fd505d1414b444d233706b2ea1d7efe5492317c4f5ba9f79eb2e3a88d",
+      "hash": "307bfc48e5375febd0733635bacde146c28e34df7c6ded9c0fab184cd4f24888",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/kalkulator-czasu-danych-wplyw-predkosci-strony/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/kalkulator-czytelnosci-wizualnej-wcag-apca/": {
-      "hash": "6340431a84509b8331a5c9c99d955b79a42f60aae43dbb2920750c045ea806db",
+      "hash": "9bd8d15f4946693bfb19474f81033ea488909b3cbef9b972ea7eb3953cd8880d",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/kalkulator-czytelnosci-wizualnej-wcag-apca/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/kalkulator-kosztow-llm/": {
-      "hash": "dffcc5337506aa095213341b5098338e8f80c0953522cc5aec1eae0d6b62b165",
+      "hash": "2440f258aac179f7f9210b993d36f6322a3e6a1c5f442f050ab7d3469f843b59",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/kalkulator-kosztow-llm/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/kalkulator-proporcji-obrazu/": {
-      "hash": "527a37362c4c78554b60950e1f763d5a7ede5c65a1dbbd86ea3cdae9269dde45",
+      "hash": "2dd196f00a53489463e7707e3ebc2553160304d2c96a5ada872e713a9ddb6e9b",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/kalkulator-proporcji-obrazu/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/kalkulator-specyficznosci-css/": {
-      "hash": "e3268f2dc12693f72f4c5871f92c29beabd82a4fa5d2aa1d7766c48170088f82",
+      "hash": "da2981ef2d67fbef4ae7808fc87ce037907d70cdf056284ea99d81f2a925ef6f",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/kalkulator-specyficznosci-css/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/koder-i-dekoder-url/": {
-      "hash": "07037e1212bd139430635efe641502a372dfe8964b3622fc9cf768eacf8d8b7a",
+      "hash": "e4f3cb6c233642a5f98271b762274ebb49f1ce7aed3c400a29f85b1fa6f7d57c",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/koder-i-dekoder-url/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/konwerter-css-do-inline-html/": {
-      "hash": "a60bd379b099041f2cc7a857f36812c8f20463e8555b8c49949b2830838181a7",
+      "hash": "ab2442ae73dc37e722b674207001af0c62eac198e65dfb3e351564b3fdc2aacd",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/konwerter-css-do-inline-html/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/konwerter-kolorow-rgb-hex-hsl/": {
-      "hash": "4c99d80f7dca11f9a51cd6061a4ce8fa4e3f33f6cf5b2578a59130276c6cc669",
+      "hash": "f9553a79b92160b7fb54ff49586a07fe9ff2efb365c71412e315369a995c671c",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/konwerter-kolorow-rgb-hex-hsl/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/konwerter-svg-na-css/": {
-      "hash": "45dd4c62c9cc8e2578ec5768bb44f4e449041abd638c003d4d178171f7325179",
+      "hash": "6a1ae4e92a37c7082bf58c583eb8590baf1f6749efd9f91874570ab8f870a836",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/konwerter-svg-na-css/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/konwerter-tabel-excel-csv-html/": {
-      "hash": "f62210a93a49f64c8458a1fb5e1ef2b9198f659c4fe218458692e634c4f568d4",
+      "hash": "786aa518ed749d9c5af38488341737f1a01e5a676123daa800a83a98a3ffcd44",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/konwerter-tabel-excel-csv-html/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/muzyczna-skala-typograficzna/": {
-      "hash": "f5cdd626ffd5855d2bdd2350c869e9b2f366bd83d1014731cf7ef4346691e0ea",
+      "hash": "1fba3643f2a847f36fbce19b4186aafc1e7b9aea983e3d3e3bd3070522e69174",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/muzyczna-skala-typograficzna/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/oczyszczacz-svg/": {
-      "hash": "96cd31b99789d4bc33edd273ee35aadef6bda9d274350599d06d2e2c7f7e63cd",
+      "hash": "2f347596e38ae4aefe32b3cf51d2750bbfa36082add4d8616cc299216883fd7d",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/oczyszczacz-svg/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/otwarte-dane-csv-json-brakujace-wartosci-duplikaty-wierszy-kontroler/": {
-      "hash": "9b8749f2ace323d79b8dab9e6795c875bfcb04d7a67921bb5d388b398484a952",
+      "hash": "547eb5dd04de6c6f54b304127263c2966a862f8fb7aa526425a70efc7f4743fd",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/otwarte-dane-csv-json-brakujace-wartosci-duplikaty-wierszy-kontroler/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/promuj-te-strone/": {
-      "hash": "dec4166e88a4879461d15e49c78ee7ea0cc886f18f337f658c7119da6107c180",
+      "hash": "562ea90d21393c54207e0b51a9192d3787d09b4ef27348caf1a49c51a539cb6b",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/promuj-te-strone/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/prywatna-biblioteka-sztucznej-inteligencji-prompt/": {
-      "hash": "d3e1a958f52f3156cd0ba738b95ae69ba9c13c73ef9bb5994080aa7d37a822df",
+      "hash": "76e19949ef71088c05f93c71c7f92fa8eae87e3e214bb6db8a59ee63cc33d849",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/prywatna-biblioteka-sztucznej-inteligencji-prompt/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/symulator-serp-licznik-pikseli/": {
-      "hash": "4aacbbbf533169ba36127a1fe91837cbc9cfee16dbb55cea1bf8d8b7c1e558d5",
+      "hash": "2b9c143c31a41a90233489572d43e760f2c130fcc37e82041d420af1a90e427b",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/symulator-serp-licznik-pikseli/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/tworca-security-txt/": {
-      "hash": "7f0313f5b1eb4af963f8f30921640902a5ded3d715da0a58edd2bbb8eb003ddc",
+      "hash": "9a80d81343473e77c14c5696c161ce6d932768350d565a5c0b14992a06a97899",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/tworca-security-txt/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/usuniecie-sledzenia-url/": {
-      "hash": "d210b28f0b6f8c7510e4ee27c6f04751e63dda1ac78cab8325598b5e369ae2d7",
+      "hash": "0409f44c3488d316fbbbe8b165fdcc44b4405eaeb9e57e54e5db5528b1db04b0",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/usuniecie-sledzenia-url/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/usuwanie-duplikatow-css/": {
-      "hash": "f1042febe8918e01e5bdd955d3c58e5f84d3967cd5b253eb7277bf28aacebcf7",
+      "hash": "3f81fb3dd2c8dd21d4df837573e34b4bb61e0b20eeed9f75d3eb1a77156ea2f9",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/usuwanie-duplikatow-css/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/wizualizator-kodu-klawisza/": {
-      "hash": "a68902eeddfedcfe056b013b996f01be25f728dc4b880deeda51fb3e7ab7d460",
+      "hash": "2bd47a4136fc444be9652be085861e104b98e4b7568a2b544b09d1fae8317f9d",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/wizualizator-kodu-klawisza/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/programowanie-webowe/wizualny-generator-css-grid-flexbox/": {
-      "hash": "6cf11c918b145ddfe58acb23504e86f1a5252829c383ee02b85efc409fc42967",
+      "hash": "789a5223828623dc5da03f897c02eaee29e8888432041214eaae545ad3ad68f8",
       "route": "/pl/narzedzia/kategorie/programowanie-webowe/wizualny-generator-css-grid-flexbox/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/auditoria-icones-app-ios-android/": {
-      "hash": "f56d7bf91fe02a6e519072cb8885f9c0b8f91ae4ba470048c088ed9a9dc69571",
+      "hash": "9821f65feb84aa061eef6a3b9949ce70b1a0f68971af00ea823e21e6e1d89c50",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/auditoria-icones-app-ios-android/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/biblioteca-prompts-privada/": {
-      "hash": "10adce5437ae07c23311423d62a4d75fb9a6ea2ce58eb92b4f20b8e7e3ced7f0",
+      "hash": "242391e3fe57d836a49b970a80e75e830e96a6b6c24dfd9a53217595726be563",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/biblioteca-prompts-privada/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/calculadora-custo-llm/": {
-      "hash": "bffc6b8e22c8e84e22707a09539854d020efd83e74108c045e22a61a05e39432",
+      "hash": "7004ab239ca76a59df43dddf14172e58dff8a327353ca8216fef392d6536742c",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/calculadora-custo-llm/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/calculadora-especificidade-css/": {
-      "hash": "e8c1aa6afbe878c7b60f6ecc809cbac41e76f1dece9a08fe1dc48c5a4f32355a",
+      "hash": "8b6cd3ba32443919949584232a7eacc96e7ab7c27e68ec62aaa1d842d350cbd8",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/calculadora-especificidade-css/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/calculadora-legibilidade-visual/": {
-      "hash": "8377ebdd9229b27ab013cd0ce57509471d8ea5671373dd501bd796293a1b0988",
+      "hash": "4906851b72ed0d440f10eb4c9f4a138975a84ea8af7453c98ab0d904f580a9ac",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/calculadora-legibilidade-visual/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/calculadora-proporcao-tela/": {
-      "hash": "7919331bd3163823ac6767083718ce98afc47909e07fcf4c4d4ca716098836a1",
+      "hash": "cbf623aabf78a2436674dccb0b07a3de27fdb226f89ecd39bb7907cbaf641df4",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/calculadora-proporcao-tela/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/calculadora-tempo-dados-impacto-velocidade-web/": {
-      "hash": "4db3437158462835d1831b70a5c421aa7d10f1cdfd67a2a2bb7105dbe7cb23cb",
+      "hash": "36fa1b3bd1cb237f72e5e3fee82c4cc4c34ca6cf8d983dd81502b4a335325bb1",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/calculadora-tempo-dados-impacto-velocidade-web/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/codificador-url-decodificador/": {
-      "hash": "00b4851ac0a44543505c51cd2910c50c865dcd435b4f71a4b2b63bf229b88f5c",
+      "hash": "a95093bc9ab59783be054326e1b4a2a31981c90e656025db74b8e6ff146ba6ad",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/codificador-url-decodificador/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/conversor-de-cores-rgb-hex-hsl/": {
-      "hash": "cf9fa97c877e88917dd2684016705cd2d0630d73423a214806dd88eaa66bd708",
+      "hash": "14282fd3042e14b7fb3258afe39a8d4f0cc951d4939d978f4c763b6cd9d658f3",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/conversor-de-cores-rgb-hex-hsl/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/conversor-de-tabela-excel-csv-html/": {
-      "hash": "2923cc092a34f8caec1df1c03214c21ed222fdc4f50ba0a7da0a47e4a7cef511",
+      "hash": "0edd520742505721817a8f69bc738e53be5510265d8de2916fdfc294074531c2",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/conversor-de-tabela-excel-csv-html/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/conversor-svg-para-css/": {
-      "hash": "00925f0167b251ae6354f417019234e2fb5397a80a72c914ab6a0a4b28667a80",
+      "hash": "01b62560dc7ace615f13577eb6fa222824759004c9b497e7ef1bd120e6de2a9e",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/conversor-svg-para-css/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/css-converter-inline-html/": {
-      "hash": "74cacf746bf29b4c472f14e375bf5856c9e9983e262cda495b5c7e1915b9354e",
+      "hash": "4865541e1ea72080bf759351ae24aad4d89c944aeb6e630113e5a32b24f83e2b",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/css-converter-inline-html/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/dados-abertos-csv-json-valores-ausentes-linhas-duplicadas-verificador/": {
-      "hash": "f05bafdabc5e52f510a4bafcad0f526299e687af4bc731b086b3a466522d7fd3",
+      "hash": "044cb80e4df8e5f2aadd52b8cb50e27ef690c0c069168ff1a32f69ceb2aea35b",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/dados-abertos-csv-json-valores-ausentes-linhas-duplicadas-verificador/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/decodificador-jwt-parser-e-inspetor-de-claims/": {
-      "hash": "c06e3568915e1878bbb4ceaa56f268adaa9031dba4d269c03405180ba006fe20",
+      "hash": "21b823abdb99da52b2baafb262c2548020f5e57e2617012df8e10edfb4267428",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/decodificador-jwt-parser-e-inspetor-de-claims/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/desinfetante-svg-online/": {
-      "hash": "9f6680a4de9f6dbef3beceb440e1621068ac9b41b89380cfb7df921280223d23",
+      "hash": "9d20c90b0f04b9e0f596daebc75ab9af1ae2684bd6904df5a4054d88d0f99917",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/desinfetante-svg-online/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/escala-tipografica-musical/": {
-      "hash": "2997419bcfe447769b03f3fbba2461cebb4d69ebff2d1bef34789cf3ca2596b9",
+      "hash": "a64bf8fed703806d4c167ddb49a06e1ac2a958975f402efd6d4f786655a08930",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/escala-tipografica-musical/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/formatador-json/": {
-      "hash": "156f4762f1add6d8ef6771a610415ecfae547babb54cdfc5996c1d946b1fbdc0",
+      "hash": "90c3ae57853fe038eb4f7db34730e429d28cce75d51427fb8890f021e380b572",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/formatador-json/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/gerador-de-hash/": {
-      "hash": "22781d0fbd40c6534e9bb562768d06e24a0366bbb5857061965fbb8f3aaf8ba2",
+      "hash": "e039ba6f81e5567b7e8a5251f02e5812c02f9684f22e7b8ffc5ca6930035f12d",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/gerador-de-hash/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/gerador-expressoes-cron/": {
-      "hash": "b62d1053927f62a088f1e8b10655c1245a381bd17b66647b60e275c9c6b8106e",
+      "hash": "d7a759fa430e694041a1ea8285fe8cbfd5a253fa44e3bb147370c666f101f130",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/gerador-expressoes-cron/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/gerador-imagem-marcador/": {
-      "hash": "ac6b52fcd3665d8b7a72b4ce958715cc082b86536d28fe301331e0cbe1f9c56b",
+      "hash": "c3938b3e687e7f5c140c83d91e163b76e0e8d636227bad08406493f691e7f481",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/gerador-imagem-marcador/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/gerador-mockup-mobile/": {
-      "hash": "e66ac49b4cde8e328bdaa5991ed9b41dd830a3b77dc1a11fdaa3840b9e07a938",
+      "hash": "0b14092041950c9d4baa5ff58533565ad11a4a1992653daf0730645b34677993",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/gerador-mockup-mobile/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/gerador-parametros-utm/": {
-      "hash": "e3b191680105d726b7b01f8abe728c02aff2bd292321c33cfba448e4fe033349",
+      "hash": "9570bb2bdc83890001a6aed0e480f25aa4be47f2d9e43cdcc9597924198ffc9c",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/gerador-parametros-utm/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/gerador-security-txt/": {
-      "hash": "310c687fe43b10d84e9028ecd8e2a13ebe59146163cefb3ef28b7fc7a10e1d23",
+      "hash": "35cd7905516c46d0d8a5f6180a404e86ff223d5968e15744b04303630fd71c81",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/gerador-security-txt/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/gerador-sombras-css/": {
-      "hash": "8acaa32e14a6949690072ba42ae4f5af6108916bd4c8bb6f3b266a61d91df904",
+      "hash": "2cb2884f530994b3a4389ab8c1e0d2e5bac2fbc4b504e54d9d3aa21e514570d6",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/gerador-sombras-css/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/gerador-visual-css-grid-flexbox/": {
-      "hash": "6d3410d624ed76b2e16a719c1a20eea61c9eb9d370810bbfcb423029781270c1",
+      "hash": "245ae839e7612b1b4134d5a63c94e59c92c055c1259c21ce4837da98530077b0",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/gerador-visual-css-grid-flexbox/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/": {
-      "hash": "b8d8a5f520fc3b4b1a3c819fd6e787eb5522efa64c44e60d8dc1e965ae0a101e",
+      "hash": "79420fb1004481ecc402d0f017b03d1beb83f287d1f38dbc0e8ff929211826d3",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/inspecionador-codigo-tecla-teclado/": {
-      "hash": "c40e12ccf17a2f30753a3395a2780ffa156af07918877c337781295191615341",
+      "hash": "5e1cb0a79706b7062b7bb317f3146eb2759578cd29655224ac4b407a4e705ce4",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/inspecionador-codigo-tecla-teclado/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/inspetor-certificados-ssl-tls/": {
-      "hash": "4f33ff2bda67aa69ded0c26accdfae22be5cb4b042d658c4a382d9476388671f",
+      "hash": "b978d5ed5d2ff9a37825da5c3af3b5bd730ac1e319fa60845e314d232bb9bd1c",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/inspetor-certificados-ssl-tls/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/limpador-url-rastreamento/": {
-      "hash": "f6e5aa0a1594e1e0a59e38b3378c7cfb420265a37f5c3082e4d38e4bcffecf0c",
+      "hash": "6733fb627b81fcbd286dc98e36a617de9c9609d0d40170948732aba2b57d1d31",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/limpador-url-rastreamento/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/promover-este-site/": {
-      "hash": "d430e26ddc97a9f14c039decbc62df3ddb46c26abd5f2acbec1ccdaa43336131",
+      "hash": "157b63031cf96274ad4959fecd60f4b2c68af90b0782c0057cb718409f85a71e",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/promover-este-site/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/removedor-de-css-duplicado/": {
-      "hash": "84e00374b181fcc6782d56b15da6a7ffa263d6382d903b07503557b022b84715",
+      "hash": "543d6175a9f081d7eb03696e7f6a0ba4f53cd65a436b7c91698091bdba34e3bc",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/removedor-de-css-duplicado/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/desenvolvimento-web/simulador-serp-contador-pixels/": {
-      "hash": "54a6b5bbda465b8dcc92c818999380fd55209afd5577dd4a7218779b2bec6512",
+      "hash": "72227eb5495dca9be5521bce66d4ab136fbf5259521fa721d57bdf7268211fff",
       "route": "/pt/utilidades/categorias/desenvolvimento-web/simulador-serp-contador-pixels/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/audit-ikonki-prilozheniya-ios-android/": {
-      "hash": "6a1cab9750846ca4e79ac376db065b4483dc73404ec324ca0b73bf8d576f6f8c",
+      "hash": "2ba6c5c0e4f65a9f8ec43840ecace6e92a1a0f239ea4c364558cd23232beb48c",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/audit-ikonki-prilozheniya-ios-android/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/chastnaya-biblioteka-promptov/": {
-      "hash": "1b25049773b3ca98f6ef53c80f3ba50e6edc813948fd7f983de31d275b63aecf",
+      "hash": "9b256e946c19a8f69c88ce216b85d4928e509c4ea705667784052b47c1f9a6b1",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/chastnaya-biblioteka-promptov/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/css-v-vstrochnye-stilii-html/": {
-      "hash": "b05c56147ad94183e8b6011b293f01d3df3601271ec2357ead0b0ae7b0cb100e",
+      "hash": "931e4c34c5e510cca771dde671ecc06a8f5c1fa844caf3c56d8524c7d0d2528f",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/css-v-vstrochnye-stilii-html/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/cvhetovoj-konverter-rgb-hex-hsl/": {
-      "hash": "13def721c56a8c02b9eb1a6a329dda6e02107ea7ef87c4ec5f8bfc447f238d84",
+      "hash": "74e27aefa2e98dbb2dd838caf199730661da5b78cf28c2b7d1cf9e37b4acbf9e",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/cvhetovoj-konverter-rgb-hex-hsl/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/dekoder-jwt-parser-inspector-claims/": {
-      "hash": "e16d19a657764ee82eee00e23e7338435950dc4f59b3277594b57200a554d0bf",
+      "hash": "be1114f14bd8365f15b218727fda72da90d18a7c834632ea1c1fdad58acb151d",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/dekoder-jwt-parser-inspector-claims/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/enkoder-dekoder-url/": {
-      "hash": "50bf9f86318847f4eb06879cacee6e8dbb8de0d112de0b94411f4cb241d2ee06",
+      "hash": "03983b788b55434ceff1a2fa23f68139b8ab3614a66300aec240233ef58888b4",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/enkoder-dekoder-url/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/formatirovalshik-json/": {
-      "hash": "6e0c8a194ea15b529991f94a7d6d9b4afa7bb274dc47e9cc4cc5def049019342",
+      "hash": "68c1ffd5fedbf00e5eecb7086e0e4a03a1829bc8173c16ec68ac099e1a1a6d6f",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/formatirovalshik-json/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/generator-heshej/": {
-      "hash": "6eb4ae01d2a9da58e5c595a23ad1f28056014eb84bccad95e284cfeef5445cdc",
+      "hash": "4a1f5f9cfc7accd7e06d4eaae25ecfe5d2844b1d96674abc8b24b2d7114c17a9",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/generator-heshej/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/generator-izobrazhenii-zapolnitelja/": {
-      "hash": "b5bb7c7644f47e53131c40363eba149b0954f204db774135a5cf04751e2c8a84",
+      "hash": "50d65d65e91d285b88d64f61f3ebb572066ce2190fb1e892822933d94e03655c",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/generator-izobrazhenii-zapolnitelja/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/generator-mobilnykh-maketov/": {
-      "hash": "513b603b9e6a7645c187b0c74057b5b0c7693419b53bd0e39c06582bb60d30e3",
+      "hash": "1802a50865fc58c619652a394154773c2d10c3297ab489b317edb42f3209cf69",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/generator-mobilnykh-maketov/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/generator-parametrov-utm/": {
-      "hash": "a4172a5eca1303c30bedec0c6a1043f88c6c795bff2c87c9f75ed84074a61c59",
+      "hash": "b595b490c631cebca0278b7efd054b64925a3532b3f00136f546ec6f303cfc75",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/generator-parametrov-utm/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/generator-security-txt/": {
-      "hash": "e7a171ab09087f7a25bd65bb621fe1ccafd0452ab64275eee59411e1f2dd1e97",
+      "hash": "32d4273b6db7e1469dc89330f477164f6707da8508d09ccfe36358aaaa69b963",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/generator-security-txt/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/generator-tenei-css/": {
-      "hash": "b4116e8c7d90d1d0361ad9256a233f53bdfe73c4576f57906a11555fbc750bca",
+      "hash": "21466518133d02778fe6b27d13f05a9f4bed1646f42ad1cee1730a883f58b96b",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/generator-tenei-css/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/generator-vyrazhenij-cron/": {
-      "hash": "606a3be95a4208b8641dd93b8f3d10d3899c73f4eb041c0a6cca05a1b83e3d05",
+      "hash": "7a8e70652f00a295ef0e110469853a6c8a26533e06ab2b097c2a4c33ae197c7b",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/generator-vyrazhenij-cron/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/": {
-      "hash": "40eeaeadda9144b650bae3302e0b0fe395bb3932d18e6de3f2613c0df5ea7007",
+      "hash": "cfee69af339dd8eb7385d61e7e24cdaca1ef75879027168681105edcd77f9b10",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/inspektor-sertifikatov-ssl/": {
-      "hash": "608a76bc522f7f82646d54c35d3ebc3cb7906732eef93cc16ad6e1b1924ba186",
+      "hash": "e2b86985f22a5309490909359a4a7100833d79bcf8a432487a0968e317374a49",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/inspektor-sertifikatov-ssl/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/inspekttor-koda-klavishi/": {
-      "hash": "70226389382f211201029b46bfd285ffacb7df2afe04065ef6d2a85851d1a361",
+      "hash": "f6060fa0b6c3692769d3078021e5ed36942192593c1d6e59c24e2426dab85b3e",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/inspekttor-koda-klavishi/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/kalkulator-specifichnosti-css/": {
-      "hash": "ebe9d47d7caeea3d58a99621f99f03902bf8722c8a109d9dc1cafe6d77255604",
+      "hash": "0f67e8151a2d73b29825cbb6de03a050777be3aa1f3702b3d7f944924c7efa03",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/kalkulator-specifichnosti-css/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/kalkulyator-sootnosheniya-storon/": {
-      "hash": "6a9ffc0ab32149007ec2d68ff560b97821ae92ec5c433275ce50ddd1a1c7b3b0",
+      "hash": "8b895ca258baf3b3ae624778918abf89cd7b8ab59caba48e0b75c623d2e6b7ff",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/kalkulyator-sootnosheniya-storon/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/kalkulyator-stoimosti-llm/": {
-      "hash": "3f0be18950254f1e5cfb2aba8a706e31896f8b853d754eb9ba86f6c4d80f9341",
+      "hash": "52e4e128d28ad7e5abf232ea09505d30d392ff8f93562e23e6b02a95bafef4a6",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/kalkulyator-stoimosti-llm/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/kalkulyator-vizualnoj-chitaemosti/": {
-      "hash": "222cdd6dfff4c6afd8ac8a6f91a24e15dc79f4341853a18a84785f1fdf85dd3a",
+      "hash": "b9d8985d93516f75616304e1eacfe50e3bd52f22df1ac4a8ce415c658772e8e0",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/kalkulyator-vizualnoj-chitaemosti/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/kalkulyator-vremeni-dannyh/": {
-      "hash": "ce68fdb7e5d6da07e674b0e4b5fb45e1dec53dbec2f78095413850cef82093a6",
+      "hash": "d5f92626c5085f9cee67feb11eba9f0ffdae6dafc1f38eb73b574d40a1326e58",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/kalkulyator-vremeni-dannyh/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/konverter-svg-v-css/": {
-      "hash": "89085771823d1cd18940adbf009c68543fd7bb8fe2c0be56664439e7ab74f74e",
+      "hash": "d5946638b20206def8014fcfa44592f58e3cce2182bd4b6489606bce59fd926c",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/konverter-svg-v-css/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/konverter-tablic-excel-csv-html/": {
-      "hash": "66a5a2dd00138e3565153f7a5c97def3531f29fde5634430bbd94e5b5bcddd48",
+      "hash": "99ce566c2c0f124288d44dbb62b9dcb562f8d90e78a1f89ee401c82098b707d9",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/konverter-tablic-excel-csv-html/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/muzykalnaya-tipograficheskaya-shkala/": {
-      "hash": "13ec0a77c1b0b3ad4319894f3d6d1deee1bfdc9b2555208bdadb6bf0d20f2b36",
+      "hash": "3fb7ae41b66c8ab54f04bfc887e087503d76bb1d20d72a32dcd4c1f1e513f5cb",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/muzykalnaya-tipograficheskaya-shkala/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/ochishchatel-url-otsledzivaniya/": {
-      "hash": "0afe4b8c3fa5d331d6378dcd5f2f45152d91d7be90286858b78118b17f3528c9",
+      "hash": "6ad26735a671f657eed5d6bd46abed2edf2f7e9f9ff3f7c132f68029abfe68ea",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/ochishchatel-url-otsledzivaniya/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/otkrytye-dannye-csv-json-propuski-dublikaty-strok-proverka/": {
-      "hash": "808539793dc112a6ff205d9d38fe11565246cc276f1faa91ce8f219741a8b465",
+      "hash": "d44d905c5dc8799ac6adf04153e56cfe725be38c4b9fec33f63b059a7f373a51",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/otkrytye-dannye-csv-json-propuski-dublikaty-strok-proverka/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/prodvigat-etot-sayt/": {
-      "hash": "6b8b346fdddbd1cf4c757a42e67f564f404f2fb3f1cbeefc349b3a44522920b1",
+      "hash": "b6e536e189828041024d9aa83e93e2bf50862add8331b0848e9bc39f9369f4b5",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/prodvigat-etot-sayt/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/simulyator-serp-schetchik-pikselej/": {
-      "hash": "fdcad1a15d51ac05da30d263fca9bc0e0b444a4a7d0c27bfdf4f82405609a3a7",
+      "hash": "2110de50ebdd636548c96893ed8cd65b20d71905e8f25ad54481d46315d945a0",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/simulyator-serp-schetchik-pikselej/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/svg-ochishchatel/": {
-      "hash": "86c83e61c93e1db74f20ddfabcb08594eb3f3e314d2162722d8817d3b4733f43",
+      "hash": "baf5a83a8cd402fda58a0fe3f0685ebbae4fea05c8579afb88c5245937afe1a6",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/svg-ochishchatel/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/udalenie-dublikatov-css/": {
-      "hash": "2f834a36f34373051896d0c0b0fa788b75c3832c4a7052188116eb3a535d7f0b",
+      "hash": "12dde52082957507e3608c981d1589e27977056e19da5c9c5060b0f49f66242c",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/udalenie-dublikatov-css/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/veb-razrabotka-util/vizualniy-generator-css-grid-flexbox/": {
-      "hash": "f87b32ab5d3645e443cf91f7867b5a209980558dba5f14b79c3dc083c5da89af",
+      "hash": "ca326ad132f8d824ed01af7b9142dbd4bcbf4c6cf383b1af4336c0071ba9289e",
       "route": "/ru/instrumenty/kategorii/veb-razrabotka-util/vizualniy-generator-css-grid-flexbox/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/bildforhallande-kalkylator/": {
-      "hash": "597033685ce92576ab543ce27bbe51dfa9e0665e67fa34a29c509ffecf0963d6",
+      "hash": "4e5be617eacc68d93d90cce878c7faaf07c376891858e3a276c6e6245b6b2597",
       "route": "/sv/verktyg/kategorier/webbutveckling/bildforhallande-kalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/certifikatgranskare-ssl-tls/": {
-      "hash": "23e7682fd406fc32bbd0b1f61a4d0656a385679055b0d825732c131a96ae1ba5",
+      "hash": "0529adf97ffee47dbfd1e335fcd63e36b74a037abba36f030bd7e6f4b74e18eb",
       "route": "/sv/verktyg/kategorier/webbutveckling/certifikatgranskare-ssl-tls/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/cron-uttrycksgenerator/": {
-      "hash": "6148c81d737e233861acc92fd88d09850dbb18837c515bfd746e2cb835fe470b",
+      "hash": "41309520e0538ab6cefe5aaeb6b72c4cd0f8bf4e233491d44da11ee927291e2d",
       "route": "/sv/verktyg/kategorier/webbutveckling/cron-uttrycksgenerator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/css-boxskugga-generator/": {
-      "hash": "37176dad192bffb1c0f76001ee330399620a7211b132ba7c7998d57d41d4bec9",
+      "hash": "89553e7309e7465b954519f7cfa6dbb22da0c5aa2aabd88cd9b07b3a29ab99c7",
       "route": "/sv/verktyg/kategorier/webbutveckling/css-boxskugga-generator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/css-specificitetskalkulator/": {
-      "hash": "0a74dcb4dc3a02431877a43176b4a5d8ac38b48e205f38668a6d49637ef2dbc7",
+      "hash": "770a49d6c969ac96faa7f413b7ae9837968566e3ac6d3b50e7bcb9f3dbfa380e",
       "route": "/sv/verktyg/kategorier/webbutveckling/css-specificitetskalkulator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/css-till-inline-html-konverterare/": {
-      "hash": "c23152b197e534426919f483b3d3af37c4fb70ff3bec4cd561a0608b7c44c2b5",
+      "hash": "a4b03068b04aba45899bac99d88b6da844f9dd333af302ba70ae069ba132dc58",
       "route": "/sv/verktyg/kategorier/webbutveckling/css-till-inline-html-konverterare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/data-tids-kalkylator-webbhastighet-paverkan/": {
-      "hash": "3cb98f360a2f4ef7855db9b68a6c5afa2da31f2f8442a21ebf54d8476c42ae1e",
+      "hash": "cc72f02ac1b2a1eee198c2f5b1720604908a0e18fd8e131f09349e7adb3fa94d",
       "route": "/sv/verktyg/kategorier/webbutveckling/data-tids-kalkylator-webbhastighet-paverkan/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/excel-csv-html-tabell-konverterare/": {
-      "hash": "8899e6a71caf4e947f356f4d408c7539527e39f007646e063f9b8a51f37d15bc",
+      "hash": "3acdd5eb931e50075723465e64473ebfdb3dade4939f2c3ff13d6a26fe568872",
       "route": "/sv/verktyg/kategorier/webbutveckling/excel-csv-html-tabell-konverterare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/fargkonverterare-rgb-hex-hsl/": {
-      "hash": "dfb07930ea00b3bac50148c5e014c765f2e4337100e280932f4e5c0078aceeb7",
+      "hash": "890f96989f8cb50d39e4b75cff522fa9ac55008d927681842b92a22b73d3458e",
       "route": "/sv/verktyg/kategorier/webbutveckling/fargkonverterare-rgb-hex-hsl/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/granskning-appikoner-ios-android/": {
-      "hash": "24b1b45c22c564bbfb973cc97f75e1e15fb841e674d1ac0de0a0062d43c5a429",
+      "hash": "c1679c54395b14f8782cb6b371af4d37e6f631c266afa191e746cd45f1afdec7",
       "route": "/sv/verktyg/kategorier/webbutveckling/granskning-appikoner-ios-android/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/hashgenerator-sakekerhet/": {
-      "hash": "40cde62cceac057a91250b7087ac5c1c404bfaeca6ec22880641f3244f3f0aed",
+      "hash": "b8d8083fe94292f182e4739ca7d9e0f87b6e2a97292b4f98449d516af8dcf640",
       "route": "/sv/verktyg/kategorier/webbutveckling/hashgenerator-sakekerhet/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/": {
-      "hash": "fa8fb4b48515d9cba393e3392531b0b57a79d3f71c2e3e5e52a3f19a32efabbc",
+      "hash": "e6ab4c51aca3b655742ffd4afd48c8d5f22f2cbd21c5f6a0e8aa4936b45389e6",
       "route": "/sv/verktyg/kategorier/webbutveckling/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/json-formaterare-validator/": {
-      "hash": "b53a0feff1b881dad2d25174030ed2caee3fab8ec6e7deb284f0390a82544b6f",
+      "hash": "5caf2d9dc64e5e517129dca5a814c9dbb2379d6634478d1b7a8e21e60fddde74",
       "route": "/sv/verktyg/kategorier/webbutveckling/json-formaterare-validator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/jwt-dekoder-tolk-och-anspraksinspektor/": {
-      "hash": "95a6ac82972de199ee8147575080a9329076327abff5bc65020ee254c73aa7d6",
+      "hash": "8082219186bfa8de99627cb939ddf1ca2189eec6771c2587b02a1f370a707036",
       "route": "/sv/verktyg/kategorier/webbutveckling/jwt-dekoder-tolk-och-anspraksinspektor/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/llm-kostnadskalkylator/": {
-      "hash": "a32aec1a9edb5523476559b9fb29b92a05ee00b5893b883e31859cf36d8ba215",
+      "hash": "38ae04da5cd8c5c9119015ec5015c9061614504fd41c4bba7db1c9fb6fa9656d",
       "route": "/sv/verktyg/kategorier/webbutveckling/llm-kostnadskalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/marknadsfor-den-har-webbplatsen/": {
-      "hash": "601bd7bc48c479815882410d0f7be2d6902b25f89f69a7cc134ea68bef0a906c",
+      "hash": "3401606e417440971860d3157ba45f7e0213804bc925d5793e278e8ac99e442e",
       "route": "/sv/verktyg/kategorier/webbutveckling/marknadsfor-den-har-webbplatsen/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/mobil-mockup-generator/": {
-      "hash": "61485a4a55f0d83f2151e8bcd26188b8fba7b8553a27823997b4b430d15cc1d9",
+      "hash": "44e376dcd73b22b626c7ca1d7dec65701fb4e8edf5154da903520fc1edd185a8",
       "route": "/sv/verktyg/kategorier/webbutveckling/mobil-mockup-generator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/musikal-typografi-skal/": {
-      "hash": "bfd9b7e6c3ee66fe749feb97a7da2a3bd7de4794c5f078475859784851979949",
+      "hash": "ba2b7fa8f286edddc576c4842258b967129e2936383c27e8b8e81b28c010385f",
       "route": "/sv/verktyg/kategorier/webbutveckling/musikal-typografi-skal/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/oppna-data-csv-json-saknade-varden-dubbla-rader-kontroll/": {
-      "hash": "c6f63124503e32059ae04211132b265ff6fa3d61d331909ffa2dd882d8c0860a",
+      "hash": "b294bc24037540b20a74a34d339de56fb1c9005cecd3e54dc58dd8b50e0690ac",
       "route": "/sv/verktyg/kategorier/webbutveckling/oppna-data-csv-json-saknade-varden-dubbla-rader-kontroll/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/platshallare-bildgenerator/": {
-      "hash": "fdc973ae13f0bcd0807df0769ee03865f28be9970934d20617cfaffe84bf5dab",
+      "hash": "9dc485008a38c590e7a86e83d5ee919b183c41e88a0be0d269a8900b1f840a9c",
       "route": "/sv/verktyg/kategorier/webbutveckling/platshallare-bildgenerator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/privat-prompt-bibliotek/": {
-      "hash": "9e5a50570cc13fb88874fdffe6c288f227adafb8f1bf60df5a44191dff276d76",
+      "hash": "5fc79c76f99e00e2309d191a138fd14651984b1f5748df0c3d5bc357f0426ac4",
       "route": "/sv/verktyg/kategorier/webbutveckling/privat-prompt-bibliotek/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/security-txt-skapare/": {
-      "hash": "a0f43847431e75cfe867cc311c22c8a022d7f4dac9f295647b0bde671299bcdc",
+      "hash": "e068042c3ec253696cfa526618d0798b3bed0c419c5788b6f17fee2eb02d728f",
       "route": "/sv/verktyg/kategorier/webbutveckling/security-txt-skapare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/serp-pixel-simulator-raknare/": {
-      "hash": "e494f5bd891cef172e52b473855288b874523984f267869ccdf85e698d1ab28e",
+      "hash": "a5e406cd741066923cdf614946c31994a6463cb99f3cfae81eb889d4c1f29eb6",
       "route": "/sv/verktyg/kategorier/webbutveckling/serp-pixel-simulator-raknare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/svg-sanering-online/": {
-      "hash": "2dc2ed0c3affcee6d56ab4876efd3143d14e74953b255fad3e626b5f77a5a1dc",
+      "hash": "efd2185fa6387f7b5c9f9fcb1e6f5419c695436157d090e9c36db980fbf78c32",
       "route": "/sv/verktyg/kategorier/webbutveckling/svg-sanering-online/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/svg-till-css-konverterare/": {
-      "hash": "e67d629d9c0edf54e7135c14d5cdd84d97db1178e245a35a4e34263125a04450",
+      "hash": "080803c69875459d8358e40d2af44c73538c607868f03ec8206c71aa639d9495",
       "route": "/sv/verktyg/kategorier/webbutveckling/svg-till-css-konverterare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/ta-bort-dubblett-css/": {
-      "hash": "f6370bcc7861a46ec02634143adb14b571a79eed715787a7c5b60f420497dd7a",
+      "hash": "1d161cf08edbeba7ac1246f0497bc8b600684e29c094cc8effacefbffb689447",
       "route": "/sv/verktyg/kategorier/webbutveckling/ta-bort-dubblett-css/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/tangentbords-tangentkodsvisualiserare-online/": {
-      "hash": "b164b82ccad21f446d9b755e75dbd9ee69eb9ac8c134d821220672b797ea4b71",
+      "hash": "635d9beb36aaa48300e6264a62d75ba634e291eb182f04512964adab7b4f2179",
       "route": "/sv/verktyg/kategorier/webbutveckling/tangentbords-tangentkodsvisualiserare-online/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/url-kodare-avkodare/": {
-      "hash": "7992705633b0a58062250408320ab42a24d485a373ea3860d2afc1a2123b9bed",
+      "hash": "dc967cd928443812e0021e1b4b30a0aa324e7118b171a6830ff7a86f49c36667",
       "route": "/sv/verktyg/kategorier/webbutveckling/url-kodare-avkodare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/url-sponingsstoppare/": {
-      "hash": "6cb5c845327bdfc600a274f61769342075a0ff4abc952b5a0ffb45ddee8cf8d6",
+      "hash": "f91eee1d6d7ee995d98e092e3bee78bba6ab6cf2321dd4b2bfa108a3c536e380",
       "route": "/sv/verktyg/kategorier/webbutveckling/url-sponingsstoppare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/utm-parametergenerator/": {
-      "hash": "f42762c79292c32c685d5c6fc2670f873c06d35fa43849aff1379f060076d4cf",
+      "hash": "7f1b6e625231d30be482df274a43f24eda90ad270cf3bb743554caebddacd7cb",
       "route": "/sv/verktyg/kategorier/webbutveckling/utm-parametergenerator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/visuell-css-grid-flexbox-generator/": {
-      "hash": "32c26a83da88049de538335dfca76695c50ab67799b4d9f07d479873c8534f10",
+      "hash": "f0ff0a8d31ee6dd027ec94f03d42038232c29df6a09fb01fe92174dc27e0304a",
       "route": "/sv/verktyg/kategorier/webbutveckling/visuell-css-grid-flexbox-generator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/webbutveckling/visuell-lasbarhetskalkylator/": {
-      "hash": "73a9deff51c8a4d1f3dec6f82dcc28b27f47a1c9247651526379aac93246d964",
+      "hash": "e05a080bd4f7e21a9369cde938b7c04e795e3630ac1535def477ddc2923b7782",
       "route": "/sv/verktyg/kategorier/webbutveckling/visuell-lasbarhetskalkylator/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/acik-veri-csv-json-eksik-degerler-yinelenen-satirlar-denetleyici/": {
-      "hash": "b5d17f443f5b3dc59cab4b4208bf956545816bdbffcabd197d0506b193c73d19",
+      "hash": "c8e00c9f309f2521d2f6c707140003db22bf5bebc15ef151a5d964e9e2fe76af",
       "route": "/tr/araclar/kategoriler/web-gelistirme/acik-veri-csv-json-eksik-degerler-yinelenen-satirlar-denetleyici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/bu-web-sitesini-tanit/": {
-      "hash": "14692ca4b278a9c9ba62647b50f1f5ab9f53d9b4189f0d7eee113e71f1448870",
+      "hash": "094f11dcae1b88b3963fedbbb4aba415d91fd14061085216aa59d32dcd5f9ea5",
       "route": "/tr/araclar/kategoriler/web-gelistirme/bu-web-sitesini-tanit/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/cevirdo-kimligi-inceleyici/": {
-      "hash": "4fd7dfac63d97fd8f493ad2ea57c58250c7e70c784d4909a36ad27b89477fbdd",
+      "hash": "a5f571f91416ae91b4e2c5cfedf577e56ca31550e67b1e25d02b447867c5abd2",
       "route": "/tr/araclar/kategoriler/web-gelistirme/cevirdo-kimligi-inceleyici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/cron-ifadesi-olusturucu/": {
-      "hash": "8012fe68fdc84283ff268eb6ae2077c4cd083d2c9aec56bea275769d74511c44",
+      "hash": "a098b2d4c066ed8ca8e1c456e62618ab9a82f5415c1a321ba222e87ad31ab2f5",
       "route": "/tr/araclar/kategoriler/web-gelistirme/cron-ifadesi-olusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/css-golge-olusturucu/": {
-      "hash": "998024af5654af501bcdd23e0887dd03e9dbdf769122e6b16346ca3c96a439ef",
+      "hash": "5022cd5e164d5a4bb429ec5690bc3ea1aa32b10bac2178ccc94ffe4ac44951d9",
       "route": "/tr/araclar/kategoriler/web-gelistirme/css-golge-olusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/css-ozgulesme-hesaplayici/": {
-      "hash": "56f96fd82384ef6d3dfebaffd10345dd5730fab5f1c6a9c6aa392963d5258cec",
+      "hash": "876cfa87117dc358cddb8d6e7e4b0c9d62184252280294cfd032505d99a87b63",
       "route": "/tr/araclar/kategoriler/web-gelistirme/css-ozgulesme-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/css-satir-ici-html-donusturucu/": {
-      "hash": "9dc5088c003268688fd2d5c7f1b6ae3b901264814837160e4880c671abb60683",
+      "hash": "70ebc6b942b8df2ad243971c6dbdae0a55bd9c760bfcf785ad10b7c9506fb7a4",
       "route": "/tr/araclar/kategoriler/web-gelistirme/css-satir-ici-html-donusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/en-boy-orani-hesaplayici/": {
-      "hash": "784398390a540546ce94d9299839670ac1960146efb3898959538b0dc7f0b22a",
+      "hash": "236b2346b84372f93908875f18610193f36f63f338bddf79e77c61a5eec015e7",
       "route": "/tr/araclar/kategoriler/web-gelistirme/en-boy-orani-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/excel-csv-html-tablo-donusturucu/": {
-      "hash": "3f2272a5712aece97cd48fd60e4bc5d8e993e25d29d105fc18693a5d5d029fa7",
+      "hash": "3a0dd5bea5cbb8f5ceaa3533e50c8b84daee1dec1b84b0be503e07ffa41f5df8",
       "route": "/tr/araclar/kategoriler/web-gelistirme/excel-csv-html-tablo-donusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/gorsel-css-grid-flexbox-olusturucu/": {
-      "hash": "c14543d4188f286f091c0060d8db928d36c2ed3116aec79ee5a51448603a8ea4",
+      "hash": "a6d02379a6db0117920048030ed129adbd4362fa7961d38c1576d3b6e1f46aa1",
       "route": "/tr/araclar/kategoriler/web-gelistirme/gorsel-css-grid-flexbox-olusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/gorsel-okunabilirlik-hesaplayicisi/": {
-      "hash": "a48536d758b94c67b197395dbd91d37ff201be45c197c8efabe2f6f97485e59d",
+      "hash": "0fa284fee77c6672c6a3b56fa07d4da9bea9583814c4b9a78a8c3cb8e6dcb088",
       "route": "/tr/araclar/kategoriler/web-gelistirme/gorsel-okunabilirlik-hesaplayicisi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/hash-olusturucu/": {
-      "hash": "fc73b6b99ce9280df64fb24394bd3b5dce8beac442ca554eb85c00d44a7f9b1e",
+      "hash": "9abf6e5a3f845309028ae4777632e98d42ba4dc8ea95389389c72f0f507e04b7",
       "route": "/tr/araclar/kategoriler/web-gelistirme/hash-olusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/": {
-      "hash": "630cb7e776ea95b7f8c8a643e2c3a8a425cd8c7e0780a14cb9317e9c99dde1d1",
+      "hash": "c3098616d15d78d911d35ebaaa1532629a0433180c09c3829770bcc2c536a97e",
       "route": "/tr/araclar/kategoriler/web-gelistirme/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/ios-android-uygulama-simgesi-denetimi/": {
-      "hash": "cdf311045178c48e99ade01536632311f50bde66bdd1bac87c2fa00d7e47927c",
+      "hash": "8d0fdab00f5c6bba9f6a0b94502ba0bab75dffbc2fa761733ea9b43aab2968d5",
       "route": "/tr/araclar/kategoriler/web-gelistirme/ios-android-uygulama-simgesi-denetimi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/json-formatlayici-dogrulayici/": {
-      "hash": "ba2aa7d3a119d2007247dbf243a04d3848e2bb0d3440d93e7a507368f01ec268",
+      "hash": "06f477bcfdda8d240416fedb725aeb3496437078669ea025605ed675ace67384",
       "route": "/tr/araclar/kategoriler/web-gelistirme/json-formatlayici-dogrulayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/jwt-cozucu-ayristirici-ve-claims-denetleyicisi/": {
-      "hash": "c652612da6d9cefca207153cee53ac39ae54d6713cf942cdd8ac49007eb1f3f3",
+      "hash": "4126371f370c8d6bd903d8799253dbe2814c50a4bdaf79306b6f9d84e895bde1",
       "route": "/tr/araclar/kategoriler/web-gelistirme/jwt-cozucu-ayristirici-ve-claims-denetleyicisi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/llm-maliyet-hesaplayicisi/": {
-      "hash": "39f3c613fc6391e4525e74fa27c349936970fefd963c8b6028854e3ab4288a16",
+      "hash": "ece57519e0e9909a0e03b2492c3a2c7a03bc884e637d27d7e4d62d3238ec8b9f",
       "route": "/tr/araclar/kategoriler/web-gelistirme/llm-maliyet-hesaplayicisi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/mobil-mockup-uretec/": {
-      "hash": "adc04a113e71491acbf6920299df59504d31b8d3cc5071351d170ca0c7908b2c",
+      "hash": "bf7bb18c271e68dcb4cd29dc3286f3a1f32c9c64c95bcb794a60f357a10203ca",
       "route": "/tr/araclar/kategoriler/web-gelistirme/mobil-mockup-uretec/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/muziksal-tipografi-olcegi/": {
-      "hash": "2f1f30dff2c002221ee6b7914c58af64224060d0f91ff6dcda403d7fcb2061d7",
+      "hash": "8c2d79074ca84f47c042cc3eec89186280db532021fdb2c4c8af8b1724116c2d",
       "route": "/tr/araclar/kategoriler/web-gelistirme/muziksal-tipografi-olcegi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/ozel-prompt-kutuphane/": {
-      "hash": "fc006ad4338899aca863a46a3fe15ca790b84452713a988771cfd2d973edc495",
+      "hash": "483fa7f9551aee952b47027454b993d42c43b9ab1e6305fe84d8f9a8aeb90489",
       "route": "/tr/araclar/kategoriler/web-gelistirme/ozel-prompt-kutuphane/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/renk-donusturucu-rgb-hex-hsl/": {
-      "hash": "399e16961ff73966c3dfd597ebe45eb3cbd4b88d218f7b3478c70644092b5758",
+      "hash": "d44881551e71af7d82c5b3e3689e6ea05ff09487cad4a12e5d5378312be05ecf",
       "route": "/tr/araclar/kategoriler/web-gelistirme/renk-donusturucu-rgb-hex-hsl/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/security-txt-olusturucu/": {
-      "hash": "6f583fbd820a2ae26391b621d6ea4897b574b1a52dff4388b403373d9cea30d3",
+      "hash": "228868ed6820e5dfb138a859287aa156a386ef4071bc19a0bcef2de847078362",
       "route": "/tr/araclar/kategoriler/web-gelistirme/security-txt-olusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/serp-pixel-simulatoru/": {
-      "hash": "3334511f3da7f96e4f91f3a3280a5faba2a12ad51d4d7b2774ada0006436f5f6",
+      "hash": "ad5510296219af131a16d1fc8da5010cbd513ec00efd01d4dcb615526c17dd71",
       "route": "/tr/araclar/kategoriler/web-gelistirme/serp-pixel-simulatoru/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/ssl-sertifika-inceleme/": {
-      "hash": "679976bcc82973710cf060380e7f42629e099b5e75996fa39553dd2a94c40f37",
+      "hash": "d29603b3fc3e0232cba74342ea03ecc58b83b0b8707ca2e2398309978b9fbf88",
       "route": "/tr/araclar/kategoriler/web-gelistirme/ssl-sertifika-inceleme/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/svg-css-donusturucu/": {
-      "hash": "e4fa94e7989716ff5b781e26a2658a7a352b0459c82735b7210be5ba66b5289f",
+      "hash": "d3ec002f4c4b1699ed7f3429ae906cb58cc9c29440582b6e8146d361015619be",
       "route": "/tr/araclar/kategoriler/web-gelistirme/svg-css-donusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/svg-temizleyici/": {
-      "hash": "c7cbebc0b3c86c95d9627f01c0c32e918842b365a9838e289547040004672d1b",
+      "hash": "5baf11a83eba97919aa642cf7d726c8bf8a1bcd5a288bdeff29f85a0742d7e6c",
       "route": "/tr/araclar/kategoriler/web-gelistirme/svg-temizleyici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/url-izleme-temizleyicisi/": {
-      "hash": "a1a6295b322b5406e0d6f43ec7e1027b2a222e1ba2e4ee1e1bb19f3966620783",
+      "hash": "8d7308e28a547cacb941c36273c02eeaa3ddece13ef0b3291bba873b9e2ead92",
       "route": "/tr/araclar/kategoriler/web-gelistirme/url-izleme-temizleyicisi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/url-kodlayici-ve-cozucu/": {
-      "hash": "25a9818cf7e6de5883be4aafdf13e953dac74d33109789c7d8043147a2659a9e",
+      "hash": "e8b79408bccfc15d7318415ce43582f7c99f3ba8fdb17eae033b22256c53e364",
       "route": "/tr/araclar/kategoriler/web-gelistirme/url-kodlayici-ve-cozucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/utm-olusturucu/": {
-      "hash": "7d95c1d0afa93745cef40360363714c0f2ff0b3b687f5a102111075d5a058389",
+      "hash": "af4221f76839765ea944873585e48f9305013ad88559b958c6791383c8a6e5cd",
       "route": "/tr/araclar/kategoriler/web-gelistirme/utm-olusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/veri-zamani-hesaplayici-web-hizi-etkisi/": {
-      "hash": "3561feb0e5f4daf3f0469d227efcc1731fa76425a224ec92e41e744f9389239a",
+      "hash": "afb727a89ac46e035897adfc2f6c0206555500ea84c92c4ddee9441ef9a788ad",
       "route": "/tr/araclar/kategoriler/web-gelistirme/veri-zamani-hesaplayici-web-hizi-etkisi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/yer-tutucu-resim-ureteci/": {
-      "hash": "f606e90689cc7d94e3d15a3f756181dd41e3cf5c1e21bab9911258aec011ac05",
+      "hash": "33efbda13ee5e104779e09aa0422d428b214d87d68cf856e0322c4f0ea667d14",
       "route": "/tr/araclar/kategoriler/web-gelistirme/yer-tutucu-resim-ureteci/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/web-gelistirme/yinelenen-css-temizleyici/": {
-      "hash": "a1023aaa16c9ba91f31100e33547ca7da22c0243da569f48fab2957245cc04fe",
+      "hash": "f13f5bbd47e13d55cfb73fdb72c25df4af353681d24d6bda39c08b2eafb9fd63",
       "route": "/tr/araclar/kategoriler/web-gelistirme/yinelenen-css-temizleyici/"
     },
     "https://www.jjlmoya.es/utilidades/auditoria-iconos-app-ios-android/": {
-      "hash": "7af3d44e2c289629dbf08506b20326ff41e38cc40473365b3d98e4f4fc3f099c",
+      "hash": "ba645e150f8d8e757142227b83c017db03c54cd7130eee2ac264f6d67382ea27",
       "route": "/utilidades/auditoria-iconos-app-ios-android/"
     },
     "https://www.jjlmoya.es/utilidades/biblioteca-prompts/": {
-      "hash": "e8e4ae642d4e3de62b30dfd72c983ea35ba9f2839736bf2bb9954b227f965cbe",
+      "hash": "7aafc2040b703f9aacc622a7138b974255f9477a6a815503e816d5d1ae9ca805",
       "route": "/utilidades/biblioteca-prompts/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-aspect-ratio/": {
-      "hash": "453e17a0fa7db722d46715aa2584b4a6813a06154407c7205960f6df538ed953",
+      "hash": "b229c9a670a31a166de2f5fdaaa418ab316999e7602b693485411212c060396f",
       "route": "/utilidades/calculadora-aspect-ratio/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-coste-llm/": {
-      "hash": "108cbd7b420df70c22f3f1ef194897c5e5ae0e71516e607eaef25baf7e0e1c87",
+      "hash": "4dde9be8aa2db72ab4e1dcc0e192e99c010c8776ec728a3d1befe358ed1e8263",
       "route": "/utilidades/calculadora-coste-llm/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-especificidad-css/": {
-      "hash": "7909460dcd6c195051b932e2887ccd0d84ff642588228e1620c55fcbcdf11dec",
+      "hash": "47b560addb656dc72de7e23159fa05ffaf5555198cd5210f7bceee600c66d9ff",
       "route": "/utilidades/calculadora-especificidad-css/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-legibilidad-visual-wcag-apca/": {
-      "hash": "e28d21c20c5ae432d3c5124f1a1b8a56da51f2c749401d310f4f7028d0364565",
+      "hash": "5048604cfc7afcbdb85b8174f80c26a1d62f5758c7d189e094432c908c999ede",
       "route": "/utilidades/calculadora-legibilidad-visual-wcag-apca/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-tiempo-datos/": {
-      "hash": "7613b4a1b732bc167d835d44f1921814f04725989b318f23eaa3baee7669decb",
+      "hash": "d39a3d7312a8e66cb920f2902b5b179aae89527a0da811d48fe2f320cc873e51",
       "route": "/utilidades/calculadora-tiempo-datos/"
     },
     "https://www.jjlmoya.es/utilidades/categorias/desarrollo-web/": {
-      "hash": "591d6674ab12c5bf536ba2b6611b9618ada3581494ce890d14d9102708245fbb",
+      "hash": "66de4592eee57df3d0976bb4a9006a887f967295cb011dae7a98839fb39c233d",
       "route": "/utilidades/categorias/desarrollo-web/"
     },
     "https://www.jjlmoya.es/utilidades/codificador-decodificador-url/": {
-      "hash": "8db573ef892b0f41dda74270956af5088042db9f21e43777678c98c6682ae9c0",
+      "hash": "443d5b2c664dbadd58bc540ff0897726c10878ab213abe4bb2a568379be9b98f",
       "route": "/utilidades/codificador-decodificador-url/"
     },
     "https://www.jjlmoya.es/utilidades/conversor-color-rgb-hex-hsl/": {
-      "hash": "b48a1d670eca2cab1626c460e079a5714ac9f7c96bcdf1b869dbbdb7f50b6554",
+      "hash": "c87494d8d96fcac1d9f7b2d278465143437c779ea8281e01be0781d469590a67",
       "route": "/utilidades/conversor-color-rgb-hex-hsl/"
     },
     "https://www.jjlmoya.es/utilidades/conversor-excel-csv-a-tabla-html/": {
-      "hash": "9a688352254fc7862c8cf2b4e1befbf08a6cca9938f2001fae0d7c10b882ebbe",
+      "hash": "4643426f25c292a34bac3601aa2c0eecb950dc28178485ad821095999ac88fb9",
       "route": "/utilidades/conversor-excel-csv-a-tabla-html/"
     },
     "https://www.jjlmoya.es/utilidades/convertidor-css-inline/": {
-      "hash": "76f79f9d0d5e136141cac2654cc2d55e5e16fce29d204da1c44e7a256c7a57d2",
+      "hash": "aa70489f29cd63b3e14924d4b525b7100941f314274c2f46e260ecca831c51f0",
       "route": "/utilidades/convertidor-css-inline/"
     },
     "https://www.jjlmoya.es/utilidades/convertidor-svg-css/": {
-      "hash": "5cc927b599ba6152eb73c1fab924878a96dfeac73d9d3afdaa5c5601dfb6601b",
+      "hash": "0fedf6c4eeb6d8019d2b51a1405da11959ed30ad2d1fcd275563dca1835b21d1",
       "route": "/utilidades/convertidor-svg-css/"
     },
     "https://www.jjlmoya.es/utilidades/cron/": {
-      "hash": "53af84675a2a289e14f430c0d6aeb8f7bf103adc240186ecc824863c472e91df",
+      "hash": "04981392a11aff330c50a33691e9f21fc3e52a40900948a074c52f68a4045d63",
       "route": "/utilidades/cron/"
     },
     "https://www.jjlmoya.es/utilidades/datos-abiertos-csv-json-valores-faltantes-filas-duplicadas-comprobador/": {
-      "hash": "6cfedc01217675da0c6755f6fe6b856b8a6d6e7fbd0d0502b2e28010d9a8ac2a",
+      "hash": "942e577849ced128a2b585619af3603380c535ebc014ee3cf0c6d58ccc659ea6",
       "route": "/utilidades/datos-abiertos-csv-json-valores-faltantes-filas-duplicadas-comprobador/"
     },
     "https://www.jjlmoya.es/utilidades/decodificador-jwt-parser-e-inspector-de-claims/": {
-      "hash": "6bcbba85b1aaad116193912f731170e0d50f6f7ad9554abc16234402874bb890",
+      "hash": "adc6c87348519f22c15bac72bafa1fe75d044c452aa6a105340e4699937b24f8",
       "route": "/utilidades/decodificador-jwt-parser-e-inspector-de-claims/"
     },
     "https://www.jjlmoya.es/utilidades/eliminador-css-duplicado/": {
-      "hash": "e46fedfdd609910c91e6e56913d8412caaa1d4557e33e08707fe7db96e5f1ed3",
+      "hash": "30e12d55e155672df4a45cf17bd92cc50caae0cbddef01fc35d25bb788b8bc71",
       "route": "/utilidades/eliminador-css-duplicado/"
     },
     "https://www.jjlmoya.es/utilidades/generador-hashes-seguridad/": {
-      "hash": "60ae794a3bf1600d3b5a6643b675257db8d27ed0b954170c8f3cd6f52625330f",
+      "hash": "54d2ae50adf0d8604c1dc7ba84ebf9de33d2c51a5a4b84d101e49fc1299fe0c0",
       "route": "/utilidades/generador-hashes-seguridad/"
     },
     "https://www.jjlmoya.es/utilidades/generador-imagenes-placeholder/": {
-      "hash": "ef4f4a5c84d145aae69d9c7d8e2b90334c3112838a7a08066b88002a44b29a9d",
+      "hash": "82a8bcf7db9058a5c8e0f9fb59d6d7750f789670c71f36727d37d0f791e78c69",
       "route": "/utilidades/generador-imagenes-placeholder/"
     },
     "https://www.jjlmoya.es/utilidades/generador-mockups-movil/": {
-      "hash": "01133ab4a713fce8fb5cd7d31ba92634c2936e163400a6bbd26eb01f30768ebc",
+      "hash": "d4b4ff3ca88078fef5073d9da2fde40980b9cdd3943b1b0d90e3e76a4a933093",
       "route": "/utilidades/generador-mockups-movil/"
     },
     "https://www.jjlmoya.es/utilidades/generador-security-txt/": {
-      "hash": "487d4f681d8d4fc2b02e60f637cc0d708b76d437f1347fec13cfe7e638a5a7fb",
+      "hash": "0d7503b745890b9c99212cbd6741aba6768a93c4525cd10a82f69087e76f02cc",
       "route": "/utilidades/generador-security-txt/"
     },
     "https://www.jjlmoya.es/utilidades/generador-sombras-css/": {
-      "hash": "4c5903f0312e7fa662023350dbeafeb808d9f59c9aee488d5d7e16c2108918a5",
+      "hash": "692c5caaf8a544b3067c570a33e9fde151f8fa1802431f1636b92f336340ba3e",
       "route": "/utilidades/generador-sombras-css/"
     },
     "https://www.jjlmoya.es/utilidades/generador-utm/": {
-      "hash": "06619371d886d898290fc951e964f4bf5247cef950f6ae2c1c3f4b41ac7f660c",
+      "hash": "57ca6d5d0479d79f7487006736fa6f0423517404fb81dbc7b69c993e10405ea4",
       "route": "/utilidades/generador-utm/"
     },
     "https://www.jjlmoya.es/utilidades/generador-visual-css-grid-flexbox/": {
-      "hash": "2d01ddef750f849d89defdebd43efb132aca7bf7d0fe4b160b33b6a16e9589d4",
+      "hash": "84ecedb7baa524f9a25723b12fbd3d68cc787326ca4a52c996e3e272d7213b90",
       "route": "/utilidades/generador-visual-css-grid-flexbox/"
     },
     "https://www.jjlmoya.es/utilidades/inspector-certificados-ssl/": {
-      "hash": "7df38d41a5015bcb34d885c1a3d80a9bf4ccc1ea984b4ec64feb4dc1e38260ec",
+      "hash": "c918791da2e90eb167218cc2edbaad806a0aeea2834d5141539a71e78f074e49",
       "route": "/utilidades/inspector-certificados-ssl/"
     },
     "https://www.jjlmoya.es/utilidades/json-formatter/": {
-      "hash": "47018c3b9a74eb0ad254933feeeb77c38879b05be7753c4f5c6c2aa31cf96bdb",
+      "hash": "ed06632908cbc5800837986d746d067af89161b281f3732e1e0226d3d4e7afbb",
       "route": "/utilidades/json-formatter/"
     },
     "https://www.jjlmoya.es/utilidades/keycode/": {
-      "hash": "20d380a6983185826b0966c5690134768c10682874a0bb8ae6c44c276d47f9b1",
+      "hash": "97c766601b1480f0ebc8da52fb0b82d9b13a8840f53a636b731bda368cf41ba1",
       "route": "/utilidades/keycode/"
     },
     "https://www.jjlmoya.es/utilidades/limpiador-tracking-url/": {
-      "hash": "0082557a44bc98ef6ee60f9a302bf3c094074a170d8ec9dc51ffab2ee0d11ccf",
+      "hash": "c41d74de1f0911b8815fe2d90bfb905b23d9de7ccaabd086e4c49afb54dcdc69",
       "route": "/utilidades/limpiador-tracking-url/"
     },
     "https://www.jjlmoya.es/utilidades/promociona-esta-web/": {
-      "hash": "6e279063dfc30df6fc7ec7f3c647cf819aa28e315abf71aaba232b4c6e5f3561",
+      "hash": "f4eeae07c066a218ec12dfa8b0e2a4ce4577c5b55946deeb09f89e2b84d4a456",
       "route": "/utilidades/promociona-esta-web/"
     },
     "https://www.jjlmoya.es/utilidades/saneador-svg/": {
-      "hash": "bfcae5e424b2b74de35bb681b13aa896c8bfb0677b01608317249ff05640e06c",
+      "hash": "b6cd803701054eb5aee327dc373fcb9f4fbc87740999b5cff0b9712834aef74e",
       "route": "/utilidades/saneador-svg/"
     },
     "https://www.jjlmoya.es/utilidades/simulador-serp-contador-pixeles/": {
-      "hash": "69b2d021fc83c9969c91a4a304e4a6c18d4de7296e834a3eae703411300f8582",
+      "hash": "e8067c2a5e06ea0a150493faf2799ffc9d9a1fb1e97a32540dcaddec011c1eb0",
       "route": "/utilidades/simulador-serp-contador-pixeles/"
     },
     "https://www.jjlmoya.es/utilidades/tipografia-musical/": {
-      "hash": "2701bc568963e8161fc95a9d9cb572a53bdc5b1c4d998409785176fb120eedbf",
+      "hash": "1cd4da447980cccc0d89227f863fef548679eb58f62d2edfecf79e692423a285",
       "route": "/utilidades/tipografia-musical/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/aspect-ratio-calculator/": {
-      "hash": "1e1461cd7065219cd6c0528702dfb4317e39fcadb18cedf70036862759afc7c8",
+      "hash": "2c039ca2d1b0b7c1a0a77fd270980919a52d025d767c4f58699918e38aac29b0",
       "route": "/zh/utilities/categories/wang-ye-kaifa/aspect-ratio-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/color-converter-rgb-hex-hsl/": {
-      "hash": "e49966ea1a5bea444406f3f0336f64a26032566560c834d5a0fc3cc34a5ce01a",
+      "hash": "7081e601547f9869981c1d71af5fd2e97bc304ba9d0029bbdcd817dcbcaf91ca",
       "route": "/zh/utilities/categories/wang-ye-kaifa/color-converter-rgb-hex-hsl/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/cron/": {
-      "hash": "a9eebb37b078ff8e7c1722e0cf4b472defa1985a7204bf4c5be4da07159bb92c",
+      "hash": "bd399682635454814194dea28ab5b146321e46fd98e30a985343deff0798f59b",
       "route": "/zh/utilities/categories/wang-ye-kaifa/cron/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/css-box-shadow-generator/": {
-      "hash": "23467ad6a26affecd62760c58981ab22420e74696b967c7492b8a7ab8e58b946",
+      "hash": "13f6057792bf7b654ad923c2fccef3a09ba0433595b5800c479b09adcb2a1dda",
       "route": "/zh/utilities/categories/wang-ye-kaifa/css-box-shadow-generator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/css-specificity-calculator/": {
-      "hash": "b05dd1a5ef5913e5e05679cbc27e12493d87f0c32851a1f8d9a99c38f3db4fd9",
+      "hash": "2ec9ccec12fd31c5791baf94ef75d15324f8d0092725b182e603047387cd5ee8",
       "route": "/zh/utilities/categories/wang-ye-kaifa/css-specificity-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/css-to-inline-converter/": {
-      "hash": "fe2d9aaf4bdf883a5ae3d354d0774068f2a5044d829eaf10a629d46cd93c6e9a",
+      "hash": "d42968aee95da662c4466ef125a33294cf960bd9a0551a3bfdb3efae46b321c9",
       "route": "/zh/utilities/categories/wang-ye-kaifa/css-to-inline-converter/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/data-time-calculator-web-speed-impact/": {
-      "hash": "b2303cbcc4f0732e731a6af5845142e6d9032694e8d263073f808761d2347b83",
+      "hash": "62436ceb185e41386ab160e7947c23c25395f6360ef37303cf9bb6056d29791a",
       "route": "/zh/utilities/categories/wang-ye-kaifa/data-time-calculator-web-speed-impact/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/dual-ios-android-app-icon-preview/": {
-      "hash": "c15a23dd4f7fbf5720ed357b57b273aa49a11d432918b99a01b1f2d34619c44b",
+      "hash": "022f9684a4fc2960b15ac30501438504c11183937dc6bec244183dbdcda5456d",
       "route": "/zh/utilities/categories/wang-ye-kaifa/dual-ios-android-app-icon-preview/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/duplicate-css-remover/": {
-      "hash": "9ebc955df9a093835af70ba9834db8c3e1dfa62101ffc7e5ff2b885641b3dde6",
+      "hash": "998527639688a8eda8b3970345b233025334d9b4aa2a0dfe3115b0289abb3fad",
       "route": "/zh/utilities/categories/wang-ye-kaifa/duplicate-css-remover/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/excel-csv-html-table-converter/": {
-      "hash": "2c44c7faa5fceccae8df25b536566fd9e443344f2e66bb51d33043440295f19e",
+      "hash": "c2c5401c190311a690514b2eb1f1059281262d435cffdd29cb5fecd22bdcb992",
       "route": "/zh/utilities/categories/wang-ye-kaifa/excel-csv-html-table-converter/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/hash-generator/": {
-      "hash": "7d87c8c6c32caa8f603e90e5db98162f3d825e803ca1fc8b8e867c9a14bdb45b",
+      "hash": "75d331671d55c41ac76b43c4a05a7b54f0d123bedc54f2fe9944d300d9e5bf78",
       "route": "/zh/utilities/categories/wang-ye-kaifa/hash-generator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/": {
-      "hash": "75167eda3a7590ece4750a5ff52952a34ec290ad13b4a415c57c971cd64c8ee8",
+      "hash": "6eceb69f12c9086220363cf1f87729d7cae65dff546bf1e7a6d27e57610c7a7e",
       "route": "/zh/utilities/categories/wang-ye-kaifa/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/json-formatter/": {
-      "hash": "36d6497efb6c4446d7becb3610d2c9f29264074fbe05c176b105b5a81730139a",
+      "hash": "ea639978bf0679dff176d6c139ead00b9e1813849a018ea3ca6867214d2095ee",
       "route": "/zh/utilities/categories/wang-ye-kaifa/json-formatter/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/jwt-decoder-parser-and-claims-inspector/": {
-      "hash": "6d1e335e211271fa04b53d677857bb36ae9a2f08be146303bb1da13341223470",
+      "hash": "588b6123dd75306fb2a7de0c7b0c78712208e8b35d8685e98fb4e6e69219c182",
       "route": "/zh/utilities/categories/wang-ye-kaifa/jwt-decoder-parser-and-claims-inspector/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/keycode/": {
-      "hash": "49345de2d16a70bfb691d4db584ec676184fbd7a6d8b8e1d86fd74d669fcd9d4",
+      "hash": "a9901e806ce59ec6abbdfb3a2fc0e4b81ffcdf501a77d9771597bec4f387559e",
       "route": "/zh/utilities/categories/wang-ye-kaifa/keycode/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/llm-cost-calculator/": {
-      "hash": "1f6392e8739dd2fa22ef6d44abfa1eae1f8d559a00c907cc999b36f53aa107f6",
+      "hash": "c58534c4ba3e4a6d68987f95ec3f47860ff9f939c973bff94fe09c2a5d18a4f2",
       "route": "/zh/utilities/categories/wang-ye-kaifa/llm-cost-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/mobile-mockup-generator/": {
-      "hash": "794ba8ce6fb4c59811c5b6b7e44624c0e6bcdf03dda4e6f39567157dc5c48cd3",
+      "hash": "d4055da75d5d40544815e53ed1d2320ca91a359485ffeb2398d865df83fb0e6e",
       "route": "/zh/utilities/categories/wang-ye-kaifa/mobile-mockup-generator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/musical-typography/": {
-      "hash": "bb09900a0ebf9a6ef7cfecfc988d2ee60dcd7b240727551a0b613b6202e88d6b",
+      "hash": "863ffaf4ba45775d5f6898c767bb409bf84c477e9c3739029e09764149b64a15",
       "route": "/zh/utilities/categories/wang-ye-kaifa/musical-typography/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/open-data-csv-json-missing-values-duplicate-rows-checker/": {
-      "hash": "b9424149c637923d1dd4cb67b2ea7a746101697ac3bb5748503648118950dc07",
+      "hash": "79c0860ed4fadfa1b79ccdcff9a2b029814e4f84c78a97bbbfdf3081b66bc4b0",
       "route": "/zh/utilities/categories/wang-ye-kaifa/open-data-csv-json-missing-values-duplicate-rows-checker/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/placeholder-image-generator/": {
-      "hash": "6f8fcc4dc36ea3ffaaed153ade7fc69177e26e4d59fa5cfe02c23b5bd9cf3a34",
+      "hash": "89398d175b0fe94f214cbbc145f1018a26e6ac65e268cb88e46190bedc308304",
       "route": "/zh/utilities/categories/wang-ye-kaifa/placeholder-image-generator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/promote-this-website/": {
-      "hash": "acc8b7cbcdde217bc782ffed9630ca07b12e7114f57baf9e3f61f6ffebf43fd0",
+      "hash": "aeb563f454dcfe8851f16ff3ffea14f1e5834d035e6378d496021ccbdbf2a4eb",
       "route": "/zh/utilities/categories/wang-ye-kaifa/promote-this-website/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/prompt-library/": {
-      "hash": "940a36e7dd68a72fbb9de9f61e3923e7304876ee6948b5be4288a67a45fa8dde",
+      "hash": "5dbe1847b9c4dc6e96dfb188cd9e9feba74f2d15e381a896cb55f8a64276f2c2",
       "route": "/zh/utilities/categories/wang-ye-kaifa/prompt-library/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/security-txt-generator-rfc-9116/": {
-      "hash": "b1612a822bfe434f12ce0a0bd65e75eb0b5b968bb44a9e38e1f2e12b72ce6e26",
+      "hash": "f4f6c3d2ed019454210befb6519cbc253733d3bc49d794aa3353943f7c650b3c",
       "route": "/zh/utilities/categories/wang-ye-kaifa/security-txt-generator-rfc-9116/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/serp-pixel-simulator/": {
-      "hash": "30fb95a41d04d84d02ce20475f427be9ae3a25da329f2f30a8fe1e9e976f40fb",
+      "hash": "0f515d0aa3f7d6f1df55fc8c21ef4c23ac598c39af548af7d4975786c03e5223",
       "route": "/zh/utilities/categories/wang-ye-kaifa/serp-pixel-simulator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/ssl-tls-certificate-inspector/": {
-      "hash": "45d39aa8d1e4b12ae92c32d5081169cc51b43c4c7a5546c97275ffc5e918e1a2",
+      "hash": "2e52d8e64a51f8bd2cc2788d420f877c934798d7180b4b32eb1d9f28335ccd7a",
       "route": "/zh/utilities/categories/wang-ye-kaifa/ssl-tls-certificate-inspector/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/svg-sanitizer/": {
-      "hash": "c68ce121757dd0ad1149aa45008f9d9dde211e8c1c5030eefc6c092dd6b4aee4",
+      "hash": "fc889cd91e1ee33351bcaa841af46d5790db4252327bb8855deb79d4ccbd25be",
       "route": "/zh/utilities/categories/wang-ye-kaifa/svg-sanitizer/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/svg-to-css-converter/": {
-      "hash": "1ffe57eead06847874f9d8969473b25b91d6ab41ccab11e627a1feb248b01f7d",
+      "hash": "2e29666a5eb802a5911e2ff9144c5aff1c759795e31c84b82e6defdf5f4243d3",
       "route": "/zh/utilities/categories/wang-ye-kaifa/svg-to-css-converter/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/url-encoder-decoder/": {
-      "hash": "f347893dd149140f630293523a7e72166690f8857308e4f79b1a9be1c8c16f1c",
+      "hash": "2b545a9b1ca75dba47b8c15d84cffa5fd0ca5f1d4ed5e2b126f5536f66cefa83",
       "route": "/zh/utilities/categories/wang-ye-kaifa/url-encoder-decoder/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/url-tracking-cleaner/": {
-      "hash": "cd94c8ea8ab26b7a79e8fc9f2722d351958237a576272eb0458a0f9a05b75313",
+      "hash": "c6a94bdd3b9ace65f36ab5d4cbb6a5defdd863908383e6c214a55f96ed58d70a",
       "route": "/zh/utilities/categories/wang-ye-kaifa/url-tracking-cleaner/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/utm-generator/": {
-      "hash": "65e1d9eb324bd81c3e6e3f7950b755842c7a9c3b393ee4f89598fb8b3af4bb69",
+      "hash": "b5aff7aa9e944d44ac5beda8c34d8fdbe96e9e33de5920bbaf9a2e8e08ffb08f",
       "route": "/zh/utilities/categories/wang-ye-kaifa/utm-generator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/visual-css-grid-flexbox-generator/": {
-      "hash": "223d230bceec8f56312a7ecb2034abde3b423a5c045b82c84a6126eb0ae33616",
+      "hash": "b4a196b539c48c1bd1ef23e706d2c5a17e004cb91837d298d637b3f652794e33",
       "route": "/zh/utilities/categories/wang-ye-kaifa/visual-css-grid-flexbox-generator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/wang-ye-kaifa/visual-readability-calculator-wcag-apca/": {
-      "hash": "906da6fd67a6f49e54ea03f481a06f6ee12b741ecb59c6eda03ca30e715a6635",
+      "hash": "4caf422d1845065ad0c94a26c46eadaeb3696a4ed25017db91836e45fde8e688",
       "route": "/zh/utilities/categories/wang-ye-kaifa/visual-readability-calculator-wcag-apca/"
     }
   }
