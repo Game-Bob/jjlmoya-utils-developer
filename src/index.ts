@@ -73,3 +73,4 @@ export { VISUAL_CSS_GRID_FLEXBOX_GENERATOR_TOOL } from './tool/visualCssGridFlex
 export { CSS_BOX_SHADOW_GENERATOR_TOOL } from './tool/cssBoxShadowGenerator/index';
 export { DUAL_OS_ICON_PREVIEW_TOOL } from './tool/dualOsIconPreview/index';
 export { OPEN_DATA_CSV_JSON_MISSING_VALUES_DUPLICATE_ROWS_CHECKER_TOOL } from './tool/open-data-csv-json-missing-values-duplicate-rows-checker/index';
+export { JSON_SCHEMA_VALIDATOR_TOOL } from './tool/jsonSchemaValidator/index';

@@ -1,0 +1,168 @@
+---
+import type { JsonSchemaValidatorUI } from './ui';
+import './json-schema-validator.css';
+
+interface Props {
+  ui: JsonSchemaValidatorUI;
+  locale?: string;
+}
+
+const { ui, locale = 'en' } = Astro.props;
+const payload = JSON.stringify({ locale, ui });
+---
+
+<section class="jsv-root" data-json-schema-validator>
+  <div class="jsv-workbench">
+    <div class="jsv-toolbar">
+      <div class="jsv-actions">
+        <button class="jsv-button jsv-button-soft" type="button" data-action="example" aria-label={ui.exampleButton}>{ui.exampleButton}</button>
+        <button class="jsv-button jsv-button-ghost" type="button" data-action="clear" aria-label={ui.clearButton}>{ui.clearButton}</button>
+        <button class="jsv-button jsv-button-primary" type="button" data-action="validate" aria-label={ui.validateButton}>{ui.validateButton}</button>
+      </div>
+    </div>
+
+    <div class="jsv-editor-grid">
+    <label class="jsv-editor-pane" for="jsv-schema-input">
+      <span class="jsv-editor-heading"><span class="jsv-index">01</span><span>{ui.schemaLabel}</span></span>
+      <textarea id="jsv-schema-input" data-input="schema" spellcheck="false" placeholder={ui.schemaPlaceholder}></textarea>
+    </label>
+    <label class="jsv-editor-pane" for="jsv-data-input">
+      <span class="jsv-editor-heading"><span class="jsv-index jsv-index-data">02</span><span>{ui.dataLabel}</span></span>
+      <textarea id="jsv-data-input" data-input="data" spellcheck="false" placeholder={ui.dataPlaceholder}></textarea>
+    </label>
+    </div>
+
+    <div class="jsv-status jsv-status-waiting" data-status aria-live="polite">
+      <span class="jsv-status-dot" aria-hidden="true"></span>
+      <div><strong data-status-title>{ui.waitingTitle}</strong><span data-status-text>{ui.waitingText}</span></div>
+    </div>
+
+    <section class="jsv-result" data-result hidden aria-labelledby="jsv-result-title">
+      <div class="jsv-result-head">
+        <div><span class="jsv-kicker">JSON Schema</span><h2 id="jsv-result-title" data-result-title></h2><p data-result-text></p></div>
+        <div class="jsv-result-score"><strong data-error-count>0</strong><span>{ui.errorsTitle}</span></div>
+      </div>
+      <div class="jsv-error-toolbar">
+        <span>{ui.errorsTitle}</span>
+        <button class="jsv-button jsv-button-ghost" type="button" data-action="copy" aria-label={ui.copyButton}>{ui.copyButton}</button>
+      </div>
+      <div class="jsv-empty-errors" data-no-errors>{ui.noErrors}</div>
+      <div class="jsv-table-wrap" data-errors-table hidden>
+        <table>
+          <thead><tr><th scope="col">{ui.pathLabel}</th><th scope="col">{ui.ruleLabel}</th><th scope="col">{ui.messageLabel}</th></tr></thead>
+          <tbody data-errors></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</section>
+
+<script is:inline type="application/json" id="jsv-payload" set:html={payload}></script>
+
+<script>
+  import { parseJson, SAMPLE_DATA, SAMPLE_SCHEMA, validateJsonSchema } from './logic';
+  import type { JsonSchemaValidatorUI } from './ui';
+
+  const root = document.querySelector<HTMLElement>('[data-json-schema-validator]');
+  const payload = document.getElementById('jsv-payload');
+  if (root && payload) {
+    const data = JSON.parse(payload.textContent ?? '{}') as { ui: JsonSchemaValidatorUI };
+    const schemaInput = root.querySelector<HTMLTextAreaElement>('[data-input="schema"]');
+    const dataInput = root.querySelector<HTMLTextAreaElement>('[data-input="data"]');
+    const status = root.querySelector<HTMLElement>('[data-status]');
+    const statusTitle = root.querySelector<HTMLElement>('[data-status-title]');
+    const statusText = root.querySelector<HTMLElement>('[data-status-text]');
+    const result = root.querySelector<HTMLElement>('[data-result]');
+    const resultTitle = root.querySelector<HTMLElement>('[data-result-title]');
+    const resultText = root.querySelector<HTMLElement>('[data-result-text]');
+    const errorCount = root.querySelector<HTMLElement>('[data-error-count]');
+    const noErrors = root.querySelector<HTMLElement>('[data-no-errors]');
+    const errorsTable = root.querySelector<HTMLElement>('[data-errors-table]');
+    const errorsBody = root.querySelector<HTMLElement>('[data-errors]');
+    let lastReport = '';
+
+    function setStatus(kind: 'waiting' | 'valid' | 'invalid', title: string, text: string): void {
+      status?.classList.remove('jsv-status-waiting', 'jsv-status-valid', 'jsv-status-invalid');
+      status?.classList.add(`jsv-status-${kind}`);
+      if (statusTitle) statusTitle.textContent = title;
+      if (statusText) statusText.textContent = text;
+    }
+
+    function renderErrors(errors: ReturnType<typeof validateJsonSchema>['errors']): void {
+      if (!errorsBody || !errorCount || !noErrors || !errorsTable) return;
+      errorsBody.replaceChildren();
+      errorCount.textContent = String(errors.length);
+      noErrors.hidden = errors.length > 0;
+      errorsTable.hidden = errors.length === 0;
+      errors.forEach((error) => {
+        const row = document.createElement('tr');
+        [error.instancePath, error.keyword, error.message].forEach((value) => {
+          const cell = document.createElement('td');
+          cell.textContent = value;
+          row.appendChild(cell);
+        });
+        errorsBody.appendChild(row);
+      });
+    }
+
+    function showParseFailure(schemaError: string | undefined, dataError: string | undefined): void {
+      const message = schemaError ? `${data.ui.schemaError} ${schemaError}` : `${data.ui.parseError} ${dataError ?? data.ui.inputEmpty}`;
+      setStatus('invalid', data.ui.invalidTitle, message);
+      if (result) result.hidden = false;
+      if (resultTitle) resultTitle.textContent = data.ui.invalidTitle;
+      if (resultText) resultText.textContent = message;
+      renderErrors([{ instancePath: '/', schemaPath: '#', keyword: 'parse', message }]);
+      lastReport = message;
+    }
+
+    function showValidation(validation: ReturnType<typeof validateJsonSchema>): void {
+      const message = validation.valid ? data.ui.validText : data.ui.invalidText;
+      const kind = validation.valid ? 'valid' : 'invalid';
+      const title = validation.valid ? data.ui.validTitle : data.ui.invalidTitle;
+      setStatus(kind, title, message);
+      if (result) result.hidden = false;
+      if (resultTitle) resultTitle.textContent = title;
+      if (resultText) resultText.textContent = message;
+      renderErrors(validation.errors);
+      lastReport = validation.valid ? data.ui.noErrors : validation.errors.map((error) => `${error.instancePath} [${error.keyword}] ${error.message}`).join('\n');
+    }
+
+    function validate(): void {
+      const schemaResult = parseJson(schemaInput?.value ?? '');
+      const dataResult = parseJson(dataInput?.value ?? '');
+      if (schemaResult.error || dataResult.error) {
+        showParseFailure(schemaResult.error, dataResult.error);
+        return;
+      }
+      showValidation(validateJsonSchema(dataResult.value, schemaResult.value));
+    }
+
+    function loadExample(): void {
+      if (schemaInput) schemaInput.value = SAMPLE_SCHEMA;
+      if (dataInput) dataInput.value = SAMPLE_DATA;
+      validate();
+    }
+
+    function clearAll(): void {
+      if (schemaInput) schemaInput.value = '';
+      if (dataInput) dataInput.value = '';
+      if (result) result.hidden = true;
+      setStatus('waiting', data.ui.waitingTitle, data.ui.waitingText);
+      lastReport = '';
+    }
+
+    root.querySelector('[data-action="validate"]')?.addEventListener('click', validate);
+    root.querySelector('[data-action="example"]')?.addEventListener('click', loadExample);
+    root.querySelector('[data-action="clear"]')?.addEventListener('click', clearAll);
+    root.querySelector('[data-action="copy"]')?.addEventListener('click', async () => {
+      if (!lastReport) return;
+      await navigator.clipboard.writeText(lastReport);
+      setStatus('valid', data.ui.validTitle, data.ui.copiedMessage);
+    });
+    [schemaInput, dataInput].forEach((input) => input?.addEventListener('input', () => {
+      if (result && !result.hidden) result.hidden = true;
+      setStatus('waiting', data.ui.waitingTitle, data.ui.waitingText);
+    }));
+    loadExample();
+  }
+</script>
