@@ -1,0 +1,70 @@
+---
+import type { UnicodeNormalizationInspectorUI } from './ui';
+import './unicode-normalization-inspector.css';
+
+interface Props {
+  ui: UnicodeNormalizationInspectorUI;
+  locale?: string;
+}
+
+const { ui, locale = 'en' } = Astro.props;
+const payload = JSON.stringify({ locale, ui });
+---
+
+<section class="uni-root" data-unicode-inspector>
+  <div class="uni-surface">
+    <div class="uni-toolbar">
+      <div class="uni-samples" aria-label="Examples">
+        <button class="uni-button uni-button-soft" type="button" data-action="canonical">{ui.sampleCanonical}</button>
+        <button class="uni-button uni-button-soft" type="button" data-action="compatibility">{ui.sampleCompatibility}</button>
+        <button class="uni-button uni-button-quiet" type="button" data-action="clear">{ui.clear}</button>
+      </div>
+      <button class="uni-button uni-button-primary" type="button" data-action="compare">{ui.compare}</button>
+    </div>
+
+    <div class="uni-specimens">
+      <label class="uni-specimen" for="uni-left-input">
+        <span class="uni-specimen-heading"><span class="uni-index">A</span>{ui.leftLabel}</span>
+        <textarea id="uni-left-input" data-input="left" spellcheck="false" placeholder={ui.leftPlaceholder}></textarea>
+      </label>
+      <label class="uni-specimen" for="uni-right-input">
+        <span class="uni-specimen-heading"><span class="uni-index uni-index-right">B</span>{ui.rightLabel}</span>
+        <textarea id="uni-right-input" data-input="right" spellcheck="false" placeholder={ui.rightPlaceholder}></textarea>
+      </label>
+    </div>
+
+    <section class="uni-verdict is-waiting" data-verdict aria-live="polite">
+      <div class="uni-verdict-mark" aria-hidden="true"></div>
+      <div class="uni-verdict-copy"><h2 data-verdict-title>{ui.waitingTitle}</h2><p data-verdict-text>{ui.waitingText}</p></div>
+      <button class="uni-button uni-button-quiet uni-copy" type="button" data-action="copy">{ui.copyReport}</button>
+    </section>
+    <p class="uni-feedback" data-feedback role="status"></p>
+
+    <div class="uni-formula" aria-label={ui.formLabel}>
+      <div class="uni-section-label">{ui.formLabel}<span>{ui.leftResult} / {ui.rightResult}</span></div>
+      <div data-forms></div>
+    </div>
+
+    <div class="uni-codepoints">
+      <div class="uni-section-label">{ui.codePointsTitle}<span>{ui.visibleCharacter} / {ui.codePoint} / {ui.category} / {ui.flags}</span></div>
+      <div class="uni-codepoint-columns">
+        <div><h3>{ui.leftResult}</h3><ul data-left-codepoints></ul></div>
+        <div><h3>{ui.rightResult}</h3><ul data-right-codepoints></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline type="application/json" id="uni-payload" set:html={payload}></script>
+
+<script>
+  import { mountUnicodeInspector } from './controller';
+  import type { UnicodeNormalizationInspectorUI } from './ui';
+
+  const root = document.querySelector<HTMLElement>('[data-unicode-inspector]');
+  const payload = document.getElementById('uni-payload');
+  if (root && payload) {
+    const data = JSON.parse(payload.textContent ?? '{}') as { ui: UnicodeNormalizationInspectorUI };
+    mountUnicodeInspector(root, data.ui);
+  }
+</script>
